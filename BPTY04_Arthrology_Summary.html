@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 – Arthrology</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; }
+  header { background: linear-gradient(135deg, #1b4332, #2d6a4f); color: white; padding: 32px 40px; }
+  header h1 { font-size: 2em; margin-bottom: 4px; }
+  header p { opacity: 0.85; font-size: 1em; }
+  .toc { background: #fff; border-left: 4px solid #2d6a4f; margin: 24px 40px; padding: 20px 28px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+  .toc h2 { font-size: 1.05em; margin-bottom: 10px; color: #1b4332; text-transform: uppercase; letter-spacing: 1px; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .toc a { color: #2d6a4f; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  main { max-width: 1100px; margin: 0 auto; padding: 10px 40px 60px; }
+  section { background: #fff; border-radius: 8px; margin-bottom: 36px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); overflow: hidden; }
+  .sec-header { background: #1b4332; color: white; padding: 14px 24px; }
+  .sec-header h2 { font-size: 1.2em; }
+  .sec-body { padding: 24px; }
+  h3 { color: #1b4332; font-size: 1.05em; margin: 20px 0 8px; border-bottom: 1px solid #d8ede3; padding-bottom: 4px; }
+  h4 { color: #2d6a4f; font-size: 0.98em; margin: 14px 0 6px; }
+  p { line-height: 1.7; margin-bottom: 12px; }
+  ul { padding-left: 20px; margin-bottom: 12px; }
+  li { margin: 5px 0; line-height: 1.6; }
+  .key { color: #c0392b; font-weight: bold; }
+  .green { color: #1b4332; font-weight: bold; }
+  .slides-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+  .slide-img { flex: 1 1 300px; max-width: 500px; }
+  .slide-img img { width: 100%; border-radius: 4px; border: 1px solid #c8e6d4; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  .slide-img p { font-size: 0.78em; color: #666; text-align: center; margin-top: 4px; }
+  .slide-trio { flex: 1 1 220px; max-width: 380px; }
+  .slide-trio img { width: 100%; border-radius: 4px; border: 1px solid #c8e6d4; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  .slide-trio p { font-size: 0.78em; color: #666; text-align: center; margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.9em; }
+  th { background: #2d6a4f; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 8px 12px; border-bottom: 1px solid #eaeef4; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4fbf7; }
+  .callout { background: #e8f5ee; border-left: 4px solid #2d6a4f; padding: 12px 16px; border-radius: 4px; margin: 16px 0; font-size: 0.95em; }
+  .answer { background: #fff8e1; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 4px; margin: 8px 0; font-size: 0.93em; }
+  .q-block { background: #f0faf4; border: 1px solid #b7deca; border-radius: 6px; padding: 14px 18px; margin: 10px 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Arthrology — Classification of Joints</h1>
+  <p>BPTY04: Musculoskeletal Anatomy</p>
+</header>
+
+<div class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#intro">What is a Joint?</a></li>
+    <li><a href="#structure">Classification by Structure</a>
+      <ol type="a">
+        <li><a href="#fibrous">Fibrous Joints</a></li>
+        <li><a href="#cartilaginous">Cartilaginous Joints</a></li>
+        <li><a href="#synovial">Synovial Joints</a></li>
+      </ol>
+    </li>
+    <li><a href="#mobility">Classification by Mobility</a></li>
+    <li><a href="#rom">Classification by Range of Motion</a></li>
+    <li><a href="#summary">Summary &amp; Self-Test</a></li>
+  </ol>
+</div>
+
+<main>
+
+<!-- SECTION 1: Introduction -->
+<section id="intro">
+  <div class="sec-header"><h2>Learning Outcomes</h2></div>
+  <div class="sec-body">
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-02.png"><p>Slide 2 – Learning outcomes</p></div>
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-03.png"><p>Slide 3 – Joint definition</p></div>
+    </div>
+    <ul>
+      <li>Identify and classify joints according to their structure, mobility, and range of motion</li>
+      <li>Describe the key anatomical features of synovial joints</li>
+      <li>Relate joint structure to functional movement capacity</li>
+    </ul>
+    <div class="callout">An <strong>articulation (joint)</strong> is the connection between two bones in the skeleton. The joint is the centre of motion of a bone in relation to another.<br><br>
+    Joints are classified by: <strong>(1) Structure</strong>, <strong>(2) Mobility</strong>, and <strong>(3) Range of Motion</strong></div>
+  </div>
+</section>
+
+<!-- SECTION 2: Structure -->
+<section id="structure">
+  <div class="sec-header"><h2>1. Classification by Structure</h2></div>
+  <div class="sec-body">
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-04.png"><p>Slide 4 – Structural classification overview</p></div>
+    </div>
+
+    <h3 id="fibrous">A. Fibrous Joints</h3>
+    <p>Bones are bounded by <strong>fibrous connective tissue</strong> and exhibit little to no mobility.</p>
+    <div class="slides-row">
+      <div class="slide-trio"><img src="bpty04_images/arthrology/slide-05.png"><p>Slide 5 – Types summary table</p></div>
+      <div class="slide-trio"><img src="bpty04_images/arthrology/slide-06.png"><p>Slide 6 – Sutures</p></div>
+      <div class="slide-trio"><img src="bpty04_images/arthrology/slide-07.png"><p>Slide 7 – Gomphoses</p></div>
+    </div>
+    <div class="slides-row">
+      <div class="slide-trio"><img src="bpty04_images/arthrology/slide-08.png"><p>Slide 8 – Syndesmoses</p></div>
+      <div class="slide-trio"><img src="bpty04_images/arthrology/slide-09.png"><p>Slide 9 – Synostoses</p></div>
+    </div>
+
+    <table>
+      <tr><th>Type</th><th>Union</th><th>Mobility</th><th>Location / Description</th></tr>
+      <tr><td><strong>Sutures</strong></td><td>Fibrous</td><td>None</td><td>Exclusively between bones of the skull</td></tr>
+      <tr><td><strong>Gomphoses</strong></td><td>Fibrous</td><td>None</td><td>Teeth in dental alveoli (dentoalveolar joint); bound by the periodontal ligament</td></tr>
+      <tr><td><strong>Syndesmoses</strong></td><td>Fibrous</td><td>Reduced</td><td>Ligaments + membrane hold two bones (e.g., distal tibiofibular joint)</td></tr>
+      <tr><td><strong>Synostoses</strong></td><td>Bony fusion</td><td>None</td><td>Complete bony fusion (e.g., fused sacral vertebrae)</td></tr>
+    </table>
+
+    <h3 id="cartilaginous">B. Cartilaginous Joints</h3>
+    <p>Bones are connected by <strong>fibrocartilage</strong> or <strong>hyaline cartilage</strong>.</p>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-10.png"><p>Slide 10 – Cartilaginous overview</p></div>
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-11.png"><p>Slide 11 – Symphyses</p></div>
+    </div>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-12.png"><p>Slide 12 – Synchondroses</p></div>
+    </div>
+
+    <table>
+      <tr><th>Type</th><th>Union</th><th>Mobility</th><th>Description</th></tr>
+      <tr><td><strong>Symphyses</strong></td><td>Fibrocartilage</td><td>Reduced</td><td>Connected by fibrocartilage; found primarily along the midline (e.g., pubic symphysis, intervertebral discs)</td></tr>
+      <tr><td><strong>Synchondroses</strong></td><td>Hyaline cartilage</td><td>Reduced</td><td>Growth plates between diaphysis and epiphysis of growing long bones; eventually ossify in adulthood</td></tr>
+    </table>
+
+    <h3 id="synovial">C. Synovial Joints</h3>
+    <p>The <strong>most common</strong> joint type in the human body. Freely mobile.</p>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-13.png"><p>Slide 13 – Synovial joint features</p></div>
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-14.png"><p>Slide 14 – Additional synovial features</p></div>
+    </div>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-15.png"><p>Slide 15 – Types of synovial joints</p></div>
+    </div>
+
+    <h4>Characteristic Features:</h4>
+    <ul>
+      <li><strong>Articular Capsule</strong>
+        <ul>
+          <li><em>Outer fibrous layer</em> — stabilises the joint</li>
+          <li><em>Inner synovial layer</em> (synovial membrane) — absorbs and secretes <strong>synovial fluid</strong> to lubricate the joint cavity</li>
+        </ul>
+      </li>
+      <li><strong>Articular Surface</strong> — covered in <strong>hyaline (articular) cartilage</strong> to reduce friction and provide shock absorption</li>
+    </ul>
+    <h4>Additional Features:</h4>
+    <ul>
+      <li><strong>Articular discs</strong> — e.g., medial and lateral menisci in the knee</li>
+      <li><strong>Bursae</strong> — small sacs lined by synovial membrane, filled with synovial fluid; reduce friction caused by muscles and tendons over bony prominences</li>
+    </ul>
+
+    <h4>Types of Synovial Joint:</h4>
+    <div class="callout">Ball &amp; Socket · Hinge · Pivot · Condylar (Ellipsoid) · Saddle · Plane</div>
+  </div>
+</section>
+
+<!-- SECTION 3: Mobility -->
+<section id="mobility">
+  <div class="sec-header"><h2>2. Classification by Mobility</h2></div>
+  <div class="sec-body">
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-16.png"><p>Slide 16 – Mobility classification</p></div>
+    </div>
+    <table>
+      <tr><th>Classification</th><th>Mobility</th><th>Examples</th></tr>
+      <tr><td><strong>Diarthroses</strong></td><td>Freely mobile</td><td>Every synovial joint</td></tr>
+      <tr><td><strong>Amphiarthroses</strong></td><td>Slightly mobile</td><td>Pubic symphysis, syndesmosis</td></tr>
+      <tr><td><strong>Synarthroses</strong></td><td>Immobile</td><td>Sutures of the skull, gomphoses, synchondroses</td></tr>
+    </table>
+    <div class="callout"><strong>Note:</strong> Although an amphiarthrosis may move slightly, it does not perform a functional movement.</div>
+  </div>
+</section>
+
+<!-- SECTION 4: Range of Motion -->
+<section id="rom">
+  <div class="sec-header"><h2>3. Classification by Range of Motion (Axes)</h2></div>
+  <div class="sec-body">
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-17.png"><p>Slide 17 – ROM classification overview</p></div>
+    </div>
+
+    <h3>A. Multiaxial — Ball &amp; Socket Joint</h3>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-18.png"><p>Slide 18 – Ball &amp; socket joint</p></div>
+    </div>
+    <ul>
+      <li>One ball-shaped and one socket-like articular surface</li>
+      <li>Examples: <strong>acetabulofemoral joint</strong> (hip), <strong>glenohumeral joint</strong> (shoulder)</li>
+      <li>Movements: Flexion/Extension (frontal axis) · Abduction/Adduction (sagittal axis) · Internal/External Rotation (vertical axis)</li>
+    </ul>
+
+    <h3>B. Uniaxial — Hinge &amp; Pivot Joints</h3>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-19.png"><p>Slide 19 – Hinge joint</p></div>
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-20.png"><p>Slide 20 – Pivot joint</p></div>
+    </div>
+    <table>
+      <tr><th>Sub-type</th><th>Movements</th><th>Example</th></tr>
+      <tr><td><strong>Hinge</strong></td><td>Flexion &amp; Extension (frontal axis only)</td><td>Elbow (humeroulnar), knee (tibiofemoral), ankle</td></tr>
+      <tr><td><strong>Pivot</strong></td><td>Rotation (vertical axis only)</td><td>Atlantoaxial joint (C1-C2), proximal radioulnar joint</td></tr>
+    </table>
+
+    <h3>C. Biaxial — Condylar (Ellipsoid) &amp; Saddle Joints</h3>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-21.png"><p>Slide 21 – Condylar joint</p></div>
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-22.png"><p>Slide 22 – Saddle joint</p></div>
+    </div>
+    <table>
+      <tr><th>Sub-type</th><th>Movements</th><th>Example</th></tr>
+      <tr><td><strong>Condylar (Ellipsoid)</strong></td><td>Flexion/Extension (frontal axis) + Radial/Ulnar deviation (sagittal axis)</td><td>Radiocarpal joint (wrist)</td></tr>
+      <tr><td><strong>Saddle</strong></td><td>Flexion/Extension + Abduction/Adduction + Circumduction. <em>Concave</em> surface of one meets <em>convex</em> of the other</td><td>Carpometacarpal joint of the thumb (1st CMC)</td></tr>
+    </table>
+
+    <h3>D. Plane Joint (Non-axial)</h3>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-23.png"><p>Slide 23 – Plane joint</p></div>
+    </div>
+    <ul>
+      <li>Movement along the plane of the articular surface, not around an axis — <strong>cannot be classified as uniaxial/biaxial/multiaxial</strong></li>
+      <li>Movement: <strong>gliding or sliding</strong></li>
+      <li>Examples: <strong>acromioclavicular joint</strong>, spinal zygapophyseal joints</li>
+    </ul>
+
+    <h3>Summary Table — All Joint Classifications</h3>
+    <table>
+      <tr><th>Structural Type</th><th>Mobility Class</th><th>ROM Class</th><th>Examples</th></tr>
+      <tr><td>Synovial — Ball &amp; Socket</td><td>Diarthrosis</td><td>Multiaxial</td><td>Hip, Shoulder</td></tr>
+      <tr><td>Synovial — Hinge</td><td>Diarthrosis</td><td>Uniaxial</td><td>Elbow, Knee</td></tr>
+      <tr><td>Synovial — Pivot</td><td>Diarthrosis</td><td>Uniaxial</td><td>C1-C2, proximal radioulnar</td></tr>
+      <tr><td>Synovial — Condylar</td><td>Diarthrosis</td><td>Biaxial</td><td>Wrist (radiocarpal)</td></tr>
+      <tr><td>Synovial — Saddle</td><td>Diarthrosis</td><td>Biaxial</td><td>1st CMC (thumb)</td></tr>
+      <tr><td>Synovial — Plane</td><td>Diarthrosis</td><td>Non-axial</td><td>AC joint, zygapophyseal</td></tr>
+      <tr><td>Fibrous — Suture</td><td>Synarthrosis</td><td>None</td><td>Skull sutures</td></tr>
+      <tr><td>Fibrous — Gomphosis</td><td>Synarthrosis</td><td>None</td><td>Teeth in sockets</td></tr>
+      <tr><td>Fibrous — Syndesmosis</td><td>Amphiarthrosis</td><td>Minimal</td><td>Distal tibiofibular</td></tr>
+      <tr><td>Fibrous — Synostosis</td><td>Synarthrosis</td><td>None</td><td>Fused sacral vertebrae</td></tr>
+      <tr><td>Cartilaginous — Symphysis</td><td>Amphiarthrosis</td><td>Minimal</td><td>Pubic symphysis, IVDs</td></tr>
+      <tr><td>Cartilaginous — Synchondrosis</td><td>Synarthrosis</td><td>Minimal</td><td>Growth plates (in children)</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- SECTION 5: Summary -->
+<section id="summary">
+  <div class="sec-header"><h2>4. Summary Exercise &amp; Self-Test</h2></div>
+  <div class="sec-body">
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-24.png"><p>Slide 24 – Questions</p></div>
+      <div class="slide-img"><img src="bpty04_images/arthrology/slide-25.png"><p>Slide 25 – Answers</p></div>
+    </div>
+    <div class="q-block">
+      <p><strong>Q1. Do all articulations have a synovial membrane?</strong></p>
+      <div class="answer">No — only <strong>synovial joints</strong> have a synovial membrane. Fibrous and cartilaginous joints lack one.</div>
+    </div>
+    <div class="q-block">
+      <p><strong>Q2. Which is usually more mobile — synarthroses or amphiarthroses?</strong></p>
+      <div class="answer"><strong>Amphiarthroses</strong> (slightly mobile, e.g., pubic symphysis, syndesmosis) &gt; Synarthroses (immobile, e.g., skull sutures, gomphoses, synchondroses).</div>
+    </div>
+    <div class="q-block">
+      <p><strong>Q3. What are the most mobile articulations of the human body?</strong></p>
+      <div class="answer"><strong>Diarthroses</strong> — freely mobile joints, i.e., every synovial joint.</div>
+    </div>
+    <div class="q-block">
+      <p><strong>Q4. What is the movement difference between an Ellipsoid/Condylar and a Saddle joint?</strong></p>
+      <div class="answer">Both are biaxial. The <strong>saddle joint</strong> also permits <strong>circumduction</strong> (a combination movement), whereas the condylar/ellipsoid joint does not. The saddle joint has a greater range due to its reciprocally curved surfaces (convex meets concave).</div>
+    </div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

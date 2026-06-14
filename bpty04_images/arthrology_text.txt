@@ -1,0 +1,196 @@
+=== PAGE 1 ===
+BPT04_ARTHROLOGY
+=== PAGE 2 ===
+Learning outcomes
+1. Identify and classify joints according to their
+structure, mobility, and range of motion
+2. Describe the key anatomical features of synovial
+joints
+3. Relate joint structure to functional movement
+capacity
+=== PAGE 3 ===
+ARTICULATION/JOINT
+• CONNECTION BETWEEN TWO BONES IN THE SKELETON. THE JOINT
+IS THE CENTER OF MOTION OF A BONE IN RELATION TO ANOTHER.
+JOINT CAN BE CLASSIFIED ACCORDING TO:
+1. STRUCTURE
+2. MOBILITY
+3. RANGE OF MOTION
+=== PAGE 4 ===
+1. JOINT CLASSIFICATION: STRUCTURE
+A. FIBROUS JOINT
+B. CARTILAGINOUS JOINT
+C. SYNOVIAL JOINT
+=== PAGE 5 ===
+1. JOINT CLASSIFICATION: STRUCTURE
+A. FIBROUS JOINT
+Bones are bounded by fibrous connective tissue and exhibit little to no mobility
+TYPES OF FIBROUS JOINT:
+- SutuNreame Union Mobility
+Sutures Fibrous None
+- Gomphoses
+Gomphoses Fibrous None
+- Syndesmoses
+Syndesmoses Fibrous Reduced
+- Synostoses
+Synostoses Bony fusions None
+=== PAGE 6 ===
+1. JOINT CLASSIFICATION: STRUCTURE
+A. FIBROUS JOINT
+Bones are bounded by fibrous connective tissue and exhibit little to no mobility
+TYPES OF FIBROUS JOINT:
+- Suture
+a. Exclusively between bones of the skull (in green)
+=== PAGE 7 ===
+1. JOINT CLASSIFICATION: STRUCTURE
+A. FIBROUS JOINT
+Bones are bounded by fibrous connective tissue and exhibit little to no mobility
+TYPES OF FIBROUS JOINT:
+- Gomphoses
+a. Found on the mouth where the root of the teeth articulate with the dental alveoli at the
+dentoalveolar joint. The tooth is bound into its socket by the periodontal ligament (in green)
+=== PAGE 8 ===
+1. JOINT CLASSIFICATION: STRUCTURE
+A. FIBROUS JOINT
+Bones are bounded by fibrous connective tissue and exhibit little to no mobility
+TYPES OF FIBROUS JOINT:
+- Syndesmoses
+a. Formed by ligaments and a membrane that hold two bones in place
+=== PAGE 9 ===
+1. JOINT CLASSIFICATION: STRUCTURE
+A. FIBROUS JOINT
+Bones are bounded by fibrous connective tissue and exhibit little to no mobility
+TYPES OF FIBROUS JOINT:
+- Synostoses
+a. Fusion of sacral vertebrae (in red)
+=== PAGE 10 ===
+1. JOINT CLASSIFICATION: STRUCTURE
+B. CARTILAGINOUS JOINT
+Bones are connected by fibrocartilage or hyaline cartilage
+TYPES OF CARTILAGINOUS JOINT:
+Name Union Mobility
+Synchondroses Cartilage Reduced
+Symphyses Fibrocartilage Reduced
+=== PAGE 11 ===
+1. JOINT CLASSIFICATION: STRUCTURE
+B. CARTILAGINOUS JOINT
+Bones are connected by fibrocartilage or hyaline cartilage
+TYPES OF FIBROUS JOINT:
+- Symphyses
+a. Bones are connected by fibrocartilage.
+Found primarily along the midline of the body
+=== PAGE 12 ===
+1. JOINT CLASSIFICATION: STRUCTURE
+B. CARTILAGINOUS JOINT
+Bones are connected by fibrocartilage or hyaline cartilage
+TYPES OF FIBROUS JOINT:
+- Synchondroses
+a. Bones are connected by hyaline cartilage (growth plate →).
+Between the diaphysis and epiphysis of growing long bones that will eventually
+become completely ossified in adulthood
+=== PAGE 13 ===
+1. JOINT CLASSIFICATION: STRUCTURE
+C. SYNOVIAL JOINT
+Most common joint in the human body
+CHARACTERISTIC FEATURES:
+- Articular capsule
+a. Outer fibrous layer >> to stabilize
+b. Inner synovial layer (in orange) >> absorbs and secretes
+synovial fluid in joint cavity to lubricate the joint
+- Articular Surface
+a. Covered in hyaline (articular) cartilage (in light blue) >> to
+reduce friction and shock absorption
+=== PAGE 14 ===
+1. JOINT CLASSIFICATION: STRUCTURE
+C. SYNOVIAL JOINT
+Most common joint in the human body
+ADDITIONAL FEATURES:
+- Articular discs (e.g., medial and lateral menisci in the knee)
+- Bursae
+a. Small sacs lined by the synovial membrane and filled with synovial fluid >> to reduce
+friction caused by muscles and tendons which are located over bony joint
+=== PAGE 15 ===
+1. JOINT CLASSIFICATION: STRUCTURE
+C. TYPES OF SYNOVIAL JOINT:
+- Ball and Socket
+- Hinge
+- Pivot
+- Condylar
+- Saddle
+- Plane
+=== PAGE 16 ===
+2. JOINT CLASSIFICATION: MOBILITY
+A. DIARTHROSES >> FREELY MOBILE JOINT >> EVERY SYNOVIAL JOINT
+B. AMPHIARTHROSES >> SLIGHTLY MOBILE JOINT >> e.g., PUBIC SYMPHISIS AND SYNDESMOSIS
+C. SYNARTHROSES >> IMMOBILE JOINT >> e.g., SUTURE OF THE SKULL, GOMPOSHIS, AND
+SYNCHONDROSIS
+NOTE: ALTHOUGH A JOINT MAY SLIGHTLY MOVE, IT DOES NOT PERFORM A FUNCTIONAL MOVEMENT
+=== PAGE 17 ===
+3. JOINT CLASSIFICATION: RANGE OF MOTION
+A. MULTIAXIAL >> BALL AND SOCKET JOINT
+B. UNIAXIAL JOINT >> PIVOT AND HINGE JOINTS
+C. BIAXIAL >> CONDYLAR AND SADDLE JOINTS
+D. PLANE JOINT >> CANNOT BE CLASSIFIED
+=== PAGE 18 ===
+3. JOINT CLASSIFICATION: RANGE OF MOTION
+A. MULTIAXIAL >> BALL AND SOCKET JOINT
+One ball shaped and one socket-like articular surface
+e.g., ACETABULOFEMORAL AND GLENOHUMERAL JOINTS
+MOVEMENTS:
+- FLEXION AND EXTESION (FRONTAL AXIS)
+- ABDUCTION AND ADDUCTION (SAGITTAL AXIS)
+- INTERNAL AND EXTERNAL ROTATION (VERTICAL AXIS)
+=== PAGE 19 ===
+3. JOINT CLASSIFICATION: RANGE OF MOTION
+B. UNIAXIAL JOINT >> HINGE JOINT
+MOVEMENTS:
+- FLEXION AND EXTESION (FRONTAL AXIS)
+=== PAGE 20 ===
+3. JOINT CLASSIFICATION: RANGE OF MOTION
+B. UNIAXIAL JOINT >> PIVOT JOINT
+MOVEMENTS:
+- ROTATION (VERTICAL AXIS)
+=== PAGE 21 ===
+3. JOINT CLASSIFICATION: RANGE OF MOTION
+C. BIAXIAL >> CONDYLAR (ALSO, ELLIPSOID) JOINT
+e.g., RADIOCARPAL JOINT
+MOVEMENTS:
+- RADIAL AND ULNAR DEVIATION (SAGITTAL AXIS)
+- FLEXION AND EXTESION (FRONTAL AXIS)
+=== PAGE 22 ===
+3. JOINT CLASSIFICATION: RANGE OF MOTION
+C. BIAXIAL >> SADDLE JOINT
+The bones meet at the concave articular surface of one bone and the
+convex articular surface of the other that form the saddle shape
+MOVEMENTS:
+- ABDUCTION AND ADDUCTION (SAGITTAL AXIS)
+- FLEXION AND EXTESION (FRONTAL AXIS)
+- CIRCUMDUCTION
+=== PAGE 23 ===
+3. JOINT CLASSIFICATION: RANGE OF MOTION
+D. PLANE JOINT
+Do not move around an axis and permit movement along the plane of the
+articular surface. Therefore, cannot be classified.
+e.g., Acromioclavicular joint, spinal zygapophyseal joint
+MOVEMENTS:
+- GLIDING OR SLIDING (when one bone moves across the surface of
+another)
+=== PAGE 24 ===
+SUMMARY EXERCISE
+Please answer to the following questions:
+1. Do all articulations have a synovial membrane ? Justify your answer.
+2. Which type of articulation is usually more mobile, synarthroses or amphiarthroses ? Justify your answer.
+3. What are the most mobile articulations of the human body ?
+4. In terms of movement, what is the difference between an Ellipsoidal/Condylar and a Saddle joint ?
+=== PAGE 25 ===
+SUMMARY EXERCISE
+Please answer to the following questions:
+1. Do all articulations have a synovial membrane ?
+NO ONLY SYNOVIAL JOINTS
+2. Which type of articulation is usually more mobile, synarthroses or amphiarthroses ?
+AMPHIARTHROSES (SLIGHTLY MOBILE JOINT, e.g., PUBIC SYMPHISIS AND SYNDESMOSIS) >
+SYNARTHROSES IMMOBILE JOINT, e.g., SUTURE OF THE SKULL, GOMPOSHIS, AND SYNCHONDROSIS
+3. What are the most mobile articulations of the human body ?
+FREELY MOBILE JOINT >> EVERY SYNOVIAL JOINT
+4. In terms of movement, what is the difference between an Ellipsoidal/Condylar and a Saddle joint ?
+SADDLE BIAXIAL (BIAXIAL) > ELLIPSOIDAL/CONDYLAR (BIAXIAL)

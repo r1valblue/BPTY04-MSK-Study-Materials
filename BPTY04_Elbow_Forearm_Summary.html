@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 – Elbow &amp; Forearm Anatomy</title>
+<style>
+  :root {
+    --blue1: #1a3a5c; --blue2: #2e6da4; --blue3: #d0e8f8;
+    --green1: #1a4d2e; --green2: #2e8b57; --green3: #d4f0e0;
+    --purple1: #3d1a5c; --purple2: #7b4fa6; --purple3: #ead4f8;
+    --orange1: #6b3500; --orange2: #c97c2b; --orange3: #fde8c8;
+    --red1: #5c1a1a; --red2: #a63030; --red3: #f8d4d4;
+    --teal1: #0d4040; --teal2: #1a8080; --teal3: #c8f0f0;
+    --bg: #f9f9fb; --text: #1e1e2e; --card: #fff; --border: #dde;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
+  header { background: linear-gradient(135deg, #1a4d2e, #2e8b57, #2e6da4); color: #fff; padding: 2.5rem 2rem 2rem; }
+  header h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: 1px; }
+  header p { opacity: 0.88; margin-top: 0.4rem; font-size: 1rem; }
+  nav { background: #fff; border-bottom: 2px solid var(--border); padding: 0.6rem 2rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  nav a { color: var(--green2); text-decoration: none; font-size: 0.88rem; padding: 0.2rem 0.6rem; border-radius: 4px; background: var(--green3); }
+  nav a:hover { background: var(--green2); color: #fff; }
+  main { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem 4rem; }
+  .sec-header { border-radius: 10px 10px 0 0; padding: 1rem 1.5rem; color: #fff; font-size: 1.25rem; font-weight: 700; }
+  .sec-body { background: var(--card); border: 1px solid var(--border); border-top: none; border-radius: 0 0 10px 10px; padding: 1.5rem; margin-bottom: 2rem; }
+  .blue .sec-header { background: linear-gradient(90deg, var(--blue1), var(--blue2)); }
+  .green .sec-header { background: linear-gradient(90deg, var(--green1), var(--green2)); }
+  .purple .sec-header { background: linear-gradient(90deg, var(--purple1), var(--purple2)); }
+  .orange .sec-header { background: linear-gradient(90deg, var(--orange1), var(--orange2)); }
+  .teal .sec-header { background: linear-gradient(90deg, var(--teal1), var(--teal2)); }
+  h3 { color: var(--green1); font-size: 1.05rem; margin: 1.2rem 0 0.4rem; border-bottom: 2px solid var(--green3); padding-bottom: 0.2rem; }
+  p { margin: 0.4rem 0; }
+  .callout { border-left: 4px solid var(--green2); background: var(--green3); padding: 0.6rem 1rem; border-radius: 0 6px 6px 0; margin: 0.8rem 0; }
+  .clinical { border-left: 4px solid var(--red2); background: var(--red3); padding: 0.6rem 1rem; border-radius: 0 6px 6px 0; margin: 0.8rem 0; }
+  .mnemonic { border-left: 4px solid var(--orange2); background: var(--orange3); padding: 0.6rem 1rem; border-radius: 0 6px 6px 0; margin: 0.8rem 0; font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.92rem; }
+  th { background: var(--green1); color: #fff; padding: 0.5rem 0.8rem; text-align: left; }
+  td { padding: 0.45rem 0.8rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: var(--green3); }
+  .slides-row { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0; }
+  .slide-img { flex: 0 0 auto; }
+  .slide-img img { border: 2px solid var(--border); border-radius: 6px; max-width: 320px; width: 100%; display: block; }
+  .slide-img p { font-size: 0.78rem; color: #666; text-align: center; margin-top: 0.2rem; }
+  ul { margin-left: 1.4rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🦾 BPTY04 – Elbow &amp; Forearm Anatomy</h1>
+  <p>Dr Maria Abulkhanova · LUNEX University · Arthrology &amp; Myology</p>
+</header>
+<nav>
+  <a href="#elbow-complex">Elbow Complex</a>
+  <a href="#lcl">Lateral Ligaments</a>
+  <a href="#mcl">Medial Ligament</a>
+  <a href="#annular">Annular Lig.</a>
+  <a href="#arm-muscles">Arm Muscles</a>
+  <a href="#flexors">Forearm Flexors</a>
+  <a href="#extensors">Forearm Extensors</a>
+  <a href="#pronation">Pronation/Supination</a>
+  <a href="#tendon-groups">Tendon Groups</a>
+</nav>
+<main>
+
+<!-- ELBOW JOINT COMPLEX -->
+<div class="blue" id="elbow-complex">
+  <div class="sec-header">🔗 Arthrology – Elbow Joint Complex</div>
+  <div class="sec-body">
+    <div class="callout">3 joints enclosed in one capsule:
+      <ul>
+        <li><strong>Humeroradial joint</strong> – Spheroidal (ball and socket)</li>
+        <li><strong>Humeroulnar joint</strong> – Hinge (uniaxial)</li>
+        <li><strong>Proximal radioulnar joint</strong> – Pivot</li>
+      </ul>
+    </div>
+    <div class="mnemonic">🧠 CRAzy TULips: <strong>C</strong>apitulum = <strong>RA</strong>dius · <strong>T</strong>rochlea = <strong>UL</strong>na</div>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-02.png"><p>Slide 2: Elbow bones</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-03.png"><p>Slide 3: Radius and Ulna</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-05.png"><p>Slide 5: Elbow joint complex</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- LATERAL LIGAMENTS -->
+<div class="blue" id="lcl">
+  <div class="sec-header">🔗 Lateral Collateral Ligament Complex</div>
+  <div class="sec-body">
+    <table>
+      <tr><th>Ligament</th><th>Attachment</th></tr>
+      <tr><td>Radial collateral ligament (RCL)</td><td>Lateral epicondyle → annular ligament</td></tr>
+      <tr><td>Lateral ulnar collateral ligament (LUCL)</td><td>Lateral epicondyle → supinator crest</td></tr>
+    </table>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-06.png"><p>Slide 6: Lateral collateral ligaments</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- MEDIAL LIGAMENT -->
+<div class="blue" id="mcl">
+  <div class="sec-header">🔗 Medial (Ulnar) Collateral Ligament</div>
+  <div class="sec-body">
+    <table>
+      <tr><th>Portion</th><th>Attachment</th></tr>
+      <tr><td>Anterior</td><td>Medial epicondyle → coronoid process</td></tr>
+      <tr><td>Posterior</td><td>Medial epicondyle → olecranon</td></tr>
+      <tr><td>Transverse</td><td>Coronoid process → olecranon</td></tr>
+    </table>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-07.png"><p>Slide 7: Medial collateral ligament</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ANNULAR LIGAMENT & BURSAE -->
+<div class="blue" id="annular">
+  <div class="sec-header">🔗 Annular Ligament &amp; Bursae</div>
+  <div class="sec-body">
+    <div class="callout"><strong>Annular ligament</strong>: Surrounds the radial head, inserting at both ends into the radial notch of the ulna. Provides stability to the proximal radioulnar joint.</div>
+    <h3>Bursae</h3>
+    <ul>
+      <li>Subtendinous bursa</li>
+      <li>Intratendinous bursa</li>
+      <li>Olecranon synovial bursa</li>
+    </ul>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-08.png"><p>Slide 8: Annular ligament</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-09.png"><p>Slide 9: Bursae</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ARM MUSCLES -->
+<div class="green" id="arm-muscles">
+  <div class="sec-header">💪 Myology – Muscles of the Arm</div>
+  <div class="sec-body">
+    <div class="mnemonic">🧠 3 B's bend the elbow: <strong>B</strong>iceps · <strong>B</strong>rachialis · <strong>B</strong>rachioradialis</div>
+    <table>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+      <tr><td>Biceps brachii<br><em>Long head</em><br><em>Short head</em></td><td>Long: Supraglenoid tubercle<br>Short: Coracoid process</td><td>Radial tuberosity + bicipital aponeurosis</td><td>Elbow flexion; Forearm supination; Shoulder abduction/flexion (long head)</td><td>Musculocutaneous n. [C5–7]</td></tr>
+      <tr><td>Brachialis</td><td>Anterior surface humerus, intermuscular septum</td><td>Ulnar tuberosity, coronoid process</td><td>Elbow flexion</td><td>Musculocutaneous n. [C5–7]</td></tr>
+      <tr><td>Brachioradialis</td><td>Lateral distal humerus, intermuscular septum</td><td>Styloid process of radius</td><td>Elbow flexion; Forearm pronation/supination</td><td>Radial n. [C5–6]</td></tr>
+      <tr><td>Triceps brachii<br><em>Long head</em><br><em>Medial head</em><br><em>Lateral head</em></td><td>Long: Infraglenoid tubercle<br>Medial: Post. humerus, medial septum<br>Lateral: Post. humerus, lateral septum</td><td>Olecranon</td><td>Elbow extension; Shoulder extension (long head)</td><td>Radial n. [C6–8]</td></tr>
+      <tr><td>Anconeus</td><td>Lateral epicondyle</td><td>Olecranon</td><td>Elbow extension</td><td>Radial n. [C8]</td></tr>
+    </table>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-11.png"><p>Slide 11: Biceps brachii</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-12.png"><p>Slide 12: Brachialis</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-13.png"><p>Slide 13: Brachioradialis</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-14.png"><p>Slide 14: Triceps brachii</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-15.png"><p>Slide 15: Anconeus</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOREARM FLEXORS -->
+<div class="purple" id="flexors">
+  <div class="sec-header">💜 Myology – Forearm Flexors</div>
+  <div class="sec-body">
+    <div class="callout">Common Flexor Tendon (CFT) at medial epicondyle: Pronator Teres · FCR · Palmaris Longus · FCU · FDS</div>
+    <table>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+      <tr><td>Pronator teres</td><td>Medial epicondyle (CFT); Coronoid process (ulnar head)</td><td>Lateral surface of radius</td><td>Forearm pronation; Elbow weak flexion</td><td>Median n. [C6–7]</td></tr>
+      <tr><td>Flexor digitorum superficialis (FDS)</td><td>Medial epicondyle (CFT); Radial tuberosity</td><td>Middle phalanges II–V</td><td>Wrist flexion; MCP + PIP II–V flexion</td><td>Median n. [C7–T1]</td></tr>
+      <tr><td>Flexor digitorum profundus (FDP)</td><td>Interosseous membrane; Proximal ¾ anterior ulna</td><td>Palmar distal phalanges II–V</td><td>Wrist + MCP + PIP + DIP II–V flexion</td><td>Median [C8–T1] + Ulnar n.</td></tr>
+      <tr><td>Flexor carpi radialis (FCR)</td><td>Medial epicondyle (CFT)</td><td>Base of metacarpal II</td><td>Wrist flexion + abduction; Elbow flexion; Pronation</td><td>Median n. [C6–7]</td></tr>
+      <tr><td>Flexor carpi ulnaris (FCU)</td><td>Medial epicondyle (CFT); Olecranon + posterior ulna</td><td>Hook of hamate, base MC V, pisiform</td><td>Wrist flexion + adduction; Elbow flexion</td><td>Ulnar n. [C7–T1]</td></tr>
+      <tr><td>Palmaris longus</td><td>Medial epicondyle (CFT)</td><td>Palmar aponeurosis</td><td>Wrist flexion (via aponeurosis)</td><td>Median n. [C8]</td></tr>
+    </table>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-16.png"><p>Slide 16: Pronator teres</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-17.png"><p>Slide 17: FDS</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-18.png"><p>Slide 18: FDP</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-19.png"><p>Slide 19: FCR</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-20.png"><p>Slide 20: FCU</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-21.png"><p>Slide 21: Palmaris longus</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOREARM EXTENSORS -->
+<div class="teal" id="extensors">
+  <div class="sec-header">🌊 Myology – Forearm Extensors</div>
+  <div class="sec-body">
+    <div class="callout">Common Extensor Tendon (CET) at lateral epicondyle: ECRB · ED · EDM · ECU — all are wrist extensors</div>
+    <table>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+      <tr><td>Extensor carpi radialis longus (ECRL)</td><td>Lateral supracondylar crest</td><td>Dorsal surface metacarpal II</td><td>Wrist extension + abduction; Elbow flexion</td><td>Radial n. [C6–7]</td></tr>
+      <tr><td>Extensor carpi radialis brevis (ECRB)</td><td>Lateral epicondyle (CET)</td><td>Dorsal surface metacarpal III</td><td>Wrist extension + abduction; Elbow flexion</td><td>Radial n. [C7–8]</td></tr>
+      <tr><td>Extensor digitorum (ED)</td><td>Lateral epicondyle (CET)</td><td>Middle + distal phalanges II–V via dorsal aponeurosis</td><td>Wrist extension; MCP + PIP + DIP extension + abduction</td><td>Radial n. [C7–8]</td></tr>
+      <tr><td>Extensor carpi ulnaris (ECU)</td><td>Lateral epicondyle (CET); Posterior ulna</td><td>Base metacarpal V</td><td>Wrist extension + adduction; Elbow extension</td><td>Radial n. [C7–8]</td></tr>
+    </table>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-22.png"><p>Slide 22: ECRL</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-23.png"><p>Slide 23: ECRB</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-24.png"><p>Slide 24: Extensor digitorum</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-25.png"><p>Slide 25: ECU</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- PRONATION / SUPINATION -->
+<div class="orange" id="pronation">
+  <div class="sec-header">🔄 Myology – Pronation &amp; Supination</div>
+  <div class="sec-body">
+    <table>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+      <tr><td>Supinator</td><td>Supinator crest, Lateral epicondyle</td><td>Proximal ⅓ of radius</td><td>Forearm supination</td><td>Radial n. [C7–8]</td></tr>
+      <tr><td>Pronator quadratus</td><td>Distal ¼ anterior ulna</td><td>Distal ¼ anterior radius</td><td>Forearm pronation</td><td>Median n. [C7–8]</td></tr>
+    </table>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-26.png"><p>Slide 26: Supinator</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-27.png"><p>Slide 27: Pronator quadratus</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- TENDON GROUPS -->
+<div class="green" id="tendon-groups">
+  <div class="sec-header">📌 Common Tendon Groups</div>
+  <div class="sec-body">
+    <div class="callout">
+      <strong>Common Flexor Tendon (CFT)</strong> – medial epicondyle:<br>
+      Pronator Teres · FCR · Palmaris Longus · FCU · FDS<br>
+      <em>All except Pronator Teres are wrist flexors</em>
+    </div>
+    <div class="callout" style="border-color: var(--teal2); background: var(--teal3);">
+      <strong>Common Extensor Tendon (CET)</strong> – lateral epicondyle:<br>
+      ECRB · Extensor Digitorum · EDM · ECU<br>
+      <em>All are wrist extensors</em>
+    </div>
+    <div class="clinical">⚠️ Lateral epicondyle tenderness = "Tennis Elbow" (common extensor tendon overload). Medial = "Golfer's Elbow".</div>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-28.png"><p>Slide 28: Common Flexor Tendon</p></div>
+      <div class="slide-img"><img src="bpty04_images/elbow/slide-29.png"><p>Slide 29: Common Extensor Tendon</p></div>
+    </div>
+  </div>
+</div>
+
+</main>
+</body>
+</html>

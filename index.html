@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPTY04 – Musculoskeletal Anatomy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background: #ffffff;
+      color: #111;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 2rem 2.5rem;
+      border-bottom: 4px solid #333;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    header p {
+      margin-top: 0.4rem;
+      color: #aaa;
+      font-size: 0.85rem;
+    }
+
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 5rem;
+    }
+
+    .section-header {
+      font-size: 0.7rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.4rem 0.8rem;
+      margin: 2.5rem 0 0;
+      display: inline-block;
+      background: #fff;
+    }
+
+    /* Section accent colours — outline + text only */
+    .s-foundations { color: #4a6741; border: 2px solid #4a6741; }
+    .s-osteology   { color: #3a5a7a; border: 2px solid #3a5a7a; }
+    .s-upper       { color: #6b3d6b; border: 2px solid #6b3d6b; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0;
+    }
+
+    tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:last-child {
+      border-bottom: 2px solid #111;
+    }
+
+    /* Colour strip on left + topic text colour by section */
+    .s-foundations td:first-child { border-left: 4px solid #4a6741; color: #4a6741; }
+    .s-osteology   td:first-child { border-left: 4px solid #3a5a7a; color: #3a5a7a; }
+    .s-upper       td:first-child { border-left: 4px solid #6b3d6b; color: #6b3d6b; }
+
+    td {
+      padding: 0.75rem 0.8rem;
+      vertical-align: middle;
+    }
+
+    td.topic {
+      font-weight: bold;
+      width: 30%;
+    }
+
+    td.desc {
+      color: #444;
+      font-size: 0.82rem;
+      width: 45%;
+    }
+
+    td.actions {
+      width: 25%;
+      text-align: right;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 0.3rem 0.7rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.78rem;
+      font-weight: bold;
+      border: 1px solid #111;
+      color: #111;
+      background: #fff;
+      margin-left: 0.3rem;
+      letter-spacing: 0.5px;
+      transition: background 0.1s, color 0.1s;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .btn-primary {
+      background: #111;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #444;
+    }
+
+    /* Anki guide */
+    .guide {
+      margin-top: 3rem;
+      border: 1px solid #bbb;
+      border-left: 4px solid #111;
+      padding: 1.2rem 1.4rem;
+      background: #fafafa;
+    }
+
+    .guide h3 {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.8rem;
+      color: #111;
+    }
+
+    .guide ol {
+      margin-left: 1.4rem;
+      color: #333;
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    .guide a {
+      color: #111;
+      font-weight: bold;
+    }
+
+    .guide code {
+      background: #eee;
+      padding: 0 0.3rem;
+      font-size: 0.85rem;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 1rem 2rem;
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    @media (max-width: 560px) {
+      td.desc { display: none; }
+      td.topic { width: 55%; }
+      td.actions { width: 45%; }
+      .btn { margin-left: 0; margin-top: 0.2rem; display: block; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>BPTY04 – Musculoskeletal Anatomy</h1>
+  <p>LUNEX University · Physiotherapy · Study Summaries &amp; Anki Flashcard Decks</p>
+</header>
+
+<main>
+
+  <!-- FOUNDATIONS -->
+  <div class="section-header s-foundations">Foundations</div>
+  <table>
+    <tr class="s-foundations">
+      <td class="topic">Myology</td>
+      <td class="desc">Muscle types · Fibre arrangements · Muscle mechanics · Anatomical planes</td>
+      <td class="actions">
+        <a class="btn btn-primary" href="BPTY04_Myology_Summary.html">Summary</a>
+        <a class="btn" href="BPTY04_Myology_Flashcards.apkg" download>Flashcards</a>
+      </td>
+    </tr>
+    <tr class="s-foundations">
+      <td class="topic">Arthrology</td>
+      <td class="desc">Joint classification · Fibrous · Cartilaginous · Synovial joints · ROM</td>
+      <td class="actions">
+        <a class="btn btn-primary" href="BPTY04_Arthrology_Summary.html">Summary</a>
+        <a class="btn" href="BPTY04_Arthrology_Flashcards.apkg" download>Flashcards</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- OSTEOLOGY -->
+  <div class="section-header s-osteology">Osteology</div>
+  <table>
+    <tr class="s-osteology">
+      <td class="topic">Upper Limb</td>
+      <td class="desc">Clavicle · Scapula · Humerus · Radius · Ulna · Carpus &amp; Hand</td>
+      <td class="actions">
+        <a class="btn btn-primary" href="BPTY04_Osteology_UL_Summary.html">Summary</a>
+        <a class="btn" href="BPTY04_Osteology_UL_Flashcards.apkg" download>Flashcards</a>
+      </td>
+    </tr>
+    <tr class="s-osteology">
+      <td class="topic">Lower Limb</td>
+      <td class="desc">Pelvis · Femur · Tibia · Fibula · Tarsus &amp; Foot · Bone identification</td>
+      <td class="actions">
+        <a class="btn btn-primary" href="BPTY04_LowerLimb_Osteology_Summary.html">Summary</a>
+        <a class="btn" href="BPTY04_LowerLimb_Osteology_Flashcards.apkg" download>Flashcards</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- UPPER LIMB -->
+  <div class="section-header s-upper">Upper Limb — Arthrology &amp; Myology</div>
+  <table>
+    <tr class="s-upper">
+      <td class="topic">Shoulder Girdle</td>
+      <td class="desc">SC · AC · Glenohumeral joints · Rotator cuff · Trapezius · Deltoid</td>
+      <td class="actions">
+        <a class="btn btn-primary" href="BPTY04_Shoulder_Summary.html">Summary</a>
+        <a class="btn" href="BPTY04_Shoulder_Flashcards.apkg" download>Flashcards</a>
+      </td>
+    </tr>
+    <tr class="s-upper">
+      <td class="topic">Elbow &amp; Forearm</td>
+      <td class="desc">Elbow joint complex · Collateral ligaments · Biceps · Forearm flexors &amp; extensors</td>
+      <td class="actions">
+        <a class="btn btn-primary" href="BPTY04_Elbow_Forearm_Summary.html">Summary</a>
+        <a class="btn" href="BPTY04_Elbow_Forearm_Flashcards.apkg" download>Flashcards</a>
+      </td>
+    </tr>
+    <tr class="s-upper">
+      <td class="topic">Wrist &amp; Hand</td>
+      <td class="desc">Radiocarpal · CMC · MCP · IP joints · TFCC · Thenar &amp; hypothenar · Interossei</td>
+      <td class="actions">
+        <a class="btn btn-primary" href="BPTY04_Wrist_Hand_Summary.html">Summary</a>
+        <a class="btn" href="BPTY04_Wrist_Hand_Flashcards.apkg" download>Flashcards</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- ANKI GUIDE -->
+  <div class="guide">
+    <h3>How to use the flashcard decks</h3>
+    <ol>
+      <li>Download the free <a href="https://apps.ankiweb.net/" target="_blank">Anki app</a> on your computer, phone, or tablet.</li>
+      <li>Click <strong>Flashcards</strong> on any topic to download the <code>.apkg</code> file.</li>
+      <li>Open Anki → <strong>File → Import</strong> → select the downloaded file. All images are bundled inside — no extra setup needed.</li>
+      <li>To sync across devices, create a free account at <a href="https://ankiweb.net/" target="_blank">AnkiWeb</a> and enable sync.</li>
+    </ol>
+  </div>
+
+</main>
+
+<footer>
+  BPTY04 Musculoskeletal Anatomy · LUNEX University · For personal study use only
+</footer>
+
+</body>
+</html>

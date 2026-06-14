@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 – Wrist &amp; Hand Anatomy</title>
+<style>
+  :root {
+    --blue1: #1a3a5c; --blue2: #2e6da4; --blue3: #d0e8f8;
+    --green1: #1a4d2e; --green2: #2e8b57; --green3: #d4f0e0;
+    --purple1: #3d1a5c; --purple2: #7b4fa6; --purple3: #ead4f8;
+    --orange1: #6b3500; --orange2: #c97c2b; --orange3: #fde8c8;
+    --red1: #5c1a1a; --red2: #a63030; --red3: #f8d4d4;
+    --teal1: #0d4040; --teal2: #1a8080; --teal3: #c8f0f0;
+    --bg: #f9f9fb; --text: #1e1e2e; --card: #fff; --border: #dde;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
+  header { background: linear-gradient(135deg, #3d1a5c, #7b4fa6, #c97c2b); color: #fff; padding: 2.5rem 2rem 2rem; }
+  header h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: 1px; }
+  header p { opacity: 0.88; margin-top: 0.4rem; font-size: 1rem; }
+  nav { background: #fff; border-bottom: 2px solid var(--border); padding: 0.6rem 2rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  nav a { color: var(--purple2); text-decoration: none; font-size: 0.88rem; padding: 0.2rem 0.6rem; border-radius: 4px; background: var(--purple3); }
+  nav a:hover { background: var(--purple2); color: #fff; }
+  main { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem 4rem; }
+  .sec-header { border-radius: 10px 10px 0 0; padding: 1rem 1.5rem; color: #fff; font-size: 1.25rem; font-weight: 700; }
+  .sec-body { background: var(--card); border: 1px solid var(--border); border-top: none; border-radius: 0 0 10px 10px; padding: 1.5rem; margin-bottom: 2rem; }
+  .blue .sec-header { background: linear-gradient(90deg, var(--blue1), var(--blue2)); }
+  .green .sec-header { background: linear-gradient(90deg, var(--green1), var(--green2)); }
+  .purple .sec-header { background: linear-gradient(90deg, var(--purple1), var(--purple2)); }
+  .orange .sec-header { background: linear-gradient(90deg, var(--orange1), var(--orange2)); }
+  .teal .sec-header { background: linear-gradient(90deg, var(--teal1), var(--teal2)); }
+  h3 { color: var(--purple1); font-size: 1.05rem; margin: 1.2rem 0 0.4rem; border-bottom: 2px solid var(--purple3); padding-bottom: 0.2rem; }
+  p { margin: 0.4rem 0; }
+  .callout { border-left: 4px solid var(--purple2); background: var(--purple3); padding: 0.6rem 1rem; border-radius: 0 6px 6px 0; margin: 0.8rem 0; }
+  .clinical { border-left: 4px solid var(--red2); background: var(--red3); padding: 0.6rem 1rem; border-radius: 0 6px 6px 0; margin: 0.8rem 0; }
+  .mnemonic { border-left: 4px solid var(--orange2); background: var(--orange3); padding: 0.6rem 1rem; border-radius: 0 6px 6px 0; margin: 0.8rem 0; font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.92rem; }
+  th { background: var(--purple1); color: #fff; padding: 0.5rem 0.8rem; text-align: left; }
+  td { padding: 0.45rem 0.8rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: var(--purple3); }
+  .slides-row { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0; }
+  .slide-img { flex: 0 0 auto; }
+  .slide-img img { border: 2px solid var(--border); border-radius: 6px; max-width: 320px; width: 100%; display: block; }
+  .slide-img p { font-size: 0.78rem; color: #666; text-align: center; margin-top: 0.2rem; }
+  ul { margin-left: 1.4rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🤚 BPTY04 – Wrist &amp; Hand Anatomy</h1>
+  <p>Dr Maria Abulkhanova · LUNEX University · Arthrology &amp; Myology</p>
+</header>
+<nav>
+  <a href="#joint-complex">Joint Overview</a>
+  <a href="#druj">Distal RU Joint</a>
+  <a href="#carpal-bones">Carpal Bones</a>
+  <a href="#radiocarpal">Radiocarpal</a>
+  <a href="#midcarpal">Midcarpal</a>
+  <a href="#cmc">CMC Joints</a>
+  <a href="#mcp">MCP Joints</a>
+  <a href="#ip">IP Joints</a>
+  <a href="#tfcc">TFCC</a>
+  <a href="#extrinsic-thumb">Extrinsic Thumb</a>
+  <a href="#extrinsic-finger">Extrinsic Finger</a>
+  <a href="#thenar">Thenar</a>
+  <a href="#hypothenar">Hypothenar</a>
+  <a href="#intrinsic">Intrinsic Hand</a>
+</nav>
+<main>
+
+<!-- JOINT COMPLEX OVERVIEW -->
+<div class="purple" id="joint-complex">
+  <div class="sec-header">🔗 Wrist &amp; Hand Joint Complex Overview</div>
+  <div class="sec-body">
+    <div class="callout">
+      6 joint regions: Distal Radioulnar · Radiocarpal · Midcarpal · Carpometacarpal · Metacarpophalangeal · Interphalangeal
+    </div>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-02.png"><p>Slide 2: Wrist and hand joint complex</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- DISTAL RADIOULNAR JOINT -->
+<div class="blue" id="druj">
+  <div class="sec-header">🔗 Distal Radioulnar Joint (DRUJ)</div>
+  <div class="sec-body">
+    <div class="callout">Type: <strong>Pivot joint</strong> · Uniplanar · Reinforced by radioulnar ligaments and interosseous membrane</div>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-03.png"><p>Slide 3: Distal radioulnar joint</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- CARPAL BONES -->
+<div class="blue" id="carpal-bones">
+  <div class="sec-header">🦷 Carpal Bones</div>
+  <div class="sec-body">
+    <h3>Proximal Row</h3>
+    <p>Scaphoid (S) · Lunate (L) · Triquetrum (Tr) · Pisiform (P)</p>
+    <h3>Distal Row</h3>
+    <p>Trapezium (Tm) · Trapezoid (Td) · Capitate (C) · Hamate (H)</p>
+    <div class="mnemonic">🧠 Proximal: <strong>S</strong>he <strong>L</strong>ikes <strong>T</strong>o <strong>P</strong>lay<br>Distal: <strong>T</strong>ry <strong>T</strong>o <strong>C</strong>atch <strong>H</strong>er</div>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-04.png"><p>Slide 4: Carpal bones overview</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- RADIOCARPAL JOINT -->
+<div class="blue" id="radiocarpal">
+  <div class="sec-header">🔗 Radiocarpal Joint</div>
+  <div class="sec-body">
+    <div class="callout">Type: <strong>Ellipsoid joint</strong> · Biplanar · Radius articulates with proximal carpal bones (excluding pisiform) · Has articular disc</div>
+    <h3>Ligaments</h3>
+    <table>
+      <tr><th>Ligament</th><th>Origin</th><th>Insertion</th><th>Function</th></tr>
+      <tr><td>Palmar radiocarpal lig.</td><td>Anterior radius</td><td>Scaphoid, lunate, triquetrum</td><td>Sagittal plane stability</td></tr>
+      <tr><td>Dorsal radiocarpal lig.</td><td>Posterior radius</td><td>Scaphoid, lunate, triquetrum</td><td>Sagittal plane stability</td></tr>
+      <tr><td>Radial collateral lig.</td><td>–</td><td>–</td><td>Limits wrist abduction (radial deviation)</td></tr>
+      <tr><td>Ulnar collateral lig.</td><td>–</td><td>–</td><td>Limits wrist adduction (ulnar deviation)</td></tr>
+    </table>
+    <h3>Carpal Tunnel</h3>
+    <div class="callout">Flexor retinaculum creates the carpal tunnel. Contains: median nerve + flexor tendons.</div>
+    <div class="clinical">⚠️ Carpal Tunnel Syndrome: compression of the median nerve causing paraesthesia in lateral 3½ digits.</div>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-05.png"><p>Slide 5: Radiocarpal joint</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-06.png"><p>Slide 6: Radiocarpal ligaments</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-07.png"><p>Slide 7: Collateral ligaments</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-09.png"><p>Slide 9: Flexor retinaculum / carpal tunnel</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- TFCC -->
+<div class="blue" id="tfcc">
+  <div class="sec-header">🔗 Triangular Fibrocartilage Complex (TFCC)</div>
+  <div class="sec-body">
+    <div class="callout">3 components: <strong>Triangular fibrocartilage disc</strong> · Radioulnar ligaments · Ulnocarpal ligaments</div>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-08.png"><p>Slide 8: TFCC</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- MIDCARPAL -->
+<div class="blue" id="midcarpal">
+  <div class="sec-header">🔗 Midcarpal Joints</div>
+  <div class="sec-body">
+    <div class="callout">
+      <strong>Ellipsoidal joints</strong> between proximal and distal carpal rows<br>
+      <strong>Plane joints</strong> between adjacent carpal bones within each row
+    </div>
+    <h3>Intercarpal Ligaments</h3>
+    <table>
+      <tr><th>Ligament</th><th>Function</th></tr>
+      <tr><td>Dorsal intercarpal</td><td>Stabilize carpal bones dorsally; limit excessive extension</td></tr>
+      <tr><td>Palmar intercarpal</td><td>Stabilize carpal bones; maintain carpal arch integrity; resist excessive flexion</td></tr>
+    </table>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-10.png"><p>Slide 10: Midcarpal joints</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-11.png"><p>Slide 11: Intercarpal ligaments</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- CMC JOINTS -->
+<div class="blue" id="cmc">
+  <div class="sec-header">🔗 Carpometacarpal (CMC) Joints</div>
+  <div class="sec-body">
+    <h3>1st CMC (Thumb)</h3>
+    <div class="callout">Type: <strong>Saddle joint</strong> · 2 planes of motion + rotation → enables opposition</div>
+    <table>
+      <tr><th>Ligament group</th><th>Function</th></tr>
+      <tr><td>Lateral ligaments</td><td>Side-to-side stability; limit abduction and adduction; stabilize during pinch</td></tr>
+      <tr><td>Palmar (volar) ligaments</td><td>Limit extension; guide flexion and rotation during opposition</td></tr>
+      <tr><td>Dorsal ligaments</td><td>Primary stabilizers; prevent dorsal displacement during pinch, grip, opposition</td></tr>
+    </table>
+    <h3>2nd–5th CMC (Fingers)</h3>
+    <div class="callout">Type: <strong>Plane joints</strong> · Very little movement</div>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-12.png"><p>Slide 12: 1st CMC joint</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-13.png"><p>Slide 13: CMC II–V</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- MCP JOINTS -->
+<div class="blue" id="mcp">
+  <div class="sec-header">🔗 Metacarpophalangeal (MCP) Joints</div>
+  <div class="sec-body">
+    <div class="callout">Type: <strong>Ellipsoidal joints</strong> · Biplanar</div>
+    <table>
+      <tr><th>Structure</th><th>Function</th></tr>
+      <tr><td>Collateral ligaments</td><td>Side-to-side stability during grip</td></tr>
+      <tr><td>Accessory collateral ligaments</td><td>Connect to palmar plate; guide movement</td></tr>
+      <tr><td>Palmar (volar) plates</td><td>Prevent hyperextension; increase joint surface area</td></tr>
+      <tr><td>Deep transverse metacarpal ligament (digits 2–5)</td><td>Connects metacarpal heads</td></tr>
+    </table>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-14.png"><p>Slide 14: MCP joints</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-15.png"><p>Slide 15: 1st MCP ulnar collateral lig.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- IP JOINTS -->
+<div class="blue" id="ip">
+  <div class="sec-header">🔗 Interphalangeal (IP) Joints</div>
+  <div class="sec-body">
+    <div class="callout">Type: <strong>Hinge joint</strong> · Uniplanar (sagittal plane)</div>
+    <table>
+      <tr><th>Joint</th><th>Location</th></tr>
+      <tr><td>Proximal IP (PIP)</td><td>Between proximal and middle phalanges (digits 2–5)</td></tr>
+      <tr><td>Distal IP (DIP)</td><td>Between middle and distal phalanges (digits 2–5)</td></tr>
+      <tr><td>Thumb IP</td><td>Single IP joint for the thumb</td></tr>
+    </table>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-16.png"><p>Slide 16: IP joints</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXTRINSIC THUMB MUSCLES -->
+<div class="green" id="extrinsic-thumb">
+  <div class="sec-header">💪 Extrinsic Muscles of the Thumb</div>
+  <div class="sec-body">
+    <div class="callout">Named with "Pollicis" – all cross multiple joints</div>
+    <table>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+      <tr><td>Flexor pollicis longus (FPL)</td><td>Interosseous membrane, anterior radius</td><td>Palmar distal phalanx I</td><td>Wrist flexion + abduction; MCP + IP I flexion; CMC I opposition</td><td>Median n.</td></tr>
+      <tr><td>Abductor pollicis longus (APL)</td><td>Dorsal surface radius + ulna, interosseous membrane</td><td>Base metacarpal I</td><td>Wrist flexion + abduction; CMC I abduction</td><td>Radial n.</td></tr>
+      <tr><td>Extensor pollicis brevis (EPB)</td><td>Dorsal surface radius, interosseous membrane</td><td>Base proximal phalanx I</td><td>Wrist extension + abduction; CMC + MCP I extension</td><td>Radial n.</td></tr>
+      <tr><td>Extensor pollicis longus (EPL)</td><td>Dorsal surface ulna, interosseous membrane</td><td>Base distal phalanx I</td><td>CMC I adduction; MCP + IP I extension; Wrist extension + abduction</td><td>Radial n.</td></tr>
+    </table>
+    <div class="callout">💡 <strong>Anatomical Snuff Box</strong>: triangular depression on lateral wrist bordered by APL + EPB (radial) and EPL (ulnar). Contains radial nerve, radial artery, and cephalic vein.</div>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-17.png"><p>Slide 17: FPL</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-18.png"><p>Slide 18: APL</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-19.png"><p>Slide 19: EPB</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-20.png"><p>Slide 20: EPL</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-21.png"><p>Slide 21: Anatomical snuff box</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXTRINSIC FINGER MUSCLES -->
+<div class="green" id="extrinsic-finger">
+  <div class="sec-header">💪 Extrinsic Muscles of the Fingers</div>
+  <div class="sec-body">
+    <table>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+      <tr><td>Extensor digiti minimi (EDM)</td><td>Lateral epicondyle</td><td>Middle + distal phalanges V via dorsal aponeurosis</td><td>Wrist extension + ulnar deviation; MCP + PIP + DIP V extension + abduction</td><td>Radial n.</td></tr>
+      <tr><td>Extensor indicis (EI)</td><td>Dorsal ulna, interosseous membrane</td><td>Dorsal aponeurosis II</td><td>Digit II extension + adduction; Wrist extension + abduction</td><td>Radial n.</td></tr>
+    </table>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-22.png"><p>Slide 22: Extensor digiti minimi</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-23.png"><p>Slide 23: Extensor indicis</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- THENAR MUSCLES -->
+<div class="purple" id="thenar">
+  <div class="sec-header">✋ Intrinsic – Thenar Muscles</div>
+  <div class="sec-body">
+    <div class="callout">4 thenar muscles controlling the thumb: APB · AdP · FPB · OP</div>
+    <table>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+      <tr><td>Abductor pollicis brevis (APB)</td><td>Scaphoid, trapezium, flexor retinaculum</td><td>Base proximal phalanx I</td><td>CMC I abduction; MCP synergist with flexor</td><td>Median n.</td></tr>
+      <tr><td>Adductor pollicis (AdP)<br><em>Transverse head</em><br><em>Oblique head</em></td><td>Transverse: Palmar surface MC III<br>Oblique: Capitate, base MC II–III</td><td>Base proximal phalanx I</td><td>CMC I opposition; MCP flexion</td><td>Ulnar n.</td></tr>
+      <tr><td>Flexor pollicis brevis (FPB)<br><em>Superficial head</em><br><em>Deep head</em></td><td>Superficial: Flexor retinaculum<br>Deep: Capitate, trapezium</td><td>Base proximal phalanx I</td><td>CMC I flexion + opposition</td><td>Ulnar + Median n.</td></tr>
+      <tr><td>Opponens pollicis (OP)</td><td>Trapezium</td><td>Radial border metacarpal I</td><td>CMC I opposition</td><td>Median n.</td></tr>
+    </table>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-24.png"><p>Slide 24: Thenar overview</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-25.png"><p>Slide 25: APB</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-26.png"><p>Slide 26: Adductor pollicis</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-27.png"><p>Slide 27: FPB</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-28.png"><p>Slide 28: Opponens pollicis</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- HYPOTHENAR MUSCLES -->
+<div class="teal" id="hypothenar">
+  <div class="sec-header">✋ Intrinsic – Hypothenar Muscles</div>
+  <div class="sec-body">
+    <div class="callout">4 hypothenar muscles controlling the little finger: ADM · FDM · ODM · Palmaris brevis</div>
+    <table>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+      <tr><td>Abductor digiti minimi (ADM)</td><td>Pisiform</td><td>Proximal phalanx + dorsal aponeurosis V</td><td>MCP V flexion + abduction; PIP + DIP V extension</td><td>Ulnar n.</td></tr>
+      <tr><td>Flexor digiti minimi (FDM)</td><td>Hook of hamate, flexor retinaculum</td><td>Base proximal phalanx V</td><td>MCP V flexion + abduction</td><td>Ulnar n.</td></tr>
+      <tr><td>Opponens digiti minimi (ODM)</td><td>Hook of hamate, flexor retinaculum</td><td>Ulnar border MC V</td><td>MC V opposition</td><td>Ulnar n.</td></tr>
+      <tr><td>Palmaris brevis</td><td>Palmar aponeurosis, flexor retinaculum</td><td>Dermis of hypothenar region</td><td>Tightens palmar aponeurosis</td><td>Ulnar n.</td></tr>
+    </table>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-29.png"><p>Slide 29: Hypothenar overview</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-30.png"><p>Slide 30: ADM + Palmaris brevis</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-31.png"><p>Slide 31: ODM + FDM</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- INTRINSIC HAND MUSCLES -->
+<div class="orange" id="intrinsic">
+  <div class="sec-header">🖐️ Intrinsic Hand Muscles</div>
+  <div class="sec-body">
+    <table>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+      <tr><td>Lumbricals I–IV</td><td>Tendons of FDP</td><td>Dorsal aponeurosis</td><td>MCP II–V flexion; PIP + DIP II–V extension</td><td>Ulnar + Median n.</td></tr>
+      <tr><td>Dorsal interossei I–IV</td><td>Metacarpals I–V</td><td>Dorsal aponeurosis II–IV, base proximal phalanx (radial side)</td><td>MCP II–IV flexion; PIP + DIP extension; ABD of II and IV</td><td>Ulnar n.</td></tr>
+      <tr><td>Palmar interossei I–III</td><td>Ulnar side of MC II, IV, V</td><td>Dorsal aponeurosis + base proximal phalanx</td><td>MCP II, IV, V flexion; PIP + DIP extension; ADD of II and IV</td><td>Ulnar n.</td></tr>
+    </table>
+    <div class="callout">💡 <strong>DAB + PAD</strong>: Dorsal interossei ABduct; Palmar interossei ADduct</div>
+    <h3>Flexor Pulley System</h3>
+    <div class="callout">
+      A1: Over MCP joint · A2: Proximal ⅔ proximal phalanx · A3: Over PIP joint · A4: Middle of middle phalanx · A5: Over DIP joint
+    </div>
+    <div class="slides-row">
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-32.png"><p>Slide 32: Lumbricals</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-33.png"><p>Slide 33: Dorsal interossei</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-34.png"><p>Slide 34: Palmar interossei</p></div>
+      <div class="slide-img"><img src="bpty04_images/wrist/slide-35.png"><p>Slide 35: Flexor pulley system</p></div>
+    </div>
+  </div>
+</div>
+
+</main>
+</body>
+</html>
