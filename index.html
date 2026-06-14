@@ -36,10 +36,28 @@
     }
 
     main {
-      max-width: 820px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 2.5rem 2rem 5rem;
     }
+
+    /* Legend strip */
+    .legend {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0 0;
+      font-size: 0.75rem;
+      color: #555;
+    }
+    .legend-item { display: flex; align-items: center; gap: 0.35rem; }
+    .legend-dot {
+      width: 10px; height: 10px; border-radius: 2px; display: inline-block;
+    }
+    .ld-summary  { background: #111; }
+    .ld-cards    { background: #fff; border: 1px solid #111; }
+    .ld-indepth  { background: #5a3080; }
+    .ld-pending  { background: #ccc; }
 
     .section-header {
       font-size: 0.7rem;
@@ -83,17 +101,17 @@
 
     td.topic {
       font-weight: bold;
-      width: 30%;
+      width: 22%;
     }
 
     td.desc {
       color: #444;
       font-size: 0.82rem;
-      width: 45%;
+      width: 38%;
     }
 
     td.actions {
-      width: 25%;
+      width: 40%;
       text-align: right;
     }
 
@@ -102,12 +120,12 @@
       text-decoration: none;
       padding: 0.3rem 0.7rem;
       font-family: 'Courier New', Courier, monospace;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       font-weight: bold;
       border: 1px solid #111;
       color: #111;
       background: #fff;
-      margin-left: 0.3rem;
+      margin-left: 0.25rem;
       letter-spacing: 0.5px;
       transition: background 0.1s, color 0.1s;
       white-space: nowrap;
@@ -125,6 +143,27 @@
 
     .btn-primary:hover {
       background: #444;
+    }
+
+    /* In-depth button */
+    .btn-indepth {
+      background: #5a3080;
+      color: #fff;
+      border-color: #5a3080;
+    }
+    .btn-indepth:hover {
+      background: #3d1f5a;
+      border-color: #3d1f5a;
+      color: #fff;
+    }
+
+    /* Pending / not-yet-built in-depth */
+    .btn-pending {
+      background: #fff;
+      color: #bbb;
+      border-color: #ccc;
+      cursor: default;
+      pointer-events: none;
     }
 
     /* Anki guide */
@@ -162,6 +201,49 @@
       font-size: 0.85rem;
     }
 
+    /* Resource guide box */
+    .resource-guide {
+      margin-top: 2rem;
+      border: 1px solid #bbb;
+      border-left: 4px solid #5a3080;
+      padding: 1.2rem 1.4rem;
+      background: #faf8ff;
+    }
+
+    .resource-guide h3 {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.8rem;
+      color: #5a3080;
+    }
+
+    .resource-guide table {
+      margin-top: 0;
+    }
+
+    .resource-guide tr {
+      border-bottom: 1px solid #e8e0f0;
+    }
+
+    .resource-guide tr:last-child {
+      border-bottom: none;
+    }
+
+    .resource-guide td {
+      padding: 0.4rem 0.6rem;
+      font-size: 0.82rem;
+      color: #333;
+      border: none;
+    }
+
+    .resource-guide td:first-child {
+      font-weight: bold;
+      width: 18%;
+      color: #5a3080;
+      border-left: none;
+    }
+
     footer {
       border-top: 1px solid #ddd;
       padding: 1rem 2rem;
@@ -171,10 +253,10 @@
       font-family: 'Courier New', Courier, monospace;
     }
 
-    @media (max-width: 560px) {
+    @media (max-width: 600px) {
       td.desc { display: none; }
-      td.topic { width: 55%; }
-      td.actions { width: 45%; }
+      td.topic { width: 40%; }
+      td.actions { width: 60%; }
       .btn { margin-left: 0; margin-top: 0.2rem; display: block; text-align: center; }
     }
   </style>
@@ -183,10 +265,18 @@
 
 <header>
   <h1>BPTY04 – Musculoskeletal Anatomy</h1>
-  <p>LUNEX University · Physiotherapy · Study Summaries &amp; Anki Flashcard Decks</p>
+  <p>LUNEX University · Physiotherapy · Study Summaries · Anki Flashcard Decks · In-Depth Guides</p>
 </header>
 
 <main>
+
+  <!-- LEGEND -->
+  <div class="legend">
+    <div class="legend-item"><span class="legend-dot ld-summary"></span> Summary — concise slide-based overview</div>
+    <div class="legend-item"><span class="legend-dot ld-cards"></span> Flashcards — Anki deck for active recall</div>
+    <div class="legend-item"><span class="legend-dot ld-indepth"></span> In-Depth — explanatory guide with clinical context</div>
+    <div class="legend-item"><span class="legend-dot ld-pending"></span> In-Depth coming soon</div>
+  </div>
 
   <!-- FOUNDATIONS -->
   <div class="section-header s-foundations">Foundations</div>
@@ -197,6 +287,7 @@
       <td class="actions">
         <a class="btn btn-primary" href="BPTY04_Myology_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Myology_Flashcards.apkg" download>Flashcards</a>
+        <a class="btn btn-indepth" href="BPTY04_Myology_InDepth.html">In-Depth</a>
       </td>
     </tr>
     <tr class="s-foundations">
@@ -205,6 +296,7 @@
       <td class="actions">
         <a class="btn btn-primary" href="BPTY04_Arthrology_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Arthrology_Flashcards.apkg" download>Flashcards</a>
+        <a class="btn btn-indepth" href="BPTY04_Arthrology_InDepth.html">In-Depth</a>
       </td>
     </tr>
   </table>
@@ -218,6 +310,7 @@
       <td class="actions">
         <a class="btn btn-primary" href="BPTY04_Osteology_UL_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Osteology_UL_Flashcards.apkg" download>Flashcards</a>
+        <a class="btn btn-indepth" href="BPTY04_UL_Osteology_InDepth.html">In-Depth</a>
       </td>
     </tr>
     <tr class="s-osteology">
@@ -226,6 +319,7 @@
       <td class="actions">
         <a class="btn btn-primary" href="BPTY04_LowerLimb_Osteology_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_LowerLimb_Osteology_Flashcards.apkg" download>Flashcards</a>
+        <a class="btn btn-indepth" href="BPTY04_LL_Osteology_InDepth.html">In-Depth</a>
       </td>
     </tr>
   </table>
@@ -239,6 +333,7 @@
       <td class="actions">
         <a class="btn btn-primary" href="BPTY04_Shoulder_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Shoulder_Flashcards.apkg" download>Flashcards</a>
+        <a class="btn btn-indepth" href="BPTY04_Shoulder_InDepth.html">In-Depth</a>
       </td>
     </tr>
     <tr class="s-upper">
@@ -247,6 +342,7 @@
       <td class="actions">
         <a class="btn btn-primary" href="BPTY04_Elbow_Forearm_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Elbow_Forearm_Flashcards.apkg" download>Flashcards</a>
+        <a class="btn btn-indepth" href="BPTY04_Elbow_Forearm_InDepth.html">In-Depth</a>
       </td>
     </tr>
     <tr class="s-upper">
@@ -255,13 +351,45 @@
       <td class="actions">
         <a class="btn btn-primary" href="BPTY04_Wrist_Hand_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Wrist_Hand_Flashcards.apkg" download>Flashcards</a>
+        <a class="btn btn-indepth" href="BPTY04_Wrist_Hand_InDepth.html">In-Depth</a>
       </td>
     </tr>
   </table>
 
+  <!-- GLOSSARY -->
+  <div class="section-header" style="color:#7a5a00;border:2px solid #7a5a00;margin-top:2.5rem;">Reference</div>
+  <table>
+    <tr style="border-bottom:1px solid #ddd;">
+      <td class="topic" style="border-left:4px solid #7a5a00;color:#7a5a00;">Glossary</td>
+      <td class="desc">Abbreviations &amp; key term definitions across all BPTY04 in-depth guides</td>
+      <td class="actions">
+        <a class="btn btn-indepth" href="BPTY04_Glossary.html" style="background:#7a5a00;border-color:#7a5a00;">Glossary</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- RESOURCE GUIDE -->
+  <div class="resource-guide">
+    <h3>How to use these resources</h3>
+    <table>
+      <tr>
+        <td>Summary</td>
+        <td>Concise, image-embedded overview of each topic. Use this for a quick review before a lecture, tutorial, or to refresh material you already know.</td>
+      </tr>
+      <tr>
+        <td>Flashcards</td>
+        <td>Anki deck (.apkg) with Q&amp;A, cloze, and image identification cards. Use this for active recall practice — the best method for long-term retention of muscle attachments, joint types, and nerve supply.</td>
+      </tr>
+      <tr>
+        <td>In-Depth</td>
+        <td>Scholarly explanatory guide going beyond the slides — anatomical reasoning, clinical applications, mnemonics, and the "why" behind the facts. Use this when you want to <em>understand</em> material, not just memorise it, or to prepare for case-based assessments.</td>
+      </tr>
+    </table>
+  </div>
+
   <!-- ANKI GUIDE -->
   <div class="guide">
-    <h3>How to use the flashcard decks</h3>
+    <h3>How to import flashcard decks into Anki</h3>
     <ol>
       <li>Download the free <a href="https://apps.ankiweb.net/" target="_blank">Anki app</a> on your computer, phone, or tablet.</li>
       <li>Click <strong>Flashcards</strong> on any topic to download the <code>.apkg</code> file.</li>

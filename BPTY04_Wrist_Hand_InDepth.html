@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wrist & Hand — In-Depth Anatomy | BPTY04</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #f8f7f4;
+      color: #1a1a1a;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #6b3d8e, #c0622f);
+      color: #fff;
+      padding: 2.5rem 3rem;
+    }
+    header h1 { font-size: 2rem; font-weight: bold; letter-spacing: 0.5px; }
+    header .sub {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      opacity: 0.85;
+      font-style: italic;
+      font-family: Arial, sans-serif;
+    }
+    header .tag-row {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    header .tag {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 3px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      font-family: Arial, sans-serif;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* ── LAYOUT ── */
+    .page-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 5rem;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 4px solid #6b3d8e;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+      font-family: Arial, sans-serif;
+    }
+    .toc h3 {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #6b3d8e;
+      margin-bottom: 0.7rem;
+    }
+    .toc ol {
+      margin-left: 1.3rem;
+      font-size: 0.88rem;
+      line-height: 2;
+    }
+    .toc a { color: #6b3d8e; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── SECTIONS ── */
+    .sec {
+      margin-top: 2.5rem;
+    }
+    .sec-header {
+      padding: 0.65rem 1.2rem;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 1.05rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      border-radius: 3px 3px 0 0;
+    }
+    .sec-header.purple  { background: linear-gradient(90deg, #6b3d8e, #8b5aae); }
+    .sec-header.plum    { background: linear-gradient(90deg, #7a2e6e, #a03e8e); }
+    .sec-header.teal    { background: linear-gradient(90deg, #1d6a72, #2e8a94); }
+    .sec-header.rust    { background: linear-gradient(90deg, #9b3a1a, #c0622f); }
+    .sec-header.navy    { background: linear-gradient(90deg, #1f3a5c, #2a5080); }
+    .sec-header.olive   { background: linear-gradient(90deg, #4a5e1a, #6a7e2a); }
+
+    .sec-body {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-top: none;
+      padding: 1.5rem 1.8rem;
+      border-radius: 0 0 3px 3px;
+    }
+
+    /* ── SUBSECTIONS ── */
+    .subsec {
+      margin-top: 1.8rem;
+    }
+    .subsec:first-child { margin-top: 0; }
+    .subsec h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #3a1a5e;
+      border-bottom: 2px solid #e0d4f0;
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.9rem;
+      font-family: Arial, sans-serif;
+    }
+    .subsec h4 {
+      font-size: 0.92rem;
+      font-weight: bold;
+      color: #555;
+      margin: 1rem 0 0.4rem;
+      font-family: Arial, sans-serif;
+    }
+
+    p { margin-bottom: 0.85rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── CALLOUT BOXES ── */
+    .callout, .clinical, .mnemonic, .concept {
+      border-radius: 3px;
+      padding: 0.85rem 1.1rem;
+      margin: 1.1rem 0;
+      font-size: 0.88rem;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .callout {
+      background: #e8f4fd;
+      border-left: 4px solid #2a7db5;
+      color: #1a4a6e;
+    }
+    .callout strong { color: #1a4a6e; }
+    .clinical {
+      background: #fdecea;
+      border-left: 4px solid #c0392b;
+      color: #6e1a1a;
+    }
+    .clinical strong { color: #7a1a1a; }
+    .mnemonic {
+      background: #fff8e6;
+      border-left: 4px solid #e6a817;
+      color: #5e4200;
+    }
+    .mnemonic strong { color: #5e4200; }
+    .concept {
+      background: #ede9f8;
+      border-left: 4px solid #7b52c4;
+      color: #2e1a55;
+    }
+    .concept strong { color: #2e1a55; }
+
+    .callout-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      display: block;
+      margin-bottom: 0.3rem;
+      opacity: 0.75;
+    }
+
+    /* ── TABLES ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.84rem;
+      font-family: Arial, sans-serif;
+    }
+    th {
+      background: #f0eaf8;
+      color: #3a1a5e;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      font-weight: bold;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid #c9b8e8;
+    }
+    td {
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid #eeeeee;
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: #faf8ff; }
+    td:first-child { font-weight: bold; color: #4a2a7a; }
+
+    /* Clinical table variant */
+    .clinical-table th { background: #fdecea; color: #7a1a1a; border-bottom-color: #e5a0a0; }
+    .clinical-table td:first-child { color: #7a1a1a; }
+    .clinical-table tr:nth-child(even) td { background: #fff5f5; }
+
+    /* ── SLIDE IMAGES ── */
+    .slides-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0;
+    }
+    .slide-img {
+      flex: 0 0 auto;
+    }
+    .slide-img img {
+      display: block;
+      max-width: 280px;
+      max-height: 210px;
+      width: auto;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    }
+    .slide-img .caption {
+      font-size: 0.72rem;
+      color: #888;
+      text-align: center;
+      margin-top: 0.25rem;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ── NERVE MAP ── */
+    .nerve-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.75rem;
+      margin: 1rem 0;
+    }
+    .nerve-card {
+      border-radius: 4px;
+      padding: 0.8rem 1rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+    .nerve-card h4 {
+      font-size: 0.82rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      font-family: Arial, sans-serif;
+      color: inherit;
+    }
+    .nerve-median { background: #e8f4fd; border: 1px solid #a0c8e8; color: #1a3a5e; }
+    .nerve-ulnar  { background: #fdecea; border: 1px solid #e8a0a0; color: #5e1a1a; }
+    .nerve-radial { background: #fff8e6; border: 1px solid #e8c870; color: #5e3a00; }
+    .nerve-card ul { padding-left: 1rem; line-height: 1.7; }
+
+    /* ── PULLEY DIAGRAM ── */
+    .pulley-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin: 0.8rem 0;
+    }
+    .pulley-tag {
+      padding: 0.35rem 0.7rem;
+      border-radius: 3px;
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    .pt-annular { background: #6b3d8e; color: #fff; }
+    .pt-cruciate { background: #c0622f; color: #fff; }
+
+    /* ── CARPAL ARCH VISUAL ── */
+    .carpal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin: 0.8rem 0;
+    }
+    .carpal-row-card {
+      border-radius: 4px;
+      padding: 0.8rem 1rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+    }
+    .proximal-row { background: #e8f0fa; border: 1px solid #a0b8e0; }
+    .distal-row   { background: #f0f8e8; border: 1px solid #a0c890; }
+    .carpal-row-card h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; color: #333; }
+    .carpal-bones { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .c-bone {
+      padding: 0.3rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    .proximal-row .c-bone { background: #bfd4f7; color: #1a3060; }
+    .distal-row .c-bone   { background: #b8e0a8; color: #1a4a10; }
+
+    /* ── DIVIDER ── */
+    .sec-divider {
+      border: none;
+      border-top: 1px solid #e0dada;
+      margin: 1.5rem 0;
+    }
+
+    /* ── SOURCES ── */
+    .sources {
+      margin-top: 3rem;
+      padding: 1rem 1.2rem;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 4px solid #aaa;
+      font-size: 0.78rem;
+      font-family: Arial, sans-serif;
+      color: #555;
+    }
+    .sources h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #333; margin-bottom: 0.5rem; }
+    .sources ul { margin-left: 1.2rem; line-height: 2; }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #aaa;
+      font-family: Arial, sans-serif;
+    }
+
+    @media (max-width: 640px) {
+      header { padding: 1.5rem 1.2rem; }
+      .sec-body { padding: 1rem 1rem; }
+      .nerve-grid { grid-template-columns: 1fr; }
+      .carpal-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Wrist &amp; Hand Anatomy — In-Depth Guide</h1>
+  <div class="sub">BPTY04 Musculoskeletal Anatomy · LUNEX University · Physiotherapy Programme</div>
+  <div class="tag-row">
+    <span class="tag">Osteology</span>
+    <span class="tag">Arthrology</span>
+    <span class="tag">Myology</span>
+    <span class="tag">Clinical Correlations</span>
+    <span class="tag">Mnemonics</span>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#osteology">Osteology — Bones of the Wrist &amp; Hand</a></li>
+      <li><a href="#arthrology">Arthrology — Joints of the Wrist &amp; Hand Complex</a></li>
+      <li><a href="#tfcc">The Triangular Fibrocartilage Complex (TFCC)</a></li>
+      <li><a href="#carpal-tunnel">The Carpal Tunnel</a></li>
+      <li><a href="#anatomical-snuffbox">The Anatomical Snuff Box</a></li>
+      <li><a href="#extrinsic">Extrinsic Muscles — Thumb &amp; Fingers</a></li>
+      <li><a href="#intrinsic">Intrinsic Muscles of the Hand</a></li>
+      <li><a href="#pulley">The Flexor Pulley System</a></li>
+      <li><a href="#neurovascular">Innervation &amp; Blood Supply</a></li>
+      <li><a href="#clinical">Clinical Summary</a></li>
+    </ol>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 1. OSTEOLOGY -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="sec" id="osteology">
+    <div class="sec-header purple">1 — Osteology: Bones of the Wrist &amp; Hand</div>
+    <div class="sec-body">
+
+      <div class="subsec">
+        <h3>1.1 Carpal Bones</h3>
+        <p>The wrist contains <strong>eight carpal bones</strong> arranged in two rows. They are irregular bones whose complexity reflects the enormous variety of wrist motion required for daily function. The carpals collectively form a <strong>concave palmar arch</strong> — this architectural feature is important because it creates the floor and walls of the carpal tunnel.</p>
+
+        <div class="carpal-grid">
+          <div class="carpal-row-card proximal-row">
+            <h4>Proximal Row (Superior)</h4>
+            <div class="carpal-bones">
+              <span class="c-bone">Scaphoid</span>
+              <span class="c-bone">Lunate</span>
+              <span class="c-bone">Triquetrum</span>
+              <span class="c-bone">Pisiform</span>
+            </div>
+          </div>
+          <div class="carpal-row-card distal-row">
+            <h4>Distal Row (Inferior)</h4>
+            <div class="carpal-bones">
+              <span class="c-bone">Trapezium</span>
+              <span class="c-bone">Trapezoid</span>
+              <span class="c-bone">Capitate</span>
+              <span class="c-bone">Hamate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mnemonic">
+          <span class="callout-label">Mnemonic — Carpal Bones</span>
+          <strong>From slides (Kaewlai et al., 2008):</strong><br>
+          Proximal row — <em>"She Likes To Play"</em> → <strong>S</strong>caphoid, <strong>L</strong>unate, <strong>T</strong>riquetrum, <strong>P</strong>isiform<br>
+          Distal row — <em>"Try To Catch Her"</em> → <strong>T</strong>rapezium, <strong>T</strong>rapezoid, <strong>C</strong>apitate, <strong>H</strong>amate
+        </div>
+
+        <div class="callout">
+          <span class="callout-label">Key Concept</span>
+          <strong>The pisiform is a sesamoid bone</strong> — it develops within the tendon of Flexor Carpi Ulnaris and sits anterior to the triquetrum. Because it is a sesamoid, it does not directly participate in the radiocarpal joint. The hamate has a distinctive hook-shaped projection on its palmar surface (the "hook of hamate") which forms the medial wall of the carpal tunnel and serves as an attachment for the flexor retinaculum.
+        </div>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-04.png" alt="Carpal bones — proximal and distal rows">
+            <div class="caption">Slide 4 — Carpal bones, rows &amp; mnemonics</div>
+          </div>
+        </div>
+
+        <p><strong>The scaphoid bridges both rows</strong> — it is the largest carpal bone and it spans the proximal and distal rows, helping coordinate intercarpal motion. This bridge position makes it the most commonly fractured carpal bone, as it absorbs substantial compressive force during a fall on an outstretched hand (FOOSH).</p>
+
+        <div class="clinical">
+          <span class="callout-label">Clinical — Scaphoid Fracture</span>
+          <strong>Most commonly fractured carpal bone</strong>, typically from FOOSH. The hallmark clinical sign is pain and tenderness in the <em>anatomical snuffbox</em>. The key danger is <strong>avascular necrosis (AVN)</strong>: the scaphoid receives its blood supply <em>distally</em>, entering at the waist from the radial artery branches. A fracture at the waist therefore cuts off supply to the proximal fragment, which may die. Never dismiss wrist pain after FOOSH as a sprain — if X-ray is negative but snuffbox tenderness persists, treat as a scaphoid fracture and arrange MRI/CT. Untreated scaphoid non-union leads to progressive wrist osteoarthritis.
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>1.2 Metacarpals</h3>
+        <p>There are five metacarpal bones (I–V), each consisting of a <strong>base</strong>, <strong>shaft</strong>, and <strong>head</strong>. Metacarpal I is the shortest and sturdiest (supporting the thumb); metacarpal III is the longest. The medial and lateral surfaces of each shaft are concave — this concavity provides attachment for the interosseous muscles.</p>
+
+        <div class="clinical">
+          <span class="callout-label">Clinical — Metacarpal Fractures</span>
+          <strong>Boxer's Fracture:</strong> Fracture of the 5th metacarpal <em>neck</em>, caused by punching a hard surface with a clenched fist. The distal fragment angulates palmarly, causing apparent shortening of the little finger. Usually managed conservatively unless angulation is severe.<br><br>
+          <strong>Bennett's Fracture:</strong> Fracture-dislocation of the <em>base</em> of the 1st metacarpal. Forced hyperabduction of the thumb drives the metacarpal base off the trapezium. The pull of Abductor Pollicis Longus subluxes the main metacarpal fragment radially and proximally. Often requires surgical fixation due to joint involvement and instability.
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>1.3 Phalanges</h3>
+        <p>The <strong>thumb</strong> has two phalanges (proximal and distal). Each <strong>finger</strong> (digits 2–5) has three phalanges: proximal, middle, and distal. Each phalanx consists of a base (proximal), shaft, and head (distal). The distal phalanx terminates as the tuft — a broader bony end that supports the fingertip pulp and nail bed.</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 2. ARTHROLOGY -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="sec" id="arthrology">
+    <div class="sec-header plum">2 — Arthrology: Joints of the Wrist &amp; Hand Complex</div>
+    <div class="sec-body">
+
+      <div class="subsec">
+        <h3>2.1 Distal Radioulnar Joint (DRUJ)</h3>
+        <p>The DRUJ is a <strong>pivot (trochoid) joint</strong> — uniplanar motion only. The convex head of the ulna articulates with the ulnar notch of the radius. During pronation and supination, the <strong>radius rotates around the fixed ulna</strong>. Together with the proximal radioulnar joint (at the elbow), the DRUJ allows forearm rotation of approximately 85° in each direction.</p>
+        <p>The DRUJ is stabilised by the <strong>distal radioulnar ligaments</strong> (the palmar and dorsal components of the TFCC — see Section 3) and the interosseous membrane. The interosseous membrane is crucial: it transmits forces from the hand up through the forearm — roughly 80% via the radius and 20% via the ulna, with force redistribution possible due to the membrane.</p>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-03.png" alt="Distal Radioulnar Joint">
+            <div class="caption">Slide 3 — DRUJ: pivot joint &amp; interosseus membrane</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>2.2 Radiocarpal Joint (Wrist Joint)</h3>
+        <p>The radiocarpal joint is a <strong>condyloid (ellipsoid) synovial joint</strong>, allowing motion in two planes (biplanar). The articulating surfaces are:</p>
+        <ul style="margin-left: 1.4rem; margin-bottom: 0.8rem; line-height: 1.9;">
+          <li>Proximally: the <em>distal articular surface of the radius</em> plus the <em>articular disc of the TFCC</em></li>
+          <li>Distally: the <em>proximal carpal row</em> — scaphoid, lunate, and triquetrum (the pisiform does not articulate here)</li>
+        </ul>
+
+        <div class="callout">
+          <span class="callout-label">Key Concept — Why not the ulna?</span>
+          The <strong>ulna does not directly articulate with the carpal bones</strong>. Instead, the TFCC articular disc interposed between the ulnar head and the triquetrum/lunate extends the functional joint surface. This is why the disc is so important — it effectively lengthens the proximal articulating surface and cushions the ulnar side of the wrist.
+        </div>
+
+        <h4>Ligaments of the Radiocarpal Joint</h4>
+        <table>
+          <thead>
+            <tr><th>Ligament</th><th>Origin → Insertion</th><th>Function</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Palmar (Anterior) Radiocarpal</td>
+              <td>Anterior radius → scaphoid, lunate, triquetrum</td>
+              <td>Stability in sagittal plane; ensures hand follows forearm into <strong>supination</strong> (prevents lag)</td>
+            </tr>
+            <tr>
+              <td>Dorsal (Posterior) Radiocarpal</td>
+              <td>Posterior radius → scaphoid, lunate, triquetrum</td>
+              <td>Stability in sagittal plane; ensures hand follows forearm into <strong>pronation</strong></td>
+            </tr>
+            <tr>
+              <td>Radial Collateral</td>
+              <td>Radial styloid → scaphoid</td>
+              <td>Prevents <strong>ulnar deviation</strong> (adduction) — keeps wrist from "falling" medially</td>
+            </tr>
+            <tr>
+              <td>Ulnar Collateral</td>
+              <td>Ulnar styloid → triquetrum &amp; pisiform</td>
+              <td>Prevents <strong>radial deviation</strong> (abduction) — keeps wrist from "falling" laterally</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="concept">
+          <span class="callout-label">Concept — Collateral Ligament Logic</span>
+          Think of collateral ligaments as preventing the motion that would tighten them on the <em>opposite</em> side. The <strong>radial collateral</strong> runs on the radial (lateral) side, so it prevents the wrist from deviating <em>away</em> from radial — i.e. it prevents ulnar deviation. The <strong>ulnar collateral</strong> runs on the ulnar (medial) side, preventing radial deviation. This is a consistent pattern across all collateral ligaments in the upper limb.
+        </div>
+
+        <h4>Wrist Movements and Producing Muscles</h4>
+        <table>
+          <thead>
+            <tr><th>Movement</th><th>Range</th><th>Primary Muscles</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Flexion (palmar flexion)</td>
+              <td>~80°</td>
+              <td>FCU, FCR, FDS, FDP, FPL</td>
+            </tr>
+            <tr>
+              <td>Extension (dorsiflexion)</td>
+              <td>~70°</td>
+              <td>ECRL, ECRB, ECU</td>
+            </tr>
+            <tr>
+              <td>Radial deviation (abduction)</td>
+              <td>~20°</td>
+              <td>FCR, ECRL, APL, EPB</td>
+            </tr>
+            <tr>
+              <td>Ulnar deviation (adduction)</td>
+              <td>~35°</td>
+              <td>FCU, ECU</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mnemonic">
+          <span class="callout-label">Concept — Why ulnar deviation is greater</span>
+          The radial styloid extends further distally than the ulnar styloid, creating a bony block that limits radial deviation to ~20°. The ulnar styloid is shorter, giving more room for ulnar deviation (~35°). This is why ulnar deviation during writing is so natural.
+        </div>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-05.png" alt="Radiocarpal joint — ellipsoidal">
+            <div class="caption">Slide 5 — Radiocarpal joint</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-06.png" alt="Radiocarpal ligaments">
+            <div class="caption">Slide 6 — Radiocarpal ligaments</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-07.png" alt="Collateral ligaments">
+            <div class="caption">Slide 7 — Collateral ligaments</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>2.3 Midcarpal Joints</h3>
+        <p>The midcarpal joint is the articulation between the <strong>proximal and distal carpal rows</strong>. It is technically a compound joint with two articulatory patterns:</p>
+        <ul style="margin-left:1.4rem; margin-bottom:0.8rem; line-height:1.9;">
+          <li><strong>Ellipsoidal (condyloid) portion</strong>: the head of the capitate and hamate articulating with the concave surface of the scaphoid and lunate — this component allows flexion/extension.</li>
+          <li><strong>Plane joint portion</strong>: between the scaphoid-trapezium-trapezoid on the radial side — allows small gliding movements.</li>
+        </ul>
+        <p>Approximately <strong>half of wrist flexion and half of extension</strong> occurs at the midcarpal joint, with the other half at the radiocarpal joint. Stabilising ligaments include the palmar and dorsal intercarpal ligaments, which resist excessive flexion and extension respectively and coordinate intercarpal motion.</p>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-10.png" alt="Midcarpal joints">
+            <div class="caption">Slide 10 — Midcarpal joints</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-11.png" alt="Intercarpal ligaments">
+            <div class="caption">Slide 11 — Intercarpal ligaments</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>2.4 Carpometacarpal (CMC) Joints</h3>
+        <h4>1st CMC Joint (Thumb) — Saddle Joint</h4>
+        <p>The 1st CMC is the most mobile and mechanically complex joint in the hand. It is a <strong>saddle (sellar) joint</strong> between the trapezium and the base of metacarpal I. The saddle configuration means each articular surface is convex in one direction and concave in the perpendicular direction — allowing motion in <strong>two planes</strong> (frontal and sagittal) plus a degree of rotation, which together produce the key movement of <strong>opposition</strong>.</p>
+
+        <div class="concept">
+          <span class="callout-label">What makes opposition special?</span>
+          Opposition is the combined movement of <em>flexion, medial rotation, and palmar abduction</em> at the 1st CMC — it brings the thumb pad across to meet the pad of the little finger. This is uniquely human and enables precision grip. The ability to oppose is driven primarily by <strong>Opponens Pollicis</strong> (median nerve) and assisted by FPB, APB.
+        </div>
+
+        <table>
+          <thead>
+            <tr><th>Ligament Group</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Dorsal ligaments</td><td>Primary stabilisers — prevent dorsal displacement during pinch, grip, and opposition</td></tr>
+            <tr><td>Palmar (volar) ligaments</td><td>Limit extension; guide flexion and rotation during opposition</td></tr>
+            <tr><td>Lateral ligaments</td><td>Side-to-side stability; limit abduction and adduction</td></tr>
+          </tbody>
+        </table>
+
+        <h4>2nd–5th CMC Joints — Plane Joints</h4>
+        <p>The CMC joints of fingers II–V are <strong>plane (gliding) joints</strong> with very limited mobility. The 2nd and 3rd CMC are essentially immobile (forming a rigid central pillar of the hand). The 4th and 5th have slightly more glide, allowing the little finger side of the palm to cup — important for power grip and cupping the hand.</p>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-12.png" alt="1st CMC saddle joint">
+            <div class="caption">Slide 12 — 1st CMC joint (saddle)</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-13.png" alt="CMC II-V plane joints">
+            <div class="caption">Slide 13 — CMC II–V joints</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>2.5 Metacarpophalangeal (MCP) Joints</h3>
+        <p>The MCP joints are <strong>condyloid (ellipsoid) joints</strong> — biplanar. The convex head of each metacarpal articulates with the concave base of the proximal phalanx. This allows flexion/extension plus abduction/adduction (spreading the fingers). The design trades stability for mobility, which is why MCP joints can be susceptible to injury during ball sports.</p>
+
+        <h4>Stabilising Structures of the MCP</h4>
+        <table>
+          <thead>
+            <tr><th>Structure</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Collateral ligaments</td><td>Prevent lateral (side-to-side) displacement; tighten in <strong>flexion</strong>. This is critical clinically — always splint MCPs in flexion to prevent ligament shortening.</td></tr>
+            <tr><td>Accessory collateral ligaments</td><td>Connect the collateral ligaments to the palmar plate; help guide movement</td></tr>
+            <tr><td>Palmar plate (volar plate)</td><td>Fibrocartilaginous thickening of the joint capsule on the palmar side — prevents hyperextension and increases joint surface area</td></tr>
+            <tr><td>Deep transverse metacarpal ligament</td><td>Connects palmar plates of digits 2–5; maintains metacarpal spacing and stability during grip</td></tr>
+          </tbody>
+        </table>
+
+        <div class="clinical">
+          <span class="callout-label">Clinical — Gamekeeper's/Skier's Thumb</span>
+          The <strong>ulnar collateral ligament of the 1st MCP</strong> is commonly torn by forced radial deviation of the thumb (e.g. falling on a ski pole — hence "skier's thumb"). If the ligament is avulsed and folds back on itself (Stener lesion), it cannot heal without surgery. Test by applying radial stress to the MCP in both extension and 30° flexion — instability suggests UCL rupture.
+        </div>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-14.png" alt="MCP joint structures">
+            <div class="caption">Slide 14 — MCP joint</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-15.png" alt="1st MCP collateral ligament">
+            <div class="caption">Slide 15 — 1st MCP UCL</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>2.6 Interphalangeal (IP) Joints</h3>
+        <p>The IP joints are <strong>hinge (ginglymus) joints</strong> — uniplanar, moving only in the sagittal plane (flexion/extension). Their close-packed (most stable) position is full extension. There are two types:</p>
+        <ul style="margin-left:1.4rem; margin-bottom:0.8rem; line-height:1.9;">
+          <li><strong>Proximal interphalangeal (PIP)</strong>: between proximal and middle phalanges (digits 2–5). This is the most important joint for grip — PIP flexion contractures are disabling.</li>
+          <li><strong>Distal interphalangeal (DIP)</strong>: between middle and distal phalanges (digits 2–5).</li>
+          <li>The <strong>thumb</strong> has a single IP joint between its proximal and distal phalanges.</li>
+        </ul>
+
+        <div class="clinical">
+          <span class="callout-label">Clinical — Jersey Finger &amp; Mallet Finger</span>
+          <strong>Mallet finger:</strong> Rupture of the extensor tendon at the DIP joint, causing the distal phalanx to droop into flexion. Common in ball sports — the ball strikes the fingertip. Treated with 6–8 weeks of DIP extension splinting.<br><br>
+          <strong>Jersey finger:</strong> Avulsion of the FDP tendon from the distal phalanx, typically the ring finger during rugby (grabbing a jersey). Causes loss of active DIP flexion. Requires surgical repair.
+        </div>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-16.png" alt="IP joints — hinge">
+            <div class="caption">Slide 16 — Interphalangeal joints</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 3. TFCC -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="sec" id="tfcc">
+    <div class="sec-header teal">3 — The Triangular Fibrocartilage Complex (TFCC)</div>
+    <div class="sec-body">
+      <p>The TFCC is a <strong>load-bearing, stabilising fibrocartilaginous structure</strong> on the ulnar side of the wrist. It is not a single structure but a complex of three components working together:</p>
+
+      <table>
+        <thead>
+          <tr><th>Component</th><th>Structure</th><th>Function</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Triangular fibrocartilage disc</td>
+            <td>Fibrocartilaginous disc between ulnar head and proximal carpal row</td>
+            <td>Extends the proximal articulating surface medially; transmits and absorbs compressive forces from the ulnar side of the wrist (approx. 20% of axial load)</td>
+          </tr>
+          <tr>
+            <td>Radioulnar ligaments</td>
+            <td>Palmar and dorsal components spanning radius to ulna</td>
+            <td>Primary stabilisers of the DRUJ — prevent excessive rotation and translation of the ulna on the radius</td>
+          </tr>
+          <tr>
+            <td>Ulnocarpal ligaments</td>
+            <td>Ulnolunate and ulnotriquetral bands</td>
+            <td>Support the ulnar carpus; limit ulnar deviation and prevent excessive dorsal translation</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="clinical">
+        <span class="callout-label">Clinical — TFCC Tears</span>
+        TFCC injuries are common in racquet sports and gymnastics (repetitive loading/rotation). They present as <strong>ulnar-sided wrist pain</strong> — often described as a "deep ache" worsened by forearm rotation and gripping. The <em>press test</em> (patient pushes up from a chair using the affected wrist) and <em>piano key sign</em> (ballottement of the ulnar head) can aid diagnosis. MRI arthrography is the gold standard investigation. Peripheral tears may heal conservatively; central tears (avascular zone) often need arthroscopic debridement.
+      </div>
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/wrist/slide-08.png" alt="TFCC components">
+          <div class="caption">Slide 8 — TFCC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 4. CARPAL TUNNEL -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="sec" id="carpal-tunnel">
+    <div class="sec-header rust">4 — The Carpal Tunnel</div>
+    <div class="sec-body">
+      <p>The carpal tunnel is a narrow osseofibrous passageway on the anterior (palmar) aspect of the wrist. Its tight dimensions are precisely why it is clinically relevant.</p>
+
+      <div class="subsec">
+        <h3>4.1 Borders</h3>
+        <table>
+          <thead>
+            <tr><th>Wall</th><th>Formed by</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Floor &amp; sides (carpal arch)</td><td>Laterally: scaphoid tubercle + trapezium tubercle<br>Medially: pisiform + hook of hamate</td></tr>
+            <tr><td>Roof</td><td>Flexor retinaculum (transverse carpal ligament) — thick fibrous band spanning between the medial and lateral bony prominences</td></tr>
+          </tbody>
+        </table>
+        <div class="callout">
+          <span class="callout-label">Landmark</span>
+          The entrance of the carpal tunnel aligns with the <strong>distal wrist crease</strong>. You can find it on yourself — run your finger along the distal crease and you are marking the proximal opening of the tunnel.
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>4.2 Contents — The 9+1 Rule</h3>
+        <p>The tunnel contains <strong>nine tendons and one nerve</strong>:</p>
+        <table>
+          <thead>
+            <tr><th>Contents</th><th>Detail</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>FPL tendon (×1)</td><td>Surrounded by its own synovial sheath (the radial bursa)</td></tr>
+            <tr><td>FDS tendons (×4)</td><td>To digits 2–5; share a common synovial sheath (the ulnar bursa) with FDP</td></tr>
+            <tr><td>FDP tendons (×4)</td><td>To digits 2–5; share the common ulnar bursa</td></tr>
+            <tr><td>Median nerve</td><td>Most superficial and lateral — lies just beneath the flexor retinaculum</td></tr>
+          </tbody>
+        </table>
+
+        <div class="mnemonic">
+          <span class="callout-label">Memory Aid — What's NOT in the carpal tunnel</span>
+          The <strong>FCR tendon</strong> runs within the substance of the flexor retinaculum itself (in its own groove) — <em>not inside</em> the tunnel. The <strong>ulnar nerve and artery</strong> pass through <em>Guyon's canal</em> (ulnar canal) — a separate fibro-osseous tunnel medial to the carpal tunnel. They are not compressed in CTS.
+        </div>
+
+        <div class="callout">
+          <span class="callout-label">Key Concept — Palmar Cutaneous Branch of Median Nerve</span>
+          This branch leaves the median nerve <em>proximal</em> to the carpal tunnel and travels <strong>superficial to the flexor retinaculum</strong> to supply the skin over the thenar eminence. This is why carpal tunnel syndrome does <em>not</em> produce numbness over the thenar skin — only over the palmar digits.
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>4.3 Carpal Tunnel Syndrome (CTS)</h3>
+        <p>CTS is the <strong>most common mononeuropathy</strong> — caused by compression of the median nerve within the tunnel. It may be idiopathic but is also associated with pregnancy, hypothyroidism, rheumatoid arthritis, diabetes, and repetitive wrist use. Any increase in tunnel content volume (synovitis, oedema, ganglion) or decrease in tunnel volume (fracture deformity) can precipitate compression.</p>
+
+        <table class="clinical-table">
+          <thead>
+            <tr><th>Feature</th><th>Detail</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Symptoms</td><td>Numbness, tingling, and burning in the lateral 3½ digits (thumb, index, middle, radial half of ring). Classic: <strong>nocturnal symptoms</strong> — patients wake to shake their hand ("flick sign").</td></tr>
+            <tr><td>Tinel's sign</td><td>Tap over the carpal tunnel → reproduces tingling in median nerve distribution</td></tr>
+            <tr><td>Phalen's manoeuvre</td><td>Hold wrist in sustained flexion for 60s → reproduces symptoms</td></tr>
+            <tr><td>Thenar wasting</td><td>In severe/chronic cases — Abductor Pollicis Brevis and Opponens Pollicis waste (both median/recurrent branch)</td></tr>
+            <tr><td>Treatment</td><td>Nocturnal splinting (wrist in neutral) → corticosteroid injection → surgical decompression (carpal tunnel release)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/wrist/slide-09.png" alt="Carpal tunnel and flexor retinaculum">
+          <div class="caption">Slide 9 — Carpal tunnel &amp; flexor retinaculum</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 5. ANATOMICAL SNUFFBOX -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="sec" id="anatomical-snuffbox">
+    <div class="sec-header navy">5 — The Anatomical Snuffbox</div>
+    <div class="sec-body">
+      <p>The anatomical snuffbox is a <strong>triangular depression visible on the dorsolateral aspect of the wrist</strong> when the thumb is extended and abducted. Its name derives from its historical use as a surface to hold snuff powder.</p>
+
+      <table>
+        <thead>
+          <tr><th>Border</th><th>Structure</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Lateral (radial) border</td><td>Abductor Pollicis Longus + Extensor Pollicis Brevis (in front)</td></tr>
+          <tr><td>Medial (ulnar) border</td><td>Extensor Pollicis Longus (behind)</td></tr>
+          <tr><td>Proximal border</td><td>Radial styloid process</td></tr>
+          <tr><td>Floor</td><td>Scaphoid + trapezium (distal)</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Contents</h4>
+      <p>Running through the snuffbox: <strong>Radial artery</strong> (passes deep to EPL on its way to the dorsal hand and deep palmar arch), branches of the <strong>radial nerve</strong> (superficial branch — sensory), and the <strong>cephalic vein</strong> (originates here as the dorsal venous network coalesces).</p>
+
+      <div class="clinical">
+        <span class="callout-label">Clinical Relevance</span>
+        Tenderness in the anatomical snuffbox after FOOSH = <strong>scaphoid fracture until proven otherwise</strong>. The scaphoid forms the floor of the snuffbox, and direct palpation compresses it against the radial artery and periosteum. Tenderness at this site is more sensitive than X-ray in the acute setting — X-ray may be negative for up to 2 weeks after a true scaphoid fracture.
+      </div>
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/wrist/slide-21.png" alt="Anatomical snuffbox">
+          <div class="caption">Slide 21 — Anatomical snuffbox</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 6. EXTRINSIC MUSCLES -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="sec" id="extrinsic">
+    <div class="sec-header olive">6 — Extrinsic Muscles of the Thumb &amp; Fingers</div>
+    <div class="sec-body">
+
+      <div class="subsec">
+        <h3>6.1 Extrinsic Thumb Muscles (Pollicis Group)</h3>
+        <p>Four muscles originate in the forearm and act on the thumb. Three run through the <strong>anatomical snuffbox</strong> (APL, EPB, EPL); FPL runs through the carpal tunnel.</p>
+
+        <table>
+          <thead>
+            <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Flexor Pollicis Longus (FPL)</td>
+              <td>Anterior surface of radius + interosseous membrane</td>
+              <td>Palmar surface of distal phalanx I</td>
+              <td>IP I: flexion; MCP I: flexion; CMC I: opposition; wrist: flexion &amp; abduction</td>
+              <td>Median (AIN)</td>
+            </tr>
+            <tr>
+              <td>Abductor Pollicis Longus (APL)</td>
+              <td>Dorsal radius + ulna + interosseous membrane</td>
+              <td>Base of metacarpal I</td>
+              <td>CMC I: abduction; wrist: flexion &amp; abduction (radial deviation)</td>
+              <td>Radial (PIN)</td>
+            </tr>
+            <tr>
+              <td>Extensor Pollicis Brevis (EPB)</td>
+              <td>Dorsal radius + interosseous membrane</td>
+              <td>Base of proximal phalanx I</td>
+              <td>CMC I + MCP I: extension; wrist: extension &amp; abduction</td>
+              <td>Radial (PIN)</td>
+            </tr>
+            <tr>
+              <td>Extensor Pollicis Longus (EPL)</td>
+              <td>Dorsal ulna + interosseous membrane</td>
+              <td>Base of distal phalanx I</td>
+              <td>MCP I + IP I: extension; CMC I: adduction; wrist: extension &amp; abduction</td>
+              <td>Radial (PIN)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="concept">
+          <span class="callout-label">Concept — APL &amp; EPB vs EPL</span>
+          APL and EPB share the 1st extensor compartment and form the <em>anterior boundary</em> of the anatomical snuffbox. EPL alone forms the <em>posterior boundary</em>, hooking around Lister's tubercle on the radius to change direction. EPL is the muscle most vulnerable to spontaneous rupture in rheumatoid arthritis — the inflamed extensor retinaculum at Lister's tubercle erodes the tendon, causing sudden loss of IP thumb extension.
+        </div>
+
+        <div class="clinical">
+          <span class="callout-label">Clinical — De Quervain's Tenosynovitis</span>
+          Stenosing tenosynovitis of the <strong>APL and EPB tendons</strong> in the 1st extensor compartment. Common in new mothers (lifting babies with radially deviated wrists). Presents as pain and swelling over the radial styloid. <strong>Finkelstein's test</strong>: patient clasps the thumb within the fist and the examiner ulnarly deviates the wrist — reproduction of sharp pain is positive.
+        </div>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-17.png" alt="FPL">
+            <div class="caption">Slide 17 — Flexor Pollicis Longus</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-18.png" alt="APL">
+            <div class="caption">Slide 18 — Abductor Pollicis Longus</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-19.png" alt="EPB">
+            <div class="caption">Slide 19 — Extensor Pollicis Brevis</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-20.png" alt="EPL">
+            <div class="caption">Slide 20 — Extensor Pollicis Longus</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>6.2 Extrinsic Finger Muscles</h3>
+        <p>Two muscles originating in the forearm extend the fingers independently:</p>
+
+        <table>
+          <thead>
+            <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Extensor Digiti Minimi (EDM)</td>
+              <td>Lateral epicondyle of humerus</td>
+              <td>Middle &amp; distal phalanges V (via dorsal aponeurosis)</td>
+              <td>MCP/PIP/DIP V: extension &amp; abduction; wrist: extension &amp; ulnar deviation</td>
+              <td>Radial (PIN)</td>
+            </tr>
+            <tr>
+              <td>Extensor Indicis (EI)</td>
+              <td>Dorsal ulna + interosseous membrane</td>
+              <td>Dorsal aponeurosis of index finger (II)</td>
+              <td>II: extension &amp; adduction; wrist: extension &amp; abduction</td>
+              <td>Radial (PIN)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <span class="callout-label">Why do these two exist?</span>
+          The main finger extensor (EDC — Extensor Digitorum Communis) extends all four fingers but its tendons are linked by <em>juncturae tendinum</em>, limiting independent extension. <strong>EI</strong> (index) and <strong>EDM</strong> (little finger) provide independent extension for the most-used "pointing" fingers. When you point (extend only the index), you are using EI while EDC is partially pulled back by the juncturae.
+        </div>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-22.png" alt="Extensor digiti minimi">
+            <div class="caption">Slide 22 — Extensor Digiti Minimi</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-23.png" alt="Extensor indicis">
+            <div class="caption">Slide 23 — Extensor Indicis</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 7. INTRINSIC MUSCLES -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="sec" id="intrinsic">
+    <div class="sec-header purple">7 — Intrinsic Muscles of the Hand</div>
+    <div class="sec-body">
+
+      <div class="callout">
+        <span class="callout-label">Extrinsic vs Intrinsic</span>
+        <strong>Extrinsic muscles</strong> originate in the forearm — they control gross grip strength. <strong>Intrinsic muscles</strong> originate and insert entirely within the hand — they control <em>fine motor function</em>: precision pinch, independent finger movement, spreading/closing fingers, and thumb opposition. Intrinsic paralysis (e.g. from ulnar nerve palsy) devastates hand dexterity despite preserved grip.
+      </div>
+
+      <div class="subsec">
+        <h3>7.1 Thenar Muscles</h3>
+        <p>The thenar eminence (the fleshy mound at the base of the thumb) is formed by three muscles, all innervated by the <strong>recurrent branch of the median nerve</strong> (with one exception noted). Remember them as <strong>"OAF"</strong> — Opponens, Abductor, Flexor — from deep to superficial.</p>
+
+        <table>
+          <thead>
+            <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Opponens Pollicis</td>
+              <td>Tubercle of trapezium + flexor retinaculum</td>
+              <td>Lateral margin of metacarpal I (entire length)</td>
+              <td>CMC I: opposition (medial rotation + flexion of metacarpal)</td>
+              <td>Median (recurrent branch)</td>
+            </tr>
+            <tr>
+              <td>Abductor Pollicis Brevis (APB)</td>
+              <td>Scaphoid, trapezium tubercles + flexor retinaculum</td>
+              <td>Lateral base of proximal phalanx I</td>
+              <td>CMC I: abduction (pulls thumb anteriorly away from palm)</td>
+              <td>Median (recurrent branch)</td>
+            </tr>
+            <tr>
+              <td>Flexor Pollicis Brevis (FPB)</td>
+              <td>Superficial head: flexor retinaculum / Deep head: capitate + trapezium</td>
+              <td>Base of proximal phalanx I</td>
+              <td>CMC I: flexion &amp; opposition; MCP I: flexion</td>
+              <td>Superficial head: Median; Deep head: <strong>Ulnar</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mnemonic">
+          <span class="callout-label">Memory — Thenar Muscles</span>
+          <strong>"Occasionally A Fox"</strong> (lateral to medial, or deep to superficial): <strong>O</strong>pponens Pollicis, <strong>A</strong>bductor Pollicis Brevis, <strong>F</strong>lexor Pollicis Brevis. All three are median nerve — except the deep head of FPB (ulnar). In a median nerve lesion at the wrist (CTS), <em>thenar wasting</em> develops — you will specifically see flattening of the thenar eminence and the patient cannot oppose the thumb to the little finger.
+        </div>
+
+        <div class="clinical">
+          <span class="callout-label">Clinical — "Ape Hand" Deformity</span>
+          Median nerve palsy at the wrist causes loss of thenar muscles → the thumb falls flat into the plane of the palm (loss of opposition/abduction). This produces the "ape thumb" or "simian hand" appearance — the palm looks flat with the thumb lying beside rather than in front. This also impairs the precision grip needed for most daily tasks.
+        </div>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-24.png" alt="Thenar muscles overview">
+            <div class="caption">Slide 24 — Thenar muscle group</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-25.png" alt="Abductor pollicis brevis">
+            <div class="caption">Slide 25 — Abductor Pollicis Brevis</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-26.png" alt="Adductor pollicis">
+            <div class="caption">Slide 26 — Adductor Pollicis</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-27.png" alt="Flexor pollicis brevis">
+            <div class="caption">Slide 27 — Flexor Pollicis Brevis</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-28.png" alt="Opponens pollicis">
+            <div class="caption">Slide 28 — Opponens Pollicis</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>7.2 Adductor Pollicis</h3>
+        <p>Technically part of the thenar group but listed separately — it lies deep to the thenar muscles and is the only thenar muscle innervated by the <strong>ulnar nerve (deep branch)</strong>.</p>
+        <table>
+          <thead>
+            <tr><th>Head</th><th>Origin</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Oblique head</td><td>Capitate + bases of metacarpals II &amp; III</td></tr>
+            <tr><td>Transverse head</td><td>Palmar surface of metacarpal III</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Insertion:</strong> Both heads → medial base of proximal phalanx I (via the ulnar sesamoid).<br><strong>Action:</strong> Adducts the thumb (pulls it back into the plane of the palm); assists opposition and MCP flexion.</p>
+        <div class="callout">
+          <span class="callout-label">Concept — Froment's Sign</span>
+          The radial artery passes between the two heads of Adductor Pollicis to become the deep palmar arch. When the ulnar nerve is injured, the patient cannot adduct the thumb — instead they compensate using FPL (median nerve) to hold a piece of paper, causing the IP joint to flex. This is <strong>Froment's sign</strong> — a classic test for ulnar nerve palsy.
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>7.3 Hypothenar Muscles</h3>
+        <p>The hypothenar eminence (the pad on the ulnar side of the palm at the base of the little finger) mirrors the thenar eminence in organisation. All hypothenar muscles are innervated by the <strong>ulnar nerve (deep branch)</strong>.</p>
+
+        <table>
+          <thead>
+            <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Opponens Digiti Minimi</td>
+              <td>Hook of hamate + flexor retinaculum</td>
+              <td>Medial margin of metacarpal V (entire length)</td>
+              <td>MC V: rotation towards palm (opposition of little finger)</td>
+              <td>Ulnar (deep)</td>
+            </tr>
+            <tr>
+              <td>Abductor Digiti Minimi</td>
+              <td>Pisiform + tendon of FCU</td>
+              <td>Base of proximal phalanx V + dorsal aponeurosis</td>
+              <td>MCP V: abduction &amp; flexion; IP V: extension</td>
+              <td>Ulnar (deep)</td>
+            </tr>
+            <tr>
+              <td>Flexor Digiti Minimi Brevis</td>
+              <td>Hook of hamate + flexor retinaculum</td>
+              <td>Base of proximal phalanx V</td>
+              <td>MCP V: flexion &amp; abduction</td>
+              <td>Ulnar (deep)</td>
+            </tr>
+            <tr>
+              <td>Palmaris Brevis</td>
+              <td>Palmar aponeurosis + flexor retinaculum</td>
+              <td>Dermis of skin over hypothenar eminence</td>
+              <td>Wrinkles hypothenar skin; deepens palm curvature → improves grip</td>
+              <td>Ulnar (superficial)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mnemonic">
+          <span class="callout-label">Mnemonics — Hypothenar</span>
+          Same names as thenar: <strong>O</strong>pponens, <strong>A</strong>bductor, <strong>F</strong>lexor — just append "Digiti Minimi." Palmaris Brevis is the odd one out — superficial branch of ulnar, not deep — it has no bony attachment on one end (inserts into skin only).
+        </div>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-29.png" alt="Hypothenar muscles overview">
+            <div class="caption">Slide 29 — Hypothenar muscles</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-30.png" alt="Abductor digiti minimi and palmaris brevis">
+            <div class="caption">Slide 30 — ADM &amp; Palmaris Brevis</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-31.png" alt="Opponens and FDM">
+            <div class="caption">Slide 31 — Opponens DM &amp; FDM Brevis</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>7.4 Lumbricals</h3>
+        <p>The four lumbricals are unique muscles that <strong>originate from tendons rather than bone</strong>. They link the flexor system to the extensor system and are critical for the hand's most refined movement.</p>
+
+        <table>
+          <thead>
+            <tr><th>Feature</th><th>Lumbricals I &amp; II (Lateral)</th><th>Lumbricals III &amp; IV (Medial)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Origin</td><td>From radial side of FDP tendons of digits 2 &amp; 3 (unipennate)</td><td>From adjacent sides of FDP tendons of digits 3–5 (bipennate)</td></tr>
+            <tr><td>Insertion</td><td colspan="2">Lateral extensor hood of each digit (joins the extensor expansion)</td></tr>
+            <tr><td>Action</td><td colspan="2">MCP joints 2–5: <strong>flexion</strong>; IP joints 2–5: <strong>extension</strong></td></tr>
+            <tr><td>Innervation</td><td>Median nerve</td><td>Ulnar nerve (deep branch)</td></tr>
+          </tbody>
+        </table>
+
+        <div class="concept">
+          <span class="callout-label">Why is the lumbrical action so unusual?</span>
+          Most muscles can only <em>flex</em> OR <em>extend</em> joints. The lumbrical achieves both simultaneously because it attaches to the FDP tendon proximally and the extensor hood distally. When it contracts, it does two things at once: it <em>slackens</em> the FDP (reducing IP flexion force) while <em>tensioning</em> the extensor hood (producing IP extension). The net result is the "intrinsic plus" position: MCP flexion + IP extension. This is the position needed to pick up a glass or type on a keyboard.
+        </div>
+
+        <div class="clinical">
+          <span class="callout-label">Clinical — Clawing</span>
+          Loss of lumbricals (and interossei) leads to the "intrinsic minus" or <strong>claw hand</strong> posture: MCP hyperextension + IP flexion (because the flexors now overpower the absent intrinsics at the IP joints). This is more pronounced for digits 4 &amp; 5 in an <em>ulnar claw</em> (ulnar nerve palsy) because digits 2 &amp; 3 still have median-innervated lumbricals. Full intrinsic loss (combined median + ulnar) causes clawing of all four fingers.
+        </div>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-32.png" alt="Lumbricals">
+            <div class="caption">Slide 32 — Lumbricals I–IV</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>7.5 Interossei</h3>
+        <p>There are seven interosseous muscles in total — four dorsal and three palmar — all innervated by the <strong>ulnar nerve (deep branch)</strong>. They occupy the spaces between the metacarpal bones and, like the lumbricals, insert into the extensor hood.</p>
+
+        <table>
+          <thead>
+            <tr><th>Group</th><th>Number</th><th>Origin</th><th>Insertion</th><th>Action</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dorsal Interossei (DAB)</td>
+              <td>4</td>
+              <td>Adjacent sides of two metacarpals (bipennate)</td>
+              <td>Extensor hood + proximal phalanx base</td>
+              <td><strong>AB</strong>duction of digits; MCP flexion; IP extension</td>
+            </tr>
+            <tr>
+              <td>Palmar Interossei (PAD)</td>
+              <td>3</td>
+              <td>Single metacarpal (unipennate)</td>
+              <td>Extensor hood + proximal phalanx base</td>
+              <td><strong>AD</strong>duction of digits; MCP flexion; IP extension</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mnemonic">
+          <span class="callout-label">Mnemonic</span>
+          <strong>DAB = Dorsal ABduct</strong> (spread fingers apart)<br>
+          <strong>PAD = Palmar ADduct</strong> (bring fingers together)<br>
+          The axis of abduction/adduction passes through the <strong>middle finger</strong> — so the middle finger has two dorsal interossei (one on each side) but no palmar interosseus.
+        </div>
+
+        <div class="slides-row">
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-33.png" alt="Dorsal interossei">
+            <div class="caption">Slide 33 — Dorsal Interossei</div>
+          </div>
+          <div class="slide-img">
+            <img src="bpty04_images/wrist/slide-34.png" alt="Palmar interossei">
+            <div class="caption">Slide 34 — Palmar Interossei</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 8. FLEXOR PULLEY SYSTEM -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="sec" id="pulley">
+    <div class="sec-header teal">8 — The Flexor Pulley System</div>
+    <div class="sec-body">
+      <p>The flexor tendons (FDS &amp; FDP) to each digit run within a <strong>fibro-osseous canal</strong> — a tight tunnel formed by the bones below and a series of fibrous pulleys above. Without the pulleys, the tendons would <em>bowstring</em> across the palm when the fingers flex, massively reducing mechanical efficiency.</p>
+
+      <p>There are <strong>five annular (A) pulleys</strong> and three cruciate (C) pulleys in each finger. The annular pulleys are most important clinically:</p>
+
+      <div class="pulley-row">
+        <span class="pulley-tag pt-annular">A1 — MCP Joint Level</span>
+        <span class="pulley-tag pt-annular">A2 — Proximal ⅔ of Prox. Phalanx</span>
+        <span class="pulley-tag pt-annular">A3 — PIP Joint Level</span>
+        <span class="pulley-tag pt-annular">A4 — Middle of Middle Phalanx</span>
+        <span class="pulley-tag pt-annular">A5 — DIP Joint Level</span>
+        <span class="pulley-tag pt-cruciate">C1</span>
+        <span class="pulley-tag pt-cruciate">C2</span>
+        <span class="pulley-tag pt-cruciate">C3</span>
+      </div>
+
+      <div class="concept">
+        <span class="callout-label">Most Critical Pulleys</span>
+        <strong>A2 and A4</strong> are the most biomechanically critical — they prevent bowstringing at the proximal and middle phalanx respectively. In tendon reconstruction surgery, these two must be preserved or reconstructed at all costs. Loss of A2 alone reduces FDP efficiency by ~30%.
+      </div>
+
+      <div class="clinical">
+        <span class="callout-label">Clinical — Trigger Finger (Stenosing Tenosynovitis)</span>
+        Nodular thickening of the FDP or FDS tendon becomes too large to pass smoothly through the <strong>A1 pulley</strong>. The finger "clicks" or locks in flexion and has to be manually extended. Most common at the A1 pulley (over MCP joint). Risk factors: diabetes, rheumatoid arthritis, repetitive gripping. Treated with corticosteroid injection at the A1 pulley or surgical release.
+      </div>
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/wrist/slide-35.png" alt="Flexor pulley system A1-A5">
+          <div class="caption">Slide 35 — Flexor Pulley System</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 9. NEUROVASCULAR -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="sec" id="neurovascular">
+    <div class="sec-header navy">9 — Innervation &amp; Blood Supply</div>
+    <div class="sec-body">
+
+      <div class="subsec">
+        <h3>9.1 Nerve Summary</h3>
+        <p>Three terminal branches of the brachial plexus supply the wrist and hand. Understanding their territory is essential for interpreting sensory loss, weakness, and deformity.</p>
+
+        <div class="nerve-grid">
+          <div class="nerve-card nerve-median">
+            <h4>Median Nerve (C6–T1)</h4>
+            <ul>
+              <li>Enters via carpal tunnel</li>
+              <li>Motor: thenar muscles (APB, OP, FPB superficial head); lateral 2 lumbricals</li>
+              <li>Sensory: palmar skin + dorsal nail beds of lateral 3½ digits</li>
+              <li>Palmar cutaneous branch: thenar skin (exits proximal to tunnel)</li>
+              <li><em>Lesion at wrist:</em> CTS, thenar wasting, ape hand</li>
+            </ul>
+          </div>
+          <div class="nerve-card nerve-ulnar">
+            <h4>Ulnar Nerve (C8–T1)</h4>
+            <ul>
+              <li>Enters via Guyon's canal (lateral to pisiform)</li>
+              <li>Motor: all hypothenar muscles; medial 2 lumbricals; all interossei; adductor pollicis; FPB deep head</li>
+              <li>Sensory: palmar + dorsal skin of medial 1½ digits</li>
+              <li><em>Lesion at wrist:</em> ulnar claw (digits 4–5); loss of grip &amp; fine motor</li>
+            </ul>
+          </div>
+          <div class="nerve-card nerve-radial">
+            <h4>Radial Nerve (C5–T1)</h4>
+            <ul>
+              <li>Superficial branch enters via anatomical snuffbox</li>
+              <li>Motor to wrist: extensors via PIN (forearm) — no motor branches in the hand itself</li>
+              <li>Sensory: dorsal skin of lateral 3½ digits (to mid-phalanx), anatomical snuffbox, dorsal thumb web</li>
+              <li><em>Lesion:</em> wrist drop (from forearm); sensory loss on dorsal hand</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mnemonic">
+          <span class="callout-label">Innervation Shortcut — LOAF muscles</span>
+          Muscles in the hand supplied by the <strong>Median nerve</strong> at the wrist: <strong>L</strong>umbricals I &amp; II, <strong>O</strong>pponens Pollicis, <strong>A</strong>bductor Pollicis Brevis, <strong>F</strong>lexor Pollicis Brevis (superficial head). Everything else is ulnar. The radial nerve has no intrinsic hand muscles.
+        </div>
+      </div>
+
+      <hr class="sec-divider">
+
+      <div class="subsec">
+        <h3>9.2 Blood Supply</h3>
+        <p>The hand has a rich, redundant blood supply from both the <strong>radial</strong> and <strong>ulnar arteries</strong>, which anastomose to form two palmar arches:</p>
+        <table>
+          <thead>
+            <tr><th>Arch</th><th>Formed by</th><th>Location</th><th>Supplies</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Superficial Palmar Arch</td>
+              <td>Ulnar artery (main contributor) + superficial branch of radial</td>
+              <td>Superficial to flexor tendons, at the level of the extended thumb</td>
+              <td>Common palmar digital arteries → digits 2–5</td>
+            </tr>
+            <tr>
+              <td>Deep Palmar Arch</td>
+              <td>Radial artery (main) + deep branch of ulnar (passes between heads of adductor pollicis)</td>
+              <td>Deep to flexor tendons, at the level of the metacarpal bases</td>
+              <td>Palmar metacarpal arteries; anastomoses with superficial arch</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>The wrist also receives supply from <strong>dorsal and palmar carpal arches</strong> (anastomoses of radial and ulnar branches at wrist level) — these supply the carpal bones, including the retrograde supply to the scaphoid (via dorsal carpal branch of the radial artery).</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 10. CLINICAL SUMMARY -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="sec" id="clinical">
+    <div class="sec-header rust">10 — Clinical Summary</div>
+    <div class="sec-body">
+      <table class="clinical-table">
+        <thead>
+          <tr><th>Condition</th><th>Mechanism / Cause</th><th>Key Sign / Test</th><th>Structure Involved</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Scaphoid Fracture</td>
+            <td>FOOSH (fall on outstretched hand)</td>
+            <td>Anatomical snuffbox tenderness; may be X-ray negative acutely — MRI needed</td>
+            <td>Scaphoid bone; retrograde blood supply → risk of AVN</td>
+          </tr>
+          <tr>
+            <td>Colles' Fracture</td>
+            <td>FOOSH (usually elderly with osteoporosis)</td>
+            <td>"Dinner fork" dorsal deformity; most common distal radius fracture</td>
+            <td>Distal radius — dorsal displacement &amp; angulation</td>
+          </tr>
+          <tr>
+            <td>Lunate Dislocation</td>
+            <td>High-energy FOOSH</td>
+            <td>Median nerve symptoms (acute CTS); lunate visible as "spilled teacup" on lateral X-ray</td>
+            <td>Lunate displaces anteriorly into carpal tunnel</td>
+          </tr>
+          <tr>
+            <td>Carpal Tunnel Syndrome</td>
+            <td>Compression of median nerve in carpal tunnel — idiopathic, pregnancy, hypothyroidism, RA</td>
+            <td>Tinel's sign; Phalen's manoeuvre; nocturnal symptoms; thenar wasting in severe cases</td>
+            <td>Median nerve (9 flexor tendons + 1 nerve)</td>
+          </tr>
+          <tr>
+            <td>De Quervain's Tenosynovitis</td>
+            <td>Repetitive radial deviation/thumb use (new parents, racquet sports)</td>
+            <td>Finkelstein's test positive; pain over radial styloid</td>
+            <td>APL &amp; EPB in 1st extensor compartment</td>
+          </tr>
+          <tr>
+            <td>Trigger Finger</td>
+            <td>Nodular tendon thickening catching on A1 pulley</td>
+            <td>Clicking or locking of finger in flexion; most common in ring finger</td>
+            <td>A1 pulley + FDS/FDP tendon</td>
+          </tr>
+          <tr>
+            <td>Boxer's Fracture</td>
+            <td>Striking with clenched fist</td>
+            <td>Shortening of 5th digit; angulation of metacarpal neck on X-ray</td>
+            <td>5th metacarpal neck</td>
+          </tr>
+          <tr>
+            <td>Bennett's Fracture</td>
+            <td>Forced hyperabduction of thumb</td>
+            <td>Subluxation of 1st CMC; instability on stress testing</td>
+            <td>1st metacarpal base + CMC joint</td>
+          </tr>
+          <tr>
+            <td>TFCC Tear</td>
+            <td>Repetitive forearm rotation, compressive loading (gymnastics, racquets)</td>
+            <td>Ulnar-sided wrist pain; press test; piano key sign</td>
+            <td>TFCC disc and/or radioulnar ligaments</td>
+          </tr>
+          <tr>
+            <td>Ulnar Claw (Ulnar N. palsy at wrist)</td>
+            <td>Compression at Guyon's canal (cyclists, trauma)</td>
+            <td>Claw posture of digits 4 &amp; 5; Froment's sign; loss of finger abduction/adduction</td>
+            <td>Ulnar nerve deep branch; loss of medial 2 lumbricals + all interossei + hypothenar</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- SOURCES -->
+  <div class="sources">
+    <h4>Sources &amp; References</h4>
+    <ul>
+      <li>TeachMeAnatomy — Wrist Joint, Carpal Bones, Muscles of the Hand, Carpal Tunnel (Jones O. et al., 2026; teachmeanatomy.info)</li>
+      <li>Kaewlai R. et al. (2008) — Carpal bone mnemonic reference (cited in BPTY04 lecture slides)</li>
+      <li>BPTY04 Lecture Slides — Dr Maria Abulkhanova / Tiago Neto PhD, LUNEX University, WS25</li>
+      <li>Standring S. (ed.) — Gray's Anatomy, 42nd edition (clinical correlation reference)</li>
+    </ul>
+  </div>
+
+</div><!-- end page-wrap -->
+
+<footer>
+  BPTY04 Musculoskeletal Anatomy · LUNEX University · In-Depth Study Guide · For personal study use only
+</footer>
+
+</body>
+</html>

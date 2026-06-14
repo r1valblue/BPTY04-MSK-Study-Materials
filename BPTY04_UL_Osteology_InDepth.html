@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upper Limb Osteology — In-Depth Guide | BPTY04</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #fdfcfa;
+      color: #1a1a1a;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4a2800, #b06a18);
+      color: #fff;
+      padding: 2.8rem 3rem 2.2rem;
+    }
+
+    header .back-link {
+      display: inline-block;
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 0.2rem 0.55rem;
+    }
+    header .back-link:hover { background: rgba(255,255,255,0.15); }
+
+    header .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.7rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.15rem 0.6rem;
+      margin-bottom: 0.7rem;
+    }
+
+    header h1 { font-size: 2rem; font-weight: normal; line-height: 1.2; }
+    header p { margin-top: 0.6rem; color: rgba(255,255,255,0.8); font-size: 0.88rem; font-style: italic; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    .toc {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 4px solid #b06a18;
+      padding: 1.2rem 1.6rem;
+      margin-bottom: 3rem;
+      font-size: 0.83rem;
+    }
+    .toc h3 {
+      font-size: 0.68rem;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #4a2800;
+      margin-bottom: 0.7rem;
+    }
+    .toc ol { margin-left: 1.2rem; color: #444; line-height: 2; }
+    .toc a { color: #4a2800; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    section { margin-bottom: 3.5rem; }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #4a2800;
+      border-bottom: 2px solid #b06a18;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    h3 { font-size: 1.05rem; font-weight: bold; color: #333; margin: 1.5rem 0 0.6rem; }
+    h4 { font-size: 0.92rem; font-weight: bold; color: #555; margin: 1.2rem 0 0.4rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    p { margin-bottom: 0.9rem; }
+
+    .callout, .clinical, .mnemonic, .concept {
+      border-left: 4px solid; padding: 0.9rem 1.2rem; margin: 1.2rem 0; border-radius: 0 4px 4px 0;
+    }
+    .callout  { border-color: #2a7db5; background: #f0f7fc; }
+    .clinical { border-color: #c0392b; background: #fdf3f2; }
+    .mnemonic { border-color: #e6a817; background: #fdf8ec; }
+    .concept  { border-color: #7b52c4; background: #f6f2fd; }
+
+    .callout strong, .clinical strong, .mnemonic strong, .concept strong {
+      display: block;
+      font-size: 0.7rem;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.4rem;
+    }
+    .callout strong  { color: #2a7db5; }
+    .clinical strong { color: #c0392b; }
+    .mnemonic strong { color: #b07e0a; }
+    .concept strong  { color: #7b52c4; }
+
+    /* Landmark tables */
+    .lm-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .lm-table th {
+      background: #4a2800;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+    .lm-table td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid #e8ddd5;
+      vertical-align: top;
+    }
+    .lm-table tr:last-child td { border-bottom: 2px solid #b06a18; }
+    .lm-table tr:nth-child(even) { background: #faf6f1; }
+    .lm-table td:first-child { font-weight: bold; color: #4a2800; }
+
+    /* Carpal bone cards */
+    .carpal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.8rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .carpal-card {
+      border: 1px solid #d8c8b0;
+      border-top: 3px solid #b06a18;
+      padding: 0.8rem;
+      background: #fff;
+      font-size: 0.8rem;
+    }
+    .carpal-card .cc-name { font-weight: bold; color: #4a2800; margin-bottom: 0.2rem; font-size: 0.88rem; }
+    .carpal-card .cc-row { font-family: 'Courier New', Courier, monospace; font-size: 0.64rem; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.4rem; }
+    .carpal-card .cc-art { color: #555; margin-bottom: 0.3rem; }
+    .carpal-card .cc-note { font-style: italic; color: #888; }
+
+    /* Clinical table */
+    .clinical-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .clinical-table th {
+      background: #7b0d0d;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+    .clinical-table td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid #f0d5d5;
+      vertical-align: top;
+    }
+    .clinical-table tr:last-child td { border-bottom: 2px solid #c0392b; }
+    .clinical-table tr:nth-child(even) { background: #fdf8f8; }
+    .clinical-table td:first-child { font-weight: bold; color: #7b0d0d; }
+
+    /* Bone overview mini-cards */
+    .bone-intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .bone-intro-card {
+      border: 1px solid #d8c8b0;
+      padding: 0.9rem 1rem;
+      background: #fff;
+      font-size: 0.84rem;
+    }
+    .bone-intro-card .bic-name { font-weight: bold; color: #4a2800; margin-bottom: 0.25rem; }
+    .bone-intro-card .bic-type { font-family: 'Courier New', Courier, monospace; font-size: 0.68rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.4rem; }
+
+    .sources {
+      margin-top: 4rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1.5rem;
+      font-size: 0.8rem;
+      color: #666;
+    }
+    .sources h3 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #4a2800;
+      margin-bottom: 0.8rem;
+    }
+    .sources ol { margin-left: 1.2rem; line-height: 1.9; }
+    .sources a { color: #4a2800; }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 1rem 2rem;
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    @media (max-width: 680px) {
+      .carpal-grid { grid-template-columns: repeat(2, 1fr); }
+      .bone-intro-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="index.html">← Back to BPTY04 Resources</a>
+  <div class="tag">BPTY04 · In-Depth Guide</div>
+  <h1>Upper Limb Osteology</h1>
+  <p>Clavicle · Scapula · Humerus · Radius · Ulna · Carpus · Metacarpals · Phalanges · TFCC · Clinical correlations</p>
+</header>
+
+<div class="container">
+
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#overview">Overview of the Upper Limb Skeleton</a></li>
+      <li><a href="#clavicle">Clavicle</a></li>
+      <li><a href="#scapula">Scapula</a></li>
+      <li><a href="#humerus">Humerus</a></li>
+      <li><a href="#radius">Radius</a></li>
+      <li><a href="#ulna">Ulna</a></li>
+      <li><a href="#carpus">Carpus — The Eight Carpal Bones</a></li>
+      <li><a href="#metacarpals">Metacarpals &amp; Phalanges</a></li>
+      <li><a href="#tfcc">Triangular Fibrocartilage Complex (TFCC)</a></li>
+      <li><a href="#clinical">Clinical Applications</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. OVERVIEW -->
+  <section id="overview">
+    <h2>1. Overview of the Upper Limb Skeleton</h2>
+    <p>The upper limb skeleton consists of 32 bones on each side (64 total) — from the proximal shoulder girdle to the distal fingertips. The upper limb is optimised for <strong>mobility</strong> over stability (the opposite priority to the lower limb), allowing the hand to be positioned anywhere within a large hemisphere of space. This design reflects the upper limb's primary roles: manipulation, tool use, reaching, and fine motor control.</p>
+
+    <div class="bone-intro-grid">
+      <div class="bone-intro-card">
+        <div class="bic-name">Shoulder Girdle</div>
+        <div class="bic-type">2 bones</div>
+        Clavicle (s-shaped strut connecting the sternum to the shoulder); Scapula (triangular bone providing muscular origins and the glenoid for the glenohumeral joint)
+      </div>
+      <div class="bone-intro-card">
+        <div class="bic-name">Arm</div>
+        <div class="bic-type">1 bone</div>
+        Humerus — the largest bone of the upper limb. Articulates proximally with the glenoid of the scapula (GH joint) and distally with both the ulna (trochlea) and radius (capitulum).
+      </div>
+      <div class="bone-intro-card">
+        <div class="bic-name">Forearm</div>
+        <div class="bic-type">2 bones</div>
+        Radius (lateral/thumb side) and Ulna (medial/little finger side). Unique in that they articulate with each other both proximally and distally, enabling pronation/supination.
+      </div>
+      <div class="bone-intro-card">
+        <div class="bic-name">Carpus</div>
+        <div class="bic-type">8 bones</div>
+        Two rows of 4 carpal bones each, forming the wrist joint. Proximal row (SLTP) articulates with the radius/TFCC; distal row (TTCH) articulates with the metacarpals.
+      </div>
+      <div class="bone-intro-card">
+        <div class="bic-name">Metacarpals</div>
+        <div class="bic-type">5 bones</div>
+        Bones of the palm, numbered I (thumb) to V (little finger). Each has a base (proximal), shaft, and head (the knuckle). Articulate proximally with the carpus, distally with phalanges.
+      </div>
+      <div class="bone-intro-card">
+        <div class="bic-name">Phalanges</div>
+        <div class="bic-type">14 bones per hand</div>
+        Each finger has 3 phalanges (proximal, middle, distal). The thumb has only 2 (proximal and distal — no middle phalanx). All have a base, shaft, and head/tuft.
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Upper vs. Lower Limb — Structural Philosophy</strong>
+      The upper limb skeleton sacrifices bony stability for mobility: the glenoid covers only ~25% of the humeral head (compared to the acetabulum covering ~70% of the femoral head), and the wrist's 8-carpal configuration provides multi-directional compliance. The lower limb skeleton sacrifices mobility for stability and weight-bearing — the hip is deeply constrained, the knee has menisci and cruciate ligaments, and the ankle locks into the mortice under load. Understanding this design philosophy helps predict which joints are prone to instability (shoulder, finger PIP joints) vs. which are prone to load-bearing degeneration (hip, knee, ankle).
+    </div>
+  </section>
+
+  <!-- 2. CLAVICLE -->
+  <section id="clavicle">
+    <h2>2. Clavicle</h2>
+    <p>The clavicle is the <strong>only bony link between the upper limb and the axial skeleton</strong>. It is an S-shaped bone: the medial two-thirds is convex anteriorly (cylindrical in cross-section), while the lateral third is concave anteriorly and flattened. It articulates medially with the sternum (SC joint — the only true synovial joint of the shoulder girdle with the axial skeleton) and laterally with the acromion of the scapula (AC joint).</p>
+
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Description</th>
+          <th>Attachment / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sternal extremity</td>
+          <td>Medial end — circular articular surface, articulates with sternal manubrium via a fibrocartilaginous disc</td>
+          <td>Sternoclavicular (SC) joint; only bony axial-appendicular link</td>
+        </tr>
+        <tr>
+          <td>Acromial extremity</td>
+          <td>Lateral end — smaller, flat articular surface, articulates with the acromion</td>
+          <td>Acromioclavicular (AC) joint; stabilised by AC and coracoclavicular (conoid + trapezoid) ligaments</td>
+        </tr>
+        <tr>
+          <td>Superior surface</td>
+          <td>Subcutaneous — palpable along its entire length</td>
+          <td>Attachment: trapezius (lateral) + SCM (medial)</td>
+        </tr>
+        <tr>
+          <td>Inferior surface</td>
+          <td>Rougher — not subcutaneous</td>
+          <td>Deltoid (lateral border) + trapezius (posterior border) + pectoralis major (anterior border)</td>
+        </tr>
+        <tr>
+          <td>Costal tuberosity</td>
+          <td>Rough oval impression on inferior medial surface</td>
+          <td>Costoclavicular ligament — limits elevation of the shoulder</td>
+        </tr>
+        <tr>
+          <td>Subclavian groove / sulcus</td>
+          <td>Groove on inferior surface running the length of the shaft</td>
+          <td>Subclavius muscle — depresses the clavicle, prevents the SC joint from dislocating superiorly</td>
+        </tr>
+        <tr>
+          <td>Conoid tubercle</td>
+          <td>Rough protuberance on inferior surface near lateral end</td>
+          <td>Conoid ligament (medial part of coracoclavicular ligament — vertical orientation, resists superior force)</td>
+        </tr>
+        <tr>
+          <td>Trapezoid line</td>
+          <td>Ridge running anterolaterally from conoid tubercle</td>
+          <td>Trapezoid ligament (lateral part of coracoclavicular — horizontal, resists medial displacement)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="clinical">
+      <strong>Clinical — Clavicle Fractures</strong>
+      The most commonly fractured bone of the shoulder girdle. The middle third is the most common site (~80%) — it is the weakest point, where the two curves intersect. Mechanism: fall onto an outstretched hand (FOOSH) or direct blow. The sternocleidomastoid pulls the medial fragment superiorly (via sternum), while the weight of the arm depresses the lateral fragment — producing the classic "step deformity." Treatment: most middle-third fractures heal with a broad arm sling alone (6–8 weeks). Operative fixation is indicated for significantly displaced, shortened, or open fractures. Physiotherapy: progressive shoulder mobilisation and strengthening after sling removal.
+    </div>
+  </section>
+
+  <!-- 3. SCAPULA -->
+  <section id="scapula">
+    <h2>3. Scapula</h2>
+    <p>The scapula is a triangular, flat bone that sits on the posterior thorax between ribs 2–7 at rest. Its medial border is approximately at vertebral level T3 (spine of scapula). The scapula has three borders (medial/vertebral, lateral/axillary, superior), three angles (superior, inferior, lateral/glenoid), three fossae, and several projections. It is the anchor point for 17 muscles and provides the glenoid cavity for the glenohumeral joint.</p>
+
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Description</th>
+          <th>Attachment / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Subscapular fossa</td>
+          <td>Slightly concave anterior surface of the scapular body</td>
+          <td>Subscapularis (rotator cuff — medial rotator, prevents anterior GH dislocation)</td>
+        </tr>
+        <tr>
+          <td>Supraspinous fossa</td>
+          <td>Flat depression above the spine of the scapula, posterior surface</td>
+          <td>Supraspinatus (rotator cuff — initiates abduction 0–15°, compresses humeral head)</td>
+        </tr>
+        <tr>
+          <td>Infraspinous fossa</td>
+          <td>Broad depression below the spine, posterior surface</td>
+          <td>Infraspinatus (rotator cuff — lateral rotator, primary external rotation)</td>
+        </tr>
+        <tr>
+          <td>Spine of scapula</td>
+          <td>Horizontal bony ridge crossing the posterior surface; flat medial origin, broadens laterally to acromion; level T3</td>
+          <td>Deltoid (anterior surface) + Trapezius (posterior surface). Separates supra- and infraspinous fossae. Palpable landmark.</td>
+        </tr>
+        <tr>
+          <td>Acromion</td>
+          <td>Lateral extension of the spine, forming the "roof" of the shoulder</td>
+          <td>Deltoid (origin) + Trapezius (insertion). Articulates with clavicle at AC joint. Sub-acromial space (10mm normally) contains the supraspinatus tendon + subacromial bursa — compressed in impingement.</td>
+        </tr>
+        <tr>
+          <td>Coracoid process</td>
+          <td>Beak-shaped process projecting anterolaterally from superior scapula</td>
+          <td>Pectoralis minor (insertion) + Coracobrachialis + short head of Biceps brachii (both origin). Coracohumeral and coracoclavicular ligaments also attach. Palpable inferior to the AC joint.</td>
+        </tr>
+        <tr>
+          <td>Glenoid cavity</td>
+          <td>Pear-shaped, shallow articular surface at the lateral angle — cartilage-lined, deepened by the fibrocartilaginous labrum</td>
+          <td>Articulates with the humeral head (GH joint). Supraglenoid tubercle: long head biceps. Infraglenoid tubercle: long head triceps.</td>
+        </tr>
+        <tr>
+          <td>Medial border</td>
+          <td>Longest border, runs from superior to inferior angle</td>
+          <td>Rhomboideus major/minor (medial surface) + Serratus anterior (anterior surface, ribs 1–8 — protracts and rotates scapula upward)</td>
+        </tr>
+        <tr>
+          <td>Lateral border</td>
+          <td>Thickest border, from inferior glenoid to inferior angle</td>
+          <td>Teres major (inferior surface) + Teres minor (superior surface). Also: long head of triceps tendon passes close to here.</td>
+        </tr>
+        <tr>
+          <td>Suprascapular notch</td>
+          <td>Notch in the superior border, bridged by the transverse scapular ligament</td>
+          <td>Suprascapular nerve passes through this notch (the artery goes above the ligament — mnemonic "the generals go over the bridge, the soldiers go under"). Compression → suprascapular nerve entrapment.</td>
+        </tr>
+        <tr>
+          <td>Inferior angle</td>
+          <td>Most inferior point of the scapula — level with T7</td>
+          <td>Latissimus dorsi (small slip from inferior angle). Important postural landmark — "winging" of the inferior angle indicates serratus anterior weakness/long thoracic nerve palsy.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="clinical">
+      <strong>Clinical — Winging of the Scapula</strong>
+      Scapular winging occurs when the medial border/inferior angle lifts away from the posterior thorax. The most common cause is paralysis of serratus anterior due to long thoracic nerve injury (vulnerable in axillary surgery, radical mastectomy, backpack palsy). Loss of serratus anterior means the scapula cannot be rotated upwardly or protracted — shoulder abduction above 90° becomes impossible (the glenoid cannot be turned to face the rising humerus). Management: serratus anterior strengthening programme; sometimes surgical nerve repair or muscle transfer.
+    </div>
+  </section>
+
+  <!-- 4. HUMERUS -->
+  <section id="humerus">
+    <h2>4. Humerus</h2>
+    <p>The humerus is the single long bone of the arm, articulating proximally with the glenoid (glenohumeral joint) and distally with the radius and ulna (elbow joint complex). It has three borders (anterior, lateral, medial), three surfaces, a complex proximal anatomy including head and tuberosities, a shaft with the deltoid tuberosity and radial nerve sulcus, and a highly detailed distal extremity.</p>
+
+    <h3>Proximal Humerus</h3>
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Description</th>
+          <th>Attachment / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Humeral head</td>
+          <td>Dome-shaped smooth articular surface (occupies ~1/3 of a sphere), faces superomedially and posteriorly (retroversion ~30°)</td>
+          <td>GH joint articulation. Covered by hyaline cartilage. The humeral head is much larger than the glenoid — inherent instability requiring muscular and ligamentous support.</td>
+        </tr>
+        <tr>
+          <td>Anatomical neck</td>
+          <td>Constriction immediately peripheral to the humeral head; marks the attachment of the articular capsule</td>
+          <td>Attachment of GH joint capsule. Anatomical neck fractures are rare but dangerous — risk of avascular necrosis of the humeral head (blood supply = anterior + posterior circumflex humeral arteries).</td>
+        </tr>
+        <tr>
+          <td>Surgical neck</td>
+          <td>The narrowest part of the shaft below the tuberosities — the true metaphysis</td>
+          <td>Most common fracture site of the proximal humerus (especially in elderly osteoporotic patients from FOOSH). The axillary nerve and posterior circumflex humeral artery cross here — both at risk in fractures and dislocations.</td>
+        </tr>
+        <tr>
+          <td>Greater tubercle</td>
+          <td>Posterolateral prominence of the proximal humerus — 3 facets for rotator cuff insertions</td>
+          <td>Superior facet: Supraspinatus. Middle facet: Infraspinatus. Inferior facet: Teres minor. Palpable lateral to the acromion.</td>
+        </tr>
+        <tr>
+          <td>Lesser tubercle</td>
+          <td>Anterior prominence, medial to the bicipital groove</td>
+          <td>Subscapularis insertion — internal rotation, prevents anterior GH dislocation.</td>
+        </tr>
+        <tr>
+          <td>Bicipital groove (intertubercular sulcus)</td>
+          <td>Vertical groove between the greater (lateral crest) and lesser tubercles (medial crest)</td>
+          <td>Long head of biceps brachii tendon travels through this groove (held by the transverse humeral ligament). The groove is also where pectoralis major (lateral crest), teres major, and latissimus dorsi (medial crest) insert. Bicipital groove tenderness = possible biceps tendinopathy.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Shaft of Humerus</h3>
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Description</th>
+          <th>Attachment / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Deltoid tuberosity</td>
+          <td>Rough V-shaped elevation on the lateral surface of the mid-shaft</td>
+          <td>Deltoid insertion — the primary shoulder abductor. Palpable on the lateral arm.</td>
+        </tr>
+        <tr>
+          <td>Radial nerve sulcus (spiral groove)</td>
+          <td>Shallow oblique depression on the posterior shaft, running from medial-superior to lateral-inferior</td>
+          <td>Radial nerve + profunda brachii artery run here. The sulcus delimits the origins of the lateral and medial heads of triceps. Mid-shaft humeral fractures — especially "Holstein-Lewis" fractures of the distal third — commonly injure the radial nerve here, causing wrist drop.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Distal Humerus</h3>
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Description</th>
+          <th>Attachment / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Trochlea</td>
+          <td>Spool-shaped medial articular surface — projects further distally than the capitulum</td>
+          <td>Articulates with the trochlear notch of the ulna (hinge joint). Extends from the coronoid fossa anteriorly to the olecranon fossa posteriorly.</td>
+        </tr>
+        <tr>
+          <td>Capitulum</td>
+          <td>Rounded lateral articular surface of the lateral condyle</td>
+          <td>Articulates with the head of the radius (humeroradial joint). "CRAzy TULips" mnemonic: Capitulum = Radius, Trochlea = Ulna.</td>
+        </tr>
+        <tr>
+          <td>Medial epicondyle</td>
+          <td>Larger, more prominent medial bony projection — palpable</td>
+          <td>Common Flexor Tendon (CFT) origin: flexor carpi radialis, palmaris longus, flexor carpi ulnaris, flexor digitorum superficialis. Also: ulnar collateral ligament (UCL). Site of pain in medial epicondylalgia (golfer's elbow).</td>
+        </tr>
+        <tr>
+          <td>Lateral epicondyle</td>
+          <td>Smaller lateral projection, above the capitulum — palpable</td>
+          <td>Common Extensor Tendon (CET) origin: extensor carpi radialis brevis, extensor digitorum, extensor digiti minimi, extensor carpi ulnaris. Also: radial collateral ligament (RCL). Site of pain in lateral epicondylalgia (tennis elbow).</td>
+        </tr>
+        <tr>
+          <td>Coronoid fossa</td>
+          <td>Small anterior depression above the trochlea</td>
+          <td>Receives the coronoid process of the ulna in elbow flexion — prevents impingement.</td>
+        </tr>
+        <tr>
+          <td>Radial fossa</td>
+          <td>Small anterior depression above the capitulum, lateral to the coronoid fossa</td>
+          <td>Receives the head of the radius in full elbow flexion.</td>
+        </tr>
+        <tr>
+          <td>Olecranon fossa</td>
+          <td>Larger triangular depression on the posterior distal humerus</td>
+          <td>Receives the olecranon of the ulna in full elbow extension. May be perforated in thin individuals.</td>
+        </tr>
+        <tr>
+          <td>Ulnar nerve sulcus</td>
+          <td>Groove on the posterior aspect of the medial epicondyle</td>
+          <td>The ulnar nerve passes here — directly subcutaneous. The "funny bone" sensation when you hit this area is the ulnar nerve being compressed. Site of cubital tunnel syndrome. Palpable with the elbow flexed.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="clinical">
+      <strong>Clinical — Supracondylar Fractures and Volkmann's Ischaemia</strong>
+      Supracondylar fractures are the most common elbow fracture in children (peak age 5–8 years), typically from FOOSH with the elbow hyperextended. The distal fragment is displaced posteriorly by the pull of triceps. The anterior interosseous nerve (branch of median nerve) and the brachial artery cross directly anterior to the fracture — swelling can cause Volkmann's ischaemic contracture (compartment syndrome of the forearm): fibrosis of the flexor muscle mass with the classic "intrinsic minus" deformity (wrist flexed, fingers clawed). Management: surgical pinning within hours + urgent fasciotomy if vascular compromise is present.
+    </div>
+  </section>
+
+  <!-- 5. RADIUS -->
+  <section id="radius">
+    <h2>5. Radius</h2>
+    <p>The radius is the <strong>lateral</strong> bone of the forearm (thumb side), and the primary weight-bearing bone at the wrist — approximately 80% of compressive force from the hand is transmitted through the radius to the humerus, with 20% through the ulna (via the TFCC). Proximally it is the smaller of the two bones; distally it is considerably wider, forming the articular surface for the wrist joint.</p>
+
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Description</th>
+          <th>Attachment / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Head of radius</td>
+          <td>Disc-shaped proximal end; flat superior surface (fovea) + cylindrical rim (articular circumference)</td>
+          <td>Fovea articulates with the capitulum (humeroradial joint). Circumference articulates with the radial notch of the ulna (proximal radioulnar joint — pivot for pronation/supination). Held by the annular ligament.</td>
+        </tr>
+        <tr>
+          <td>Neck of radius</td>
+          <td>Narrow area between the head and shaft</td>
+          <td>Site of radial head/neck fractures (impaction into the capitulum in FOOSH). Disrupts pronation/supination.</td>
+        </tr>
+        <tr>
+          <td>Radial tuberosity (bicipital tuberosity)</td>
+          <td>Rough oval prominence just distal to the neck, on the medial surface</td>
+          <td>Biceps brachii insertion — the primary supinator when the elbow is flexed. Because the biceps wraps around the radius, supination is strongest at 90° elbow flexion.</td>
+        </tr>
+        <tr>
+          <td>Interosseous border</td>
+          <td>Sharp medial border running the length of the shaft</td>
+          <td>Interosseous membrane (IOM) attachment — transmits compressive forces from the radius to the ulna, links the two bones to allow them to move as a unit.</td>
+        </tr>
+        <tr>
+          <td>Lister's tubercle (dorsal tubercle)</td>
+          <td>Bony prominence on the posterior distal radius, lateral to the groove for extensor pollicis longus</td>
+          <td>Serves as a pulley for the EPL tendon (changes its direction around the tubercle). Palpable clinical landmark. EPL rupture can occur after Colles fracture when the tendon frays over Lister's tubercle.</td>
+        </tr>
+        <tr>
+          <td>Distal articular surface</td>
+          <td>Concave inferior surface divided by a ridge into two facets</td>
+          <td>Lateral facet (scaphoid fossa) articulates with the scaphoid. Medial facet (lunate fossa) articulates with the lunate. The distal radius has a normal volar tilt (~11°) and radial inclination (~22°) — both are reduced in Colles fractures.</td>
+        </tr>
+        <tr>
+          <td>Radial styloid process</td>
+          <td>Lateral projection of the distal radius</td>
+          <td>Radial collateral ligament (limits ulnar deviation/adduction of the wrist). Extends ~1cm more distally than the ulnar styloid — allows greater ulnar deviation than radial deviation at the wrist.</td>
+        </tr>
+        <tr>
+          <td>Ulnar notch (sigmoid notch)</td>
+          <td>Medial concavity of the distal radius</td>
+          <td>Articulates with the head of the ulna at the distal radioulnar joint (DRUJ). The TFCC bridges the medial radius to the ulnar styloid across this joint.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="clinical">
+      <strong>Clinical — Colles Fracture vs. Smith Fracture</strong>
+      <strong>Colles fracture:</strong> distal radius fracture with dorsal displacement and angulation — the most common fracture in patients over 50 (osteoporosis + FOOSH mechanism). Classic deformity: "dinner fork" (dorsal angulation). Radial inclination is lost; volar tilt becomes dorsal tilt. Most treated conservatively with reduction under anaesthesia and cast. Physiotherapy after cast removal focuses on restoring wrist flexion, pronation/supination, grip strength and proprioception. <strong>Smith fracture:</strong> distal radius fracture with volar displacement — "reverse Colles" — from a FOOSH with the wrist in flexion or a fall onto a flexed wrist. Often requires surgical fixation.
+    </div>
+  </section>
+
+  <!-- 6. ULNA -->
+  <section id="ulna">
+    <h2>6. Ulna</h2>
+    <p>The ulna is the <strong>medial</strong> bone of the forearm (little finger side). It is the primary stabiliser of the elbow joint — the humeroulnar joint (trochlea articulating with the trochlear notch) is the most inherently stable component of the elbow complex. Proximally the ulna is larger and broader; distally it is small and contributes minimally to wrist articulation directly (most load goes through the radius), but its styloid process is the anchor for the TFCC.</p>
+
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Description</th>
+          <th>Attachment / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Olecranon</td>
+          <td>Large, beak-shaped proximal projection — forms the "point" of the elbow</td>
+          <td>Triceps brachii and anconeus insertion. Receives into the olecranon fossa of the humerus in extension, acting as a bony block that limits elbow hyperextension. Subcutaneous — susceptible to olecranon bursitis ("student's elbow").</td>
+        </tr>
+        <tr>
+          <td>Coronoid process</td>
+          <td>Anterior projection below the olecranon, forming the anterior wall of the trochlear notch</td>
+          <td>Brachialis insertion (ulnar tuberosity). The coronoid prevents posterior dislocation of the ulna (pulled out in a "terrible triad" elbow injury: lateral ligament rupture + radial head fracture + coronoid fracture).</td>
+        </tr>
+        <tr>
+          <td>Trochlear notch (semilunar notch)</td>
+          <td>Concave articular surface between the olecranon (posterior) and coronoid (anterior)</td>
+          <td>Articulates with the trochlea of the humerus — the humeroulnar hinge joint. The principal provider of elbow bony stability. Its articular cartilage is divided by a central non-articular ridge.</td>
+        </tr>
+        <tr>
+          <td>Radial notch</td>
+          <td>Lateral concavity on the coronoid process</td>
+          <td>Articulates with the articular circumference of the radial head (proximal radioulnar joint — PRUJ). The annular ligament surrounds the radial head and attaches to the anterior and posterior margins of the radial notch.</td>
+        </tr>
+        <tr>
+          <td>Ulnar tuberosity</td>
+          <td>Rough area below the coronoid process on the anterior surface</td>
+          <td>Brachialis muscle insertion — primary elbow flexor (independent of forearm position).</td>
+        </tr>
+        <tr>
+          <td>Supinator crest</td>
+          <td>Ridge on the proximal lateral ulna</td>
+          <td>Supinator muscle (deep head) origin.</td>
+        </tr>
+        <tr>
+          <td>Interosseous border</td>
+          <td>Sharp lateral border running the length of the shaft</td>
+          <td>Interosseous membrane attachment — with the radius's medial border.</td>
+        </tr>
+        <tr>
+          <td>Head of ulna</td>
+          <td>Rounded distal end — laterally articulates with the ulnar notch of the radius (DRUJ)</td>
+          <td>The ulnar head is prominent dorsally and palpable at the wrist. DRUJ allows forearm rotation (pronation/supination). In DRUJ instability (post-fracture or TFCC tear), the ulnar head may sublux dorsally in supination or volarly in pronation.</td>
+        </tr>
+        <tr>
+          <td>Ulnar styloid process</td>
+          <td>Small posterior projection at the distal ulna</td>
+          <td>TFCC attachment (ulnar collateral ligament component). The ulnar styloid is commonly avulsed in Colles fractures — usually insignificant unless the fragment is large (implies TFCC tear and DRUJ instability).</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 7. CARPUS -->
+  <section id="carpus">
+    <h2>7. Carpus — The Eight Carpal Bones</h2>
+    <p>The carpus consists of eight small bones arranged in two rows, forming the wrist. The carpus is not a rigid block — the individual bones glide relative to each other during wrist motion, distributing load and providing a wide range of movement. The proximal carpal row is an <strong>intercalated segment</strong> — it has no direct muscle attachments and is entirely dependent on ligaments for its position. This makes the proximal row mobile but also vulnerable to ligamentous injury and instability.</p>
+
+    <div class="mnemonic">
+      <strong>Mnemonic — Carpal Bones (Proximal then Distal, Lateral to Medial)</strong>
+      <strong>Proximal row:</strong> "She Likes To Play" — Scaphoid · Lunate · Triquetrum · Pisiform<br>
+      <strong>Distal row:</strong> "Try To Catch Her" — Trapezium · Trapezoid · Capitate · Hamate<br>
+      <em>(Kaewlai et al., 2008)</em>
+    </div>
+
+    <div class="carpal-grid">
+      <div class="carpal-card">
+        <div class="cc-name">Scaphoid</div>
+        <div class="cc-row">Proximal row · Lateral</div>
+        <div class="cc-art">Articulates with: Radius, lunate, capitate, trapezoid, trapezium (5 bones total — most of any carpal).</div>
+        <div class="cc-note">Most commonly fractured carpal. Waist fractures risk AVN due to retrograde blood supply from distal to proximal pole. "Anatomical snuffbox" tenderness = suspect fracture.</div>
+      </div>
+      <div class="carpal-card">
+        <div class="cc-name">Lunate</div>
+        <div class="cc-row">Proximal row</div>
+        <div class="cc-art">Articulates with: Radius, scaphoid, triquetrum, capitate, hamate. Crescent-shaped (lunate = moon).</div>
+        <div class="cc-note">Most commonly dislocated carpal. In perilunate dislocation, the lunate stays with the radius while all other carpals displace dorsally. On lateral X-ray, lunate "spills its cup" forward (volar).</div>
+      </div>
+      <div class="carpal-card">
+        <div class="cc-name">Triquetrum</div>
+        <div class="cc-row">Proximal row</div>
+        <div class="cc-art">Articulates with: Lunate, pisiform (palmar surface), hamate.</div>
+        <div class="cc-note">Second most commonly fractured carpal (after scaphoid). Avulsion fractures from dorsal radiocarpal ligament are often missed — small fleck on lateral X-ray.</div>
+      </div>
+      <div class="carpal-card">
+        <div class="cc-name">Pisiform</div>
+        <div class="cc-row">Proximal row · Medial</div>
+        <div class="cc-art">Articulates with: Triquetrum only (palmar surface). A sesamoid bone within the flexor carpi ulnaris tendon.</div>
+        <div class="cc-note">Forms the medial border of Guyon's canal (ulnar tunnel). Pisiform fractures associated with direct trauma/fall onto the hypothenar eminence.</div>
+      </div>
+      <div class="carpal-card">
+        <div class="cc-name">Trapezium</div>
+        <div class="cc-row">Distal row · Lateral</div>
+        <div class="cc-art">Articulates with: Scaphoid, trapezoid, 1st and 2nd metacarpals. Has a groove (for flexor carpi radialis) and a prominent ridge/tubercle on the palmar surface.</div>
+        <div class="cc-note">Forms the saddle joint with the 1st metacarpal (CMC 1) — uniquely mobile, allows thumb opposition. Trapezium fractures + CMC arthrosis are common in elderly.</div>
+      </div>
+      <div class="carpal-card">
+        <div class="cc-name">Trapezoid</div>
+        <div class="cc-row">Distal row</div>
+        <div class="cc-art">Articulates with: Scaphoid, trapezium, capitate, 2nd metacarpal. Smallest of the distal row; wedge-shaped.</div>
+        <div class="cc-note">Least commonly fractured carpal — its protected position within the distal row and strong ligamentous attachments provide stability. Fractures usually from high-energy injury.</div>
+      </div>
+      <div class="carpal-card">
+        <div class="cc-name">Capitate</div>
+        <div class="cc-row">Distal row</div>
+        <div class="cc-art">Largest carpal bone. Articulates with: Scaphoid, lunate, hamate, trapezoid, and 2nd–4th metacarpals. Has a rounded head, neck, and body.</div>
+        <div class="cc-note">The head of the capitate is the fulcrum of the wrist. The radioscaphocapitate ligament creates a sling supporting the scaphoid — key to carpal stability. The oblique head of adductor pollicis originates from the capitate.</div>
+      </div>
+      <div class="carpal-card">
+        <div class="cc-name">Hamate</div>
+        <div class="cc-row">Distal row · Medial</div>
+        <div class="cc-art">Articulates with: Lunate, triquetrum, capitate, 4th and 5th metacarpals. Distinctive hook (hamulus) on the palmar surface.</div>
+        <div class="cc-note">Hook forms the medial border of the carpal tunnel and the lateral wall of Guyon's canal. Hook fractures common in cyclists and golfers from direct impact. Ulnar nerve/artery may be compressed in Guyon's canal by hook fracture.</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The Carpal Tunnel</strong>
+      The carpal tunnel is an osseofibrous canal formed by the arch of the carpal bones (floor and sides) and the flexor retinaculum (roof). Contents: flexor digitorum superficialis (4 tendons), flexor digitorum profundus (4 tendons), flexor pollicis longus (1 tendon) + the median nerve. The tunnel is at fixed volume — any process increasing contents or reducing space (tenosynovitis, wrist oedema, pregnancy, hypothyroidism, acromegaly, fracture malunion) compresses the median nerve → carpal tunnel syndrome (CTS): paraesthesia in the lateral 3½ digits, thenar wasting, weakness of LOAF muscles. Note: FCR tendon runs in its own separate tunnel in the groove of the trapezium ridge and does NOT pass through the carpal tunnel.
+    </div>
+  </section>
+
+  <!-- 8. METACARPALS AND PHALANGES -->
+  <section id="metacarpals">
+    <h2>8. Metacarpals &amp; Phalanges</h2>
+    <p>The <strong>five metacarpal bones</strong> form the palm of the hand. Each has a <em>base</em> (proximal — articulates with distal carpal row), a <em>shaft</em>, and a <em>head</em> (distal — the knuckle, articulating with the proximal phalanx at the MCP joint). The metacarpal heads are rounded, allowing the MCP joints to flex, extend, abduct, and adduct (condyloid joints).</p>
+    <p>The <strong>first metacarpal</strong> (thumb) is the shortest and most mobile — it articulates with the trapezium at the CMC 1 saddle joint, which allows opposition (a combination of palmar abduction + flexion + medial rotation). CMC 1 osteoarthritis is one of the most common joint conditions in the hand.</p>
+    <p>The <strong>14 phalanges</strong> per hand (28 total) each have a base, shaft, and head. The distal phalanx has a broadened distal tuft supporting the nail. Interphalangeal joints (PIP and DIP) are pure hinge joints (uniaxial), stabilised by volar plates (thick fibrocartilage on the palmar surface resisting hyperextension) and collateral ligaments. The thumb has only PIP and DIP joints (proximal and distal — no middle phalanx, hence the PIP in the thumb is called the IP joint).</p>
+
+    <div class="mnemonic">
+      <strong>Metacarpal Numbering</strong>
+      I = Thumb · II = Index · III = Middle · IV = Ring · V = Little<br>
+      The third metacarpal is the longest and has a styloid process at its base (palpable dorsally, lateral to the centre of the wrist). It forms the "key stone" of the fixed central carpometacarpal unit.
+    </div>
+
+    <div class="clinical">
+      <strong>Clinical — Boxer's Fracture &amp; Bennett's Fracture</strong>
+      <strong>Boxer's fracture:</strong> fracture of the neck of the 5th (or 4th) metacarpal — the knuckle is depressed when viewed from the side. Occurs from punching with a closed fist (incorrect technique). Most heal with buddy strapping; surgical fixation if angulation exceeds ~40° at MC5 or ~20° at MC4. <strong>Bennett's fracture:</strong> intra-articular fracture-dislocation of the base of the 1st metacarpal at the CMC 1 joint. A small volar fragment remains held by the anterior oblique ("beak") ligament while the rest of the metacarpal shaft is displaced laterally by APL pull. Requires surgical fixation (K-wires or ORIF) to restore the articular surface. <strong>Rolando's fracture</strong> is the comminuted version — worse prognosis.
+    </div>
+  </section>
+
+  <!-- 9. TFCC -->
+  <section id="tfcc">
+    <h2>9. Triangular Fibrocartilage Complex (TFCC)</h2>
+    <p>The TFCC is a load-bearing, cushioning structure on the ulnar side of the wrist. It fills the gap between the distal ulna and the proximal carpal row, completing the articular surface of the wrist on the medial side. Without the TFCC, the ulna would not properly articulate with the carpus, and DRUJ stability would be lost.</p>
+
+    <h3>Components of the TFCC</h3>
+    <p><strong>Articular disc (triangular fibrocartilage proper):</strong> A triangular pad of fibrocartilage. Origin: sigmoid notch of the radius. Insertion: ulnar styloid and fovea at the base of the styloid. This disc transmits approximately 20% of the compressive load from the hand to the ulna. Its central portion is avascular (poor healing) while the peripheral edges are vascular (can heal after repair).</p>
+    <p><strong>Radioulnar ligaments (palmar and dorsal):</strong> Deep and superficial layers connecting the radius to the ulna at the DRUJ. Primary stabilisers of the DRUJ — the deep fibres attach to the ulnar fovea and are most important for rotational stability. Torn in DRUJ instability.</p>
+    <p><strong>Ulnocarpal ligaments:</strong> Ulnolunate and ulnotriquetral ligaments — stabilise the ulnar carpus and prevent ulnar translation of the hand.</p>
+    <p><strong>ECU (extensor carpi ulnaris) tendon sheath:</strong> The ECU subsheath forms the floor of the 6th extensor compartment and provides dynamic DRUJ stability. ECU tendinopathy/dislocation often occurs alongside TFCC pathology.</p>
+
+    <div class="clinical">
+      <strong>Clinical — TFCC Tears</strong>
+      TFCC tears are a common cause of ulnar-sided wrist pain, particularly in athletes, racquet sport players, and workers performing repetitive pronation/supination. Classification: Palmer Type 1 (traumatic — typically from FOOSH with axial loading and rotation) vs Type 2 (degenerative — from repetitive compression, associated with positive ulnar variance). Symptoms: ulnar-sided wrist pain, weakness of grip, pain with forearm rotation, DRUJ instability. Investigations: MRI arthrogram (gold standard). Management: acute peripheral tears (vascular zone) → surgical repair. Central tears (avascular) → arthroscopic debridement. Physiotherapy: splinting/casting (4–6 weeks), progressive DRUJ stabilisation, proprioceptive training, grip strengthening.
+    </div>
+
+    <div class="concept">
+      <strong>Ulnar Variance</strong>
+      Ulnar variance describes the relative lengths of the radius and ulna at the distal radioulnar joint. <strong>Positive ulnar variance</strong> (ulna longer than radius) increases loading through the TFCC — associated with TFCC degeneration, lunate osteonecrosis (Kienböck's disease), and ulnocarpal impingement. <strong>Negative ulnar variance</strong> (ulna shorter) is associated with Kienböck's disease in some classifications. Ulnar variance can change dynamically — increases significantly with power grip and forearm pronation. Surgical ulnar shortening osteotomy can unload the TFCC in TFCC degeneration with positive ulnar variance.
+    </div>
+  </section>
+
+  <!-- 10. CLINICAL -->
+  <section id="clinical">
+    <h2>10. Clinical Applications</h2>
+
+    <table class="clinical-table">
+      <thead>
+        <tr>
+          <th>Condition</th>
+          <th>Bone / Structure</th>
+          <th>Mechanism / Pathology</th>
+          <th>Physiotherapy Relevance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Scaphoid Fracture</td>
+          <td>Scaphoid (waist)</td>
+          <td>FOOSH — axial load through the thenar eminence. Waist fractures most common (70%). Blood supply retrograde — proximal pole at risk of AVN if diagnosis delayed. X-ray may be normal acutely.</td>
+          <td>All suspected scaphoid fractures → thumb spica cast even if X-ray normal; repeat imaging at 10–14 days or MRI. AVN risk is why a "normal" X-ray cannot exclude fracture. Delayed diagnosis → non-union → carpal collapse (SNAC wrist).</td>
+        </tr>
+        <tr>
+          <td>Lunate Dislocation / Perilunate Instability</td>
+          <td>Lunate (most commonly)</td>
+          <td>High-energy FOOSH with hyperextension. Ligament failure progresses around the lunate — the scapholunate ligament tears first (Mayfield stages I–IV). Lunate eventually dislocates volarly while the rest of the carpus is dorsal.</td>
+          <td>Neurovascular emergency — median nerve compression from volar lunate. Immediate surgical reduction + ligament repair. Post-operatively: prolonged immobilisation then supervised wrist rehab.</td>
+        </tr>
+        <tr>
+          <td>Colles Fracture</td>
+          <td>Distal radius</td>
+          <td>FOOSH with wrist in extension. Dorsal displacement, radial shortening, loss of volar tilt. Most common in post-menopausal women (osteoporosis). "Dinner fork" deformity.</td>
+          <td>After cast removal (5–6 weeks): wrist ROM, grip strengthening, pronation/supination, proprioception, functional task training. Osteoporosis management referral.</td>
+        </tr>
+        <tr>
+          <td>Radial Head Fracture</td>
+          <td>Radial head/neck</td>
+          <td>FOOSH — axial compression impacts radial head into capitulum. Mason classification (I–IV). Associated with Essex-Lopresti injury (IOM disruption + DRUJ involvement).</td>
+          <td>Undisplaced (Mason I): early mobilisation is key — immobilisation leads to stiffness. Displaced: ORIF or radial head replacement. Physiotherapy: progressive ROM (forearm rotation critical), strength, function.</td>
+        </tr>
+        <tr>
+          <td>Kienböck's Disease</td>
+          <td>Lunate (avascular necrosis)</td>
+          <td>AVN of the lunate — multifactorial (repetitive microtrauma, negative ulnar variance, vascular anatomy). Progressive: Lichtman staging I–IIIb/IV. Late stages: carpal collapse and OA.</td>
+          <td>Early stages: activity modification, splinting, physiotherapy for pain/function. Surgical options (ulnar lengthening, radial shortening, carpal unloading procedures, wrist fusion in late disease). Physiotherapy post-op: ROM and strength restoration.</td>
+        </tr>
+        <tr>
+          <td>Carpal Tunnel Syndrome (CTS)</td>
+          <td>Carpal tunnel / Median nerve</td>
+          <td>Compression of the median nerve within the carpal tunnel — most common peripheral nerve compression. Causes: tenosynovitis, wrist oedema, pregnancy, hypothyroidism, repetitive flexion. Phalen's test, Tinel's sign, wrist ratio index.</td>
+          <td>Conservative (mild/moderate): neutral wrist splint at night, activity modification, corticosteroid injection (good short-term evidence), nerve/tendon gliding exercises. Surgical (failed conservative/severe): carpal tunnel decompression. Post-op: scar massage, desensitisation, grip strength, return to function.</td>
+        </tr>
+        <tr>
+          <td>TFCC Tear</td>
+          <td>TFCC / DRUJ</td>
+          <td>Traumatic (Type 1: acute rotation-compression injury) or degenerative (Type 2: positive ulnar variance, repetitive). Ulnar-sided wrist pain, DRUJ instability, painful forearm rotation.</td>
+          <td>Conservative: splinting (Munster cast or functional brace), NSAIDs, corticosteroid injection. Physiotherapy: DRUJ stabilisation exercises, grip strengthening, proprioceptive training. Surgical: arthroscopic debridement (central) or repair (peripheral).</td>
+        </tr>
+        <tr>
+          <td>Scapular Winging</td>
+          <td>Scapula / Long thoracic nerve</td>
+          <td>Long thoracic nerve palsy → serratus anterior weakness → medial border lifts off thorax. Causes: axillary surgery, radical mastectomy, backpack palsy (compression), viral neuritis.</td>
+          <td>Serratus anterior strengthening programme (wall push-ups, protraction against resistance, serratus punches). Functional taping for symptom relief. Recovery can take 6–24 months if nerve regeneration is occurring spontaneously.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="sources">
+    <h3>Sources &amp; Further Reading</h3>
+    <ol>
+      <li>LUNEX University. <em>BPTY04 Lecture Slides — Upper Limb Osteology</em>. Dr Maria Abulkhanova / Anouk Urhausen, 2026.</li>
+      <li>Jones O. <em>The Scapula / The Clavicle / The Humerus / The Radius / The Ulna / The Bones of the Hand</em>. TeachMeAnatomy, 2025. <a href="https://teachmeanatomy.info/upper-limb/bones/" target="_blank">teachmeanatomy.info</a></li>
+      <li>Standring S (ed). <em>Gray's Anatomy</em>, 42nd ed. Elsevier, 2021.</li>
+      <li>Marieb EN, Hoehn KN. <em>Human Anatomy &amp; Physiology</em>, 11th ed. Pearson, 2019.</li>
+      <li>Kaewlai R, et al. Multidetector CT of carpal injuries. <em>RadioGraphics</em> 2008; 28:1373–1394.</li>
+      <li>Palmer AK. Triangular fibrocartilage complex lesions: a classification. <em>J Hand Surg Am</em> 1989; 14:594–606.</li>
+      <li>Netter FH. <em>Atlas of Human Anatomy</em>, 7th ed. Elsevier, 2019.</li>
+    </ol>
+  </div>
+
+</div>
+
+<footer>
+  BPTY04 Musculoskeletal Anatomy · LUNEX University · For personal study use only
+</footer>
+
+</body>
+</html>

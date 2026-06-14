@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arthrology — In-Depth Guide | BPTY04</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #fdfcfa;
+      color: #1a1a1a;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a3a6b, #3a6ea0);
+      color: #fff;
+      padding: 2.8rem 3rem 2.2rem;
+    }
+
+    header .back-link {
+      display: inline-block;
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 0.2rem 0.55rem;
+    }
+    header .back-link:hover { background: rgba(255,255,255,0.15); }
+
+    header .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.7rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.15rem 0.6rem;
+      margin-bottom: 0.7rem;
+    }
+
+    header h1 { font-size: 2rem; font-weight: normal; line-height: 1.2; }
+    header p { margin-top: 0.6rem; color: rgba(255,255,255,0.8); font-size: 0.88rem; font-style: italic; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    .toc {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 4px solid #3a6ea0;
+      padding: 1.2rem 1.6rem;
+      margin-bottom: 3rem;
+      font-size: 0.83rem;
+    }
+    .toc h3 {
+      font-size: 0.68rem;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a3a6b;
+      margin-bottom: 0.7rem;
+    }
+    .toc ol { margin-left: 1.2rem; color: #444; line-height: 2; }
+    .toc a { color: #1a3a6b; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    section { margin-bottom: 3.5rem; }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #1a3a6b;
+      border-bottom: 2px solid #3a6ea0;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    h3 { font-size: 1.05rem; font-weight: bold; color: #333; margin: 1.5rem 0 0.6rem; }
+    h4 { font-size: 0.92rem; font-weight: bold; color: #555; margin: 1.2rem 0 0.4rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    p { margin-bottom: 0.9rem; }
+
+    .callout, .clinical, .mnemonic, .concept {
+      border-left: 4px solid; padding: 0.9rem 1.2rem; margin: 1.2rem 0; border-radius: 0 4px 4px 0;
+    }
+    .callout  { border-color: #2a7db5; background: #f0f7fc; }
+    .clinical { border-color: #c0392b; background: #fdf3f2; }
+    .mnemonic { border-color: #e6a817; background: #fdf8ec; }
+    .concept  { border-color: #7b52c4; background: #f6f2fd; }
+
+    .callout strong, .clinical strong, .mnemonic strong, .concept strong {
+      display: block;
+      font-size: 0.7rem;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.4rem;
+    }
+    .callout strong  { color: #2a7db5; }
+    .clinical strong { color: #c0392b; }
+    .mnemonic strong { color: #b07e0a; }
+    .concept strong  { color: #7b52c4; }
+
+    /* Classification overview table */
+    .class-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .class-table th {
+      background: #1a3a6b;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+    .class-table td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid #d8e0ec;
+      vertical-align: top;
+    }
+    .class-table tr:last-child td { border-bottom: 2px solid #3a6ea0; }
+    .class-table tr:nth-child(even) { background: #f4f7fb; }
+    .class-table td:first-child { font-weight: bold; color: #1a3a6b; white-space: nowrap; }
+
+    /* Synovial joint type cards */
+    .joint-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .joint-card {
+      border: 1px solid #c8d8ec;
+      border-top: 3px solid #3a6ea0;
+      padding: 1rem;
+      background: #fff;
+      font-size: 0.85rem;
+    }
+    .joint-card .jc-name { font-weight: bold; color: #1a3a6b; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .joint-card .jc-axes {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.68rem;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .joint-card .jc-move { color: #555; font-size: 0.83rem; margin-bottom: 0.4rem; }
+    .joint-card .jc-ex { font-style: italic; color: #777; font-size: 0.8rem; }
+
+    /* Fibrous joint sub-table */
+    .fibrous-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .fibrous-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 3px solid #3a6ea0;
+      padding: 0.8rem 1rem;
+      font-size: 0.85rem;
+    }
+    .fibrous-item strong {
+      display: block;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1a3a6b;
+      margin-bottom: 0.3rem;
+    }
+
+    /* Stability pillars */
+    .stability-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .stability-card {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      background: #fff;
+      font-size: 0.85rem;
+    }
+    .stability-card .sc-num {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #c8d8ec;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .stability-card .sc-name { font-weight: bold; color: #1a3a6b; margin-bottom: 0.4rem; }
+
+    /* Clinical table */
+    .clinical-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .clinical-table th {
+      background: #7b0d0d;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+    .clinical-table td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid #f0d5d5;
+      vertical-align: top;
+    }
+    .clinical-table tr:last-child td { border-bottom: 2px solid #c0392b; }
+    .clinical-table tr:nth-child(even) { background: #fdf8f8; }
+    .clinical-table td:first-child { font-weight: bold; color: #7b0d0d; white-space: nowrap; }
+
+    .sources {
+      margin-top: 4rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1.5rem;
+      font-size: 0.8rem;
+      color: #666;
+    }
+    .sources h3 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a3a6b;
+      margin-bottom: 0.8rem;
+    }
+    .sources ol { margin-left: 1.2rem; line-height: 1.9; }
+    .sources a { color: #1a3a6b; }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 1rem 2rem;
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    @media (max-width: 680px) {
+      .joint-grid { grid-template-columns: 1fr 1fr; }
+      .fibrous-grid { grid-template-columns: 1fr; }
+      .stability-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="index.html">← Back to BPTY04 Resources</a>
+  <div class="tag">BPTY04 · In-Depth Guide</div>
+  <h1>Arthrology</h1>
+  <p>Joint classification · Fibrous · Cartilaginous · Synovial joints · Articular cartilage · Stability · ROM · Clinical correlations</p>
+</header>
+
+<div class="container">
+
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#classification">The Three Classification Systems</a></li>
+      <li><a href="#fibrous">Fibrous Joints</a></li>
+      <li><a href="#cartilaginous">Cartilaginous Joints</a></li>
+      <li><a href="#synovial-structure">Synovial Joints — Structural Features</a></li>
+      <li><a href="#cartilage">Articular Cartilage</a></li>
+      <li><a href="#synovial-fluid">Synovial Fluid &amp; Membrane</a></li>
+      <li><a href="#synovial-types">Synovial Joint Subtypes</a></li>
+      <li><a href="#rom">Range of Motion Classification</a></li>
+      <li><a href="#stability">Joint Stability</a></li>
+      <li><a href="#clinical">Clinical Applications</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. OVERVIEW -->
+  <section id="overview">
+    <h2>1. Overview</h2>
+    <p><strong>Arthrology</strong> is the study of joints (articulations) — the connections between bones that are the sites of all skeletal movement. Every joint in the body is a structural compromise between two competing demands: <strong>stability</strong> (resistance to unwanted movement and dislocation) and <strong>mobility</strong> (range of available motion). Understanding how joints are classified, constructed, and stabilised is essential for physiotherapists, as almost every musculoskeletal condition involves a disruption of this stability–mobility balance.</p>
+    <p>Joints can be classified by three independent systems: by <strong>structure</strong> (what tissue unites the bones), by <strong>mobility</strong> (how freely the joint moves), and by <strong>range of motion</strong> (how many planes/axes of movement are available). These three systems are interrelated but not identical — knowing one classification helps predict, but does not determine, the others.</p>
+    <div class="callout">
+      <strong>Clinical Principle: The Stability–Mobility Trade-off</strong>
+      Every joint exists on a spectrum from maximally stable (immobile, like a skull suture) to maximally mobile (the glenohumeral joint). Stability costs mobility and mobility costs stability. In rehabilitation, physiotherapists often aim to restore the <em>appropriate</em> balance for a given joint — not maximum stability (which restricts function) or maximum mobility (which risks re-injury), but the optimal combination for the patient's activities.
+    </div>
+  </section>
+
+  <!-- 2. THREE SYSTEMS -->
+  <section id="classification">
+    <h2>2. The Three Classification Systems</h2>
+    <p>The three classification frameworks are complementary — together they give a complete functional description of any joint.</p>
+
+    <table class="class-table">
+      <thead>
+        <tr>
+          <th>Classification System</th>
+          <th>Categories</th>
+          <th>Basis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>By Structure</td>
+          <td>Fibrous · Cartilaginous · Synovial</td>
+          <td>Type of tissue uniting the articulating surfaces</td>
+        </tr>
+        <tr>
+          <td>By Mobility</td>
+          <td>Synarthrosis (immobile) · Amphiarthrosis (slightly mobile) · Diarthrosis (freely mobile)</td>
+          <td>Degree of movement permitted</td>
+        </tr>
+        <tr>
+          <td>By ROM / Axes</td>
+          <td>Uniaxial · Biaxial · Multiaxial · Non-axial (plane)</td>
+          <td>Number of planes/axes of movement available</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="mnemonic">
+      <strong>Mnemonic — "FCS / SAD / UBM" (Structure, then Mobility, then Degrees of freedom)</strong>
+      <strong>F</strong>ibrous – <strong>C</strong>artilaginous – <strong>S</strong>ynovial (structure)<br>
+      <strong>S</strong>ynarthrosis – <strong>A</strong>mphiarthrosis – <strong>D</strong>iarthrosis (mobility)<br>
+      <strong>U</strong>niaxial – <strong>B</strong>iaxial – <strong>M</strong>ultiaxial (ROM axes)
+    </div>
+
+    <div class="concept">
+      <strong>Why Three Systems?</strong>
+      No single classification captures everything useful. Structure explains <em>how</em> the joint is built. Mobility tells you <em>how much</em> it moves. Axes tell you <em>in which directions</em> it can move. The systems correlate but don't perfectly overlap: for example, the pubic symphysis is cartilaginous (structure), amphiarthrosis (mobility), and the radiocarpal joint is synovial (structure), diarthrosis (mobility), biaxial (ROM) — a condyloid joint. Recognising these overlaps lets you deduce joint properties from first principles rather than memorising every joint separately.
+    </div>
+  </section>
+
+  <!-- 3. FIBROUS -->
+  <section id="fibrous">
+    <h2>3. Fibrous Joints</h2>
+    <p>Fibrous joints are united entirely by dense, irregular <strong>fibrous connective tissue</strong> with no cartilage intervening between the bone surfaces. The amount of fibrous tissue determines how much movement, if any, is permitted. Fibrous joints are typically <strong>synarthroses</strong> (immobile) or <strong>amphiarthroses</strong> (slightly mobile).</p>
+
+    <div class="fibrous-grid">
+      <div class="fibrous-item">
+        <strong>Sutures — Synarthrosis</strong>
+        Found <em>exclusively</em> between the flat bones of the skull. The bone margins interlock with a thin fibrous layer (sutural ligament). In adults, the fibrous tissue ossifies completely, becoming a <strong>synostosis</strong>. Clinically important at birth — unfused sutures allow skull deformation (moulding) during passage through the birth canal. Premature fusion (craniosynostosis) prevents normal brain growth, requiring surgical intervention.
+      </div>
+      <div class="fibrous-item">
+        <strong>Gomphoses — Synarthrosis</strong>
+        The tooth-in-socket joint. The root of each tooth is anchored in the alveolar bone of the maxilla or mandible by the <strong>periodontal ligament</strong> — a dense fibrous ligament that both fixes the tooth and acts as a shock absorber. Clinically: the periodontal ligament is destroyed in periodontitis, leading to tooth mobility and ultimately tooth loss. Orthodontic braces work by applying sustained force to gradually remodel the surrounding alveolar bone.
+      </div>
+      <div class="fibrous-item">
+        <strong>Syndesmoses — Amphiarthrosis</strong>
+        Bones held together by an interosseous membrane or ligament, permitting slight movement (elasticity of the connecting tissue). Key examples: the <strong>middle tibiofibular joint</strong> (interosseous membrane of the leg — the "high ankle") and the middle radioulnar joint (forearm interosseous membrane). Clinically relevant: high ankle sprain = syndesmosis tear, requiring longer recovery than lateral ligament sprains. The tibiofibular syndesmosis must be stable for normal ankle mechanics.
+      </div>
+      <div class="fibrous-item">
+        <strong>Synostoses — No movement</strong>
+        Bony fusion between previously separate bones. Represents the end-stage of some other joint types. Examples: fusion of the sacral vertebrae (forming the sacrum), fusion of skull sutures in adulthood, and fusion of the ilium, ischium, and pubis to form the hip bone. Pathological synostosis (e.g. of the atlantoaxial joint in rheumatoid arthritis) can cause dangerous cervical spine instability.
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CARTILAGINOUS -->
+  <section id="cartilaginous">
+    <h2>4. Cartilaginous Joints</h2>
+    <p>In cartilaginous joints, the bone surfaces are united by <strong>cartilage</strong> rather than fibrous tissue. Two subtypes exist, distinguished by the type of cartilage involved.</p>
+
+    <h3>Synchondroses (Primary Cartilaginous)</h3>
+    <p>Bones are connected by <strong>hyaline cartilage</strong>. These joints are <strong>synarthroses</strong> (immobile under normal physiological conditions). The most important examples are the <strong>epiphyseal plates</strong> (growth plates) found between the diaphysis (shaft) and epiphysis (end) of growing long bones. Once skeletal maturity is reached (approximately 18 years in females, 21 years in males), the growth plate ossifies and the synchondrosis converts to a synostosis.</p>
+
+    <div class="clinical">
+      <strong>Clinical — Growth Plate Injuries (Salter-Harris Fractures)</strong>
+      Because hyaline cartilage is mechanically weaker than bone in children, the epiphyseal plate is a zone of vulnerability. Salter-Harris fractures are classified (I–V) by the relationship of the fracture line to the growth plate. Type I (Salter I) — slip through the growth plate — is the mildest and can be missed on X-ray. Type V — crush injury to the plate — is the most serious, often leading to premature growth arrest and angular deformity. All Salter-Harris fractures should be managed with orthopaedic input, as damage to the germinal cells of the plate can stunt longitudinal bone growth.
+    </div>
+
+    <h3>Symphyses (Secondary Cartilaginous)</h3>
+    <p>Bones are connected by a pad of <strong>fibrocartilage</strong>, which is far stronger and more compressible than hyaline cartilage. Symphyses are <strong>amphiarthroses</strong> — they permit limited but important movement. Key examples:</p>
+    <p><strong>Pubic symphysis:</strong> Connects the two pubic bones at the body's midline. Allows slight movement that is critical during childbirth (the pelvis slightly widens) and during the gait cycle (weight transfer). Relaxin hormone during pregnancy increases ligamentous laxity, increasing symphysis mobility — which can cause symphysis pubis dysfunction (SPD), a painful condition managed by physiotherapy.</p>
+    <p><strong>Intervertebral discs:</strong> Between adjacent vertebral bodies from C2–S1. Each disc has a gelatinous nucleus pulposus (high water content; hydrostatic pressure distribution) surrounded by the annulus fibrosus (concentric fibrocartilage lamellae; tensile resistance). The combination allows flexion, extension, lateral flexion, and rotation while distributing compressive load. Degeneration of the disc reduces height and hydrostatic function — a common cause of back pain and nerve root compression.</p>
+
+    <div class="concept">
+      <strong>Fibrocartilage vs. Hyaline Cartilage</strong>
+      <strong>Hyaline cartilage:</strong> Fine type II collagen, highly organised; very smooth, low friction surface; poor intrinsic healing capacity (avascular and aneural). Found at articular surfaces and growth plates.<br><br>
+      <strong>Fibrocartilage:</strong> Dense type I collagen mixed with cartilage matrix; stronger in tension and compression; slightly less smooth. Found in menisci, intervertebral discs, pubic symphysis, labra, and the triangular fibrocartilage complex (TFCC). Has slightly better but still limited healing potential compared to hyaline cartilage.
+    </div>
+  </section>
+
+  <!-- 5. SYNOVIAL STRUCTURE -->
+  <section id="synovial-structure">
+    <h2>5. Synovial Joints — Structural Features</h2>
+    <p>Synovial joints are the most common joint type in the body and the primary focus of musculoskeletal physiotherapy. They are characterised by a <strong>joint cavity</strong> filled with synovial fluid, enclosed within a fibrous capsule lined by the synovial membrane. This architecture is what enables the large ranges of motion they permit.</p>
+
+    <h3>Articular Capsule</h3>
+    <p>Every synovial joint is enclosed in a fibrous capsule with two distinct layers:</p>
+    <p><strong>Outer fibrous layer:</strong> Dense irregular connective tissue (type I collagen) that surrounds the joint completely, attaching to the periosteum of each bone beyond the articular margins. Provides the primary passive structural containment of the joint. Thickened locally to form <strong>capsular ligaments</strong> (e.g. the glenohumeral ligaments, the iliofemoral ligament at the hip). These thickenings direct and limit specific movements.</p>
+    <p><strong>Inner synovial membrane:</strong> A specialised vascular connective tissue lining the inner surface of the capsule (but not the articular cartilage itself). Contains type A synoviocytes (macrophage-like, phagocytic — clear debris and wear particles) and type B synoviocytes (fibroblast-like — synthesise synovial fluid components including hyaluronan and lubricin). Richly vascularised and innervated — the primary target in rheumatoid arthritis.</p>
+
+    <h3>Articular Surfaces</h3>
+    <p>The opposing bone surfaces are covered by <strong>articular (hyaline) cartilage</strong> — a smooth, compressible, nearly frictionless surface. Unlike the bone beneath it, articular cartilage is <strong>avascular and aneural</strong>: it receives nutrition by diffusion from the synovial fluid (during joint movement) and from the subchondral bone below. This avascularity explains why articular cartilage has very limited intrinsic healing capacity when damaged.</p>
+
+    <h3>Additional Features</h3>
+    <p><strong>Articular discs / menisci:</strong> Fibrocartilaginous structures within some synovial joints that improve congruence between incongruent articular surfaces, distribute load more evenly, and deepen the joint (e.g. medial and lateral menisci of the knee, articular disc of the DRUJ and TMJ, glenoid labrum of the shoulder, acetabular labrum of the hip).</p>
+    <p><strong>Bursae:</strong> Closed, synovial-membrane-lined sacs containing a film of synovial fluid. Positioned between tendons, ligaments, muscles, and bony prominences to reduce friction. Not strictly part of the joint but closely associated; some communicate with the joint cavity (e.g. the suprapatellar bursa communicates with the knee joint).</p>
+    <p><strong>Fat pads:</strong> Intra-articular fatty tissue that fills dead space within the joint cavity, optimising pressure distribution and acting as flexible cushions (e.g. the infrapatellar fat pad at the knee, the Hoffa's fat pad).</p>
+  </section>
+
+  <!-- 6. CARTILAGE -->
+  <section id="cartilage">
+    <h2>6. Articular Cartilage — Deep Dive</h2>
+    <p>Articular cartilage is one of the most clinically important tissues in the musculoskeletal system — its integrity is essential for painless joint function, and its failure underlies osteoarthritis (the world's most prevalent joint disease).</p>
+
+    <h3>Composition</h3>
+    <p>Articular cartilage consists of chondrocytes (the only cells, making up ~5% of the volume), embedded in a matrix of type II collagen fibres (~15% wet weight), proteoglycans (aggregan — highly negatively charged, attracting water), and water (~70% wet weight). The high water content and the electrostatic repulsion between proteoglycan chains creates the tissue's remarkable compressive stiffness and resilience.</p>
+
+    <h3>Zones of Articular Cartilage</h3>
+    <p>Articular cartilage is organised into four zones, each with different collagen fibre orientation and mechanical properties:</p>
+    <p><strong>Superficial (tangential) zone:</strong> Collagen fibres run parallel to the surface; highest collagen density; resists shear stress; contains lubricin-secreting chondrocytes.</p>
+    <p><strong>Middle (transitional) zone:</strong> Collagen fibres run obliquely; spherical chondrocytes; highest proteoglycan content; primary compressive load-bearing zone.</p>
+    <p><strong>Deep (radial) zone:</strong> Collagen fibres perpendicular to the surface; largest chondrocytes; highest compressive stiffness.</p>
+    <p><strong>Calcified zone:</strong> Transition to subchondral bone; separated from the deep zone by the "tidemark." Acts as an anchor for the cartilage to the underlying bone.</p>
+
+    <h3>Nutrition — Why Movement Matters</h3>
+    <p>Because articular cartilage is avascular, chondrocytes depend on <strong>diffusion</strong> of nutrients from synovial fluid. This diffusion is dramatically enhanced by the <strong>pumping action</strong> of joint loading and unloading during movement — compression forces fluid (and with it, nutrients) into and out of the cartilage matrix. This is why sustained immobilisation leads to cartilage degeneration — it starves chondrocytes of nutrients. Regular, controlled joint movement is therefore not merely beneficial for joint health; it is <em>necessary</em> for cartilage survival.</p>
+
+    <div class="clinical">
+      <strong>Clinical — Osteoarthritis (OA)</strong>
+      OA is characterised by progressive degradation of articular cartilage, subchondral bone remodelling (sclerosis, osteophyte formation), synovial inflammation, and eventual joint failure. Pathologically, the balance between cartilage matrix synthesis (by chondrocytes) and breakdown (by matrix metalloproteinases) shifts in favour of catabolism. Risk factors include age, female sex, obesity, previous joint injury, and genetic predisposition. Physiotherapy plays a central role in OA management — not because it regenerates cartilage, but because exercise maintains synovial fluid circulation, strengthens periarticular muscles (offloading the cartilage), reduces pain through endogenous opioid release and central sensitisation modulation, and maintains function. Exercise is the single most effective conservative intervention for knee OA.
+    </div>
+  </section>
+
+  <!-- 7. SYNOVIAL FLUID -->
+  <section id="synovial-fluid">
+    <h2>7. Synovial Fluid &amp; Membrane</h2>
+
+    <h3>Synovial Fluid — Composition and Function</h3>
+    <p>Synovial fluid is a viscous, pale-yellow dialysate of blood plasma to which the synovial membrane adds <strong>hyaluronan</strong> (high molecular weight — responsible for viscosity and boundary lubrication) and <strong>lubricin</strong> (a surface-active glycoprotein that reduces surface friction at the cartilage interface). Synovial fluid also contains leukocytes (normally &lt;200 cells/mm³ — elevated counts indicate infection or inflammation) and phagocytic cells that clear wear debris.</p>
+    <p>Synovial fluid serves four functions: (1) <strong>lubrication</strong> — dramatically reducing joint friction; (2) <strong>nutrition</strong> — diffusing glucose, oxygen, and growth factors into the avascular cartilage; (3) <strong>shock absorption</strong> — hydrostatic resistance to sudden compression; (4) <strong>immune surveillance</strong> — leukocytes within the fluid respond to intra-articular infections and inflammatory triggers.</p>
+
+    <h3>Joint Aspiration (Arthrocentesis)</h3>
+    <p>Synovial fluid analysis is a powerful diagnostic tool. <strong>Normal</strong> fluid is clear and viscous. <strong>Non-inflammatory</strong> (e.g. OA) fluid is slightly cloudy, low cell count. <strong>Inflammatory</strong> (e.g. RA, gout) fluid is more turbid, moderate cell count, and may contain crystals. <strong>Septic</strong> fluid is frankly purulent, very high leukocyte count (&gt;50,000 cells/mm³ with &gt;75% neutrophils) — a medical emergency requiring same-day joint washout.</p>
+
+    <div class="concept">
+      <strong>Gout and Pseudogout — Crystal Arthropathy</strong>
+      Gout is caused by deposition of <strong>monosodium urate</strong> crystals in synovial fluid, typically in the first metatarsophalangeal joint, due to hyperuricaemia. Crystals are needle-shaped and negatively birefringent under polarised light. Pseudogout involves <strong>calcium pyrophosphate dihydrate (CPPD)</strong> crystals, typically in larger joints (knee, wrist), which appear rhomboidal and positively birefringent. Both cause acute, severe inflammatory arthritis. Polarised light microscopy of aspirated synovial fluid distinguishes them.
+    </div>
+  </section>
+
+  <!-- 8. SYNOVIAL TYPES -->
+  <section id="synovial-types">
+    <h2>8. Synovial Joint Subtypes</h2>
+    <p>Synovial joints are sub-classified by the shape of their articular surfaces, which determines the axes and directions of movement permitted.</p>
+
+    <div class="joint-grid">
+      <div class="joint-card">
+        <div class="jc-name">Ball &amp; Socket</div>
+        <div class="jc-axes">Multiaxial — 3 axes</div>
+        <div class="jc-move">Flexion/extension, abduction/adduction, internal/external rotation + circumduction. Greatest freedom of movement of all joint types.</div>
+        <div class="jc-ex">Hip (acetabulofemoral), Shoulder (glenohumeral)</div>
+      </div>
+      <div class="joint-card">
+        <div class="jc-name">Hinge</div>
+        <div class="jc-axes">Uniaxial — 1 axis</div>
+        <div class="jc-move">Flexion and extension only (around a mediolateral axis). A cylindrical convex surface fits into a concave trough.</div>
+        <div class="jc-ex">Elbow (humeroulnar), Ankle (talocrural), Knee (approximation only), IP joints of fingers</div>
+      </div>
+      <div class="joint-card">
+        <div class="jc-name">Pivot</div>
+        <div class="jc-axes">Uniaxial — 1 axis</div>
+        <div class="jc-move">Rotation only (around a longitudinal/vertical axis). A central bony peg rotates within a fibro-osseous ring.</div>
+        <div class="jc-ex">Proximal + distal radioulnar joints, Atlantoaxial joint (C1–C2)</div>
+      </div>
+      <div class="joint-card">
+        <div class="jc-name">Condyloid (Ellipsoid)</div>
+        <div class="jc-axes">Biaxial — 2 axes</div>
+        <div class="jc-move">Flexion/extension + abduction/adduction (+ circumduction as combination). A convex ellipsoid fits into a concave elliptical socket. No rotation.</div>
+        <div class="jc-ex">Radiocarpal (wrist), MCP joints, MTP joints</div>
+      </div>
+      <div class="joint-card">
+        <div class="jc-name">Saddle</div>
+        <div class="jc-axes">Biaxial — 2 axes</div>
+        <div class="jc-move">Flexion/extension + abduction/adduction + circumduction. Each surface is concave in one direction and convex in the perpendicular direction (reciprocal concavo-convex). Slightly more mobile than condyloid.</div>
+        <div class="jc-ex">1st CMC joint (thumb), sternoclavicular joint</div>
+      </div>
+      <div class="joint-card">
+        <div class="jc-name">Plane (Gliding)</div>
+        <div class="jc-axes">Non-axial</div>
+        <div class="jc-move">Gliding or sliding movement along a flat or slightly curved surface. Movement is limited by surrounding ligaments, not joint shape. Cannot be classified by axial movement.</div>
+        <div class="jc-ex">Acromioclavicular joint, intertarsal joints, zygapophyseal (facet) joints, intercarpal joints</div>
+      </div>
+    </div>
+
+    <div class="mnemonic">
+      <strong>Mnemonic — "His Pigs Can Swim But Poorly" (synovial joint types)</strong>
+      <strong>H</strong>inge · <strong>P</strong>ivot · <strong>C</strong>ondyloid · <strong>S</strong>addle · <strong>B</strong>all &amp; Socket · <strong>P</strong>lane<br>
+      (Ordered roughly from most to least restricted movement for the first five; plane is non-axial.)
+    </div>
+  </section>
+
+  <!-- 9. ROM -->
+  <section id="rom">
+    <h2>9. Range of Motion Classification</h2>
+    <p>The ROM classification system describes how many independent axes of rotation a joint possesses — directly determining which movements are anatomically possible at that joint. The number of axes equals the "degrees of freedom" of the joint.</p>
+
+    <table class="class-table">
+      <thead>
+        <tr>
+          <th>Classification</th>
+          <th>Axes / DoF</th>
+          <th>Movements</th>
+          <th>Joint Types</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Uniaxial</td>
+          <td>1 axis</td>
+          <td>Movement in one plane only</td>
+          <td>Hinge, Pivot</td>
+          <td>Hinge: elbow (F/E). Pivot: radioulnar joint (rotation only)</td>
+        </tr>
+        <tr>
+          <td>Biaxial</td>
+          <td>2 axes</td>
+          <td>Movement in two planes; circumduction possible</td>
+          <td>Condyloid, Saddle</td>
+          <td>Wrist (F/E + radial/ulnar deviation); 1st CMC (F/E + Ab/Ad)</td>
+        </tr>
+        <tr>
+          <td>Multiaxial</td>
+          <td>3 axes</td>
+          <td>Movement in all three planes; full circumduction; rotation</td>
+          <td>Ball &amp; Socket</td>
+          <td>Hip, Glenohumeral joint</td>
+        </tr>
+        <tr>
+          <td>Non-axial (Plane)</td>
+          <td>0 true axes</td>
+          <td>Gliding only — translation rather than angular movement</td>
+          <td>Plane</td>
+          <td>AC joint, intercarpal joints, facet joints</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Concept — Circumduction</strong>
+      Circumduction is not a true joint movement (there is no single axis for it) — it is a <em>combination</em> of sequentially performed flexion, abduction, extension, and adduction in a conical sweep. It requires at least a biaxial joint (condyloid or saddle) and is fullest in multiaxial joints (ball-and-socket). This is why the hip and shoulder can circumduct widely, while the wrist circumducts in a narrower cone, and the elbow cannot circumduct at all.
+    </div>
+  </section>
+
+  <!-- 10. STABILITY -->
+  <section id="stability">
+    <h2>10. Joint Stability</h2>
+    <p>Joint stability is the ability to resist displacement of the articular surfaces under load. It is not a single property but the sum of contributions from three distinct systems, each of which can be addressed separately in physiotherapy rehabilitation.</p>
+
+    <div class="stability-grid">
+      <div class="stability-card">
+        <div class="sc-num">1</div>
+        <div class="sc-name">Bony / Static Stability</div>
+        The shape and congruence of the articular surfaces. A deeply congruent joint (e.g. hip — femoral head 70% covered by acetabulum) is inherently stable regardless of soft tissue. A shallow, incongruent joint (e.g. glenohumeral — glenoid covers ~25% of the humeral head) relies heavily on soft tissue for stability. Bone provides static, load-bearing stability that cannot be rehabilitated — but it can be surgically altered (e.g. glenoid osteotomy, acetabular shelf procedures).
+      </div>
+      <div class="stability-card">
+        <div class="sc-num">2</div>
+        <div class="sc-name">Ligamentous / Passive Stability</div>
+        Ligaments, capsule, and labra provide passive restraint against excessive translation and rotation. They are most important at the extremes of range where muscle activity decreases. Ligaments contain mechanoreceptors (Ruffini, Pacinian, Golgi) that contribute to proprioception — ligament injury impairs proprioceptive feedback, not just passive restraint. Physiotherapy after ligament injury must address both passive restraint (healing time, potential surgery) and proprioceptive retraining.
+      </div>
+      <div class="stability-card">
+        <div class="sc-num">3</div>
+        <div class="sc-name">Muscular / Active Stability</div>
+        The most important component for physiotherapy — active muscle contraction compresses and stabilises the joint throughout its range of motion. The rotator cuff at the shoulder and the deep hip rotators at the hip are prime examples of muscles whose primary role is joint compression/centration rather than movement production. Strengthening periarticular muscles is the cornerstone of most joint rehabilitation programmes. Active stability can be trained and significantly improved.
+      </div>
+    </div>
+
+    <div class="concept">
+      <strong>Hypermobility — When Stability is Insufficient</strong>
+      Joint hypermobility (generalised: Beighton score ≥ 4/9) occurs when passive stability is inadequate — typically due to abnormally extensible collagen (e.g. Hypermobile EDS, joint hypermobility syndrome). Hypermobile joints are prone to repeated subluxation and dislocation, chronic pain, and early degenerative change. Counterintuitively, physiotherapy for hypermobility focuses on <em>increasing</em> muscular stability (active stability) to compensate for insufficient passive restraint — stretching is contraindicated.
+    </div>
+  </section>
+
+  <!-- 11. CLINICAL -->
+  <section id="clinical">
+    <h2>11. Clinical Applications</h2>
+
+    <table class="clinical-table">
+      <thead>
+        <tr>
+          <th>Condition</th>
+          <th>Joint Type Affected</th>
+          <th>Pathology</th>
+          <th>Physiotherapy Relevance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Osteoarthritis (OA)</td>
+          <td>Synovial (diarthrosis)</td>
+          <td>Progressive articular cartilage degradation, subchondral sclerosis, osteophytes, synovial inflammation. Not purely a "wear and tear" disease — metabolically active.</td>
+          <td>Exercise therapy (aerobic + strengthening) is the most evidence-based conservative treatment. Reduces pain and improves function. Weight management reduces joint loading. Manual therapy provides short-term pain relief.</td>
+        </tr>
+        <tr>
+          <td>Rheumatoid Arthritis (RA)</td>
+          <td>Synovial (particularly small joints)</td>
+          <td>Autoimmune synovitis — pannus (proliferating synovial tissue) destroys articular cartilage and bone. Symmetrical, typically MCP and PIP joints first. Systemic disease.</td>
+          <td>Physiotherapy during remission: strengthening, aerobic exercise, joint protection education, splinting. During flares: gentle ROM, pain management. Must avoid high-impact loading on inflamed joints.</td>
+        </tr>
+        <tr>
+          <td>Septic Arthritis</td>
+          <td>Synovial (any large joint)</td>
+          <td>Bacterial infection of joint cavity (most commonly Staphylococcus aureus). Rapidly destroys cartilage via proteolytic enzymes. Medical emergency — can permanently destroy a joint within days.</td>
+          <td>Red flag: hot, swollen joint with fever and systemic illness. Requires immediate medical referral. Physiotherapy is supportive after surgical washout and antibiotics.</td>
+        </tr>
+        <tr>
+          <td>Gout</td>
+          <td>Synovial (especially 1st MTP)</td>
+          <td>Monosodium urate crystal deposition in synovial fluid. Causes acute, severely painful inflammatory arthritis. Chronic: tophi (crystal deposits in soft tissues).</td>
+          <td>During acute attack: rest, ice, elevate, refer for NSAIDs/colchicine. Chronic management: lifestyle advice (diet, alcohol reduction), liaison with rheumatology.</td>
+        </tr>
+        <tr>
+          <td>Symphysis Pubis Dysfunction (SPD)</td>
+          <td>Cartilaginous (symphysis)</td>
+          <td>Increased laxity of pubic symphysis during pregnancy (relaxin effect) → anterior pelvic pain, waddling gait, pain with hip abduction and single-leg stance.</td>
+          <td>Pelvic girdle support belt, activity modification (avoid single-leg loading), targeted hip abductor and pelvic floor strengthening, gait re-education. Usually resolves post-partum.</td>
+        </tr>
+        <tr>
+          <td>Syndesmosis Sprain</td>
+          <td>Fibrous (syndesmosis)</td>
+          <td>Disruption of the inferior tibiofibular syndesmosis (+ interosseous membrane). "High ankle sprain." Typically from external rotation force. Longer recovery than lateral ankle sprain.</td>
+          <td>Imaging essential (widened tibiofibular clear space on X-ray = instability). May require surgical fixation. Physiotherapy: protected weight-bearing, proprioceptive rehab, progressive return to sport — typically 6–12 weeks vs 2–4 weeks for lateral ankle sprain.</td>
+        </tr>
+        <tr>
+          <td>Hypermobility EDS / JHS</td>
+          <td>Synovial (generalised, all joints)</td>
+          <td>Connective tissue disorder causing excessive joint laxity, chronic pain, recurrent subluxations, and proprioceptive deficits. Beighton score used for diagnosis.</td>
+          <td>Strengthening programme targeting joint-stabilising muscles. Proprioceptive training. Education regarding activity modification and joint protection. Avoid excessive stretching. Orthotics may help foot/ankle instability.</td>
+        </tr>
+        <tr>
+          <td>Craniosynostosis</td>
+          <td>Fibrous (suture)</td>
+          <td>Premature fusion of one or more skull sutures, restricting brain growth and causing craniofacial deformity. Mostly sporadic; some genetic (Crouzon, Apert syndromes).</td>
+          <td>Primarily surgical (cranial vault remodelling). Physiotherapy involvement: post-operative positioning, developmental stimulation, management of any associated upper limb involvement (Apert syndrome).</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="sources">
+    <h3>Sources &amp; Further Reading</h3>
+    <ol>
+      <li>Quinn M. <em>Classification of Joints</em>. TeachMeAnatomy, 2025. <a href="https://teachmeanatomy.info/the-basics/joints-basic/classification-of-joints/" target="_blank">teachmeanatomy.info</a></li>
+      <li>Jones O. <em>The Synovial Joint</em>. TeachMeAnatomy, 2025. <a href="https://teachmeanatomy.info/the-basics/joints-basic/synovial-joint/" target="_blank">teachmeanatomy.info</a></li>
+      <li>LUNEX University. <em>BPTY04 Lecture Slides — Arthrology</em>. 2026.</li>
+      <li>Standring S (ed). <em>Gray's Anatomy</em>, 42nd ed. Elsevier, 2021.</li>
+      <li>Marieb EN, Hoehn KN. <em>Human Anatomy &amp; Physiology</em>, 11th ed. Pearson, 2019.</li>
+      <li>Sharma L. Osteoarthritis of the Knee. <em>N Engl J Med</em> 2021; 384:51–59.</li>
+      <li>Guyatt GH et al. GRADE guidelines. <em>J Clin Epidemiol</em> 2011.</li>
+    </ol>
+  </div>
+
+</div>
+
+<footer>
+  BPTY04 Musculoskeletal Anatomy · LUNEX University · For personal study use only
+</footer>
+
+</body>
+</html>

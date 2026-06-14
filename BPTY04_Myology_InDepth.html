@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myology — In-Depth Guide | BPTY04</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #fdfcfa;
+      color: #1a1a1a;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1a4a2e, #2d8a5a);
+      color: #fff;
+      padding: 2.8rem 3rem 2.2rem;
+    }
+
+    header .back-link {
+      display: inline-block;
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 0.2rem 0.55rem;
+    }
+    header .back-link:hover { background: rgba(255,255,255,0.15); }
+
+    header .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.7rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.15rem 0.6rem;
+      margin-bottom: 0.7rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      margin-top: 0.6rem;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.88rem;
+      font-style: italic;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* ── NAV ── */
+    .toc {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 4px solid #2d8a5a;
+      padding: 1.2rem 1.6rem;
+      margin-bottom: 3rem;
+      font-size: 0.83rem;
+    }
+
+    .toc h3 {
+      font-size: 0.68rem;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a4a2e;
+      margin-bottom: 0.7rem;
+    }
+
+    .toc ol {
+      margin-left: 1.2rem;
+      color: #444;
+      line-height: 2;
+    }
+
+    .toc a { color: #1a4a2e; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── SECTIONS ── */
+    section { margin-bottom: 3.5rem; }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #1a4a2e;
+      border-bottom: 2px solid #2d8a5a;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.3px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #333;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    h4 {
+      font-size: 0.92rem;
+      font-weight: bold;
+      color: #555;
+      margin: 1.2rem 0 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    p { margin-bottom: 0.9rem; }
+
+    /* ── CALLOUT BOXES ── */
+    .callout, .clinical, .mnemonic, .concept {
+      border-left: 4px solid;
+      padding: 0.9rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .callout  { border-color: #2a7db5; background: #f0f7fc; }
+    .clinical { border-color: #c0392b; background: #fdf3f2; }
+    .mnemonic { border-color: #e6a817; background: #fdf8ec; }
+    .concept  { border-color: #7b52c4; background: #f6f2fd; }
+
+    .callout strong, .clinical strong, .mnemonic strong, .concept strong {
+      display: block;
+      font-size: 0.7rem;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.4rem;
+    }
+
+    .callout strong  { color: #2a7db5; }
+    .clinical strong { color: #c0392b; }
+    .mnemonic strong { color: #b07e0a; }
+    .concept strong  { color: #7b52c4; }
+
+    /* ── COMPARISON TABLE ── */
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .comp-table th {
+      background: #1a4a2e;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+
+    .comp-table td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid #e5e0d8;
+      vertical-align: top;
+    }
+
+    .comp-table tr:last-child td { border-bottom: 2px solid #2d8a5a; }
+    .comp-table tr:nth-child(even) { background: #f5faf7; }
+
+    .comp-table td:first-child {
+      font-weight: bold;
+      color: #1a4a2e;
+      width: 18%;
+      white-space: nowrap;
+    }
+
+    /* ── FIBER ARRANGEMENT GRID ── */
+    .fiber-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .fiber-card {
+      border: 1px solid #cce8d8;
+      border-top: 3px solid #2d8a5a;
+      padding: 1rem;
+      background: #fff;
+      font-size: 0.85rem;
+    }
+
+    .fiber-card .fc-name {
+      font-weight: bold;
+      color: #1a4a2e;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .fiber-card .fc-tag {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.68rem;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .fiber-card .fc-example {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #555;
+      font-style: italic;
+    }
+
+    /* ── MOVEMENT TABLE ── */
+    .movement-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .movement-table th {
+      background: #2d5a1a;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+
+    .movement-table td {
+      padding: 0.55rem 0.8rem;
+      border-bottom: 1px solid #e0e8da;
+      vertical-align: top;
+    }
+
+    .movement-table tr:last-child td { border-bottom: 2px solid #2d8a5a; }
+    .movement-table tr:nth-child(even) { background: #f5faf7; }
+
+    .movement-table td:first-child {
+      font-weight: bold;
+      color: #2d5a1a;
+      white-space: nowrap;
+    }
+
+    /* ── CONTRACTION BOX ── */
+    .contraction-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .contraction-card {
+      border: 1px solid #ddd;
+      border-left: 4px solid;
+      padding: 1rem;
+      background: #fff;
+      font-size: 0.85rem;
+    }
+
+    .c-concentric { border-color: #2d8a5a; }
+    .c-eccentric  { border-color: #c0392b; }
+    .c-isometric  { border-color: #2a7db5; }
+    .c-isokinetic { border-color: #7b52c4; }
+
+    .contraction-card .cc-name {
+      font-weight: bold;
+      font-size: 0.92rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .c-concentric .cc-name { color: #1a4a2e; }
+    .c-eccentric  .cc-name { color: #7b0d0d; }
+    .c-isometric  .cc-name { color: #004085; }
+    .c-isokinetic .cc-name { color: #4a1080; }
+
+    /* ── NAMING TABLE ── */
+    .naming-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .naming-table th {
+      background: #1a4a2e;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+
+    .naming-table td {
+      padding: 0.55rem 0.8rem;
+      border-bottom: 1px solid #e0e8da;
+      vertical-align: top;
+    }
+
+    .naming-table tr:last-child td { border-bottom: 2px solid #2d8a5a; }
+    .naming-table tr:nth-child(even) { background: #f5faf7; }
+    .naming-table td:first-child { font-weight: bold; color: #1a4a2e; width: 20%; }
+
+    /* ── SOURCES ── */
+    .sources {
+      margin-top: 4rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1.5rem;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .sources h3 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a4a2e;
+      margin-bottom: 0.8rem;
+    }
+
+    .sources ol { margin-left: 1.2rem; line-height: 1.9; }
+    .sources a { color: #1a4a2e; }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 1rem 2rem;
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    @media (max-width: 680px) {
+      .fiber-grid { grid-template-columns: 1fr 1fr; }
+      .contraction-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="index.html">← Back to BPTY04 Resources</a>
+  <div class="tag">BPTY04 · In-Depth Guide</div>
+  <h1>Myology</h1>
+  <p>Muscle types · Connective tissue · Fibre arrangements · Contraction types · Muscle relationships · Clinical relevance</p>
+</header>
+
+<div class="container">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#overview">Overview &amp; Why Myology Matters</a></li>
+      <li><a href="#types">Three Types of Muscle Tissue</a></li>
+      <li><a href="#connective">Connective Tissue Hierarchy</a></li>
+      <li><a href="#micro">Muscle Microstructure &amp; the Sarcomere</a></li>
+      <li><a href="#fibre-parallel">Fibre Arrangements — Parallel</a></li>
+      <li><a href="#fibre-pennate">Fibre Arrangements — Pennate</a></li>
+      <li><a href="#pennation">Pennation Angle: Force vs. Excursion</a></li>
+      <li><a href="#planes">Anatomical Planes &amp; Movements</a></li>
+      <li><a href="#naming">Naming Muscles</a></li>
+      <li><a href="#joints-crossed">Number of Joints Crossed</a></li>
+      <li><a href="#contraction">Types of Muscle Activity</a></li>
+      <li><a href="#relationships">Muscle Relationships</a></li>
+      <li><a href="#clinical">Clinical Applications in Physiotherapy</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. OVERVIEW -->
+  <section id="overview">
+    <h2>1. Overview &amp; Why Myology Matters</h2>
+    <p><strong>Myology</strong> is the study of muscles — the tissues responsible for all movement, postural control, and force generation in the body. With over 650 muscles in the human body (approximately 220 of which are skeletal muscles directly relevant to physiotherapy), a solid conceptual understanding of how muscles are built, classified, and how they work together is the foundation for everything that follows in musculoskeletal practice.</p>
+    <p>For a physiotherapist, this means more than memorising attachments. It means understanding <em>why</em> a bipennate muscle is stronger but moves less than a fusiform one, <em>why</em> eccentric contractions are used to treat tendinopathies, and <em>why</em> biarticular muscles are uniquely vulnerable to strain. These are not academic distinctions — they directly inform assessment, exercise prescription, and rehabilitation planning.</p>
+    <div class="callout">
+      <strong>The Six-Part Framework (TeachMeAnatomy)</strong>
+      A consistent approach to learning any skeletal muscle: <strong>Site</strong> (where is it?) → <strong>Shape</strong> (what does it look like?) → <strong>Attachments</strong> (origin & insertion) → <strong>Action</strong> (what does it do?) → <strong>Nerve supply</strong> (what controls it?) → <strong>Blood supply</strong> (what feeds it?). Apply this to every new muscle and the information becomes much easier to retain.
+    </div>
+  </section>
+
+  <!-- 2. THREE TYPES -->
+  <section id="types">
+    <h2>2. Three Types of Muscle Tissue</h2>
+    <p>All muscle tissue shares the property of contractility — the ability to shorten when stimulated. However, the three types differ profoundly in structure, control, and clinical significance.</p>
+
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Skeletal</th>
+          <th>Cardiac</th>
+          <th>Smooth</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Location</td>
+          <td>Attached to bones via tendons</td>
+          <td>Wall of the heart (myocardium)</td>
+          <td>Hollow organs, vessels, airways, gut</td>
+        </tr>
+        <tr>
+          <td>Control</td>
+          <td>Voluntary (somatic NS)</td>
+          <td>Involuntary (autonomic NS + intrinsic pacemakers)</td>
+          <td>Involuntary (autonomic NS + local factors)</td>
+        </tr>
+        <tr>
+          <td>Appearance</td>
+          <td>Striated — regular banding from aligned actin/myosin</td>
+          <td>Striated — branched cells with intercalated discs</td>
+          <td>Non-striated — contractile proteins scattered, not aligned</td>
+        </tr>
+        <tr>
+          <td>Speed</td>
+          <td>Fast, powerful, fatigable</td>
+          <td>Rhythmic, sustained (never fatigues under normal conditions)</td>
+          <td>Slow, sustained, economical</td>
+        </tr>
+        <tr>
+          <td>Key function</td>
+          <td>Movement, posture, thermogenesis, vascular pump (skeletal muscle pump)</td>
+          <td>Pumping blood through pulmonary and systemic circulation</td>
+          <td>Peristalsis; vascular tone (vasoconstriction/dilation); bronchomotor tone</td>
+        </tr>
+        <tr>
+          <td>Physio relevance</td>
+          <td>Primary focus of musculoskeletal physiotherapy</td>
+          <td>Relevant to cardiac rehab; exercise tolerance</td>
+          <td>Relevant to autonomic dysfunction, visceral pain, vascular conditions</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="concept">
+      <strong>Why is skeletal muscle striated?</strong>
+      Striation (the banding pattern) reflects the highly ordered arrangement of actin (thin) and myosin (thick) filaments in parallel arrays within the sarcomere. This alignment is what allows skeletal and cardiac muscle to generate rapid, powerful contractions — the cross-bridges can pull in coordinated synchrony. Smooth muscle lacks this alignment because it doesn't need speed: a gut wall contracting slowly for peristalsis is far more efficient when it doesn't maintain the metabolic cost of organised sarcomeres.
+    </div>
+  </section>
+
+  <!-- 3. CONNECTIVE TISSUE HIERARCHY -->
+  <section id="connective">
+    <h2>3. Connective Tissue Hierarchy</h2>
+    <p>Skeletal muscle is not just contractile cells — it is an intricate scaffold of connective tissue that transmits force, provides structural support, and protects fibres from mechanical damage. The hierarchy runs from the smallest to the largest unit:</p>
+
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Layer</th>
+          <th>What it Wraps</th>
+          <th>Function</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Endomysium</td>
+          <td>Individual muscle fibres (cells)</td>
+          <td>Transmits force laterally between adjacent fibres; houses capillaries and nerve endings at the neuromuscular junction level</td>
+        </tr>
+        <tr>
+          <td>Perimysium</td>
+          <td>Bundles of fibres (fascicles)</td>
+          <td>Groups fibres into functional units; carries larger blood vessels and nerves into the muscle belly</td>
+        </tr>
+        <tr>
+          <td>Epimysium</td>
+          <td>Entire muscle belly</td>
+          <td>Outer sheath that maintains muscle shape; reduces friction between adjacent muscles; converges distally to form the tendon</td>
+        </tr>
+        <tr>
+          <td>Tendon</td>
+          <td>Connects muscle to bone</td>
+          <td>Dense regular collagen (type I); transmits tensile force; stores elastic energy (especially the Achilles tendon); the musculotendinous junction (MTJ) is the most common site of muscle strain injury</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="mnemonic">
+      <strong>Mnemonic — Every Physiotherapist Examines Tendons</strong>
+      <strong>E</strong>ndomysium → <strong>P</strong>erimysium → <strong>E</strong>pimysium → <strong>T</strong>endon<br>
+      Each layer contains the one above it. Think of a cable: individual copper wires (fibres/endomysium) → bundles wrapped in plastic (fascicles/perimysium) → the whole cable's outer sheath (epimysium) → the plug at the end (tendon, connecting to bone).
+    </div>
+
+    <div class="clinical">
+      <strong>Clinical — Musculotendinous Junction (MTJ) Injuries</strong>
+      The MTJ — where the contractile muscle fibres transition into the non-contractile tendon — is a zone of high mechanical stress. During sudden, high-force eccentric loading, the force gradient across this junction can exceed tissue tolerance. Grade II and III muscle tears (partial and complete) most commonly occur here. In imaging, MRI shows oedema and haematoma at the MTJ. Clinically, there is a palpable defect ("muscle belly step") and loss of power, with the muscle belly retracting proximally in complete tears.
+    </div>
+  </section>
+
+  <!-- 4. MICROSTRUCTURE -->
+  <section id="micro">
+    <h2>4. Muscle Microstructure &amp; the Sarcomere</h2>
+    <p>Each muscle fibre is itself a highly specialised cell containing hundreds of <strong>myofibrils</strong> — long cylindrical organelles packed with overlapping thick (myosin) and thin (actin) filaments. The repeating functional unit of a myofibril is the <strong>sarcomere</strong>, bounded by two Z-discs. The sarcomere is where contraction actually occurs.</p>
+
+    <h3>The Sliding Filament Theory</h3>
+    <p>During contraction, myosin heads bind to actin filaments and pivot, pulling the thin filaments toward the centre of the sarcomere — the Z-discs are drawn closer together and the sarcomere shortens. This process is powered by ATP hydrolysis and triggered by calcium release from the sarcoplasmic reticulum following a motor nerve action potential. Critically: <strong>neither the actin nor myosin filaments themselves change length</strong> — the sarcomere shortens because they slide past each other.</p>
+
+    <h3>Motor Units</h3>
+    <p>A <strong>motor unit</strong> consists of a single alpha motor neuron and all the muscle fibres it innervates. Small motor units (few fibres per neuron) permit fine, precise movement (e.g. extraocular muscles, intrinsic hand muscles). Large motor units (many fibres per neuron) generate great force but with less precision (e.g. gluteus maximus, quadriceps). Force production in a whole muscle is graded by <strong>recruitment</strong> (activating more motor units) and <strong>rate coding</strong> (increasing the firing frequency of active units).</p>
+
+    <div class="concept">
+      <strong>Fibre Types: Slow vs. Fast Twitch</strong>
+      Type I (slow-twitch oxidative) fibres are fatigue-resistant, rich in mitochondria and myoglobin, suited to sustained postural and endurance activities. Type IIa (fast oxidative-glycolytic) are intermediate — powerful but moderately fatigue-resistant. Type IIb/x (fast glycolytic) are the most powerful but fatigue quickly, suited to brief explosive efforts. Physiotherapy endurance training increases the proportion of Type I characteristics; strength training increases Type II cross-sectional area. Importantly, type proportions are largely genetically determined but training can shift IIb fibres toward IIa.
+    </div>
+  </section>
+
+  <!-- 5. PARALLEL -->
+  <section id="fibre-parallel">
+    <h2>5. Fibre Arrangements — Parallel</h2>
+    <p>In <strong>parallel</strong> arrangements, muscle fibres run approximately parallel to the muscle's long axis (the line of pull). The fibres span the full length of the muscle, meaning the muscle can shorten through a large range — ideal when excursion (range of motion) matters more than absolute force.</p>
+
+    <div class="fiber-grid">
+      <div class="fiber-card">
+        <div class="fc-name">Fusiform</div>
+        <div class="fc-tag">Parallel — tapered</div>
+        Thick central belly tapering to tendons at both ends. Fibres parallel; force concentrated at attachment points. Good range of shortening.
+        <div class="fc-example">Examples: Biceps brachii, brachioradialis</div>
+      </div>
+      <div class="fiber-card">
+        <div class="fc-name">Strap (Flat)</div>
+        <div class="fc-tag">Parallel — thin</div>
+        Long, thin, parallel fibres running the full muscle length. Large range of motion; moderate force. Often broad and sheet-like.
+        <div class="fc-example">Examples: Sartorius, sternocleidomastoid, rectus abdominis</div>
+      </div>
+      <div class="fiber-card">
+        <div class="fc-name">Triangular (Convergent)</div>
+        <div class="fc-tag">Parallel — convergent</div>
+        Broad fan-shaped origin converging to a narrow insertion tendon. Different fibre bundles pull in slightly different directions — muscle can produce multiple actions depending on which fibres are recruited.
+        <div class="fc-example">Examples: Pectoralis major, temporalis</div>
+      </div>
+      <div class="fiber-card">
+        <div class="fc-name">Circular (Sphincteric)</div>
+        <div class="fc-tag">Parallel — ring</div>
+        Fibres arranged concentrically around an opening. Contraction closes the orifice; relaxation opens it. Unique in that there is no tendon — force acts on surrounding tissue.
+        <div class="fc-example">Examples: Orbicularis oris (mouth), orbicularis oculi (eye), sphincter ani</div>
+      </div>
+      <div class="fiber-card">
+        <div class="fc-name">Quadrate</div>
+        <div class="fc-tag">Parallel — square</div>
+        Four-sided, flat muscle with parallel fibres running between two parallel lines of attachment. Uniform force distribution across its area.
+        <div class="fc-example">Examples: Pronator quadratus, rhomboids</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Principle: Parallel = Range</strong>
+      In a parallel muscle, each fibre spans the full length and shortens by ~30–40% of its resting length. Because all fibres contribute their full shortening potential to the overall muscle shortening, parallel muscles excel at producing movement through a large arc. This is ideal for muscles that need to swing a limb (e.g. biceps, sartorius) rather than simply generate crushing force.
+    </div>
+  </section>
+
+  <!-- 6. PENNATE -->
+  <section id="fibre-pennate">
+    <h2>6. Fibre Arrangements — Pennate</h2>
+    <p>In <strong>pennate</strong> arrangements (from Latin <em>penna</em> = feather), muscle fibres insert obliquely into a central tendon at an angle rather than running parallel to it. The fibres are shorter than the overall muscle, but more fibres can pack into the same space — favouring force over range of motion.</p>
+
+    <div class="fiber-grid">
+      <div class="fiber-card">
+        <div class="fc-name">Unipennate</div>
+        <div class="fc-tag">Pennate — one side</div>
+        Fibres run obliquely from one side only into a central tendon (like half a feather). Strong force from a single direction.
+        <div class="fc-example">Examples: Extensor digitorum longus, flexor pollicis longus, tibialis posterior</div>
+      </div>
+      <div class="fiber-card">
+        <div class="fc-name">Bipennate</div>
+        <div class="fc-tag">Pennate — both sides</div>
+        Fibres run obliquely from both sides of a central tendon (a full feather). Very strong — the central tendon is pulled from two directions simultaneously.
+        <div class="fc-example">Examples: Rectus femoris, flexor digitorum longus, gastrocnemius</div>
+      </div>
+      <div class="fiber-card">
+        <div class="fc-name">Multipennate</div>
+        <div class="fc-tag">Pennate — multiple</div>
+        Multiple tendons with oblique fibres inserting from many directions. Extremely large physiological cross-section but smallest excursion per unit of force generated.
+        <div class="fc-example">Examples: Deltoid, subscapularis, tibialis anterior</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PENNATION ANGLE -->
+  <section id="pennation">
+    <h2>7. Pennation Angle: Force vs. Excursion</h2>
+    <p>The <strong>pennation angle</strong> is the angle between the muscle fibres and the tendon's line of action. It is the key variable that determines the trade-off between force production capacity and range of shortening.</p>
+
+    <h3>Physiological Cross-Sectional Area (PCSA)</h3>
+    <p>A muscle's maximum force is proportional to its <strong>physiological cross-sectional area (PCSA)</strong> — the cross-section taken perpendicular to the direction of the fibres, not perpendicular to the tendon. Because pennate fibres are shorter and more oblique, more fibres can be packed into a given muscle volume, increasing the PCSA — and therefore the maximum force — compared to a parallel muscle of the same overall size.</p>
+
+    <div class="concept">
+      <strong>The Force-Excursion Trade-off</strong>
+      <strong>Parallel muscle:</strong> fibres run the full length → large shortening distance → large range of motion → moderate force (lower PCSA per unit volume)<br><br>
+      <strong>Pennate muscle:</strong> short oblique fibres → shorter shortening distance (excursion ≈ fibre length × cos θ, where θ = pennation angle) → less range of motion → greater force (higher PCSA per unit volume)<br><br>
+      As pennation angle increases, force potential increases but effective shortening (projected along the tendon axis) decreases. A muscle with 0° pennation transmits 100% of fibre force along the tendon. At 30°, it transmits cos 30° ≈ 87%. At 45°, only cos 45° ≈ 71%. Nature balances this by packing dramatically more fibres — the net result is that highly pennate muscles are still much stronger in absolute terms.
+    </div>
+
+    <div class="clinical">
+      <strong>Clinical — Pennation Angle and Ultrasound Measurement</strong>
+      Diagnostic ultrasound can now measure pennation angles and fascicle lengths in vivo — a tool increasingly used in physiotherapy research and elite sports. After muscle injury, the pennation angle often increases (fibres become more oblique due to scar tissue shortening). After targeted strength training, pennation angle increases as fibre hypertrophy packs more sarcomeres in parallel. In rehabilitation, monitoring pennation angle via ultrasound can provide objective evidence of muscle adaptation that precedes functional recovery — particularly relevant in quadriceps rehabilitation post-ACL reconstruction.
+    </div>
+  </section>
+
+  <!-- 8. PLANES -->
+  <section id="planes">
+    <h2>8. Anatomical Planes &amp; Movements</h2>
+    <p>Movement at joints is described relative to the three cardinal anatomical planes, always referenced from the <strong>anatomical position</strong> (standing erect, facing forward, upper limbs at the sides with palms facing anteriorly, feet flat and directed forward).</p>
+
+    <table class="movement-table">
+      <thead>
+        <tr>
+          <th>Plane</th>
+          <th>Division</th>
+          <th>Axis of Rotation</th>
+          <th>Movements</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sagittal (Longitudinal)</td>
+          <td>Left / Right halves</td>
+          <td>Mediolateral (frontal) axis</td>
+          <td>Flexion, Extension; Dorsiflexion, Plantarflexion</td>
+          <td>Elbow flexion; knee extension; nodding the head</td>
+        </tr>
+        <tr>
+          <td>Frontal (Coronal)</td>
+          <td>Anterior / Posterior halves</td>
+          <td>Anteroposterior axis</td>
+          <td>Abduction, Adduction; Lateral flexion; Inversion, Eversion</td>
+          <td>Shoulder abduction; lateral trunk flexion; ankle eversion</td>
+        </tr>
+        <tr>
+          <td>Transverse (Horizontal)</td>
+          <td>Superior / Inferior halves</td>
+          <td>Vertical (longitudinal) axis</td>
+          <td>Internal/External rotation; Pronation, Supination; Horizontal abduction/adduction</td>
+          <td>Hip internal rotation; forearm supination; trunk rotation</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="mnemonic">
+      <strong>Mnemonic — SFT: Sagittal Flexes, Frontal Fans, Transverse Turns</strong>
+      <strong>Sagittal</strong> plane = flex/extend (like a door swinging forward and back)<br>
+      <strong>Frontal</strong> plane = fan out / bring in (abduct/adduct — like a snow angel)<br>
+      <strong>Transverse</strong> plane = turn/rotate (like a spinning top)
+    </div>
+
+    <div class="callout">
+      <strong>Concept — Multi-Planar Movement</strong>
+      Most functional human movements are multi-planar — they combine components from two or three planes simultaneously. Walking alone involves sagittal (flexion/extension of hip/knee), frontal (lateral stabilisation of pelvis), and transverse (rotation of pelvis and trunk) components in every stride. Single-plane analysis is a useful simplification, but physiotherapy assessment and exercise prescription must consider all planes.
+    </div>
+  </section>
+
+  <!-- 9. NAMING -->
+  <section id="naming">
+    <h2>9. Naming Muscles</h2>
+    <p>Muscle names are not arbitrary — each name encodes one or more descriptors that help identify the muscle's location, appearance, or function. Knowing these conventions turns muscle names from random words into descriptive labels.</p>
+
+    <table class="naming-table">
+      <thead>
+        <tr>
+          <th>Convention</th>
+          <th>What it Describes</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Origin / Insertion</td>
+          <td>Named after bony attachments</td>
+          <td>Coracobrachialis (coracoid → brachium); Iliacus (iliac fossa); Sternocleidomastoid (sternum + clavicle → mastoid)</td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td>Body region or relative position</td>
+          <td>Brachii (arm); Femoris (thigh); Pectoralis (chest); Abdominis (abdomen); Temporalis (temporal region)</td>
+        </tr>
+        <tr>
+          <td>Fibre Direction</td>
+          <td>Orientation of muscle fibres</td>
+          <td>Rectus (straight — e.g. rectus abdominis, rectus femoris); Oblique (slanting — e.g. internal/external oblique); Transversus (transverse — e.g. transversus abdominis)</td>
+        </tr>
+        <tr>
+          <td>Action</td>
+          <td>Primary movement produced</td>
+          <td>Flexor carpi radialis; Extensor digitorum; Adductor longus; Abductor pollicis longus; Pronator teres</td>
+        </tr>
+        <tr>
+          <td>Size</td>
+          <td>Relative size among similar muscles</td>
+          <td>Major / Minor (pectoralis); Maximus / Medius / Minimus (gluteus); Longus / Brevis / Tertius (peroneus); Magnus / Longus / Brevis (adductor)</td>
+        </tr>
+        <tr>
+          <td>Shape</td>
+          <td>Gross appearance of the muscle</td>
+          <td>Trapezius (trapezoid shape); Deltoid (triangle, like Greek Δ); Rhomboid (diamond); Piriformis (pear-shaped); Serratus (saw-toothed margin)</td>
+        </tr>
+        <tr>
+          <td>Number of Heads</td>
+          <td>How many origins the muscle has (-ceps)</td>
+          <td>Biceps (2 heads); Triceps (3 heads); Quadriceps (4 heads)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Applied Example: Flexor Digitorum Superficialis</strong>
+      <strong>Flexor</strong> (action) + <strong>Digitorum</strong> (location: digits/fingers) + <strong>Superficialis</strong> (size/position: the superficial one, compared to profundus = deep). Three naming conventions in one name. You already know before studying it that this muscle flexes the fingers and lies superficially in the forearm.
+    </div>
+  </section>
+
+  <!-- 10. JOINTS CROSSED -->
+  <section id="joints-crossed">
+    <h2>10. Number of Joints Crossed</h2>
+    <p>A muscle's action depends not only on its attachments but on how many joints lie between origin and insertion. This classification has significant clinical implications.</p>
+
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Definition</th>
+          <th>Examples</th>
+          <th>Clinical Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monoarticular</td>
+          <td>Acts across one joint only</td>
+          <td>Soleus, brachialis, vastus medialis, gluteus maximus (primarily)</td>
+          <td>Predictable, isolated action. Easier to target in rehabilitation. Length not affected by position of other joints.</td>
+        </tr>
+        <tr>
+          <td>Biarticular</td>
+          <td>Acts across two joints</td>
+          <td>Gastrocnemius (knee + ankle), rectus femoris (hip + knee), hamstrings (hip + knee), biceps brachii (shoulder + elbow)</td>
+          <td>Can transfer energy between joints; highly efficient in gait. More vulnerable to strain at full stretch. Active insufficiency and passive insufficiency are key concepts.</td>
+        </tr>
+        <tr>
+          <td>Polyarticular</td>
+          <td>Acts across more than two joints</td>
+          <td>Extensor digitorum (multiple IP, MCP, wrist); flexor digitorum profundus</td>
+          <td>Complex length-tension relationships. Full range of action at all joints simultaneously is not possible — physiotherapists use this when assessing for tightness (e.g. two-joint muscle tightness tests).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="concept">
+      <strong>Active vs. Passive Insufficiency — The Biarticular Concept</strong>
+      A biarticular muscle becomes <strong>actively insufficient</strong> when it is asked to contract maximally across both joints simultaneously — the muscle is too short to exert full force at both ends at once. Example: hamstrings cannot fully flex the knee while maximally extending the hip.
+      <br><br>
+      <strong>Passive insufficiency</strong> occurs when a biarticular muscle is stretched across both joints — it becomes taut before either joint reaches its full passive range. Example: hamstring tightness limits hip flexion when the knee is extended (straight-leg raise test), even though the knee can fully flex separately.
+      <br><br>
+      These principles explain why isolated vs. combined joint positioning dramatically changes muscle testing results in physiotherapy assessment.
+    </div>
+  </section>
+
+  <!-- 11. CONTRACTION TYPES -->
+  <section id="contraction">
+    <h2>11. Types of Muscle Activity</h2>
+    <p>Muscle contractions are broadly divided by whether they produce limb movement (<strong>dynamic</strong>) or maintain position without movement (<strong>static / isometric</strong>). Dynamic contractions are further classified by whether the muscle is shortening or lengthening during force production.</p>
+
+    <div class="contraction-grid">
+      <div class="contraction-card c-concentric">
+        <div class="cc-name">Concentric Contraction</div>
+        <strong>Dynamic — muscle shortens</strong><br>
+        The muscle generates force while shortening — the origin and insertion move closer together. Produces positive mechanical work (force × displacement, same direction). Most commonly described as the "lifting" phase of an exercise.<br>
+        <em>Example: Biceps shortening to lift a dumbbell.</em>
+      </div>
+      <div class="contraction-card c-eccentric">
+        <div class="cc-name">Eccentric Contraction</div>
+        <strong>Dynamic — muscle lengthens under load</strong><br>
+        The muscle generates force while elongating — the origin and insertion move apart despite active contraction. The muscle acts as a brake, absorbing energy (negative work). Generates greater force per motor unit activated than concentric. Highest tensile stress on muscle-tendon unit.<br>
+        <em>Example: Biceps controlling the lowering of a dumbbell.</em>
+      </div>
+      <div class="contraction-card c-isometric">
+        <div class="cc-name">Isometric Contraction</div>
+        <strong>Static — no joint movement</strong><br>
+        Force is generated without change in muscle length or joint angle. No mechanical work is done, but ATP is still consumed. Essential for postural stabilisation and as a clinical tool (safe rehabilitation post-injury, testing muscle strength in a neutral position).<br>
+        <em>Example: Holding a book in an outstretched hand; wall squat hold.</em>
+      </div>
+      <div class="contraction-card c-isokinetic">
+        <div class="cc-name">Isokinetic Contraction</div>
+        <strong>Dynamic — constant angular velocity</strong><br>
+        The limb moves at a constant, preset speed (controlled by a dynamometer machine). The resistance automatically adjusts to match the force produced throughout the range. Not possible without specialist equipment. Used in research and high-level sports rehab for objective strength measurement and training.<br>
+        <em>Example: Biodex or Cybex dynamometer testing of quadriceps.</em>
+      </div>
+    </div>
+
+    <div class="clinical">
+      <strong>Clinical — Eccentric Exercise in Tendinopathy</strong>
+      Tendons respond poorly to passive stretching but are powerfully stimulated by controlled mechanical loading. In conditions like Achilles tendinopathy and patellar tendinopathy, eccentric loading programmes (the classic "Alfredson protocol" for Achilles: heel drops off a step) apply high tensile stress to the tendon-muscle unit, stimulating collagen synthesis and remodelling without causing excessive strain. Eccentric contractions also generate more force per motor unit — meaning fewer active motor units are required, placing proportionally more load through the tendon. This makes eccentrics ideal for progressive tendon loading in rehabilitation. Heavy slow resistance (HSR) training has emerged as an equally effective alternative, combining both concentric and eccentric phases at slow speed.
+    </div>
+  </section>
+
+  <!-- 12. RELATIONSHIPS -->
+  <section id="relationships">
+    <h2>12. Muscle Relationships</h2>
+    <p>No muscle works in isolation. Understanding the functional relationships between muscles is essential for movement analysis and for designing rehabilitation programmes that address the whole kinetic chain rather than a single muscle.</p>
+
+    <h3>Agonist</h3>
+    <p>The <strong>agonist</strong> (prime mover) is the muscle primarily responsible for producing the target movement. It is the point of reference when describing other muscles' roles. Example: the biceps brachii is the agonist during elbow flexion.</p>
+
+    <h3>Antagonist</h3>
+    <p>The <strong>antagonist</strong> produces the opposite action to the agonist. During movement, the antagonist does not simply switch off — it provides controlled resistance to regulate the speed and precision of movement (eccentric deceleration). The agonist/antagonist relationship is critical for joint stability and movement quality. Example: the triceps brachii is the antagonist during elbow flexion.</p>
+    <p>Impaired antagonist control is clinically relevant: inadequate hamstring eccentric control during sprinting contributes to hamstring strain injury; poor rotator cuff deceleration (antagonist to deltoid) contributes to impingement.</p>
+
+    <h3>Synergists</h3>
+    <p><strong>Synergists</strong> assist the agonist by contributing to the same action, eliminating unwanted movements, or stabilising adjacent joints. They are subdivided into:</p>
+    <p><strong>Direct synergists</strong> — share the same primary action as the agonist. Example: brachialis and brachioradialis assist biceps brachii in elbow flexion.</p>
+    <p><strong>Relative (indirect) synergists</strong> — share only some actions with the agonist. Example: supraspinatus assists deltoid in shoulder abduction (their shared action) but differs in rotation.</p>
+
+    <h3>Stabilisers</h3>
+    <p>A special subcategory of synergists that fix the proximal joint or bone to provide a stable base from which the agonist can work. Example: the rotator cuff stabilises the glenohumeral head against deltoid's superiorly-directed pull during shoulder abduction. Without this stabilisation, the humeral head would translate superiorly and impinge.</p>
+
+    <div class="concept">
+      <strong>Muscle Imbalance — A Core Physiotherapy Concept</strong>
+      Altered relationships between agonists, antagonists, and synergists are a major mechanism of injury and dysfunction. Janda's "upper crossed syndrome" describes tightness in upper trapezius and pectorals opposing weakness in deep neck flexors and lower trapezius — a predictable agonist/antagonist imbalance pattern producing forward head posture and shoulder impingement. Recognising these patterns allows physiotherapists to target both the tight and the weak muscles, rather than treating symptoms in isolation.
+    </div>
+  </section>
+
+  <!-- 13. CLINICAL -->
+  <section id="clinical">
+    <h2>13. Clinical Applications in Physiotherapy</h2>
+
+    <h3>Muscle Strain Classification</h3>
+    <p>Muscle strains are the most common musculoskeletal injury. Graded using the British Athletics Muscle Injury Classification (BAMIC) or the classic grade I–III system: Grade I (minor fibre disruption, no strength loss), Grade II (partial tear, reduced strength, palpable tenderness), Grade III (complete rupture, muscle belly retraction, complete loss of function). The MTJ is the most common tear site in grades II–III; complete tendon avulsions occur at the bony insertion.</p>
+
+    <h3>Muscle Atrophy — Disuse vs. Denervation</h3>
+    <p><strong>Disuse atrophy</strong> follows immobilisation or reduced loading — type II fibres preferentially atrophy first, reducing peak force but less affecting endurance. It begins within days of immobilisation and is reversible with progressive loading. <strong>Denervation atrophy</strong> follows nerve injury — the entire motor unit is denervated, causing more severe and rapid atrophy with fasciculations and fibrillations on EMG. Recovery depends on nerve regeneration (approximately 1 mm/day) reaching the end-plate before irreversible fibrosis occurs.</p>
+
+    <h3>Delayed Onset Muscle Soreness (DOMS)</h3>
+    <p>DOMS peaks 24–72 hours after unaccustomed exercise, particularly eccentric-heavy exercise. The mechanism is microtrauma to sarcomeres at the Z-disc level, triggering an inflammatory cascade. It is not caused by lactic acid (which clears within 1 hour of exercise). DOMS is associated with a "repeated bout effect" — the second bout of the same exercise causes significantly less DOMS, due to structural adaptations including increased sarcomere number in series and upregulation of protective cytoskeletal proteins (desmin, titin).</p>
+
+    <h3>Hypertrophy Mechanisms</h3>
+    <p>Muscle hypertrophy occurs through: (a) <strong>myofibrillar hypertrophy</strong> — increased actin and myosin content, increasing contractile force; (b) <strong>sarcoplasmic hypertrophy</strong> — increased sarcoplasmic volume, glycogen, and enzyme content, improving endurance capacity. Mechanical tension, metabolic stress, and muscle damage are the three primary stimuli. Progressive overload ensures the muscle is continuously challenged above its current capacity — the cornerstone of strengthening programmes in physiotherapy.</p>
+
+    <h3>Understanding Pennation in Rehabilitation</h3>
+    <p>Ultrasound measurement of pennation angle has revealed that immobilisation (e.g. post-fracture casting) decreases pennation angle as fibres become less oblique — a structural correlate of atrophy. Targeted strengthening increases pennation angle as hypertrophied fibres pack more densely. This means pennation angle can serve as an objective, non-invasive marker of rehabilitation progress, particularly for large pennate muscles such as the vastus lateralis and gastrocnemius.</p>
+
+    <div class="clinical">
+      <strong>Clinical — Why Eccentric Training Works (Summary)</strong>
+      Eccentric contractions: (1) generate more force per motor unit recruited — higher mechanical stimulus per unit neural drive; (2) place greater stress on the musculotendinous unit — stimulating collagen synthesis and tendon remodelling; (3) preferentially build sarcomeres in series — increasing the muscle's optimal length and reducing injury risk at longer lengths (important in sprinting rehabilitation); (4) cause greater DOMS on introduction — requiring careful progression. These properties make eccentric training uniquely valuable in physiotherapy for tendinopathy, muscle strain prevention, and post-surgical rehabilitation.
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <div class="sources">
+    <h3>Sources &amp; Further Reading</h3>
+    <ol>
+      <li>Pelegrinelli A, Johannsson J. <em>BPTY04 Lecture Slides — Introduction to Myology</em>. LUNEX University, 2026.</li>
+      <li>Jones O. <em>How to Learn Anatomy: Muscles</em>. TeachMeAnatomy, 2025. <a href="https://teachmeanatomy.info/the-basics/learning-anatomy/muscles/" target="_blank">teachmeanatomy.info</a></li>
+      <li>Marieb EN, Hoehn KN. <em>Human Anatomy &amp; Physiology</em>, 11th ed. Pearson, 2019.</li>
+      <li>Schuenke M, Schulte E, Schumacher U. <em>Atlas of Anatomy: General Anatomy and Musculoskeletal System</em>, 2nd ed. Thieme, 2015.</li>
+      <li>Frankly-Miller A, et al. <em>Clinical Sports Anatomy</em>. McGraw Hill, 2011.</li>
+      <li>Biel A. <em>Trail Guide to the Body</em>, 5th ed. Books of Discovery.</li>
+      <li>Alfredson H, et al. Heavy-load eccentric calf muscle training for the treatment of chronic Achilles tendinosis. <em>Am J Sports Med</em>, 1998.</li>
+    </ol>
+  </div>
+
+</div>
+
+<footer>
+  BPTY04 Musculoskeletal Anatomy · LUNEX University · For personal study use only
+</footer>
+
+</body>
+</html>

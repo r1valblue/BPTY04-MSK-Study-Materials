@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elbow &amp; Forearm — In-Depth Guide | BPTY04</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #fdfcfa;
+      color: #1a1a1a;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #7b2d00, #c97a00);
+      color: #fff;
+      padding: 2.8rem 3rem 2.2rem;
+    }
+
+    header .back-link {
+      display: inline-block;
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 0.2rem 0.55rem;
+    }
+    header .back-link:hover { background: rgba(255,255,255,0.15); }
+
+    header .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.7rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.15rem 0.6rem;
+      margin-bottom: 0.7rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      margin-top: 0.6rem;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.88rem;
+      font-style: italic;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* ── NAV ── */
+    .toc {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 4px solid #c97a00;
+      padding: 1.2rem 1.6rem;
+      margin-bottom: 3rem;
+      font-size: 0.83rem;
+    }
+
+    .toc h3 {
+      font-size: 0.68rem;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #7b2d00;
+      margin-bottom: 0.7rem;
+    }
+
+    .toc ol {
+      margin-left: 1.2rem;
+      color: #444;
+      line-height: 2;
+    }
+
+    .toc a { color: #7b2d00; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── SECTIONS ── */
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #7b2d00;
+      border-bottom: 2px solid #c97a00;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.3px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #333;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    h4 {
+      font-size: 0.92rem;
+      font-weight: bold;
+      color: #555;
+      margin: 1.2rem 0 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    p { margin-bottom: 0.9rem; }
+
+    /* ── CALLOUT BOXES ── */
+    .callout, .clinical, .mnemonic, .concept {
+      border-left: 4px solid;
+      padding: 0.9rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .callout {
+      border-color: #2a7db5;
+      background: #f0f7fc;
+    }
+
+    .clinical {
+      border-color: #c0392b;
+      background: #fdf3f2;
+    }
+
+    .mnemonic {
+      border-color: #e6a817;
+      background: #fdf8ec;
+    }
+
+    .concept {
+      border-color: #7b52c4;
+      background: #f6f2fd;
+    }
+
+    .callout strong, .clinical strong, .mnemonic strong, .concept strong {
+      display: block;
+      font-size: 0.7rem;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.4rem;
+    }
+
+    .callout strong { color: #2a7db5; }
+    .clinical strong { color: #c0392b; }
+    .mnemonic strong { color: #b07e0a; }
+    .concept strong { color: #7b52c4; }
+
+    /* ── TABLES ── */
+    .muscle-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .muscle-table th {
+      background: #3d1400;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+
+    .muscle-table td {
+      padding: 0.55rem 0.7rem;
+      border-bottom: 1px solid #e5e0d8;
+      vertical-align: top;
+    }
+
+    .muscle-table tr:last-child td { border-bottom: 2px solid #7b2d00; }
+    .muscle-table tr:nth-child(even) { background: #faf8f4; }
+
+    .muscle-table td:first-child {
+      font-weight: bold;
+      color: #3d1400;
+      white-space: nowrap;
+    }
+
+    /* ── NERVE TAGS ── */
+    .nerve-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      white-space: nowrap;
+      font-weight: bold;
+    }
+
+    .n-musculocutaneous { background: #fff3cd; color: #7a5000; border: 1px solid #e6a817; }
+    .n-radial           { background: #d4edda; color: #1a5c2a; border: 1px solid #28a745; }
+    .n-median           { background: #cce5ff; color: #004085; border: 1px solid #2a7db5; }
+    .n-ulnar            { background: #e8d8f8; color: #4a1080; border: 1px solid #7b52c4; }
+    .n-pin              { background: #d1f5e0; color: #155724; border: 1px solid #198754; }
+
+    /* ── CLINICAL TABLE ── */
+    .clinical-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin-top: 1rem;
+    }
+
+    .clinical-table th {
+      background: #7b0d0d;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+
+    .clinical-table td {
+      padding: 0.6rem 0.7rem;
+      border-bottom: 1px solid #f0d5d5;
+      vertical-align: top;
+    }
+
+    .clinical-table tr:last-child td { border-bottom: 2px solid #c0392b; }
+    .clinical-table tr:nth-child(even) { background: #fdf8f8; }
+
+    .clinical-table td:first-child {
+      font-weight: bold;
+      color: #7b0d0d;
+      white-space: nowrap;
+    }
+
+    /* ── JOINT CARDS ── */
+    .joint-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .joint-card {
+      border: 1px solid #ddd;
+      border-top: 3px solid #c97a00;
+      padding: 1rem;
+      background: #fff;
+      font-size: 0.85rem;
+    }
+
+    .joint-card .jc-name {
+      font-weight: bold;
+      color: #7b2d00;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .joint-card .jc-type {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .joint-card .jc-bones {
+      color: #444;
+    }
+
+    /* ── FOSSA BOX ── */
+    .fossa-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .fossa-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 3px solid #c97a00;
+      padding: 0.8rem 1rem;
+      font-size: 0.85rem;
+    }
+
+    .fossa-item strong {
+      display: block;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #7b2d00;
+      margin-bottom: 0.3rem;
+    }
+
+    /* ── LAYER BADGE ── */
+    .layer-badge {
+      display: inline-block;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.1rem 0.5rem;
+      border-radius: 2px;
+      margin-bottom: 0.5rem;
+    }
+
+    .layer-superficial { background: #ffe8cc; color: #7b3d00; border: 1px solid #c97a00; }
+    .layer-intermediate { background: #e8f4e8; color: #1a5c1a; border: 1px solid #4a9a4a; }
+    .layer-deep { background: #e4d8f0; color: #4a1080; border: 1px solid #7b52c4; }
+
+    /* ── SOURCES ── */
+    .sources {
+      margin-top: 4rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1.5rem;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .sources h3 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #7b2d00;
+      margin-bottom: 0.8rem;
+    }
+
+    .sources ol { margin-left: 1.2rem; line-height: 1.9; }
+    .sources a { color: #7b2d00; }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 1rem 2rem;
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    @media (max-width: 680px) {
+      .joint-grid { grid-template-columns: 1fr; }
+      .fossa-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="index.html">← Back to BPTY04 Resources</a>
+  <div class="tag">BPTY04 · In-Depth Guide</div>
+  <h1>Elbow &amp; Forearm</h1>
+  <p>Joint complex · Ligaments · Arm &amp; forearm muscles · Radioulnar joints · Clinical correlations</p>
+</header>
+
+<div class="container">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#osteology">Key Bony Landmarks</a></li>
+      <li><a href="#joint">Elbow Joint Complex</a></li>
+      <li><a href="#ligaments">Ligamentous Support</a></li>
+      <li><a href="#bursae">Bursae &amp; Carrying Angle</a></li>
+      <li><a href="#cubital-fossa">Cubital Fossa</a></li>
+      <li><a href="#radioulnar">Radioulnar Joints &amp; Forearm Rotation</a></li>
+      <li><a href="#arm-anterior">Arm Muscles — Anterior (Flexors)</a></li>
+      <li><a href="#arm-posterior">Arm Muscles — Posterior (Extensors)</a></li>
+      <li><a href="#forearm-anterior">Anterior Forearm Muscles</a></li>
+      <li><a href="#forearm-posterior">Posterior Forearm Muscles</a></li>
+      <li><a href="#neuro">Neurovascular Supply</a></li>
+      <li><a href="#clinical">Clinical Summary</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. OVERVIEW -->
+  <section id="overview">
+    <h2>1. Overview</h2>
+    <p>The elbow is a compound synovial joint formed between the distal humerus and the proximal ends of the radius and ulna. Rather than a single articulation, the elbow joint complex comprises <strong>three distinct joints</strong> within a shared synovial cavity — enabling both the hinge motion of flexion/extension and the pivoting motion of forearm pronation/supination. This dual functionality makes the elbow one of the most mechanically complex joints in the upper limb.</p>
+    <p>The forearm contains two parallel bones — the radius and ulna — linked at both ends by the proximal and distal radioulnar joints and along their length by the interosseous membrane. Two muscular compartments (anterior and posterior) control movement at the wrist and fingers, with origins largely concentrated on the common tendon origins at the medial and lateral epicondyles of the humerus.</p>
+    <div class="callout">
+      <strong>Anatomical Concept</strong>
+      Understanding the elbow requires thinking of it as a unit: hinge joint for flexion/extension + pivot joint for pronation/supination. Clinically, injuries rarely isolate to one component — disruption of one usually affects the whole complex.
+    </div>
+  </section>
+
+  <!-- 2. OSTEOLOGY -->
+  <section id="osteology">
+    <h2>2. Key Bony Landmarks</h2>
+
+    <h3>Distal Humerus</h3>
+    <p>The distal humerus widens into medial and lateral <strong>epicondyles</strong> — the medial being larger and serving as origin for the common flexor tendon (CFT), and the lateral serving as origin for the common extensor tendon (CET). The articular surface is divided into the <strong>capitulum</strong> (lateral, hemispherical, articulates with radial head) and the <strong>trochlea</strong> (medial, pulley-shaped, articulates with ulnar trochlear notch). Above the trochlea anteriorly lies the <strong>coronoid fossa</strong>, and posteriorly the <strong>olecranon fossa</strong> — these accommodate the coronoid process and olecranon respectively during flexion and extension.</p>
+
+    <h3>Proximal Ulna</h3>
+    <p>The proximal ulna has two key processes: the <strong>olecranon</strong> (projects posteriorly, palpable at the point of the elbow — insertion for triceps) and the <strong>coronoid process</strong> (anterior projection — resists posterior dislocation). Between them is the C-shaped <strong>trochlear (semilunar) notch</strong>, which articulates with the trochlea of the humerus. On the lateral side of the coronoid process sits the <strong>radial notch</strong>, which forms the proximal radioulnar joint with the radial head.</p>
+
+    <h3>Proximal Radius</h3>
+    <p>The radial head is a disc-shaped structure that articulates with the capitulum of the humerus (humeroradial joint) and rotates within the radial notch of the ulna (proximal radioulnar joint). Just distal to the neck, the <strong>radial tuberosity</strong> is the insertion point for the biceps brachii tendon.</p>
+
+    <div class="mnemonic">
+      <strong>Mnemonic — CRAzy TULips</strong>
+      <strong>CR</strong>azy = <strong>C</strong>apitulum → <strong>R</strong>adius &nbsp;|&nbsp; <strong>TU</strong>lips = <strong>T</strong>rochlea → <strong>U</strong>lna<br>
+      The capitulum (lateral) articulates with the radius; the trochlea (medial) articulates with the ulna. Remember: <em>C</em> and <em>R</em> are both in "CRazy", and <em>T</em> and <em>U</em> are both in "TUlips."
+    </div>
+  </section>
+
+  <!-- 3. ELBOW JOINT COMPLEX -->
+  <section id="joint">
+    <h2>3. Elbow Joint Complex</h2>
+    <p>All three articulations share a single synovial capsule and cavity, and are collectively classified as a <strong>synovial hinge joint</strong> (though the radioulnar component is pivot). The capsule attaches to the margins of the articular surfaces and is reinforced by the collateral ligaments.</p>
+
+    <div class="joint-grid">
+      <div class="joint-card">
+        <div class="jc-name">Humeroulnar</div>
+        <div class="jc-type">Hinge (Ginglymus)</div>
+        <div class="jc-bones">Trochlea of humerus ↔ Trochlear notch of ulna. Permits flexion/extension. Primary stabiliser of the elbow.</div>
+      </div>
+      <div class="joint-card">
+        <div class="jc-name">Humeroradial</div>
+        <div class="jc-type">Spheroidal (Condyloid)</div>
+        <div class="jc-bones">Capitulum of humerus ↔ Head of radius. Allows flexion/extension + some rotation. Less inherently stable than humeroulnar.</div>
+      </div>
+      <div class="joint-card">
+        <div class="jc-name">Proximal Radioulnar</div>
+        <div class="jc-type">Pivot</div>
+        <div class="jc-bones">Head of radius ↔ Radial notch of ulna. Enables pronation and supination of the forearm. Enclosed within the elbow capsule.</div>
+      </div>
+    </div>
+
+    <h3>Range of Motion</h3>
+    <p>The elbow flexes from 0° (full extension) to approximately 145–150°. <strong>Hyperextension</strong> is normally limited by the olecranon locking into the olecranon fossa and the anterior capsule becoming taut. A small degree of hyperextension (up to 5–10°) is normal, particularly in females and hypermobile individuals.</p>
+
+    <div class="concept">
+      <strong>Why three joints in one capsule?</strong>
+      The shared capsule ensures synergistic movement — you cannot flex at the humeroulnar joint without the radial head simultaneously tracking the capitulum. The arrangement also allows pronation/supination (at the proximal radioulnar joint) to occur independently of flexion/extension, dramatically expanding hand positioning in space without requiring shoulder movement.
+    </div>
+  </section>
+
+  <!-- 4. LIGAMENTS -->
+  <section id="ligaments">
+    <h2>4. Ligamentous Support</h2>
+
+    <h3>Medial (Ulnar) Collateral Ligament — UCL/MCL</h3>
+    <p>The UCL is the primary stabiliser of the elbow against <strong>valgus stress</strong> (lateral force pushing the forearm laterally away from the body). It consists of three bands:</p>
+
+    <div class="fossa-grid">
+      <div class="fossa-item">
+        <strong>Anterior Band</strong>
+        The strongest and most clinically important component. Runs from the medial epicondyle to the coronoid process of the ulna. Taut throughout the range of motion, particularly in extension. The primary valgus stabiliser — commonly injured in throwing athletes.
+      </div>
+      <div class="fossa-item">
+        <strong>Posterior Band</strong>
+        Fan-shaped. Runs from the medial epicondyle to the olecranon. Becomes taut in flexion, providing supplementary stability in the flexed position.
+      </div>
+      <div class="fossa-item">
+        <strong>Transverse Band</strong>
+        Also called Cooper's or the oblique ligament. Runs between the olecranon and coronoid process horizontally. Adds limited bony congruence — its contribution to stability is minimal compared to the other two bands.
+      </div>
+      <div class="fossa-item">
+        <strong>Clinical Note</strong>
+        UCL rupture is the most common injury requiring Tommy John surgery in baseball pitchers. The repetitive valgus stress of overhead throwing places enormous load on the anterior band. MRI is the gold standard for diagnosis; chronic insufficiency leads to medial elbow pain and reduced velocity.
+      </div>
+    </div>
+
+    <h3>Lateral Collateral Ligament Complex</h3>
+    <p>The lateral side is stabilised by a complex of ligaments resisting <strong>varus stress</strong> and preventing posterolateral rotatory instability:</p>
+    <p><strong>Radial Collateral Ligament (RCL):</strong> From the lateral epicondyle to the annular ligament. Resists varus stress and prevents separation of the humeroradial joint.</p>
+    <p><strong>Lateral Ulnar Collateral Ligament (LUCL):</strong> The key ligament for posterolateral rotatory stability. Runs from the lateral epicondyle to the supinator crest of the ulna, passing superficially to the annular ligament. Injury to the LUCL is implicated in posterolateral rotatory instability (PLRI), where the elbow dislocates or subluxes posterolaterally during loading in supination.</p>
+    <p><strong>Accessory Lateral Collateral Ligament:</strong> A variable band from the annular ligament to the supinator crest, providing additional support to the annular ligament under varus stress.</p>
+
+    <h3>Annular Ligament</h3>
+    <p>A strong fibrous ring that encircles the radial head, attaching anteriorly and posteriorly to the margins of the radial notch of the ulna. It holds the radial head firmly against the ulna while permitting the radius to rotate freely during pronation and supination. The inner surface is lined with synovial membrane to reduce friction.</p>
+
+    <div class="clinical">
+      <strong>Clinical — Nursemaid's Elbow (Pulled Elbow)</strong>
+      In children under 5 years, the radial head is smaller and the annular ligament is relatively lax. A sudden longitudinal pull on the outstretched arm (e.g. lifting a toddler by the hand) can allow the radial head to slip partially through the annular ligament — a subluxation, not a true dislocation. The child holds the arm in slight flexion and pronation, refusing to use it. Treatment is closed reduction by supination + flexion (or hyperpronation), often with an immediate satisfying click.
+    </div>
+  </section>
+
+  <!-- 5. BURSAE & CARRYING ANGLE -->
+  <section id="bursae">
+    <h2>5. Bursae &amp; Carrying Angle</h2>
+
+    <h3>Bursae</h3>
+    <p>Three bursae are clinically relevant around the elbow:</p>
+    <p><strong>Olecranon bursa:</strong> Lies superficially between the skin and the olecranon process. Reduces friction during flexion/extension. Prone to swelling from direct trauma (student's elbow), repetitive pressure, rheumatoid arthritis, gout, or infection (septic bursitis).</p>
+    <p><strong>Bicipitoradial bursa:</strong> Located between the biceps tendon and the radial tuberosity. Reduces friction during forearm rotation. Can become inflamed in repetitive supination activities.</p>
+    <p><strong>Subtendinous olecranon bursa:</strong> Between the triceps tendon and the olecranon, proximal to the superficial bursa. Less commonly inflamed.</p>
+
+    <h3>Carrying Angle</h3>
+    <p>When the elbow is fully extended with the forearm supinated, the long axes of the humerus and ulna form a slight lateral angle — the <strong>carrying angle</strong> (approximately 5–10° in males, 10–15° in females). This valgus angulation means the forearm deviates laterally relative to the arm, allowing objects carried at the side to clear the hips.</p>
+    <div class="callout">
+      <strong>Concept</strong>
+      <strong>Cubitus valgus</strong> = increased carrying angle (often from lateral condyle fracture in childhood, as in Panner's disease). <strong>Cubitus varus</strong> = decreased/reversed carrying angle ("gunstock deformity") — the classic complication of malunited supracondylar fractures in children, resulting in medial angulation of the distal humerus.
+    </div>
+  </section>
+
+  <!-- 6. CUBITAL FOSSA -->
+  <section id="cubital-fossa">
+    <h2>6. Cubital Fossa</h2>
+    <p>The cubital fossa is a triangular depression on the anterior aspect of the elbow, providing passage for major neurovascular structures from the arm into the forearm.</p>
+
+    <div class="fossa-grid">
+      <div class="fossa-item">
+        <strong>Lateral Boundary</strong>
+        Brachioradialis muscle
+      </div>
+      <div class="fossa-item">
+        <strong>Medial Boundary</strong>
+        Pronator teres muscle
+      </div>
+      <div class="fossa-item">
+        <strong>Superior Boundary (Base)</strong>
+        An imaginary line connecting the medial and lateral epicondyles of the humerus
+      </div>
+      <div class="fossa-item">
+        <strong>Apex</strong>
+        Where brachioradialis and pronator teres meet distally
+      </div>
+      <div class="fossa-item">
+        <strong>Roof</strong>
+        Skin, subcutaneous fascia, bicipital aponeurosis (lacertus fibrosus), median cubital vein
+      </div>
+      <div class="fossa-item">
+        <strong>Floor</strong>
+        Brachialis muscle (proximally) + Supinator muscle (distally)
+      </div>
+    </div>
+
+    <h3>Contents — Lateral to Medial</h3>
+
+    <div class="mnemonic">
+      <strong>Mnemonic — Really Boring But Meaningful</strong>
+      <strong>R</strong>adial nerve · <strong>B</strong>iceps tendon · <strong>B</strong>rachial artery · <strong>M</strong>edian nerve<br>
+      (Lateral → Medial across the fossa floor)<br>
+      Alternatively: <em>"Really Bloody Boring Medicine"</em> for the same order.
+    </div>
+
+    <p><strong>Radial nerve</strong> (and its division into superficial and deep branches / PIN) lies most laterally, often just outside the strict fossa boundary between brachialis and brachioradialis.</p>
+    <p><strong>Biceps tendon</strong> passes centrally to insert on the radial tuberosity. The bicipital aponeurosis fans medially from the tendon into the deep fascia over the flexor compartment, providing an additional line of force transmission.</p>
+    <p><strong>Brachial artery</strong> passes through the fossa and bifurcates at the neck of the radius into the radial and ulnar arteries. The bifurcation point is a key landmark for measuring blood pressure — Korotkoff sounds are auscultated over the brachial artery in the cubital fossa.</p>
+    <p><strong>Median nerve</strong> lies most medially, passing between the two heads of pronator teres to enter the anterior forearm.</p>
+
+    <div class="clinical">
+      <strong>Clinical — Brachial Artery in the Cubital Fossa</strong>
+      The brachial artery's superficial course makes it vulnerable in distal humeral fractures (especially supracondylar fractures in children). Vascular injury presents with a pulseless, pale, painful arm. The radial pulse should always be assessed after any elbow trauma. Loss of pulse indicates potential compartment syndrome or direct arterial injury — a surgical emergency.
+    </div>
+  </section>
+
+  <!-- 7. RADIOULNAR JOINTS -->
+  <section id="radioulnar">
+    <h2>7. Radioulnar Joints &amp; Forearm Rotation</h2>
+    <p>Pronation and supination of the forearm occur through a linked system: the radius rotates around the relatively fixed ulna at both ends, with the interosseous membrane maintaining their relationship throughout.</p>
+
+    <h3>Proximal Radioulnar Joint (PRUJ)</h3>
+    <p>Located immediately distal to and within the same capsule as the elbow joint. The head of the radius rotates within the annular ligament, which is lined with synovial membrane. Joint type: <strong>pivot (trochoid)</strong>. The radial head spins but does not translate. Pronation is produced by pronator teres + pronator quadratus; supination by supinator + biceps brachii.</p>
+
+    <h3>Distal Radioulnar Joint (DRUJ)</h3>
+    <p>Located at the wrist, proximal to the radiocarpal joint. The <strong>ulnar notch of the radius</strong> slides around the relatively fixed <strong>head of the ulna</strong>. Joint type: <strong>pivot</strong>. Stabilised by the anterior and posterior DRUJ ligaments, and importantly by the <strong>articular disc</strong> — a fibrocartilaginous structure (part of the triangular fibrocartilage complex, TFCC) that binds the radius and ulna together and separates the DRUJ from the wrist joint.</p>
+
+    <h3>Interosseous Membrane (IOM)</h3>
+    <p>A fibrous sheet connecting the interosseous borders of the radius and ulna across their full length. The fibres run obliquely — predominantly from the radius (proximally) to the ulna (distally). Functions include: holding the bones together during rotation, providing a broad origin for deep forearm muscles (FDP, FPL, APL, EPB, EPL), and transferring compressive forces from the radius to the ulna (approximately 80% of axial load passes through the radius at the wrist, and the IOM transfers much of this to the ulna).</p>
+
+    <div class="clinical">
+      <strong>Clinical — The Forearm as a Ring: Monteggia &amp; Galeazzi Fractures</strong>
+      The radius and ulna form a functional ring with the proximal and distal radioulnar joints. Like any ring, a single break in one place tends to cause a second break or dislocation elsewhere.
+      <br><br>
+      <strong>Monteggia fracture:</strong> Fracture of the proximal ulna + dislocation of the radial head at the PRUJ. The radial head commonly dislocates anteriorly. Risk to the posterior interosseous nerve (deep branch of radial nerve) crossing the radial neck.
+      <br><br>
+      <strong>Galeazzi fracture:</strong> Fracture of the distal third of the radius + disruption of the DRUJ (dislocation of the ulnar head). Treated surgically — ORIF of radius restores the ring.
+    </div>
+  </section>
+
+  <!-- 8. ARM MUSCLES — ANTERIOR -->
+  <section id="arm-anterior">
+    <h2>8. Arm Muscles — Anterior Compartment (Flexors)</h2>
+    <p>Three muscles occupy the anterior compartment of the arm, all crossing the elbow anteriorly to produce flexion. They are nicknamed the "3 Bs."</p>
+
+    <div class="mnemonic">
+      <strong>Mnemonic — The 3 Bs of Elbow Flexion</strong>
+      <strong>B</strong>iceps brachii · <strong>B</strong>rachialis · <strong>B</strong>rachioradialis<br>
+      All three flex the elbow. Brachialis is the "workhorse" (always active regardless of position). Biceps adds supination. Brachioradialis is most effective in the mid-range/neutral position.
+    </div>
+
+    <table class="muscle-table">
+      <thead>
+        <tr>
+          <th>Muscle</th>
+          <th>Origin</th>
+          <th>Insertion</th>
+          <th>Action</th>
+          <th>Nerve</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Biceps Brachii (Long head)</td>
+          <td>Supraglenoid tubercle of scapula (intra-articular)</td>
+          <td rowspan="2">Radial tuberosity; bicipital aponeurosis → deep fascia of forearm</td>
+          <td rowspan="2">Elbow flexion; Forearm supination (powerful); Shoulder flexion (long head only)</td>
+          <td rowspan="2"><span class="nerve-tag n-musculocutaneous">Musculocutaneous C5–C6</span></td>
+        </tr>
+        <tr>
+          <td>Biceps Brachii (Short head)</td>
+          <td>Coracoid process of scapula (with coracobrachialis)</td>
+        </tr>
+        <tr>
+          <td>Brachialis</td>
+          <td>Distal anterior surface of humerus (lower half)</td>
+          <td>Coronoid process and ulnar tuberosity of ulna</td>
+          <td>Elbow flexion (pure flexor — the primary workhorse, always active in flexion regardless of forearm position)</td>
+          <td><span class="nerve-tag n-musculocutaneous">Musculocutaneous C5–C6</span> (small lateral branch from radial nerve)</td>
+        </tr>
+        <tr>
+          <td>Brachioradialis</td>
+          <td>Lateral supracondylar ridge of humerus</td>
+          <td>Styloid process of radius</td>
+          <td>Elbow flexion (most effective in neutral/semi-pronated position); can return forearm to neutral from full pronation or supination</td>
+          <td><span class="nerve-tag n-radial">Radial N C5–C6</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="concept">
+      <strong>Biceps Supination Power</strong>
+      Biceps is a potent supinator — it is most effective at about 90° of elbow flexion because the tendon wraps around the radius most effectively at this angle. This is why you instinctively flex the elbow when using a screwdriver in supination. Supinator can supinate without the power of biceps, but only slowly and against minimal resistance.
+    </div>
+  </section>
+
+  <!-- 9. ARM MUSCLES — POSTERIOR -->
+  <section id="arm-posterior">
+    <h2>9. Arm Muscles — Posterior Compartment (Extensors)</h2>
+
+    <table class="muscle-table">
+      <thead>
+        <tr>
+          <th>Muscle</th>
+          <th>Origin</th>
+          <th>Insertion</th>
+          <th>Action</th>
+          <th>Nerve</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Triceps Brachii (Long head)</td>
+          <td>Infraglenoid tubercle of scapula</td>
+          <td rowspan="3">Posterior surface of olecranon of ulna (via common tendon)</td>
+          <td rowspan="3">Elbow extension (primary); Long head also extends and adducts shoulder</td>
+          <td rowspan="3"><span class="nerve-tag n-radial">Radial N C6–C8</span></td>
+        </tr>
+        <tr>
+          <td>Triceps Brachii (Lateral head)</td>
+          <td>Posterior surface of humerus, superior to the radial groove</td>
+        </tr>
+        <tr>
+          <td>Triceps Brachii (Medial head)</td>
+          <td>Posterior surface of humerus, inferior to the radial groove (deep head — always active)</td>
+        </tr>
+        <tr>
+          <td>Anconeus</td>
+          <td>Lateral epicondyle of humerus</td>
+          <td>Lateral surface of olecranon and proximal posterior ulna</td>
+          <td>Assists elbow extension; abducts ulna during pronation; stabilises elbow joint</td>
+          <td><span class="nerve-tag n-radial">Radial N C7–C8</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Radial Nerve in the Spiral Groove</strong>
+      The radial nerve winds around the posterior shaft of the humerus in the spiral (radial) groove, between the medial and lateral heads of triceps. Humeral shaft fractures at this level can injure the radial nerve, causing <strong>wrist drop</strong> (loss of wrist and finger extension) and sensory loss over the posterior forearm and dorsal hand. Triceps function is often spared because the branches to the medial head arise proximal to the groove.
+    </div>
+  </section>
+
+  <!-- 10. ANTERIOR FOREARM -->
+  <section id="forearm-anterior">
+    <h2>10. Anterior Forearm Muscles</h2>
+    <p>The anterior compartment contains eight muscles in three layers, predominantly innervated by the <strong>median nerve</strong>. The exception is flexor carpi ulnaris (FCU) and the medial half of flexor digitorum profundus (FDP), which are innervated by the <strong>ulnar nerve</strong>. All four superficial muscles share a <strong>Common Flexor Tendon (CFT)</strong> from the medial epicondyle.</p>
+
+    <h3>Superficial Layer — Common Flexor Tendon (CFT) Origin</h3>
+    <div class="layer-badge layer-superficial">Superficial Layer</div>
+
+    <table class="muscle-table">
+      <thead>
+        <tr>
+          <th>Muscle</th>
+          <th>Origin</th>
+          <th>Insertion</th>
+          <th>Action</th>
+          <th>Nerve</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pronator Teres</td>
+          <td>Medial epicondyle (CFT) + coronoid process of ulna (two heads)</td>
+          <td>Mid-lateral shaft of radius</td>
+          <td>Pronation of forearm; assists elbow flexion. Forms medial border of cubital fossa.</td>
+          <td><span class="nerve-tag n-median">Median N C6–C7</span></td>
+        </tr>
+        <tr>
+          <td>Flexor Carpi Radialis (FCR)</td>
+          <td>Medial epicondyle (CFT)</td>
+          <td>Base of 2nd (and 3rd) metacarpal</td>
+          <td>Wrist flexion + radial deviation (abduction)</td>
+          <td><span class="nerve-tag n-median">Median N C6–C7</span></td>
+        </tr>
+        <tr>
+          <td>Palmaris Longus</td>
+          <td>Medial epicondyle (CFT)</td>
+          <td>Flexor retinaculum + palmar aponeurosis</td>
+          <td>Wrist flexion; tenses palmar aponeurosis. Absent in ~15% of population.</td>
+          <td><span class="nerve-tag n-median">Median N C7–C8</span></td>
+        </tr>
+        <tr>
+          <td>Flexor Carpi Ulnaris (FCU)</td>
+          <td>Humeral head: medial epicondyle (CFT); Ulnar head: olecranon + posterior border of ulna</td>
+          <td>Pisiform → hook of hamate → base of 5th metacarpal</td>
+          <td>Wrist flexion + ulnar deviation (adduction)</td>
+          <td><span class="nerve-tag n-ulnar">Ulnar N C7–T1</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Intermediate Layer</h3>
+    <div class="layer-badge layer-intermediate">Intermediate Layer</div>
+
+    <table class="muscle-table">
+      <thead>
+        <tr>
+          <th>Muscle</th>
+          <th>Origin</th>
+          <th>Insertion</th>
+          <th>Action</th>
+          <th>Nerve</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Flexor Digitorum Superficialis (FDS)</td>
+          <td>Two heads: Medial epicondyle (CFT) + anterior radius shaft</td>
+          <td>Sides of middle phalanges of digits 2–5 (splits to allow FDP through)</td>
+          <td>Flexes PIP joints of digits 2–5; assists MCP flexion and wrist flexion. FDS flexes the PIP — test by holding other fingers in extension.</td>
+          <td><span class="nerve-tag n-median">Median N C7–T1</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Deep Layer</h3>
+    <div class="layer-badge layer-deep">Deep Layer</div>
+
+    <table class="muscle-table">
+      <thead>
+        <tr>
+          <th>Muscle</th>
+          <th>Origin</th>
+          <th>Insertion</th>
+          <th>Action</th>
+          <th>Nerve</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Flexor Digitorum Profundus (FDP)</td>
+          <td>Anterior and medial ulna + interosseous membrane</td>
+          <td>Base of distal phalanges of digits 2–5 (pierces through FDS)</td>
+          <td>The only muscle to flex the DIP joints. Also flexes PIP, MCP, and wrist.</td>
+          <td>Lateral half (digits 2–3): <span class="nerve-tag n-median">Median N — AIN C8–T1</span><br>Medial half (digits 4–5): <span class="nerve-tag n-ulnar">Ulnar N C8–T1</span></td>
+        </tr>
+        <tr>
+          <td>Flexor Pollicis Longus (FPL)</td>
+          <td>Anterior surface of radius + adjacent interosseous membrane</td>
+          <td>Base of distal phalanx of thumb</td>
+          <td>Flexes IP and MCP joints of thumb</td>
+          <td><span class="nerve-tag n-median">Median N — AIN C8–T1</span></td>
+        </tr>
+        <tr>
+          <td>Pronator Quadratus</td>
+          <td>Distal anterior surface of ulna</td>
+          <td>Distal anterior surface of radius</td>
+          <td>Pronation of forearm (primary pronator with forearm in all positions; pronator teres provides additional power). Also holds radius and ulna together at DRUJ.</td>
+          <td><span class="nerve-tag n-median">Median N — AIN C8–T1</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>AIN — Anterior Interosseous Nerve</strong>
+      The anterior interosseous nerve (AIN) is the deep motor branch of the median nerve, arising just distal to the elbow. It has no cutaneous distribution. It innervates FPL, lateral half of FDP (index + middle), and pronator quadratus. AIN palsy (from compression or the pronator teres syndrome) causes inability to make an "OK" sign — the IP of the thumb and DIP of the index cannot flex, producing a pinch pattern where both joints remain extended ("benediction" pinch).
+    </div>
+  </section>
+
+  <!-- 11. POSTERIOR FOREARM -->
+  <section id="forearm-posterior">
+    <h2>11. Posterior Forearm Muscles</h2>
+    <p>The posterior compartment contains extensors of the wrist and digits, as well as the supinator. All are ultimately innervated by the <strong>radial nerve</strong> — specifically the <strong>posterior interosseous nerve (PIN)</strong>, which is the deep branch of the radial nerve after it passes through the supinator. The superficial muscles share a <strong>Common Extensor Tendon (CET)</strong> from the lateral epicondyle.</p>
+
+    <h3>Superficial Layer — Common Extensor Tendon (CET) Origin</h3>
+    <div class="layer-badge layer-superficial">Superficial Layer</div>
+
+    <table class="muscle-table">
+      <thead>
+        <tr>
+          <th>Muscle</th>
+          <th>Origin</th>
+          <th>Insertion</th>
+          <th>Action</th>
+          <th>Nerve</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Extensor Carpi Radialis Longus (ECRL)</td>
+          <td>Lateral supracondylar ridge of humerus (proximal to CET)</td>
+          <td>Base of 2nd metacarpal (dorsal)</td>
+          <td>Wrist extension + radial deviation</td>
+          <td><span class="nerve-tag n-radial">Radial N C6–C7</span> (before bifurcation)</td>
+        </tr>
+        <tr>
+          <td>Extensor Carpi Radialis Brevis (ECRB)</td>
+          <td>Lateral epicondyle (CET)</td>
+          <td>Base of 3rd metacarpal (dorsal)</td>
+          <td>Wrist extension; stabilises wrist in fist-making. Most commonly injured in lateral epicondylitis.</td>
+          <td><span class="nerve-tag n-pin">PIN (deep radial) C7–C8</span></td>
+        </tr>
+        <tr>
+          <td>Extensor Digitorum (ED)</td>
+          <td>Lateral epicondyle (CET)</td>
+          <td>Extensor expansion (dorsal hood) of digits 2–5 → middle and distal phalanges</td>
+          <td>Extends MCP joints of digits 2–5; assists PIP and DIP extension via extensor hood</td>
+          <td><span class="nerve-tag n-pin">PIN C7–C8</span></td>
+        </tr>
+        <tr>
+          <td>Extensor Digiti Minimi (EDM)</td>
+          <td>Lateral epicondyle (CET)</td>
+          <td>Extensor expansion of digit 5</td>
+          <td>Extends little finger (independent extension); assists ED</td>
+          <td><span class="nerve-tag n-pin">PIN C7–C8</span></td>
+        </tr>
+        <tr>
+          <td>Extensor Carpi Ulnaris (ECU)</td>
+          <td>Lateral epicondyle (CET) + posterior ulna</td>
+          <td>Base of 5th metacarpal (dorsal)</td>
+          <td>Wrist extension + ulnar deviation. With FCU, produces ulnar deviation. Stabilises DRUJ.</td>
+          <td><span class="nerve-tag n-pin">PIN C7–C8</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Deep Layer</h3>
+    <div class="layer-badge layer-deep">Deep Layer</div>
+
+    <table class="muscle-table">
+      <thead>
+        <tr>
+          <th>Muscle</th>
+          <th>Origin</th>
+          <th>Insertion</th>
+          <th>Action</th>
+          <th>Nerve</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Supinator</td>
+          <td>Lateral epicondyle; RCL; annular ligament; supinator crest of ulna</td>
+          <td>Lateral, anterior, and posterior surface of proximal radius</td>
+          <td>Supination of forearm (the slow, low-resistance supinator; biceps adds power). The PIN passes through the supinator muscle via the arcade of Frohse.</td>
+          <td><span class="nerve-tag n-pin">PIN (deep radial) C5–C6</span></td>
+        </tr>
+        <tr>
+          <td>Abductor Pollicis Longus (APL)</td>
+          <td>Posterior radius, ulna + IOM</td>
+          <td>Base of 1st metacarpal</td>
+          <td>Abducts + extends thumb at CMC joint</td>
+          <td><span class="nerve-tag n-pin">PIN C7–C8</span></td>
+        </tr>
+        <tr>
+          <td>Extensor Pollicis Brevis (EPB)</td>
+          <td>Posterior radius + IOM</td>
+          <td>Base of proximal phalanx of thumb</td>
+          <td>Extends thumb MCP joint; forms anterior border of anatomical snuffbox</td>
+          <td><span class="nerve-tag n-pin">PIN C7–C8</span></td>
+        </tr>
+        <tr>
+          <td>Extensor Pollicis Longus (EPL)</td>
+          <td>Posterior ulna + IOM</td>
+          <td>Base of distal phalanx of thumb</td>
+          <td>Extends thumb IP joint; forms posterior border of anatomical snuffbox</td>
+          <td><span class="nerve-tag n-pin">PIN C7–C8</span></td>
+        </tr>
+        <tr>
+          <td>Extensor Indicis (EI)</td>
+          <td>Posterior ulna + IOM</td>
+          <td>Extensor expansion of index finger</td>
+          <td>Independent extension of index finger; allows pointing with fingers otherwise in a fist</td>
+          <td><span class="nerve-tag n-pin">PIN C7–C8</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="concept">
+      <strong>The Arcade of Frohse — PIN Entrapment</strong>
+      The posterior interosseous nerve (deep branch of the radial nerve) passes through the supinator muscle via a fibrous arch called the arcade of Frohse at its proximal edge. Compression here causes PIN syndrome — weakness of finger and thumb extension, and radial wrist deviation (ECRL is spared as it arises before the PIN). Wrist extension is preserved (in contrast to radial nerve palsy at the spiral groove, which causes full wrist drop).
+    </div>
+  </section>
+
+  <!-- 12. NEUROVASCULAR -->
+  <section id="neuro">
+    <h2>12. Neurovascular Supply</h2>
+
+    <h3>Nerves at the Elbow</h3>
+    <p><strong>Musculocutaneous nerve (C5–C7):</strong> Descends through the arm, innervating coracobrachialis, biceps, and brachialis. Pierces the deep fascia lateral to the biceps tendon at the elbow and continues as the lateral cutaneous nerve of the forearm, providing sensation to the lateral forearm.</p>
+    <p><strong>Median nerve (C5–T1):</strong> Passes through the cubital fossa medially to the brachial artery, then between the two heads of pronator teres to enter the anterior forearm. Provides motor supply to most anterior forearm muscles (via direct branches and the AIN) and sensation to the lateral 3½ digits.</p>
+    <p><strong>Radial nerve (C5–T1):</strong> Enters the cubital fossa laterally, between the brachialis and brachioradialis, dividing into the superficial radial nerve (sensory) and deep radial nerve (= PIN, motor) at the level of the lateral epicondyle. The PIN enters the supinator via the arcade of Frohse.</p>
+    <p><strong>Ulnar nerve (C7–T1):</strong> Passes posterior to the medial epicondyle in the cubital tunnel (between the medial epicondyle and olecranon). Enters the forearm between the two heads of FCU. Clinically important — the most commonly compressed nerve at the elbow.</p>
+
+    <h3>Arterial Supply</h3>
+    <p>The <strong>brachial artery</strong> is the primary arterial trunk of the arm. It bifurcates at the level of the radial neck in the cubital fossa into the <strong>radial artery</strong> (lateral, travels distally along the anterior forearm to the wrist) and <strong>ulnar artery</strong> (medial, larger — passes deep to FDS to travel with the ulnar nerve to the wrist). Both arteries contribute to an arterial anastomosis around the elbow via the superior and inferior ulnar collateral arteries, radial and ulnar recurrent arteries, and the interosseous recurrent artery — ensuring collateral circulation if the brachial artery is occluded proximal to the elbow.</p>
+
+    <div class="clinical">
+      <strong>Clinical — Cubital Tunnel Syndrome</strong>
+      The ulnar nerve is vulnerable to compression as it passes through the cubital tunnel between the medial epicondyle and olecranon. Prolonged elbow flexion (e.g. sleeping with the arm bent) increases tunnel pressure. Symptoms include paraesthesia in the ring and little finger and medial palm, weakness of intrinsic hand muscles (hypothenar, interossei, medial two lumbricals). Chronic compression leads to a partial <strong>claw hand</strong> (ring and little fingers clawed — MCP hyperextension + IP flexion). The sign of Benediction (ulnar claw) worsens with finger extension — contrast with median nerve claw (affects all digits, index worst). The "Froment's sign" (thumb flexes at IP when pinching paper, due to loss of adductor pollicis → compensation by FPL) confirms ulnar nerve palsy.
+    </div>
+  </section>
+
+  <!-- 13. CLINICAL SUMMARY -->
+  <section id="clinical">
+    <h2>13. Clinical Summary</h2>
+
+    <table class="clinical-table">
+      <thead>
+        <tr>
+          <th>Condition</th>
+          <th>Mechanism / Anatomy</th>
+          <th>Presentation</th>
+          <th>Key Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Olecranon Bursitis</td>
+          <td>Inflammation of olecranon bursa (trauma, repeated pressure, RA, gout, infection)</td>
+          <td>Visible swelling at posterior elbow; fluctuant; pain may be mild unless septic</td>
+          <td>Septic bursitis (warm, red, fever) needs aspiration + antibiotics; Student's/miner's elbow from chronic pressure</td>
+        </tr>
+        <tr>
+          <td>Elbow Dislocation</td>
+          <td>Posterior dislocation most common (FOOSH with valgus force); UCL + LCL rupture. "Terrible triad": posterior dislocation + radial head # + coronoid #</td>
+          <td>Posterior prominence of olecranon; elbow held in ~45° flexion; check neurovascular status</td>
+          <td>Closed reduction under sedation; post-reduction: check radial pulse + median/radial/ulnar nerve function</td>
+        </tr>
+        <tr>
+          <td>Lateral Epicondylitis (Tennis Elbow)</td>
+          <td>Tendinopathy of ECRB (± ED) at lateral epicondyle (CET); overuse / repetitive wrist extension</td>
+          <td>Lateral epicondyle pain ++ on palpation, worsened by resisted wrist extension and gripping. Cozen's test positive.</td>
+          <td>Does NOT require tennis — common in desk workers / manual trades; conservative management (load management, eccentric exercise, physio); ECRB tendinopathy = degenerative change, not inflammation</td>
+        </tr>
+        <tr>
+          <td>Medial Epicondylitis (Golfer's Elbow)</td>
+          <td>Tendinopathy of CFT (especially pronator teres + FCR) at medial epicondyle; overuse in golfers, throwers, manual workers</td>
+          <td>Medial epicondyle pain on palpation and resisted forearm pronation or wrist flexion</td>
+          <td>Less common than lateral epicondylitis; differentiate from UCL injury (deeper, more posterior) and cubital tunnel syndrome (nerve symptoms)</td>
+        </tr>
+        <tr>
+          <td>Supracondylar Fracture</td>
+          <td>Most common elbow fracture in children (&lt;8 yrs); FOOSH with elbow extended → distal fragment displaced posteriorly (extension type, 95%)</td>
+          <td>Pain, swelling, deformity at distal humerus. Check radial pulse (AIN / median nerve / radial nerve). Assess capillary refill.</td>
+          <td>Anterior humeral line: normally passes through middle third of capitulum — displaced posteriorly in extension fractures. Baumann's angle on X-ray. Risk of Volkmann's ischaemic contracture. Treat with closed reduction + K-wire fixation.</td>
+        </tr>
+        <tr>
+          <td>Volkmann's Ischaemic Contracture</td>
+          <td>Compartment syndrome of anterior forearm following supracondylar fracture → arterial compression / spasm of brachial artery → forearm ischaemia → fibrosis of forearm flexors</td>
+          <td>The "5 Ps": Pain (on passive stretch), Pallor, Paraesthesia, Pulselessness, Paralysis</td>
+          <td>Surgical emergency — fasciotomy within 6 hours. Late presentation: fixed flexion contracture of wrist + fingers, AIN palsy. Prevented by timely fracture reduction.</td>
+        </tr>
+        <tr>
+          <td>Cubital Tunnel Syndrome</td>
+          <td>Compression of ulnar nerve at cubital tunnel (posterior to medial epicondyle); aggravated by elbow flexion</td>
+          <td>Paraesthesia ring + little fingers; weak grip; intrinsic wasting; partial ulnar claw; positive Tinel's over cubital tunnel</td>
+          <td>Froment's sign (FPL compensating for absent adductor pollicis). Conservative: avoid prolonged flexion. Surgical: nerve decompression or anterior transposition if severe</td>
+        </tr>
+        <tr>
+          <td>Nursemaid's Elbow</td>
+          <td>Subluxation of radial head through annular ligament; sudden longitudinal traction on extended arm in children &lt;5 yrs</td>
+          <td>Child holds arm in pronation + slight flexion; refuses to use it; no bony deformity; no significant swelling</td>
+          <td>X-ray usually normal; closed reduction by supination + flexion (or hyperpronation) — immediate resolution. No splinting required.</td>
+        </tr>
+        <tr>
+          <td>Monteggia Fracture</td>
+          <td>Proximal ulna fracture + anterior dislocation of radial head (most common pattern)</td>
+          <td>Pain + swelling proximal forearm; radial head palpable anteriorly</td>
+          <td>ORIF of ulna restores ring; always assess PIN (may be stretched). In children, may reduce with conservative management. </td>
+        </tr>
+        <tr>
+          <td>Galeazzi Fracture</td>
+          <td>Distal third radius fracture + DRUJ disruption (ulnar head dislocation)</td>
+          <td>Distal forearm pain; DRUJ instability; prominent ulnar head on dorsum of wrist</td>
+          <td>Reverse Monteggia. ORIF mandatory in adults (conservative fails — "fracture of necessity"). Restore DRUJ stability after radius fixation.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SOURCES -->
+  <div class="sources">
+    <h3>Sources &amp; Further Reading</h3>
+    <ol>
+      <li>Jones O. <em>The Elbow Joint</em>. TeachMeAnatomy, 2025. <a href="https://teachmeanatomy.info/upper-limb/joints/elbow-joint/" target="_blank">teachmeanatomy.info</a></li>
+      <li>Jones O. <em>The Radioulnar Joints</em>. TeachMeAnatomy, 2025. <a href="https://teachmeanatomy.info/upper-limb/joints/radioulnar-joints/" target="_blank">teachmeanatomy.info</a></li>
+      <li>Jones O. <em>Muscles of the Anterior Compartment of the Forearm</em>. TeachMeAnatomy, 2025. <a href="https://teachmeanatomy.info/upper-limb/muscles/anterior-forearm/" target="_blank">teachmeanatomy.info</a></li>
+      <li>Jones O. <em>Muscles of the Posterior Compartment of the Forearm</em>. TeachMeAnatomy, 2025. <a href="https://teachmeanatomy.info/upper-limb/muscles/posterior-forearm/" target="_blank">teachmeanatomy.info</a></li>
+      <li>LUNEX University. <em>BPTY04 Lecture Slides — Elbow &amp; Forearm</em>. 2024.</li>
+      <li>Standring S (ed). <em>Gray's Anatomy</em>, 42nd ed. Elsevier, 2021.</li>
+      <li>Morrey BF, Sanchez-Sotelo J, Morrey ME. <em>Morrey's The Elbow and Its Disorders</em>, 5th ed. Elsevier, 2018.</li>
+    </ol>
+  </div>
+
+</div>
+
+<footer>
+  BPTY04 Musculoskeletal Anatomy · LUNEX University · For personal study use only
+</footer>
+
+</body>
+</html>

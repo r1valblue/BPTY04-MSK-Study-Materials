@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary &amp; Abbreviations — BPTY04</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #fdfcfa;
+      color: #1a1a1a;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+      color: #fff;
+      padding: 2.8rem 3rem 2.2rem;
+    }
+
+    header .back-link {
+      display: inline-block;
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 0.2rem 0.55rem;
+    }
+    header .back-link:hover { background: rgba(255,255,255,0.15); }
+
+    header .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.7rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.15rem 0.6rem;
+      margin-bottom: 0.7rem;
+    }
+
+    header h1 { font-size: 2rem; font-weight: normal; line-height: 1.2; }
+    header p { margin-top: 0.6rem; color: rgba(255,255,255,0.75); font-size: 0.88rem; font-style: italic; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    /* How to use */
+    .intro {
+      background: #f5f5f3;
+      border: 1px solid #ddd;
+      border-left: 4px solid #3a3a3a;
+      padding: 1.2rem 1.6rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.88rem;
+      color: #444;
+    }
+
+    /* Alpha index */
+    .alpha-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-bottom: 2.5rem;
+    }
+    .alpha-nav a {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      line-height: 2rem;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.78rem;
+      font-weight: bold;
+      text-decoration: none;
+      border: 1px solid #ccc;
+      color: #444;
+    }
+    .alpha-nav a:hover { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+    .alpha-nav a.empty { color: #ccc; pointer-events: none; }
+
+    /* Section headers */
+    .alpha-section { margin-bottom: 2.5rem; }
+
+    .alpha-section h2 {
+      font-size: 1.1rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+      color: #fff;
+      background: #1a1a1a;
+      padding: 0.3rem 0.8rem;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+    /* Glossary table */
+    .glo-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .glo-table tr { border-bottom: 1px solid #e5e5e5; }
+    .glo-table tr:last-child { border-bottom: 2px solid #1a1a1a; }
+    .glo-table tr:nth-child(even) { background: #f9f9f7; }
+    .glo-table td {
+      padding: 0.55rem 0.75rem;
+      vertical-align: top;
+    }
+    .glo-table td.abbr {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+      color: #1a1a1a;
+      width: 18%;
+      white-space: nowrap;
+    }
+    .glo-table td.full {
+      color: #444;
+      font-style: italic;
+      width: 32%;
+    }
+    .glo-table td.def {
+      color: #222;
+      width: 50%;
+    }
+
+    /* Term-only rows (no abbreviation — longer anatomical terms) */
+    .glo-table td.term-only {
+      font-weight: bold;
+      color: #1a1a1a;
+      width: 18%;
+    }
+
+    .col-heads th {
+      background: #1a1a1a;
+      color: rgba(255,255,255,0.85);
+      padding: 0.4rem 0.75rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 1rem 2rem;
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    @media (max-width: 600px) {
+      .glo-table td.full { display: none; }
+      .glo-table td.abbr, .glo-table td.term-only { width: 28%; }
+      .glo-table td.def { width: 72%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="index.html">← Back to BPTY04 Resources</a>
+  <div class="tag">BPTY04 · Reference</div>
+  <h1>Glossary &amp; Abbreviations</h1>
+  <p>All abbreviations and key anatomical / clinical terms used across the BPTY04 in-depth guides</p>
+</header>
+
+<div class="container">
+
+  <div class="intro">
+    This glossary covers every abbreviation and significant term used across the BPTY04 Musculoskeletal Anatomy in-depth guides — Arthrology, Myology, Upper Limb Osteology, Lower Limb Osteology, Shoulder Girdle, Elbow &amp; Forearm, and Wrist &amp; Hand. Terms are alphabetical. Each entry shows the abbreviation (where applicable), the full term, and a brief definition.
+  </div>
+
+  <!-- Alpha nav -->
+  <div class="alpha-nav">
+    <a href="#A">A</a><a href="#B">B</a><a href="#C">C</a><a href="#D">D</a>
+    <a href="#E">E</a><a href="#F">F</a><a href="#G">G</a><a href="#H">H</a>
+    <a class="empty">I</a><a class="empty">J</a><a href="#K">K</a><a href="#L">L</a>
+    <a href="#M">M</a><a href="#N">N</a><a href="#O">O</a><a href="#P">P</a>
+    <a class="empty">Q</a><a href="#R">R</a><a href="#S">S</a><a href="#T">T</a>
+    <a href="#U">U</a><a href="#V">V</a><a href="#W">W</a><a class="empty">X</a>
+    <a class="empty">Y</a><a class="empty">Z</a>
+  </div>
+
+  <!-- A -->
+  <div class="alpha-section" id="A">
+    <h2>A</h2>
+    <table class="glo-table">
+      <thead class="col-heads">
+        <tr>
+          <th>Abbreviation</th>
+          <th>Full Term</th>
+          <th>Definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="abbr">AC</td><td class="full">Acromioclavicular (joint)</td><td class="def">Plane synovial joint between the acromion of the scapula and the acromial end of the clavicle. Stabilised by the AC ligament and the coracoclavicular (CC) ligaments (trapezoid + conoid). Classified by Rockwood grades I–VI for injuries.</td></tr>
+        <tr><td class="abbr">ACJ</td><td class="full">Acromioclavicular Joint</td><td class="def">See AC above. Commonly used in clinical documentation (e.g., "ACJ dislocation").</td></tr>
+        <tr><td class="abbr">ACL</td><td class="full">Anterior Cruciate Ligament</td><td class="def">Intracapsular, extrasynovial ligament of the knee. Originates from the medial aspect of the lateral femoral condyle; inserts at the anterior intercondylar area of the tibia. Primary restraint to anterior tibial translation and tibial internal rotation. Most commonly torn in contact/non-contact pivoting mechanisms.</td></tr>
+        <tr><td class="abbr">AFO</td><td class="full">Ankle-Foot Orthosis</td><td class="def">A brace encompassing the ankle and foot used to support or correct deformity, most commonly prescribed for foot drop (common fibular nerve palsy) to prevent equinus contracture and allow safe ambulation.</td></tr>
+        <tr><td class="abbr">AIN</td><td class="full">Anterior Interosseous Nerve</td><td class="def">Branch of the median nerve arising approximately 5–8 cm below the lateral epicondyle. Supplies FPL, lateral half of FDP (index and middle fingers), and pronator quadratus. No cutaneous branch. AIN syndrome: inability to pinch (no OK sign) — characteristic of proximal median nerve compression or anterior interosseous nerve entrapment.</td></tr>
+        <tr><td class="abbr">ASIS</td><td class="full">Anterior Superior Iliac Spine</td><td class="def">Palpable bony prominence at the front of the iliac crest. Origin of sartorius and tensor fasciae latae. Starting point for true leg-length measurement (ASIS to medial malleolus).</td></tr>
+        <tr><td class="abbr">ATFL</td><td class="full">Anterior Talofibular Ligament</td><td class="def">Most commonly injured lateral ankle ligament. Runs from the anterior border of the lateral malleolus to the lateral talar neck. Resists ankle inversion in plantar flexion. Most common ligament injured in ankle sprains.</td></tr>
+        <tr><td class="abbr">AVN</td><td class="full">Avascular Necrosis (also Osteonecrosis)</td><td class="def">Death of bone tissue due to disruption of its blood supply. Common sites in the lower limb: femoral head (post intracapsular NOF fracture or corticosteroid use), talus (post talar neck fracture). In the upper limb: scaphoid (post waist fracture), lunate (Kienböck's disease).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- B -->
+  <div class="alpha-section" id="B">
+    <h2>B</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">—</td><td class="full">Böhler's Angle</td><td class="def">Angle measured on a lateral X-ray of the calcaneus between two lines — one from the posterior calcaneal tuberosity to the posterior facet, and one from the posterior facet to the anterior process. Normal: 20–40°. A reduced or negative angle suggests a calcaneal compression fracture.</td></tr>
+        <tr><td class="abbr">—</td><td class="full">Bursae (singular: Bursa)</td><td class="def">Small fluid-filled sacs lined with synovial membrane, found between tendons/muscles and bony prominences. Reduce friction and cushion structures during movement. Clinically important bursae: subacromial (shoulder impingement), prepatellar and infrapatellar (bursitis from kneeling), olecranon (student's elbow), trochanteric (lateral hip pain), retrocalcaneal (Achilles enthesopathy).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- C -->
+  <div class="alpha-section" id="C">
+    <h2>C</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">CC</td><td class="full">Coracoclavicular (ligaments)</td><td class="def">Two ligaments (conoid — medial/posteromedial; trapezoid — lateral/anterolateral) suspending the scapula from the clavicle. Primary vertical stabilisers of the AC joint. Ruptured in Rockwood Grade III+ AC joint injuries. Conoid + trapezoid together = "coracoclavicular ligament complex."</td></tr>
+        <tr><td class="abbr">CFL</td><td class="full">Calcaneofibular Ligament</td><td class="def">Lateral ankle ligament running from the lateral malleolus to the lateral calcaneus. Resists inversion when the ankle is in neutral or dorsiflexion. Second most commonly injured lateral ankle ligament (after ATFL).</td></tr>
+        <tr><td class="abbr">CFT</td><td class="full">Common Flexor Tendon</td><td class="def">The common origin of the superficial flexor muscles (FCR, FCU, PL, FDS) from the medial epicondyle of the humerus. Site of golfer's elbow (medial epicondylitis/epicondylalgia) — overload tendinopathy at this insertion. Occasionally called the "common flexor origin" (CFO).</td></tr>
+        <tr><td class="abbr">CMC</td><td class="full">Carpometacarpal (joint)</td><td class="def">Joints between the carpal bones and the bases of the metacarpals. The thumb CMC (1st CMC) is a saddle joint allowing biaxial movement (flexion/extension + abduction/adduction + circumduction). CMC joints 2–5 are progressively more mobile (5th CMC allows ~30° flexion, important for grip). Bennett's fracture: intra-articular fracture-dislocation of the 1st CMC.</td></tr>
+        <tr><td class="abbr">CTS</td><td class="full">Carpal Tunnel Syndrome</td><td class="def">Compression of the median nerve as it passes through the carpal tunnel (bounded by the carpal bones posterolaterally and the flexor retinaculum/transverse carpal ligament anteriorly). Symptoms: pain, paraesthesia, and numbness in the median nerve distribution (lateral 3½ digits), worse at night. Most common peripheral nerve entrapment. Management: wrist splints (neutral position, night use), physiotherapy, corticosteroid injection, surgical decompression.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- D -->
+  <div class="alpha-section" id="D">
+    <h2>D</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">DHS</td><td class="full">Dynamic Hip Screw</td><td class="def">A sliding lag screw-and-plate device used to fix extracapsular proximal femoral fractures (intertrochanteric). The lag screw slides within the barrel plate, allowing controlled collapse and compression at the fracture site during weight-bearing. Enables early mobilisation.</td></tr>
+        <tr><td class="abbr">DIP</td><td class="full">Distal Interphalangeal (joint)</td><td class="def">Hinge (uniaxial) synovial joint between the middle and distal phalanges of digits 2–5. Allows flexion/extension only. Key clinical conditions: mallet finger (extensor tendon rupture), swan-neck deformity (DIP flexion + PIP hyperextension), OA (Heberden's nodes at DIP).</td></tr>
+        <tr><td class="abbr">DRUJ</td><td class="full">Distal Radioulnar Joint</td><td class="def">Pivot synovial joint between the head of the ulna and the ulnar notch of the radius. Allows forearm pronation and supination alongside the PRUJ. Stabilised by the TFCC (triangular fibrocartilage complex). DRUJ instability is a common consequence of TFCC tears and distal radius fractures.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- E -->
+  <div class="alpha-section" id="E">
+    <h2>E</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">ECU</td><td class="full">Extensor Carpi Ulnaris</td><td class="def">Extrinsic wrist extensor arising from the lateral epicondyle (CET) and dorsal border of the ulna. Inserts into the base of the 5th metacarpal. Extends and ulnar-deviates the wrist. The ECU tendon sheath is a component of the TFCC complex. ECU tendinopathy is common in racquet sport athletes.</td></tr>
+        <tr><td class="abbr">EDS</td><td class="full">Ehlers-Danlos Syndrome</td><td class="def">A group of heritable connective tissue disorders characterised by joint hypermobility, skin hyperextensibility, and tissue fragility. Caused by defects in collagen synthesis or processing. The hypermobile type (hEDS) is the most common — no identified genetic marker, diagnosed clinically. Relevant in the context of joint stability: hypermobility increases ROM but reduces passive joint stability, predisposing to recurrent dislocations and chronic pain.</td></tr>
+        <tr><td class="abbr">ESWT</td><td class="full">Extracorporeal Shock Wave Therapy</td><td class="def">A non-invasive treatment delivering acoustic pressure waves to a target tissue. Proposed mechanisms: neovascularisation, breaking down calcific deposits, modulation of pain pathways. Used in chronic tendinopathies (Achilles, plantar fascia, lateral elbow, rotator cuff calcific tendinopathy). Best evidence for calcific rotator cuff tendinopathy and chronic Achilles/plantar fasciitis resistant to exercise therapy.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- F -->
+  <div class="alpha-section" id="F">
+    <h2>F</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">FCR</td><td class="full">Flexor Carpi Radialis</td><td class="def">Wrist flexor and radial deviator. Arises from the medial epicondyle (common flexor tendon). Inserts on the base of 2nd (and 3rd) metacarpal. Passes through its own tunnel in the flexor retinaculum. Used as a landmark for radial artery palpation (FCR tendon is medial to the radial artery at the wrist).</td></tr>
+        <tr><td class="abbr">FCU</td><td class="full">Flexor Carpi Ulnaris</td><td class="def">Wrist flexor and ulnar deviator. Two heads: humeral (medial epicondyle) and ulnar (olecranon + posterior ulna). Inserts on pisiform → hamate → 5th metacarpal base. Only flexor of the wrist on the ulnar side. Ulnar nerve passes deep to FCU. Cubital tunnel syndrome: ulnar nerve compressed between the two FCU heads.</td></tr>
+        <tr><td class="abbr">FDP</td><td class="full">Flexor Digitorum Profundus</td><td class="def">Deep flexor of digits 2–5, flexing the DIP joints (and assisting PIP and MCP flexion). Only muscle that flexes the DIP. Lateral half (index/middle finger) supplied by AIN; medial half (ring/little) supplied by ulnar nerve. Jersey finger: avulsion of FDP tendon from the distal phalanx during forced extension of a flexed finger.</td></tr>
+        <tr><td class="abbr">FDS</td><td class="full">Flexor Digitorum Superficialis</td><td class="def">Superficial flexor of digits 2–5, flexing the PIP joints (and assisting MCP flexion). Splits distally around the FDP tendon (the Camper's chiasm) before inserting on the middle phalanx (split attachment). Entirely supplied by the median nerve. Important landmark in the carpal tunnel — 4 FDS tendons fill the middle of the tunnel, with 4 FDP tendons deep to them.</td></tr>
+        <tr><td class="abbr">FPL</td><td class="full">Flexor Pollicis Longus</td><td class="def">The only flexor of the thumb IP joint. Arises from the anterior radius and IOM. Supplied by AIN (branch of median nerve). Runs through the carpal tunnel in its own tendon sheath alongside the thumb CMC flexor mechanism. Rupture in rheumatoid arthritis (Mannerfelt lesion — attrition rupture against a bony spur at the scaphoid).</td></tr>
+        <tr><td class="abbr">—</td><td class="full">Flexor Retinaculum</td><td class="def">Also called the transverse carpal ligament. A thick fibrous band spanning the carpal arch and converting it into the carpal tunnel. Attaches to the pisiform and hook of hamate medially, and the scaphoid tubercle and trapezium ridge laterally. The median nerve and 9 flexor tendons pass beneath it. The ulnar nerve and artery pass superficial to it (in Guyon's canal).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- G -->
+  <div class="alpha-section" id="G">
+    <h2>G</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">GH</td><td class="full">Glenohumeral (joint)</td><td class="def">Ball-and-socket synovial joint between the head of the humerus and the glenoid fossa of the scapula. Most mobile joint in the body — trading stability for ROM. Only ~25% of the humeral head is in contact with the glenoid at any time. Stability depends on the glenoid labrum, rotator cuff (dynamic), inferior GH ligament complex, and long head of biceps. Most commonly dislocated joint in the body.</td></tr>
+        <tr><td class="abbr">—</td><td class="full">Gomphosis</td><td class="def">A specialised fibrous joint (peg-in-socket) in which a conical peg fits into a socket. The only example in the body: the root of each tooth into its alveolar socket (periodontal membrane). Classified as synarthrosis (no movement). Tooth extraction destroys this joint.</td></tr>
+        <tr><td class="abbr">—</td><td class="full">Glenoid Labrum</td><td class="def">A fibrocartilaginous rim attached around the margin of the glenoid fossa, deepening the socket and increasing the surface area for the humeral head by approximately 50%. Important attachment for the GH ligaments and the long head of biceps (supraglenoid tubercle). Bankart lesion: avulsion of the anteroinferior labrum from the glenoid rim — hallmark of traumatic anterior shoulder dislocation.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- H -->
+  <div class="alpha-section" id="H">
+    <h2>H</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">—</td><td class="full">Hyaline Cartilage</td><td class="def">The most abundant cartilage type in the body, consisting of chondrocytes embedded in a collagen type II + proteoglycan matrix. It is avascular and aneural, receiving nutrition from synovial fluid and subchondral bone diffusion. Covers articular surfaces (articular cartilage), forms most fetal bones (endochondral ossification), and remains in the growth plates (epiphyseal cartilage). Has poor intrinsic healing capacity due to its avascularity.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- K -->
+  <div class="alpha-section" id="K">
+    <h2>K</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">—</td><td class="full">Kienböck's Disease</td><td class="def">Avascular necrosis of the lunate, likely from repetitive trauma and disrupted blood supply (particularly in patients with ulnar-negative variance — a shorter ulna that transmits more load through the lunate). Presents with dorsal wrist pain and stiffness. Lichtman classification (I–IIIb/IV). Management ranges from conservative loading modification to surgical (radial shortening osteotomy, lunate revascularisation, wrist fusion in advanced cases).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- L -->
+  <div class="alpha-section" id="L">
+    <h2>L</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">LCL / LCL (elbow)</td><td class="full">Lateral Collateral Ligament</td><td class="def">Lateral stabiliser ligament. At the knee: runs from the lateral epicondyle of the femur to the fibular head — resists varus stress and external tibial rotation. At the elbow: the lateral collateral ligament complex includes the radial collateral ligament (RCL), lateral ulnar collateral ligament (LUCL), annular ligament, and accessory lateral collateral ligament. LUCL rupture causes posterolateral rotatory instability (PLRI) of the elbow.</td></tr>
+        <tr><td class="abbr">—</td><td class="full">Linea Aspera</td><td class="def">A rough double ridge running along the posterior surface of the femoral shaft, comprising medial and lateral lips. Major attachment site for thigh muscles including the adductors (adductor longus, brevis, magnus), vastus medialis, vastus lateralis, and short head of biceps femoris. Proximally bifurcates into the gluteal tuberosity (lateral) and pectineal line (medial).</td></tr>
+        <tr><td class="abbr">—</td><td class="full">Lisfranc Joint (Complex)</td><td class="def">The tarsometatarsal (TMT) joint complex — articulations between the three cuneiforms + cuboid and the five metatarsal bases. The Lisfranc ligament is the strong plantar ligament connecting the medial cuneiform to the base of the 2nd metatarsal. Lisfranc injury (sprain, subluxation, or fracture-dislocation) can be subtle on X-ray — the "fleck sign" (small bony avulsion at the medial 2nd metatarsal base or medial cuneiform) is pathognomonic. A gap &gt;2 mm between the 1st and 2nd metatarsal bases on weight-bearing X-ray = significant injury.</td></tr>
+        <tr><td class="abbr">LUCL</td><td class="full">Lateral Ulnar Collateral Ligament</td><td class="def">The primary lateral stabiliser of the elbow, running from the lateral epicondyle to the supinator crest of the ulna. Prevents varus and posterolateral rotatory instability (PLRI). Torn in elbow dislocations and in repetitive varus loading. Its rupture is the key surgical target in PLRI reconstruction.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- M -->
+  <div class="alpha-section" id="M">
+    <h2>M</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">MCL</td><td class="full">Medial Collateral Ligament (context-dependent)</td><td class="def">At the knee: superficial and deep MCL — runs from the medial femoral epicondyle to the medial tibial shaft. Resists valgus stress. Most commonly injured knee ligament. At the elbow: the medial (ulnar) collateral ligament (UCL/MCL) — the primary medial stabiliser, with anterior bundle (primary restraint to valgus stress) being most important. The UCL is tested with the milking manoeuvre/moving valgus stress test. UCL reconstruction = "Tommy John surgery" in throwing athletes.</td></tr>
+        <tr><td class="abbr">MCP</td><td class="full">Metacarpophalangeal (joint)</td><td class="def">Condyloid synovial joints at the base of each finger, between the metacarpal heads and proximal phalangeal bases. Allow flexion/extension + abduction/adduction (and circumduction). The MCP joints are held in hyperextension by the volar plates (which prevent MCP hyperextension) and stabilised by the collateral ligaments. Gamekeeper's (Skier's) thumb: ulnar collateral ligament tear at the thumb MCP from forceful radial deviation.</td></tr>
+        <tr><td class="abbr">MPFL</td><td class="full">Medial Patellofemoral Ligament</td><td class="def">Passive medial stabiliser of the patella, running from the medial femoral epicondyle to the medial border of the patella. The primary restraint to lateral patellar translation, providing ~50–60% of medial restraining force. Torn in almost all acute lateral patellar dislocations. Reconstructed surgically in recurrent patellar instability.</td></tr>
+        <tr><td class="abbr">MTP</td><td class="full">Metatarsophalangeal (joint)</td><td class="def">Condyloid synovial joints between metatarsal heads and proximal phalanges of the foot. Allow flexion, extension, abduction, and adduction. Extension of the MTP joints is essential for normal toe-off (dorsiflexion during terminal stance). Bunion (hallux valgus): lateral deviation of the great toe at the 1st MTP, with medial eminence (bunion) formation.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- N -->
+  <div class="alpha-section" id="N">
+    <h2>N</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">NOF</td><td class="full">Neck of Femur</td><td class="def">The cylindrical segment of the femur between the head and the trochanters. The most common site of femoral fractures in elderly osteoporotic patients. Fractures classified as intracapsular (within the joint capsule — high AVN risk) or extracapsular (outside the capsule — lower AVN risk). Clinical presentation: shortened, externally rotated lower limb following a low-energy fall.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- O -->
+  <div class="alpha-section" id="O">
+    <h2>O</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">OA</td><td class="full">Osteoarthritis</td><td class="def">The most common joint disease. Characterised by progressive degeneration of articular cartilage, subchondral bone sclerosis, osteophyte formation, and synovial inflammation. Risk factors: age, obesity, prior joint injury, mechanical overload, genetics. Symptomatic in weight-bearing joints (knee, hip, ankle) and the hand (DIP/PIP/CMC). X-ray features: joint space narrowing, osteophytes, subchondral sclerosis, cysts (LOSS mnemonic). Physiotherapy is first-line for hip and knee OA: exercise therapy, weight management, education.</td></tr>
+        <tr><td class="abbr">ORIF</td><td class="full">Open Reduction and Internal Fixation</td><td class="def">Surgical procedure in which a fracture is exposed (open), the fragments returned to their correct anatomical position (reduction), and then held in place with hardware — plates, screws, wires, or intramedullary nails (internal fixation). Used for displaced intra-articular fractures (tibial plateau, calcaneus, Lisfranc), unstable forearm fractures, and femoral shaft fractures.</td></tr>
+        <tr><td class="abbr">—</td><td class="full">Osteophyte</td><td class="def">A bony outgrowth (spur) forming at joint margins in response to cartilage degeneration and increased mechanical stress. Characteristic radiological feature of osteoarthritis. Can cause impingement symptoms (anterior ankle osteophytes in "footballer's ankle") or nerve compression (spinal osteophytes causing radiculopathy).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- P -->
+  <div class="alpha-section" id="P">
+    <h2>P</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">PCL</td><td class="full">Posterior Cruciate Ligament</td><td class="def">Intracapsular, extrasynovial knee ligament. Originates from the lateral aspect of the medial femoral condyle; inserts into the posterior intercondylar area of the tibia. Primary restraint to posterior tibial translation. Injured in dashboard injuries (posterior force on flexed knee) or hyperflexion. Less commonly torn than ACL. Posterior sag sign / posterior drawer test are key clinical tests.</td></tr>
+        <tr><td class="abbr">PCSA</td><td class="full">Physiological Cross-Sectional Area</td><td class="def">The area measured perpendicular to the direction of the muscle fibres. Directly proportional to a muscle's force-generating capacity. Muscles with larger PCSA generate more force, regardless of their length. Important when comparing pennate (high PCSA, high force, low excursion) with parallel-fibred muscles (lower PCSA, lower force, greater excursion/speed). Used in biomechanical modelling of muscle function.</td></tr>
+        <tr><td class="abbr">PFPS</td><td class="full">Patellofemoral Pain Syndrome</td><td class="def">Anterior knee pain originating from the patellofemoral joint. Most common cause of knee pain in young active individuals. Often associated with patellar maltracking (VMO weakness, high Q-angle, poor hip abductor control). Management: quadriceps (especially VMO) and hip strengthening, patellar taping/bracing, foot orthotics (if overpronation contributing), activity modification.</td></tr>
+        <tr><td class="abbr">PIN</td><td class="full">Posterior Interosseous Nerve</td><td class="def">The deep branch of the radial nerve. Passes through the radial tunnel (around the radial head and through the supinator muscle — the arcade of Frohse is the most common compression site at the upper edge of supinator). Supplies all extensor muscles of the forearm. No cutaneous branch. PIN palsy: wrist drop without sensory loss (the superficial radial nerve, which is sensory, is a separate branch). PIN syndrome may cause lateral elbow pain resembling lateral epicondylalgia.</td></tr>
+        <tr><td class="abbr">PIP</td><td class="full">Proximal Interphalangeal (joint)</td><td class="def">Hinge (uniaxial) synovial joint between the proximal and middle phalanges. Allows flexion/extension only. Key deformities: boutonnière deformity (PIP flexion + DIP extension — central slip rupture), swan-neck deformity (PIP hyperextension + DIP flexion). Volar plate injuries (hyperextension mechanism) are the most common PIP injury.</td></tr>
+        <tr><td class="abbr">PL</td><td class="full">Palmaris Longus</td><td class="def">The small, inconsistent wrist flexor absent in ~15% of individuals. Arises from the medial epicondyle, inserts into the flexor retinaculum and palmar aponeurosis. Has negligible functional importance but is commonly harvested as a free tendon graft in reconstructive surgery (e.g., UCL reconstruction, ATFL repair). Tested by opposing little finger to thumb and flexing the wrist — the PL tendon becomes visible in the midline of the anterior wrist.</td></tr>
+        <tr><td class="abbr">PLRI</td><td class="full">Posterolateral Rotatory Instability</td><td class="def">An elbow instability pattern in which the ulna externally rotates and subluxes posteriorly relative to the humerus. Caused by LUCL insufficiency. The lateral pivot-shift test of the elbow reproduces subluxation. May follow lateral elbow dislocation, chronic varus loading, or iatrogenic injury. Surgical: LUCL reconstruction using a palmaris longus or gracilis graft.</td></tr>
+        <tr><td class="abbr">PRUJ</td><td class="full">Proximal Radioulnar Joint</td><td class="def">Pivot synovial joint between the radial head and the radial notch of the ulna, held by the annular ligament. Allows forearm pronation and supination alongside the DRUJ. The annular ligament can be torn in an elbow dislocation, and in children (ages 2–6) the radial head can sublux out of the annular ligament (pulled elbow / nursemaid's elbow) from a longitudinal traction force (lifting by the hand).</td></tr>
+        <tr><td class="abbr">PSIS</td><td class="full">Posterior Superior Iliac Spine</td><td class="def">Posterior bony projection of the iliac crest, palpable as a dimple in the lower back (the "dimples of Venus"). Level of S2 sacral segment. Important landmark for SIJ assessment and lumbar puncture (L3/L4 or L4/L5 interspaces are identified relative to the PSIS level).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- R -->
+  <div class="alpha-section" id="R">
+    <h2>R</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">RA</td><td class="full">Rheumatoid Arthritis</td><td class="def">A chronic autoimmune inflammatory arthritis characterised by synovial hyperplasia (pannus formation), progressive joint destruction, and systemic involvement. Typically affects small joints of the hands (MCP and PIP — sparing DIP) and feet symmetrically. Deformities: ulnar drift (MCP), swan-neck, boutonnière, Z-thumb. Seronegative (RF+/anti-CCP+) or seropositive. Management: DMARDs (methotrexate first-line), biologics, physiotherapy (joint protection, exercise, splinting, assistive devices).</td></tr>
+        <tr><td class="abbr">RCL</td><td class="full">Radial Collateral Ligament (elbow)</td><td class="def">Part of the lateral collateral ligament complex of the elbow. Runs from the lateral epicondyle to the annular ligament. Provides resistance to varus stress. The LUCL (lateral ulnar collateral ligament) is the more important lateral stabiliser for rotatory instability.</td></tr>
+        <tr><td class="abbr">ROM</td><td class="full">Range of Motion</td><td class="def">The extent of movement at a joint, measured in degrees. Active ROM (AROM): patient-generated movement. Passive ROM (PROM): movement produced by an external force (therapist, gravity). Used in joint classification (uniaxial = movement in one plane; biaxial = two planes; multiaxial = all planes; non-axial = gliding only).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- S -->
+  <div class="alpha-section" id="S">
+    <h2>S</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">SC</td><td class="full">Sternoclavicular (joint)</td><td class="def">Saddle synovial joint between the medial end of the clavicle and the manubrium of the sternum. The only bony articulation between the upper limb and the axial skeleton. Contains an articular disc. Stabilised by the anterior and posterior SC ligaments (anterior weaker than posterior), costoclavicular ligament, and the interclavicular ligament. Posterior SC dislocation is rare but dangerous — mediastinal structures (trachea, great vessels) are at risk.</td></tr>
+        <tr><td class="abbr">SIJ</td><td class="full">Sacroiliac Joint</td><td class="def">The joint between the sacrum and the ilium, predominantly fibrocartilaginous (with a small anterior synovial component). Transmits load between the spine and lower limbs. Has very limited movement (mainly nutation/counternutation). Stabilised by strong posterior SIJ ligaments (strongest ligaments in the body) and active muscle closure (transversus abdominis, multifidus, gluteus maximus, biceps femoris). SIJ dysfunction can present as low back and buttock pain.</td></tr>
+        <tr><td class="abbr">SITS</td><td class="full">Supraspinatus · Infraspinatus · Teres Minor · Subscapularis (Rotator Cuff)</td><td class="def">Mnemonic for the four rotator cuff muscles. Supraspinatus: initiates and assists abduction (0–15°), superior GH joint compressor. Infraspinatus: external rotation, posterior capsule protector. Teres minor: external rotation. Subscapularis: internal rotation (the largest rotator cuff muscle), anterior GH stabiliser. Collectively they dynamically compress the humeral head into the glenoid and counterbalance the deltoid's superior shear force during arm elevation. The supraspinatus is most commonly torn (at the critical zone — hypovascular region near its insertion).</td></tr>
+        <tr><td class="abbr">SPD</td><td class="full">Symphysis Pubis Dysfunction (also Pelvic Girdle Pain)</td><td class="def">Pain and instability at the pubic symphysis, most commonly during pregnancy due to hormonally-mediated laxity (relaxin). The pubic symphysis normally allows minimal movement (1–2 mm); in SPD/PGP there is excessive motion and pain. Physiotherapy: pelvic girdle support belts, activity modification, targeted pelvic stabilisation exercises, manual therapy.</td></tr>
+        <tr><td class="abbr">—</td><td class="full">Synovial Fluid</td><td class="def">A viscous, non-Newtonian fluid filling the joint cavity of synovial joints. Produced by type B synoviocytes (fibroblast-like). Composition: hyaluronic acid (provides viscosity/lubrication), lubricin (reduces friction at articular surfaces), plasma ultrafiltrate, leukocytes (few in normal fluid — &lt;200 cells/mm³). Functions: lubrication, shock absorption, and nutrition of avascular articular cartilage. Arthrocentesis (joint aspiration): appearance of synovial fluid provides diagnostic information — clear/straw = normal/OA; turbid/yellow = infection/RA; blood = haemarthrosis (fracture, ligament tear); milky = crystal arthropathy.</td></tr>
+        <tr><td class="abbr">—</td><td class="full">Syndesmosis</td><td class="def">A fibrous joint in which bones are united by an interosseous membrane or ligamentous band, allowing limited movement (classified as amphiarthrosis). Examples: distal tibiofibular joint (the ankle syndesmosis — held by the ATIF, PTIF ligaments + IOM), the proximal tibiofibular joint, and the interosseous membranes of the forearm and leg. Syndesmotic (high ankle) sprain is a more serious and slower-healing injury than standard lateral ankle sprain.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- T -->
+  <div class="alpha-section" id="T">
+    <h2>T</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">TFCC</td><td class="full">Triangular Fibrocartilage Complex</td><td class="def">A complex of fibrocartilaginous and ligamentous structures on the ulnar side of the wrist stabilising the DRUJ and the ulnocarpal joint. Components: articular disc (the actual triangular fibrocartilage, bridging the distal radius and ulna), dorsal and palmar radioulnar ligaments, ulnocarpal ligaments (ulnolunate + ulnotriquetral), the meniscus homologue, and the ECU tendon subsheath. Tear classification: Type 1 (traumatic, typically from a FOOSH with forearm rotation) or Type 2 (degenerative, often age-related and associated with ulnar-positive variance). Palmer classification: 1A–1E (traumatic) and 2A–2E (degenerative). Physiotherapy: DRUJ stabilisation exercises, proprioception, corticosteroid injection, wrist bracing; surgical debridement or repair for recalcitrant cases.</td></tr>
+        <tr><td class="abbr">TFL</td><td class="full">Tensor Fasciae Latae</td><td class="def">A small gluteal muscle arising from the ASIS and iliac crest, inserting into the iliotibial band (ITB). It flexes, internally rotates, and abducts the hip. The ITB transmits TFL and gluteus maximus forces to the Gerdy's tubercle on the anterolateral tibia. ITB syndrome: friction of the ITB over the lateral femoral condyle, causing lateral knee pain in runners — managed with hip strengthening, biomechanics correction, load management.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- U -->
+  <div class="alpha-section" id="U">
+    <h2>U</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">UCL</td><td class="full">Ulnar Collateral Ligament (elbow)</td><td class="def">The medial stabiliser of the elbow, comprising three bands: anterior (primary restraint to valgus stress, especially 30–90° flexion), posterior, and transverse. Injured in repetitive overhead throwing (valgus extension overload). Confirmed on MRI. Reconstruction (Tommy John surgery) uses palmaris longus or gracilis tendon graft; return to throwing: 12–18 months.</td></tr>
+        <tr><td class="abbr">—</td><td class="full">Ulnar Variance</td><td class="def">The relative length difference between the distal articular surfaces of the radius and ulna. Neutral variance: ulna and radius at the same level. Ulnar-positive (long ulna): increased load through the TFCC and ulnar side of the wrist — associated with TFCC degeneration, ulnocarpal impaction syndrome, and Kienböck's disease (some evidence). Ulnar-negative (short ulna): lower TFCC load but associated with Kienböck's disease (increased load through the lunate).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- V -->
+  <div class="alpha-section" id="V">
+    <h2>V</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">VMO</td><td class="full">Vastus Medialis Oblique</td><td class="def">The distal oblique fibres of the vastus medialis (inserting at ~55° to the quadriceps tendon). The only medial dynamic stabiliser of the patella, resisting lateral patellar translation and maltracking. VMO weakness is a key contributor to patellofemoral pain syndrome and patellar instability. VMO-targeted exercises (terminal knee extension, inner-range quad, step-down) are a cornerstone of patellofemoral rehabilitation.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- W -->
+  <div class="alpha-section" id="W">
+    <h2>W</h2>
+    <table class="glo-table">
+      <thead class="col-heads"><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="abbr">—</td><td class="full">Windlass Mechanism</td><td class="def">The mechanism by which dorsiflexion of the MTP joints during terminal stance tightens the plantar fascia (which inserts on the proximal phalanges). This raises the medial longitudinal arch and converts the foot from a flexible, shock-absorbing structure during loading to a rigid lever for efficient push-off. Failure of the windlass mechanism (plantar fascia insufficiency or MTP joint stiffness) impairs gait efficiency and propulsive force generation.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<footer>
+  BPTY04 Musculoskeletal Anatomy · LUNEX University · For personal study use only
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoulder Girdle — In-Depth Guide · BPTY04</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #f9f9f7;
+      color: #1a1a1a;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* ── HEADER ──────────────────────────────────────────── */
+    header {
+      background: linear-gradient(135deg, #1a3a5c, #0f7c6b);
+      color: #fff;
+      padding: 2.5rem 3rem;
+    }
+
+    header .breadcrumb {
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 0.6rem;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    header .breadcrumb a { color: rgba(255,255,255,0.65); text-decoration: none; }
+    header .breadcrumb a:hover { color: #fff; }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      line-height: 1.2;
+    }
+
+    header .subtitle {
+      margin-top: 0.5rem;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    header .meta {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      font-family: 'Courier New', Courier, monospace;
+      color: rgba(255,255,255,0.55);
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── LAYOUT ──────────────────────────────────────────── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 5rem;
+    }
+
+    /* ── NAVIGATION ──────────────────────────────────────── */
+    .toc {
+      background: #fff;
+      border: 1px solid #d0d8e0;
+      border-left: 4px solid #1a3a5c;
+      border-radius: 2px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .toc h3 {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a3a5c;
+      font-family: 'Courier New', Courier, monospace;
+      margin-bottom: 0.8rem;
+    }
+
+    .toc ol {
+      margin-left: 1.4rem;
+      color: #2c5f8a;
+      font-size: 0.88rem;
+      line-height: 2;
+    }
+
+    .toc a { color: #2c5f8a; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── SECTION HEADERS ─────────────────────────────────── */
+    .section {
+      margin-top: 3rem;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-family: 'Courier New', Courier, monospace;
+      color: #0f7c6b;
+      margin-bottom: 0.3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #1a3a5c;
+      border-bottom: 2px solid #1a3a5c;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: #1a3a5c;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h4 {
+      font-size: 0.95rem;
+      color: #0f7c6b;
+      margin-top: 1.2rem;
+      margin-bottom: 0.4rem;
+      font-style: italic;
+    }
+
+    p { margin-bottom: 0.9rem; }
+
+    /* ── CALLOUT BOXES ───────────────────────────────────── */
+    .callout {
+      background: #eaf4fb;
+      border-left: 4px solid #2a7db5;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .callout strong { color: #1a5276; }
+
+    .clinical {
+      background: #fdf0ee;
+      border-left: 4px solid #c0392b;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .clinical strong { color: #922b21; }
+
+    .mnemonic {
+      background: #fef9e7;
+      border-left: 4px solid #e6a817;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .mnemonic strong { color: #b7770d; }
+
+    .concept {
+      background: #f4f0fb;
+      border-left: 4px solid #7b52c4;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .concept strong { color: #5b3a9e; }
+
+    .callout-title {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Courier New', Courier, monospace;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    /* ── MUSCLE TABLES ───────────────────────────────────── */
+    .muscle-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .muscle-table th {
+      background: #1a3a5c;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .muscle-table td {
+      padding: 0.5rem 0.7rem;
+      border-bottom: 1px solid #dde4ec;
+      vertical-align: top;
+    }
+
+    .muscle-table tr:nth-child(even) td { background: #f4f7fb; }
+    .muscle-table tr:last-child td { border-bottom: 2px solid #1a3a5c; }
+
+    .muscle-name { font-weight: bold; color: #1a3a5c; }
+    .nerve-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .n-axillary   { background: #d4efdf; color: #186a3b; }
+    .n-subscapular { background: #d6eaf8; color: #1a5276; }
+    .n-suprascapular { background: #e8daef; color: #6c3483; }
+    .n-accessory  { background: #fdebd0; color: #784212; }
+    .n-dorsal     { background: #d5f5e3; color: #1e8449; }
+    .n-thoracodorsal { background: #d6dbdf; color: #2c3e50; }
+    .n-longthoracic { background: #fdf2b7; color: #7d6608; }
+    .n-medialPectoral { background: #f9ebea; color: #922b21; }
+    .n-musculocutaneous { background: #e8f8f5; color: #0e6655; }
+
+    /* ── JOINT SUMMARY CARDS ─────────────────────────────── */
+    .joint-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+
+    .joint-card {
+      border: 1px solid #cdd8e4;
+      border-top: 3px solid #1a3a5c;
+      border-radius: 3px;
+      padding: 0.9rem 1rem;
+      background: #fff;
+      font-size: 0.85rem;
+    }
+
+    .joint-card h4 {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Courier New', Courier, monospace;
+      color: #1a3a5c;
+      margin: 0 0 0.5rem;
+      font-style: normal;
+    }
+
+    .joint-card .jtype {
+      font-size: 0.75rem;
+      color: #0f7c6b;
+      font-style: italic;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ── ROTATOR CUFF CARDS ──────────────────────────────── */
+    .sits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+
+    .sits-card {
+      border: 1px solid #cdd8e4;
+      border-top: 3px solid #0f7c6b;
+      border-radius: 3px;
+      padding: 0.9rem 1rem;
+      background: #fff;
+      font-size: 0.83rem;
+    }
+
+    .sits-card h4 {
+      font-size: 0.9rem;
+      color: #0f7c6b;
+      margin: 0 0 0.4rem;
+      font-style: normal;
+    }
+
+    .sits-card .letter-badge {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #1a3a5c;
+      float: right;
+      line-height: 1;
+    }
+
+    /* ── CLINICAL TABLE ──────────────────────────────────── */
+    .clinical-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.84rem;
+    }
+
+    .clinical-table th {
+      background: #922b21;
+      color: #fff;
+      padding: 0.5rem 0.8rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .clinical-table td {
+      padding: 0.55rem 0.8rem;
+      border-bottom: 1px solid #f5c6c2;
+      vertical-align: top;
+    }
+
+    .clinical-table tr:nth-child(even) td { background: #fdf5f4; }
+    .clinical-table tr:last-child td { border-bottom: 2px solid #922b21; }
+
+    /* ── SLIDE IMAGES ────────────────────────────────────── */
+    .slide-figure {
+      margin: 1.2rem 0;
+      text-align: center;
+    }
+
+    .slide-figure img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+
+    .slide-figure figcaption {
+      font-size: 0.75rem;
+      color: #666;
+      margin-top: 0.4rem;
+      font-style: italic;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* ── MOVEMENT TABLE ──────────────────────────────────── */
+    .movement-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.84rem;
+    }
+
+    .movement-table th {
+      background: #0f7c6b;
+      color: #fff;
+      padding: 0.5rem 0.8rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .movement-table td {
+      padding: 0.5rem 0.8rem;
+      border-bottom: 1px solid #d5ece9;
+      vertical-align: top;
+    }
+
+    .movement-table tr:nth-child(even) td { background: #f0faf8; }
+    .movement-table tr:last-child td { border-bottom: 2px solid #0f7c6b; }
+
+    /* ── SOURCES ─────────────────────────────────────────── */
+    .sources {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ccc;
+      font-size: 0.8rem;
+      color: #555;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .sources h3 {
+      color: #1a3a5c;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.6rem;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .sources ol { margin-left: 1.4rem; line-height: 2; }
+    .sources a { color: #2c5f8a; }
+
+    /* ── BACK LINK ───────────────────────────────────────── */
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.78rem;
+      color: #2c5f8a;
+      text-decoration: none;
+      border-bottom: 1px solid #2c5f8a;
+    }
+
+    .back-link:hover { color: #1a3a5c; }
+
+    footer {
+      border-top: 1px solid #ccc;
+      padding: 1rem 2rem;
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 1.5rem 1.2rem; }
+      header h1 { font-size: 1.4rem; }
+      .container { padding: 1.5rem 1rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="breadcrumb">
+    <a href="index.html">BPTY04 Musculoskeletal Anatomy</a> · In-Depth Guide
+  </div>
+  <h1>Shoulder Girdle</h1>
+  <p class="subtitle">Arthrology · Myology · Neurovascular Supply · Clinical Correlations</p>
+  <div class="meta">
+    <span>LUNEX University · Physiotherapy</span>
+    <span>Sources: TeachMeAnatomy · Lecture Slides · Gray's Anatomy</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <a class="back-link" href="index.html">← Back to all resources</a>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#overview">Overview of the Shoulder Girdle</a></li>
+      <li><a href="#osteology">Key Osteology</a></li>
+      <li><a href="#sc-joint">Sternoclavicular (SC) Joint</a></li>
+      <li><a href="#ac-joint">Acromioclavicular (AC) Joint</a></li>
+      <li><a href="#gh-joint">Glenohumeral (GH) Joint</a></li>
+      <li><a href="#scapulothoracic">Scapulothoracic Mechanism</a></li>
+      <li><a href="#girdle-muscles">Muscles of the Shoulder Girdle</a></li>
+      <li><a href="#rotator-cuff">Rotator Cuff (SITS)</a></li>
+      <li><a href="#gh-muscles">Other GH Muscles</a></li>
+      <li><a href="#neurovascular">Neurovascular Supply</a></li>
+      <li><a href="#clinical">Clinical Summary</a></li>
+    </ol>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- SECTION 1 — OVERVIEW -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="section" id="overview">
+    <div class="section-label">Section 1</div>
+    <h2>Overview of the Shoulder Girdle</h2>
+
+    <p>The shoulder girdle is not a single joint but a <strong>complex of four articulations</strong> working in precise coordination to produce the widest range of motion of any joint in the body. This mobility, however, comes at a significant cost to stability — the glenohumeral joint relies almost entirely on soft-tissue structures (labrum, capsule, ligaments, and above all the rotator cuff musculature) rather than bony congruence for integrity.</p>
+
+    <div class="callout">
+      <span class="callout-title">📌 Key Concept</span>
+      The shoulder girdle is composed of <strong>three bones</strong> (clavicle, scapula, humerus) and <strong>four functional articulations</strong>: the sternoclavicular (SC) joint, the acromioclavicular (AC) joint, the glenohumeral (GH) joint, and the scapulothoracic (ST) interface. Full shoulder movement requires all four to work simultaneously — restriction at any one directly limits the others.
+    </div>
+
+    <p>Understanding the shoulder requires grasping one central anatomical principle: <strong>the glenoid fossa is extremely shallow</strong>. The humeral head is roughly four times larger than the glenoid surface area, so only about 25–30% of it contacts the glenoid at any one time. This is what allows such extraordinary mobility but also explains the frequency of shoulder pathology compared to, say, the hip.</p>
+
+    <figure class="slide-figure">
+      <img src="bpty04_images/shoulder/slide-02.png" alt="Shoulder girdle bones">
+      <figcaption>Slide 2 — The three bones of the shoulder girdle: clavicle, scapula, and humerus</figcaption>
+    </figure>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- SECTION 2 — OSTEOLOGY -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="section" id="osteology">
+    <div class="section-label">Section 2</div>
+    <h2>Key Osteology</h2>
+
+    <p>The shoulder girdle osteology is covered in detail in the Upper Limb Osteology topic. The points below focus specifically on features relevant to understanding joint mechanics and muscle attachments in this module.</p>
+
+    <h3>Clavicle</h3>
+    <p>The clavicle is the only bony connection between the upper limb and the axial skeleton. It acts as a <strong>strut</strong>, holding the shoulder laterally away from the thorax and transmitting compressive forces from the arm to the sternum. Its S-shaped curvature gives it resilience. The lateral third of the clavicle is the origin of the upper trapezius and anterior deltoid, and the insertion of the costoclavicular ligament keeps its medial end anchored to the first rib.</p>
+
+    <div class="concept">
+      <span class="callout-title">🧠 Why This Matters</span>
+      The clavicle is the most commonly fractured bone in the body (particularly at the junction of its medial two-thirds and lateral third — the weakest point). A clavicle fracture can disrupt the entire shoulder girdle mechanism because the strut function is lost, causing the shoulder to drop medially and inferiorly.
+    </div>
+
+    <h3>Scapula</h3>
+    <p>The scapula is a flat, triangular bone that sits on the posterolateral thorax between T2–T7. Its mobility over the thoracic wall (at the scapulothoracic interface) is essential for overhead arm movement. Key landmarks to know for this topic:</p>
+    <ul style="margin: 0.5rem 0 0.9rem 1.5rem; line-height: 2;">
+      <li><strong>Supraspinous fossa</strong> — origin of supraspinatus</li>
+      <li><strong>Infraspinous fossa</strong> — origin of infraspinatus</li>
+      <li><strong>Subscapular fossa</strong> (costal surface) — origin of subscapularis</li>
+      <li><strong>Lateral border</strong> — origin of teres minor (superior 2/3) and teres major (inferior angle)</li>
+      <li><strong>Medial border</strong> — insertion of serratus anterior (anterior surface) and rhomboids (posterior surface)</li>
+      <li><strong>Coracoid process</strong> — origin of coracobrachialis and pectoralis minor; attachment of coracoclavicular ligament</li>
+      <li><strong>Glenoid fossa + glenoid labrum</strong> — articulates with humeral head; labrum deepens the fossa by ~50%</li>
+      <li><strong>Acromion</strong> — forms the AC joint with clavicle; forms the subacromial space above the supraspinatus</li>
+    </ul>
+
+    <h3>Humerus</h3>
+    <p>The head of the humerus faces medially, superiorly, and posteriorly (retroversion ~30°). Key landmarks:</p>
+    <ul style="margin: 0.5rem 0 0.9rem 1.5rem; line-height: 2;">
+      <li><strong>Greater tubercle</strong> — insertion of supraspinatus, infraspinatus, teres minor (SITS except S)</li>
+      <li><strong>Lesser tubercle</strong> — insertion of subscapularis</li>
+      <li><strong>Intertubercular (bicipital) groove</strong> — long head of biceps travels here; medial lip = insertion of teres major and latissimus dorsi; lateral lip = insertion of pectoralis major</li>
+      <li><strong>Deltoid tuberosity</strong> — insertion of deltoid (all three parts)</li>
+      <li><strong>Anatomical neck</strong> — site of glenohumeral ligament attachment</li>
+      <li><strong>Surgical neck</strong> — most common fracture site; axillary nerve and posterior circumflex humeral artery are at risk</li>
+    </ul>
+
+    <figure class="slide-figure">
+      <img src="bpty04_images/shoulder/slide-05.png" alt="Humerus landmarks">
+      <figcaption>Slide 5 — Key landmarks of the humerus (anterior and posterior views)</figcaption>
+    </figure>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- SECTION 3 — SC JOINT -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="section" id="sc-joint">
+    <div class="section-label">Section 3</div>
+    <h2>Sternoclavicular (SC) Joint</h2>
+
+    <p>The SC joint is the <strong>only synovial articulation between the upper limb and the axial skeleton</strong>. Despite its small size, it is mechanically crucial: every movement of the shoulder girdle — elevation, depression, protraction, retraction — involves motion here.</p>
+
+    <h3>Classification and Structure</h3>
+    <p>The SC joint is classified as a <strong>saddle-type synovial joint</strong> (biaxial), though in practice it behaves as a multiaxial joint because of an intra-articular <strong>fibrocartilaginous articular disc</strong> that divides the joint into two compartments. This disc is vital — it compensates for the incongruence between the sternal end of the clavicle and the clavicular notch of the manubrium, allowing a third axis of movement (rotation) that would otherwise be impossible.</p>
+
+    <p>Articular surfaces are covered in <strong>fibrocartilage</strong> rather than hyaline cartilage — an unusual feature that reflects the compressive and shear forces transmitted through this joint from arm loading.</p>
+
+    <h3>Ligaments</h3>
+    <table class="muscle-table">
+      <tr><th>Ligament</th><th>Position</th><th>Primary Function</th></tr>
+      <tr><td class="muscle-name">Anterior sternoclavicular</td><td>Anterior capsule</td><td>Resists forward displacement of clavicle</td></tr>
+      <tr><td class="muscle-name">Posterior sternoclavicular</td><td>Posterior capsule</td><td>Resists posterior displacement — most important for posterior stability</td></tr>
+      <tr><td class="muscle-name">Interclavicular</td><td>Between both clavicles, over manubrium</td><td>Resists downward depression; links the two joints</td></tr>
+      <tr><td class="muscle-name">Costoclavicular</td><td>1st rib to inferior clavicle</td><td><strong>Primary stabiliser</strong> — resists elevation, lateral displacement, and rotation of the clavicle</td></tr>
+    </table>
+
+    <div class="callout">
+      <span class="callout-title">📌 Key Concept — The Articular Disc</span>
+      The articular disc absorbs forces so effectively that <strong>dislocation of the SC joint is rare</strong> — it takes enormous force (e.g., direct impact or compressive load transmitted from the arm). When it does occur, a <em>posterior dislocation</em> is the more dangerous variant, as the posterior capsule is weaker and retrosternal structures (trachea, great vessels) can be compromised.
+    </div>
+
+    <h3>Movements</h3>
+    <p>The SC joint permits: <strong>elevation and depression</strong> of the clavicle (shrugging), <strong>protraction and retraction</strong> of the shoulder, and <strong>passive axial rotation</strong> of the clavicle (occurs when the arm is raised above 90° as the scapula rotates upward).</p>
+
+    <figure class="slide-figure">
+      <img src="bpty04_images/shoulder/slide-08.png" alt="SC joint ligaments">
+      <figcaption>Slide 8 — Ligaments of the sternoclavicular joint</figcaption>
+    </figure>
+
+    <div class="clinical">
+      <span class="callout-title">🏥 Clinical Relevance — SC Joint Dislocation</span>
+      <strong>Anterior dislocation</strong> (more common): blow to the anterior shoulder rotating it backwards. Visible prominence at the SC joint. <strong>Posterior dislocation</strong>: direct blow or force driving shoulder forward. May compress the trachea, oesophagus, or great vessels — a surgical emergency. In adolescents the epiphyseal growth plate at the sternal end of the clavicle does not fully close until age 22–25, so "dislocation" in younger patients is often a physeal fracture.
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- SECTION 4 — AC JOINT -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="section" id="ac-joint">
+    <div class="section-label">Section 4</div>
+    <h2>Acromioclavicular (AC) Joint</h2>
+
+    <p>The AC joint is a <strong>plane (gliding) synovial joint</strong> formed between the lateral end of the clavicle and the acromion of the scapula. It is described as a single-plane joint but actually has <strong>three degrees of freedom</strong>, allowing the scapula to move relative to the clavicle during arm elevation and rotation.</p>
+
+    <h3>Movements at the AC Joint</h3>
+    <ul style="margin: 0.5rem 0 0.9rem 1.5rem; line-height: 2;">
+      <li><strong>Protraction–Retraction</strong> of the scapula</li>
+      <li><strong>Elevation–Depression</strong> (total ROM ~15°)</li>
+      <li><strong>Medial–Lateral Rotation</strong> of the scapula (total ROM ~30°)</li>
+    </ul>
+
+    <h3>Ligaments</h3>
+    <table class="muscle-table">
+      <tr><th>Ligament</th><th>Primary Function</th></tr>
+      <tr><td class="muscle-name">Acromioclavicular ligament</td><td>Reinforces the articular capsule; stabilises the AC joint in all directions. Primary restraint to posterior translation and axial rotation.</td></tr>
+      <tr><td class="muscle-name">Coracoclavicular lig. — Trapezoid (anterior)</td><td>Prevents anterior dislocation and medial override of the clavicle onto the acromion</td></tr>
+      <tr><td class="muscle-name">Coracoclavicular lig. — Conoid (posterior)</td><td>Prevents upward displacement of the clavicle relative to the coracoid; main vertical stabiliser</td></tr>
+      <tr><td class="muscle-name">Coracoacromial ligament</td><td>Forms the coracoacromial arch with the acromion and coracoid. <em>Not a joint ligament per se</em> — prevents superior escape of the humeral head from the GH joint.</td></tr>
+    </table>
+
+    <div class="mnemonic">
+      <span class="callout-title">🧠 Mnemonic — Coracoclavicular Ligaments</span>
+      <strong>"Trap before Con"</strong> — <strong>Trap</strong>ezoid is anterior, <strong>Con</strong>oid is posterior. Together they form the coracoclavicular ligament, which is the primary vertical stabiliser of the AC joint. If both are torn, the clavicle rises relative to the acromion (visible step deformity).
+    </div>
+
+    <div class="clinical">
+      <span class="callout-title">🏥 Clinical Relevance — AC Joint Sprain / Separation</span>
+      AC joint injuries are graded I–VI (Rockwood classification). A direct fall onto the point of the shoulder (olecranon or acromion) is the typical mechanism. <strong>Grade I</strong>: AC ligament sprain only. <strong>Grade II</strong>: AC ligament torn, coracoclavicular intact. <strong>Grade III</strong>: Both AC and coracoclavicular ligaments torn — visible step deformity ("piano key" sign). Grades IV–VI involve clavicle displacement through the trapezius, beneath the coracoid, or inferiorly — all require surgical fixation.
+    </div>
+
+    <figure class="slide-figure">
+      <img src="bpty04_images/shoulder/slide-11.png" alt="AC joint ligaments">
+      <figcaption>Slide 11 — Ligaments of the acromioclavicular joint</figcaption>
+    </figure>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- SECTION 5 — GH JOINT -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="section" id="gh-joint">
+    <div class="section-label">Section 5</div>
+    <h2>Glenohumeral (GH) Joint</h2>
+
+    <p>The GH joint is a <strong>spheroidal (ball-and-socket) synovial joint</strong> — the most mobile joint in the human body. It achieves this by sacrificing bony constraint: the humeral head (large sphere) articulates with the glenoid fossa (a shallow oval socket), providing inherent instability that must be managed by the surrounding soft tissues at all times.</p>
+
+    <h3>Why is the GH Joint So Unstable?</h3>
+    <div class="concept">
+      <span class="callout-title">🧠 Anatomical Reasoning</span>
+      The radius of curvature of the humeral head is significantly larger than that of the glenoid — the joint surfaces are <em>incongruent</em>. Only ~25% of the humeral head contacts the glenoid at any point. Additionally, gravity constantly acts to pull the humerus inferiorly out of the socket. This means the GH joint requires active muscular control (principally the rotator cuff) and passive soft-tissue constraint (labrum, capsule, ligaments) simultaneously for stability.
+    </div>
+
+    <h3>Deepening Mechanisms — The Glenoid Labrum</h3>
+    <p>The <strong>glenoid labrum</strong> is a fibrocartilaginous ring attached around the periphery of the glenoid. It deepens the socket by approximately 50%, increasing the contact area between the humeral head and glenoid. It also provides an attachment point for the glenohumeral ligaments and the long head of biceps brachii (at the supraglenoid tubercle). Labral tears (e.g., SLAP lesions — Superior Labrum Anterior to Posterior) are a major source of shoulder instability and pain.</p>
+
+    <h3>Capsule and Ligaments</h3>
+    <p>The joint capsule is loose inferiorly (forming the <em>axillary recess</em>) to accommodate full abduction. The <strong>transverse humeral ligament</strong> runs between the greater and lesser tubercles, retaining the long head of biceps in the intertubercular groove.</p>
+
+    <table class="muscle-table">
+      <tr><th>Ligament</th><th>Origin</th><th>Insertion</th><th>Function</th></tr>
+      <tr><td class="muscle-name">Superior glenohumeral</td><td>Superior glenoid</td><td>Lesser tubercle</td><td>Resists inferior translation (arm at side)</td></tr>
+      <tr><td class="muscle-name">Middle glenohumeral</td><td>Anterior glenoid</td><td>Anatomical neck</td><td>Resists anterior translation in mid-range abduction</td></tr>
+      <tr><td class="muscle-name">Inferior glenohumeral</td><td>Inferior glenoid</td><td>Surgical neck (inferior)</td><td><strong>Primary anterior stabiliser</strong> at 90° abduction; most important GH ligament</td></tr>
+      <tr><td class="muscle-name">Coracohumeral</td><td>Coracoid process</td><td>Greater tubercle</td><td>Resists inferior and posterior translation; limits lateral rotation</td></tr>
+    </table>
+
+    <h3>Bursae</h3>
+    <p>Several bursae reduce friction around the GH joint. The most clinically important is the <strong>subacromial bursa</strong> (between the acromion/coracoacromial arch and the supraspinatus tendon). Inflammation of this bursa (subacromial bursitis) is one of the most common causes of shoulder pain and is tightly linked with supraspinatus tendon impingement.</p>
+
+    <h3>GH Joint Movements and Prime Movers</h3>
+    <table class="movement-table">
+      <tr><th>Movement</th><th>Primary Muscles</th></tr>
+      <tr><td><strong>Flexion</strong></td><td>Pectoralis major (clavicular), deltoid (anterior), coracobrachialis, long head of biceps</td></tr>
+      <tr><td><strong>Extension</strong></td><td>Latissimus dorsi, teres major, pectoralis major, deltoid (posterior), long head of triceps</td></tr>
+      <tr><td><strong>Abduction</strong></td><td>Supraspinatus (0–15°), deltoid (15–90°+), trapezius + serratus anterior (scapular rotation for 90–180°)</td></tr>
+      <tr><td><strong>Adduction</strong></td><td>Pectoralis major, latissimus dorsi, teres major, coracobrachialis</td></tr>
+      <tr><td><strong>Internal Rotation</strong></td><td>Subscapularis, teres major, latissimus dorsi, pectoralis major, deltoid (anterior)</td></tr>
+      <tr><td><strong>External Rotation</strong></td><td>Infraspinatus, teres minor, deltoid (posterior)</td></tr>
+    </table>
+
+    <div class="callout">
+      <span class="callout-title">📌 The Abduction Arc — A Key Concept</span>
+      Full shoulder abduction to 180° is not achieved by the GH joint alone. It requires the <strong>scapulohumeral rhythm</strong>: for every 2° of GH abduction, 1° of scapular upward rotation occurs (2:1 ratio). This means ~120° comes from GH abduction and ~60° from scapular upward rotation (driven by upper and lower trapezius + serratus anterior). Loss of scapular control ("winging") dramatically limits this range.
+    </div>
+
+    <figure class="slide-figure">
+      <img src="bpty04_images/shoulder/slide-16.png" alt="GH joint capsule and labrum">
+      <figcaption>Slide 16 — GH joint capsule, glenoid labrum, and glenohumeral ligaments</figcaption>
+    </figure>
+
+    <div class="clinical">
+      <span class="callout-title">🏥 Clinical Relevance — GH Dislocation</span>
+      GH dislocation is by far the most common large joint dislocation in the body. <strong>Anterior dislocation</strong> (95%+) occurs with the arm in abduction and external rotation (e.g., throwing, falling on outstretched hand). The humeral head displaces anteroinferiorly through the inferior capsule. The <strong>axillary nerve</strong> (winds around the surgical neck) and the long head of biceps tendon are at risk. The <strong>Hill-Sachs lesion</strong> (compression fracture of the posterolateral humeral head) and <strong>Bankart lesion</strong> (anterior glenoid labral tear) are classic associated injuries.
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- SECTION 6 — SCAPULOTHORACIC -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="section" id="scapulothoracic">
+    <div class="section-label">Section 6</div>
+    <h2>Scapulothoracic (ST) Mechanism</h2>
+
+    <p>The scapulothoracic articulation is <strong>not a true synovial joint</strong> — there is no cartilage, capsule, or synovial membrane. It is a <strong>physiological joint</strong>: the subscapularis muscle glides against the serratus anterior muscle on the posterior thoracic wall, and movement is possible wherever these muscles are present. The scapula can therefore glide freely across ribs 2–7.</p>
+
+    <p>Despite its absence of formal joint structures, the ST mechanism is arguably the most important for overall shoulder function. The muscles that act here (trapezius, serratus anterior, rhomboids, levator scapulae) position and stabilise the glenoid fossa in the optimal orientation for GH joint movement. <strong>Weakness or paralysis of any of these muscles causes "winging" of the scapula</strong> — the medial border lifts away from the thorax, collapsing the scapular base and reducing GH abduction power.</p>
+
+    <div class="clinical">
+      <span class="callout-title">🏥 Clinical Relevance — Serratus Anterior Palsy</span>
+      The long thoracic nerve (C5–C7) has a long, superficial course and is vulnerable to traction injury, surgery, or repetitive overhead strain. Paralysis of serratus anterior abolishes scapular protraction and upward rotation, causing medial winging (medial border lifts posteriorly). The patient cannot abduct the arm above 90° because the glenoid cannot be upwardly rotated to allow full elevation.
+    </div>
+
+    <figure class="slide-figure">
+      <img src="bpty04_images/shoulder/slide-09.png" alt="Scapulothoracic joint">
+      <figcaption>Slide 9 — The scapulothoracic articulation (physiological joint)</figcaption>
+    </figure>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- SECTION 7 — GIRDLE MUSCLES -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="section" id="girdle-muscles">
+    <div class="section-label">Section 7</div>
+    <h2>Muscles of the Shoulder Girdle (Extrinsic)</h2>
+
+    <p>Extrinsic muscles originate from the <strong>axial skeleton</strong> (skull, vertebrae, ribs) and insert onto the scapula or clavicle. Their primary role is <strong>scapular positioning</strong>: they set the platform on which GH movement occurs. They fall into two functional groups — muscles that move or stabilise the scapula and muscles that reinforce the clavicle.</p>
+
+    <h3>Trapezius — Three Functional Parts</h3>
+    <p>The trapezius covers the entire posterior neck and upper back. It is innervated by the <strong>spinal accessory nerve (CN XI)</strong> with proprioceptive input from C3–C4. Its three parts act differently, which makes it a uniquely versatile muscle:</p>
+
+    <table class="muscle-table">
+      <tr><th>Part</th><th>Origin</th><th>Insertion</th><th>Action</th></tr>
+      <tr>
+        <td class="muscle-name">Upper (descending)</td>
+        <td>Occipital bone, nuchal ligament, C7 spinous process</td>
+        <td>Lateral 1/3 of clavicle</td>
+        <td>Elevates scapula; ipsilateral neck inclination (unilateral); neck extension (bilateral)</td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Middle (transverse)</td>
+        <td>Spinous processes T1–T4</td>
+        <td>Acromion</td>
+        <td>Retracts (adducts) the scapula</td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Lower (ascending)</td>
+        <td>Spinous processes T5–T12</td>
+        <td>Spine of scapula</td>
+        <td>Retracts + depresses the scapula; <strong>upward rotation</strong> of glenoid</td>
+      </tr>
+    </table>
+
+    <div class="callout">
+      <span class="callout-title">📌 The Trapezius Force Couple</span>
+      Upper and lower trapezius work together with serratus anterior as a <strong>force couple</strong> to rotate the scapula upward during arm elevation. Upper trap elevates the clavicle (via the AC joint chain), lower trap pulls the scapular spine inferiorly and medially, and serratus pulls the inferior angle anterolaterally — together creating a rotation moment around the scapula. Weakness in any component disrupts scapular kinematics.
+    </div>
+
+    <div class="clinical">
+      <span class="callout-title">🏥 Clinical — Testing the Accessory Nerve</span>
+      The most common cause of accessory nerve (CN XI) damage is iatrogenic — cervical lymph node biopsy or internal jugular vein cannulation can injure the nerve as it passes through the posterior triangle of the neck. Damage causes trapezius weakness: ask the patient to <strong>shrug their shoulders against resistance</strong>. Look also for asymmetric neckline, dropped shoulder, and difficulty with arm elevation above 90°.
+    </div>
+
+    <h3>Other Shoulder Girdle Muscles</h3>
+
+    <table class="muscle-table">
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+      <tr>
+        <td class="muscle-name">Rhomboid Major</td>
+        <td>Spinous processes T2–T5</td>
+        <td>Medial border scapula</td>
+        <td>Retraction, elevation, downward rotation of scapula</td>
+        <td><span class="nerve-tag n-dorsal">Dorsal scapular</span></td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Rhomboid Minor</td>
+        <td>Spinous processes C7–T1</td>
+        <td>Medial border scapula (at scapular spine level)</td>
+        <td>Retraction, elevation, downward rotation of scapula</td>
+        <td><span class="nerve-tag n-dorsal">Dorsal scapular</span></td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Levator Scapulae</td>
+        <td>Transverse processes C1–C4</td>
+        <td>Superior angle of scapula</td>
+        <td>Elevation and downward rotation of scapula; neck extension and ipsilateral inclination</td>
+        <td><span class="nerve-tag n-dorsal">Dorsal scapular</span></td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Serratus Anterior</td>
+        <td>Lateral surfaces of ribs 1–9</td>
+        <td>Anterior (costal) surface, medial border of scapula</td>
+        <td><strong>Protraction and upward rotation</strong> of scapula; "holds" scapula against thorax</td>
+        <td><span class="nerve-tag n-longthoracic">Long thoracic</span></td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Subclavius</td>
+        <td>1st rib (junction with costal cartilage)</td>
+        <td>Lateral 1/3 inferior surface of clavicle</td>
+        <td>Depression of scapula; coaptation (compression) of SC joint</td>
+        <td>Nerve to subclavius (C5–C6)</td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Pectoralis Minor</td>
+        <td>3rd–5th ribs (anterior surface)</td>
+        <td>Coracoid process of scapula</td>
+        <td>Depression, protraction, and downward rotation of scapula; accessory inspiratory muscle</td>
+        <td><span class="nerve-tag n-medialPectoral">Medial pectoral</span></td>
+      </tr>
+    </table>
+
+    <div class="mnemonic">
+      <span class="callout-title">🧠 Mnemonic — Scapular Rotators</span>
+      <strong>Upward rotation</strong> (glenoid faces up, needed for arm elevation): <strong>S</strong>erratus anterior + <strong>U</strong>pper and <strong>L</strong>ower trapezius (<em>SUL</em>).<br>
+      <strong>Downward rotation</strong> (glenoid faces down): <strong>R</strong>homboids + <strong>L</strong>evator scapulae + <strong>P</strong>ectoralis minor (<em>RLP</em>).<br>
+      These act as antagonistic pairs — weakness in one group causes the scapula to sit in the other group's preferred position at rest.
+    </div>
+
+    <figure class="slide-figure">
+      <img src="bpty04_images/shoulder/slide-25.png" alt="Serratus anterior">
+      <figcaption>Slide 25 — Serratus anterior: origin on ribs 1–9, insertion on medial scapular border</figcaption>
+    </figure>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- SECTION 8 — ROTATOR CUFF -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="section" id="rotator-cuff">
+    <div class="section-label">Section 8</div>
+    <h2>Rotator Cuff (SITS)</h2>
+
+    <p>The rotator cuff comprises four <strong>intrinsic</strong> scapulohumeral muscles that originate from the scapula and insert onto the proximal humerus. Their collective resting tone keeps the humeral head centred in the glenoid fossa — a dynamic compression mechanism that is the primary source of GH joint stability. Without the rotator cuff, the deltoid's superior pull would simply dislocate the humeral head upward into the subacromial space with every attempt at abduction.</p>
+
+    <div class="mnemonic">
+      <span class="callout-title">🧠 Mnemonic — SITS</span>
+      <strong>S</strong>upraspinatus · <strong>I</strong>nfraspinatus · <strong>T</strong>eres minor · <strong>S</strong>ubscapularis<br>
+      Remember that <em>three</em> insert onto the <strong>greater</strong> tubercle (SIT — Supra, Infra, Teres minor) and <em>one</em> inserts onto the <strong>lesser</strong> tubercle (Subscapularis — the "S" at the end, which also acts oppositely to the others, producing internal rather than external rotation).
+    </div>
+
+    <div class="sits-grid">
+      <div class="sits-card">
+        <span class="letter-badge">S</span>
+        <h4>Supraspinatus</h4>
+        <p><strong>Origin:</strong> Supraspinous fossa</p>
+        <p><strong>Insertion:</strong> Greater tubercle (superior facet)</p>
+        <p><strong>Action:</strong> Initiates abduction (0–15°); synergistic with external rotators</p>
+        <p><strong>Nerve:</strong> Suprascapular (C5–C6)</p>
+      </div>
+      <div class="sits-card">
+        <span class="letter-badge">I</span>
+        <h4>Infraspinatus</h4>
+        <p><strong>Origin:</strong> Infraspinous fossa</p>
+        <p><strong>Insertion:</strong> Greater tubercle (middle facet)</p>
+        <p><strong>Action:</strong> External rotation of the shoulder</p>
+        <p><strong>Nerve:</strong> Suprascapular (C5–C6)</p>
+      </div>
+      <div class="sits-card">
+        <span class="letter-badge">T</span>
+        <h4>Teres Minor</h4>
+        <p><strong>Origin:</strong> Superior 2/3 of lateral scapular border</p>
+        <p><strong>Insertion:</strong> Greater tubercle (inferior facet)</p>
+        <p><strong>Action:</strong> External rotation; adduction</p>
+        <p><strong>Nerve:</strong> Axillary (C5–C6)</p>
+      </div>
+      <div class="sits-card">
+        <span class="letter-badge">S</span>
+        <h4>Subscapularis</h4>
+        <p><strong>Origin:</strong> Subscapular (costal) fossa</p>
+        <p><strong>Insertion:</strong> Lesser tubercle</p>
+        <p><strong>Action:</strong> Internal rotation (the only internal rotator in the cuff)</p>
+        <p><strong>Nerve:</strong> Upper + lower subscapular (C5–C6)</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="callout-title">📌 The Abduction Paradox — Supraspinatus vs Deltoid</span>
+      The supraspinatus is often described as the initiator of abduction (0–15°), but this is somewhat oversimplified. The <em>true</em> role of the supraspinatus is <strong>humeral head compression</strong> into the glenoid, preventing the deltoid from simply translating the humerus upward. Without supraspinatus, the deltoid still abducts the arm — but with a painful arc as the torn tendon/bursa impinges under the acromion. The clinical test for supraspinatus is the <strong>empty can test</strong> (arm at 90° abduction, 30° forward flexion, thumb down — resistance reveals weakness or pain).
+    </div>
+
+    <div class="clinical">
+      <span class="callout-title">🏥 Clinical — Rotator Cuff Tendinopathy and Tears</span>
+      <strong>Supraspinatus</strong> is the most commonly injured rotator cuff tendon — its avascular "critical zone" (~1 cm proximal to its insertion on the greater tubercle) is predisposed to degenerative change. Impingement occurs when the supraspinatus tendon is compressed between the humeral head and the coraco-acromial arch during abduction, particularly between 60–120° (the <em>painful arc</em>). Full-thickness tears are common in the over-50s; they are often treated with physiotherapy initially (strengthening infraspinatus and posterior cuff), with surgical repair for larger tears or failed conservative management.
+    </div>
+
+    <figure class="slide-figure">
+      <img src="bpty04_images/shoulder/slide-28.png" alt="Rotator cuff muscles">
+      <figcaption>Slide 28 — The four muscles of the rotator cuff (SITS)</figcaption>
+    </figure>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- SECTION 9 — OTHER GH MUSCLES -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="section" id="gh-muscles">
+    <div class="section-label">Section 9</div>
+    <h2>Other Glenohumeral Muscles</h2>
+
+    <h3>Deltoid — Three Parts</h3>
+    <p>The deltoid is the prime mover of shoulder abduction and gives the shoulder its characteristic rounded contour. It originates from a continuous line across the lateral clavicle, acromion, and scapular spine, and all three parts converge to insert on the <strong>deltoid tuberosity</strong> of the humerus. The muscle is innervated by the <strong>axillary nerve (C5–C6)</strong> — the nerve winds around the surgical neck of the humerus in the quadrangular space.</p>
+
+    <table class="muscle-table">
+      <tr><th>Part</th><th>Origin</th><th>Primary Actions</th></tr>
+      <tr>
+        <td class="muscle-name">Anterior (clavicular)</td>
+        <td>Lateral 1/3 of clavicle</td>
+        <td>Flexion, abduction, internal rotation, horizontal adduction</td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Middle (acromial)</td>
+        <td>Acromion</td>
+        <td><strong>Abduction</strong> (major abductor 15–90°)</td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Posterior (spinal)</td>
+        <td>Spine of scapula</td>
+        <td>Extension, external rotation, horizontal abduction</td>
+      </tr>
+    </table>
+
+    <div class="concept">
+      <span class="callout-title">🧠 Deltoid vs Supraspinatus — An Important Distinction</span>
+      Students often confuse who does what in abduction. The <strong>supraspinatus</strong> initiates and stabilises (0–15°); the <strong>middle deltoid</strong> is the powerful abductor that takes over (15–90°); above 90° the <strong>upper trapezius + serratus anterior</strong> must rotate the scapula to bring the glenoid upward, allowing elevation to 180°. A patient with complete deltoid paralysis (axillary nerve injury) can still weakly abduct to ~15° using supraspinatus — but cannot reach above the shoulder.
+    </div>
+
+    <h3>Teres Major</h3>
+    <p>Teres major originates from the <strong>inferior angle of the scapula</strong> and inserts onto the <strong>medial lip of the intertubercular groove</strong>. It acts alongside latissimus dorsi (extension, adduction, internal rotation) and shares its insertion point — hence the nickname "lat's little helper." It forms the inferior border of the quadrangular space and triangular interval. Innervated by the <strong>lower subscapular nerve (C5–C6)</strong>.</p>
+
+    <h3>Latissimus Dorsi</h3>
+    <p>Latissimus dorsi is the broadest muscle of the back, arising from a wide origin (spinous processes T7–S5 via thoracolumbar fascia, iliac crest, inferior 3 ribs, and inferior angle of scapula). Its fibres converge and twist 180° to insert on the <strong>floor of the intertubercular groove</strong>. Actions: <strong>extension, adduction, and internal rotation</strong> of the shoulder. It is a powerful "pull-down" muscle critical for crutch walking, swimming, and climbing. Innervated by the <strong>thoracodorsal nerve (C6–C8)</strong>, which is also at risk during axillary lymph node dissection.</p>
+
+    <h3>Pectoralis Major</h3>
+    <p>Pectoralis major has two heads — clavicular (medial half of clavicle) and sternocostal (sternum, costal cartilages 2–6). Both insert onto the <strong>lateral lip of the intertubercular groove</strong>. Overall actions: <strong>adduction, horizontal adduction, internal rotation</strong>; the clavicular head contributes to flexion. Innervated by both the <strong>medial and lateral pectoral nerves</strong>. The sternocostal head is more powerful. Rupture at the musculotendinous junction occurs in heavy bench press loading — clinically apparent as lateral chest wall asymmetry during resisted adduction.</p>
+
+    <h3>Coracobrachialis</h3>
+    <p>A small muscle originating from the <strong>coracoid process</strong> and inserting on the <strong>middle third of the medial humerus</strong>. It assists with shoulder flexion and adduction. Innervated by the <strong>musculocutaneous nerve (C5–C7)</strong>, which actually passes through the belly of the muscle — a useful anatomical landmark when the nerve is at risk in surgery.</p>
+
+    <table class="muscle-table">
+      <tr><th>Muscle</th><th>Nerve</th><th>Key Actions</th></tr>
+      <tr><td class="muscle-name">Deltoid (ant/mid/post)</td><td><span class="nerve-tag n-axillary">Axillary</span></td><td>Abduction (mid), flexion (ant), extension (post)</td></tr>
+      <tr><td class="muscle-name">Teres Major</td><td><span class="nerve-tag n-subscapular">Lower subscapular</span></td><td>Extension, adduction, internal rotation</td></tr>
+      <tr><td class="muscle-name">Latissimus Dorsi</td><td><span class="nerve-tag n-thoracodorsal">Thoracodorsal</span></td><td>Extension, adduction, internal rotation</td></tr>
+      <tr><td class="muscle-name">Pectoralis Major</td><td><span class="nerve-tag n-medialPectoral">Medial + Lateral pectoral</span></td><td>Adduction, horizontal adduction, internal rotation; clavicular head → flexion</td></tr>
+      <tr><td class="muscle-name">Coracobrachialis</td><td><span class="nerve-tag n-musculocutaneous">Musculocutaneous</span></td><td>Flexion, adduction</td></tr>
+    </table>
+
+    <figure class="slide-figure">
+      <img src="bpty04_images/shoulder/slide-34.png" alt="Deltoid clavicular fibres">
+      <figcaption>Slide 34–36 — Deltoid muscle: clavicular, acromial, and spinal parts</figcaption>
+    </figure>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- SECTION 10 — NEUROVASCULAR -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="section" id="neurovascular">
+    <div class="section-label">Section 10</div>
+    <h2>Neurovascular Supply</h2>
+
+    <h3>Key Nerves at the Shoulder</h3>
+    <p>All shoulder muscles are supplied by the <strong>brachial plexus (C5–T1)</strong> or the <strong>accessory nerve (CN XI)</strong>. The most clinically significant nerves are:</p>
+
+    <table class="muscle-table">
+      <tr><th>Nerve</th><th>Root</th><th>Muscles Supplied</th><th>Clinical Risk</th></tr>
+      <tr>
+        <td class="muscle-name">Axillary nerve</td>
+        <td>C5–C6</td>
+        <td>Deltoid, teres minor</td>
+        <td>Surgical neck fracture, anterior GH dislocation, quadrangular space compression</td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Suprascapular nerve</td>
+        <td>C5–C6</td>
+        <td>Supraspinatus, infraspinatus</td>
+        <td>Suprascapular notch entrapment; ganglion cysts; overhead athletes</td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Upper subscapular nerve</td>
+        <td>C5–C6</td>
+        <td>Subscapularis (upper)</td>
+        <td>Brachial plexus injury</td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Lower subscapular nerve</td>
+        <td>C5–C6</td>
+        <td>Subscapularis (lower), teres major</td>
+        <td>Brachial plexus injury</td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Long thoracic nerve</td>
+        <td>C5–C7</td>
+        <td>Serratus anterior</td>
+        <td>Medial winging; surgery, traction injury, heavy backpack</td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Dorsal scapular nerve</td>
+        <td>C5</td>
+        <td>Rhomboids, levator scapulae</td>
+        <td>Thoracic outlet, scalene compression</td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Thoracodorsal nerve</td>
+        <td>C6–C8</td>
+        <td>Latissimus dorsi</td>
+        <td>Axillary lymph node dissection (breast cancer surgery)</td>
+      </tr>
+      <tr>
+        <td class="muscle-name">Accessory nerve (CN XI)</td>
+        <td>Cranial + C3–C4</td>
+        <td>Trapezius</td>
+        <td>Posterior triangle surgery, IJV cannulation, lymph node biopsy</td>
+      </tr>
+    </table>
+
+    <h3>Arterial Supply</h3>
+    <p>The shoulder is supplied primarily by the <strong>axillary artery</strong> and its branches, including the anterior and posterior circumflex humeral arteries (passing through the quadrangular space), the suprascapular artery, and the thoracoacromial trunk. A rich anastomotic network around the scapula (scapular anastomosis) provides collateral circulation if the axillary artery is occluded proximal to the scapular branches.</p>
+
+    <div class="callout">
+      <span class="callout-title">📌 The Quadrangular Space</span>
+      The quadrangular space is a gap in the posterior shoulder bounded by: <strong>teres minor (superior), teres major (inferior), long head of triceps (medial), and surgical neck of humerus (lateral)</strong>. The <strong>axillary nerve and posterior circumflex humeral artery</strong> pass through it. Space-occupying lesions (fibrous bands, hypertrophied muscles) can compress these structures — "quadrangular space syndrome" — causing posterior shoulder pain and deltoid/teres minor weakness.
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- SECTION 11 — CLINICAL SUMMARY -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="section" id="clinical">
+    <div class="section-label">Section 11</div>
+    <h2>Clinical Summary</h2>
+
+    <p>The shoulder is the most commonly injured joint region presenting to physiotherapy. The table below summarises the key conditions you must know, their anatomical basis, and what to look for clinically.</p>
+
+    <table class="clinical-table">
+      <tr>
+        <th>Condition</th>
+        <th>Structures Involved</th>
+        <th>Mechanism / Key Features</th>
+        <th>Physiotherapy Relevance</th>
+      </tr>
+      <tr>
+        <td><strong>Subacromial impingement</strong></td>
+        <td>Supraspinatus tendon, subacromial bursa, coracoacromial arch</td>
+        <td>Compression during 60–120° abduction (painful arc). Associated with poor scapular kinematics, rotator cuff weakness, AC joint osteophytes.</td>
+        <td>Rotator cuff strengthening, scapular stabilisation, posture correction</td>
+      </tr>
+      <tr>
+        <td><strong>Rotator cuff tear</strong></td>
+        <td>Most commonly supraspinatus tendon</td>
+        <td>Degenerative (over 50s) or traumatic (fall on outstretched hand). Full-thickness: loss of active abduction, weakness on empty can test.</td>
+        <td>Posterior cuff strengthening pre/post-op; pain management; graded loading</td>
+      </tr>
+      <tr>
+        <td><strong>Anterior GH dislocation</strong></td>
+        <td>Inferior GH capsule, Bankart lesion (anterior labrum), Hill-Sachs lesion (posterolateral humeral head)</td>
+        <td>Arm in abduction + external rotation. Check axillary nerve (deltoid sensation on lateral arm, "regimental badge" area).</td>
+        <td>Post-reduction sling, progressive RoM, rotator cuff and proprioceptive rehab</td>
+      </tr>
+      <tr>
+        <td><strong>AC joint separation</strong></td>
+        <td>AC and coracoclavicular ligaments</td>
+        <td>Direct fall on acromion. Grade III+: step deformity, "piano key" clavicle. Grades I–II treated conservatively.</td>
+        <td>Grades I–II: sling, analgesia, progressive strengthening. Grade III: conservative vs surgical (debated).</td>
+      </tr>
+      <tr>
+        <td><strong>Frozen shoulder (adhesive capsulitis)</strong></td>
+        <td>GH joint capsule, rotator interval</td>
+        <td>Capsular fibrosis. Three phases: freezing (painful), frozen (stiff), thawing. Affects internal rotation most. Associated with diabetes.</td>
+        <td>Gentle stretching, physiotherapy (limited evidence for passive stretch), corticosteroid injection, manipulation under anaesthesia</td>
+      </tr>
+      <tr>
+        <td><strong>Biceps tendon pathology</strong></td>
+        <td>Long head of biceps tendon, bicipital groove</td>
+        <td>Tendinopathy, rupture, SLAP tear. Speed's test (pain with resisted forward flexion, elbow extended). Popeye sign on rupture.</td>
+        <td>Eccentric loading protocol; surgical tenotomy/tenodesis in refractory cases</td>
+      </tr>
+      <tr>
+        <td><strong>SLAP lesion</strong></td>
+        <td>Superior glenoid labrum (biceps anchor)</td>
+        <td>Overhead throwing athletes; traction injury. O'Brien's test. MRI arthrogram is gold standard.</td>
+        <td>Posterior capsule stretching, rotator cuff rehabilitation; surgical repair if unstable</td>
+      </tr>
+      <tr>
+        <td><strong>SC joint dislocation</strong></td>
+        <td>SC joint capsule, articular disc, costoclavicular ligament</td>
+        <td>Rare; requires significant force. Posterior dislocation = emergency (retrosternal structures at risk).</td>
+        <td>Anterior: closed reduction under GA. Posterior: urgent surgical review.</td>
+      </tr>
+      <tr>
+        <td><strong>Axillary nerve injury</strong></td>
+        <td>Axillary nerve (C5–C6), deltoid and teres minor</td>
+        <td>Surgical neck fracture or anterior dislocation. Weakness of abduction, loss of sensation over "regimental badge" area.</td>
+        <td>Nerve recovery monitoring; deltoid EMG; electrical stimulation; compensatory strategies</td>
+      </tr>
+      <tr>
+        <td><strong>Scapular winging</strong></td>
+        <td>Long thoracic nerve → serratus anterior (medial winging) or accessory nerve → trapezius (lateral winging)</td>
+        <td>Medial winging: serratus palsy, cannot fully raise arm. Lateral winging: trapezius palsy, visible with arm raised forward.</td>
+        <td>Exercise-based rehabilitation; nerve decompression; scapular taping</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="sources">
+    <h3>Sources &amp; Further Reading</h3>
+    <ol>
+      <li>TeachMeAnatomy. <em>The Intrinsic Muscles of the Shoulder</em>. Dr Oliver Jones. Updated October 2025. <a href="https://teachmeanatomy.info/upper-limb/muscles/shoulder/intrinsic/" target="_blank">teachmeanatomy.info</a></li>
+      <li>TeachMeAnatomy. <em>The Extrinsic Muscles of the Shoulder</em>. Dr Oliver Jones. Updated January 2026. <a href="https://teachmeanatomy.info/upper-limb/muscles/shoulder/extrinsic/" target="_blank">teachmeanatomy.info</a></li>
+      <li>TeachMeAnatomy. <em>The Sternoclavicular Joint</em>. Ron Sangal. Updated November 2025. <a href="https://teachmeanatomy.info/upper-limb/joints/sternoclavicular/" target="_blank">teachmeanatomy.info</a></li>
+      <li>TeachMeAnatomy. <em>The Shoulder Joint (Glenohumeral Joint)</em>. <a href="https://teachmeanatomy.info/upper-limb/joints/shoulder/" target="_blank">teachmeanatomy.info</a></li>
+      <li>Abulkhanova M, Neto T. <em>BPTY04 — Shoulder Girdle Anatomy</em>. LUNEX University Lecture Slides, 2021.</li>
+      <li>Gray H. <em>Gray's Anatomy</em>, 41st ed. Elsevier, 2015.</li>
+      <li>Rockwood CA Jr, Matsen FA III. <em>The Shoulder</em>, 4th ed. Saunders/Elsevier, 2009.</li>
+    </ol>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  BPTY04 Musculoskeletal Anatomy · LUNEX University · Shoulder Girdle In-Depth Guide · For personal study use only
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lower Limb Osteology — In-Depth Guide | BPTY04</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #fdfcfa;
+      color: #1a1a1a;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0a2a3a, #126a5a);
+      color: #fff;
+      padding: 2.8rem 3rem 2.2rem;
+    }
+
+    header .back-link {
+      display: inline-block;
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 0.2rem 0.55rem;
+    }
+    header .back-link:hover { background: rgba(255,255,255,0.15); }
+
+    header .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.7rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.15rem 0.6rem;
+      margin-bottom: 0.7rem;
+    }
+
+    header h1 { font-size: 2rem; font-weight: normal; line-height: 1.2; }
+    header p { margin-top: 0.6rem; color: rgba(255,255,255,0.8); font-size: 0.88rem; font-style: italic; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    .toc {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 4px solid #126a5a;
+      padding: 1.2rem 1.6rem;
+      margin-bottom: 3rem;
+      font-size: 0.83rem;
+    }
+    .toc h3 {
+      font-size: 0.68rem;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #0a2a3a;
+      margin-bottom: 0.7rem;
+    }
+    .toc ol { margin-left: 1.2rem; color: #444; line-height: 2; }
+    .toc a { color: #0a2a3a; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    section { margin-bottom: 3.5rem; }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #0a2a3a;
+      border-bottom: 2px solid #126a5a;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    h3 { font-size: 1.05rem; font-weight: bold; color: #333; margin: 1.5rem 0 0.6rem; }
+    h4 { font-size: 0.92rem; font-weight: bold; color: #555; margin: 1.2rem 0 0.4rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    p { margin-bottom: 0.9rem; }
+
+    .callout, .clinical, .mnemonic, .concept {
+      border-left: 4px solid; padding: 0.9rem 1.2rem; margin: 1.2rem 0; border-radius: 0 4px 4px 0;
+    }
+    .callout  { border-color: #2a7db5; background: #f0f7fc; }
+    .clinical { border-color: #c0392b; background: #fdf3f2; }
+    .mnemonic { border-color: #e6a817; background: #fdf8ec; }
+    .concept  { border-color: #7b52c4; background: #f6f2fd; }
+
+    .callout strong, .clinical strong, .mnemonic strong, .concept strong {
+      display: block;
+      font-size: 0.7rem;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.4rem;
+    }
+    .callout strong  { color: #2a7db5; }
+    .clinical strong { color: #c0392b; }
+    .mnemonic strong { color: #b07e0a; }
+    .concept strong  { color: #7b52c4; }
+
+    /* Landmark tables */
+    .lm-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .lm-table th {
+      background: #0a2a3a;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+    .lm-table td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid #d0dde0;
+      vertical-align: top;
+    }
+    .lm-table tr:last-child td { border-bottom: 2px solid #126a5a; }
+    .lm-table tr:nth-child(even) { background: #f2f8f7; }
+    .lm-table td:first-child { font-weight: bold; color: #0a2a3a; }
+
+    /* Tarsal bone cards */
+    .tarsal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .tarsal-card {
+      border: 1px solid #b0d0cc;
+      border-top: 3px solid #126a5a;
+      padding: 0.9rem;
+      background: #fff;
+      font-size: 0.82rem;
+    }
+    .tarsal-card .tc-name { font-weight: bold; color: #0a2a3a; margin-bottom: 0.2rem; font-size: 0.9rem; }
+    .tarsal-card .tc-region { font-family: 'Courier New', Courier, monospace; font-size: 0.65rem; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.4rem; }
+    .tarsal-card .tc-art { color: #444; margin-bottom: 0.3rem; }
+    .tarsal-card .tc-note { font-style: italic; color: #777; font-size: 0.79rem; }
+
+    /* Arch summary */
+    .arch-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .arch-card {
+      border: 1px solid #b0d0cc;
+      padding: 1rem;
+      background: #fff;
+      font-size: 0.84rem;
+    }
+    .arch-card .ac-name { font-weight: bold; color: #0a2a3a; margin-bottom: 0.3rem; }
+    .arch-card .ac-bones { color: #555; margin-bottom: 0.4rem; font-size: 0.8rem; }
+    .arch-card .ac-support { font-style: italic; color: #666; font-size: 0.79rem; }
+
+    /* Clinical table */
+    .clinical-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .clinical-table th {
+      background: #7b0d0d;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+    .clinical-table td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid #f0d5d5;
+      vertical-align: top;
+    }
+    .clinical-table tr:last-child td { border-bottom: 2px solid #c0392b; }
+    .clinical-table tr:nth-child(even) { background: #fdf8f8; }
+    .clinical-table td:first-child { font-weight: bold; color: #7b0d0d; }
+
+    .sources {
+      margin-top: 4rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1.5rem;
+      font-size: 0.8rem;
+      color: #666;
+    }
+    .sources h3 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #0a2a3a;
+      margin-bottom: 0.8rem;
+    }
+    .sources ol { margin-left: 1.2rem; line-height: 1.9; }
+    .sources a { color: #0a2a3a; }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 1rem 2rem;
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    @media (max-width: 680px) {
+      .tarsal-grid { grid-template-columns: 1fr 1fr; }
+      .arch-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="index.html">← Back to BPTY04 Resources</a>
+  <div class="tag">BPTY04 · In-Depth Guide</div>
+  <h1>Lower Limb Osteology</h1>
+  <p>Pelvis · Femur · Patella · Tibia · Fibula · Tarsals · Metatarsals · Phalanges · Foot Arches · Clinical correlations</p>
+</header>
+
+<div class="container">
+
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#overview">Overview of the Lower Limb Skeleton</a></li>
+      <li><a href="#pelvis">Pelvic Girdle</a></li>
+      <li><a href="#femur">Femur</a></li>
+      <li><a href="#patella">Patella</a></li>
+      <li><a href="#tibia">Tibia</a></li>
+      <li><a href="#fibula">Fibula</a></li>
+      <li><a href="#tarsals">Tarsals — The Seven Tarsal Bones</a></li>
+      <li><a href="#metatarsals">Metatarsals &amp; Phalanges</a></li>
+      <li><a href="#arches">Foot Arches</a></li>
+      <li><a href="#clinical">Clinical Applications</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. OVERVIEW -->
+  <section id="overview">
+    <h2>1. Overview of the Lower Limb Skeleton</h2>
+    <p>The lower limb skeleton comprises approximately 31 bones per side (62 total). In contrast to the upper limb (which prioritises mobility), the lower limb is optimised for <strong>stability, weight-bearing, and locomotion</strong>. The acetabulum of the hip deeply covers the femoral head (~70% coverage vs ~25% at the glenohumeral joint), the knee has multiple intracapsular and extracapsular stabilisers, and the ankle is locked in a mortice formed by three bones.</p>
+    <p>The lower limb skeleton can be divided into: (1) the pelvic girdle — hip bones connecting the limb to the axial skeleton; (2) the thigh — femur; (3) the knee — patella; (4) the leg — tibia and fibula; (5) the foot — 7 tarsals, 5 metatarsals, and 14 phalanges per foot.</p>
+
+    <div class="callout">
+      <strong>Design Principle: Lower Limb vs Upper Limb</strong>
+      The structural differences between upper and lower limbs reflect their functional demands. The lower limb: deep ball-and-socket hip (stability over mobility), medially inclined femoral shaft (brings knees under the body's centre of gravity for efficient locomotion), a complex knee with menisci and cruciate ligaments (controls movement in a joint with little bony congruence), a mortice-and-tenon ankle (maximally stable for weight-bearing), and arched foot (shock absorption + rigid lever for propulsion). Understanding this philosophy allows you to predict what each joint sacrifices and why specific pathologies occur at each location.
+    </div>
+  </section>
+
+  <!-- 2. PELVIC GIRDLE -->
+  <section id="pelvis">
+    <h2>2. Pelvic Girdle</h2>
+    <p>The pelvic girdle consists of two <strong>hip bones</strong> (os coxae), each formed by the fusion of three bones — the <strong>ilium</strong> (superior/flared), <strong>ischium</strong> (posteroinferior), and <strong>pubis</strong> (anteromedial) — which fuse at the <strong>acetabulum</strong> (the deep socket of the hip joint) around the age of 16–18 years.</p>
+    <p>The two hip bones articulate posteriorly with the sacrum at the <strong>sacroiliac joints</strong> (SIJ — predominantly fibrocartilaginous, with a small synovial component; supports axial load transmission to the lower limbs) and anteriorly with each other at the <strong>pubic symphysis</strong> (a cartilaginous joint). The ring of the pelvis (2 hip bones + sacrum) is the structural interface between the spine and the lower limbs.</p>
+
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Bone</th>
+          <th>Description / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Iliac crest</td>
+          <td>Ilium</td>
+          <td>Palpable ridge from ASIS to PSIS. Level of L4 vertebra — used for lumbar puncture landmark. Origin of abdominal obliques, latissimus dorsi, gluteus maximus/medius/minimus. Iliac crest biopsy site for bone marrow sampling.</td>
+        </tr>
+        <tr>
+          <td>ASIS (Anterior Superior Iliac Spine)</td>
+          <td>Ilium</td>
+          <td>Palpable anteriorly. Sartorius and tensor fasciae latae (TFL) origin. Starting point for measuring leg length (ASIS to medial malleolus).</td>
+        </tr>
+        <tr>
+          <td>ASIS (Anterior Inferior Iliac Spine)</td>
+          <td>Ilium</td>
+          <td>Rectus femoris (straight head) origin. Less palpable than ASIS. Avulsion fractures in adolescents from sudden rectus femoris contraction (sprinting).</td>
+        </tr>
+        <tr>
+          <td>Acetabulum</td>
+          <td>All three — ilium (superior 2/5), ischium (posterior 2/5), pubis (anterior 1/5)</td>
+          <td>Deep socket forming the hip joint with the femoral head. Deepened by the fibrocartilaginous acetabular labrum. Acetabular fractures require urgent surgical assessment. The transverse acetabular ligament bridges the acetabular notch, converting it to a foramen for the ligamentum teres artery.</td>
+        </tr>
+        <tr>
+          <td>Ischial tuberosity</td>
+          <td>Ischium</td>
+          <td>The "sitting bone" — supports body weight in seated position. Origin of hamstrings (semimembranosus, semitendinosus, long head of biceps femoris) and adductor magnus (hamstring part). Avulsion fractures in adolescents from hamstring contraction. Palpable in the gluteal fold.</td>
+        </tr>
+        <tr>
+          <td>Ischial spine</td>
+          <td>Ischium</td>
+          <td>Sacrospinous ligament attachment — forms the boundary between the greater and lesser sciatic foramina. In obstetrics, the interischial spinous diameter (~10.5 cm) is measured to assess pelvic adequacy for vaginal delivery.</td>
+        </tr>
+        <tr>
+          <td>Pubic tubercle</td>
+          <td>Pubis</td>
+          <td>Palpable medially. Inguinal ligament attachment (lateral end). Key landmark for distinguishing direct (medial to inferior epigastric artery/Hesselbach's triangle) from indirect (lateral, through deep ring) inguinal hernias.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 3. FEMUR -->
+  <section id="femur">
+    <h2>3. Femur</h2>
+    <p>The femur is the longest and strongest bone in the body. It descends in a slight <strong>medial</strong> direction, bringing the knees under the body's centre of gravity — this valgus alignment is greater in females (wider pelvis relative to femoral length, giving a greater Q-angle). The neck-shaft angle is approximately 135° (reduced in coxa vara, increased in coxa valga).</p>
+
+    <h3>Proximal Femur</h3>
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Description</th>
+          <th>Attachment / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Head of femur</td>
+          <td>Spherical, covered with articular cartilage (~2/3 of a sphere), medially-superiorly directed. Small central depression: the fovea capitis</td>
+          <td>Articulates with the acetabulum (hip joint). Ligamentum teres attaches at the fovea — carries the medial circumflex femoral artery branch to the femoral head in children (less important in adults). Blood supply to the femoral head: primarily via the medial femoral circumflex artery (retinacular branches — course along the femoral neck inside the capsule). This is what is at risk in intracapsular femoral neck fractures.</td>
+        </tr>
+        <tr>
+          <td>Neck of femur</td>
+          <td>Cylindrical, ~135° to shaft; anteverted ~10–15° relative to the transverse plane</td>
+          <td>Most common fracture site in the elderly (osteoporotic, low-energy fall). Blood supply vulnerable — intracapsular NOF fractures risk avascular necrosis (AVN) of the femoral head. Clinical sign: shortened and externally rotated limb.</td>
+        </tr>
+        <tr>
+          <td>Greater trochanter</td>
+          <td>Prominent lateral projection, palpable at the lateral hip; most lateral bony point of the hip</td>
+          <td>Gluteus medius (anterolateral facet) + gluteus minimus (anterior facet) — primary abductors of the hip, essential for stance phase of gait. Piriformis (medial surface). Vastus lateralis (base). Avulsion fracture: forceful gluteus medius contraction. Trochanteric bursitis presents with lateral hip pain at this landmark.</td>
+        </tr>
+        <tr>
+          <td>Lesser trochanter</td>
+          <td>Small projection posteromedially at the junction of neck and shaft</td>
+          <td>Iliopsoas insertion (the primary hip flexor — iliacus + psoas major). Avulsion fracture: forceful iliopsoas contraction (sprinting). Pathological fracture at the lesser trochanter in adults → suspect bone metastasis.</td>
+        </tr>
+        <tr>
+          <td>Intertrochanteric line</td>
+          <td>Anterior ridge running between the two trochanters</td>
+          <td>Iliofemoral ligament (strongest ligament in the body — resists hip hyperextension). Anterior attachment of the hip joint capsule. Fractures here = extracapsular → blood supply to femoral head intact → AVN uncommon.</td>
+        </tr>
+        <tr>
+          <td>Intertrochanteric crest</td>
+          <td>Posterior ridge connecting the trochanters; has a rounded quadrate tubercle on its upper half</td>
+          <td>Quadrate tubercle: quadratus femoris insertion. The hip capsule does NOT attach to the intertrochanteric crest posteriorly — the femoral neck is largely extracapsular posteriorly (important for AVN risk classification in fractures).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Shaft of Femur</h3>
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Description</th>
+          <th>Attachment / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Linea aspera</td>
+          <td>Roughened double ridge on the posterior femoral shaft (medial and lateral lips), running the length of the shaft</td>
+          <td>Major attachment site for multiple muscles: adductors (longus, brevis, magnus), vastus medialis and lateralis, short head of biceps femoris. Proximally: medial lip → pectineal line; lateral lip → gluteal tuberosity. Distally: medial → medial supracondylar line (to adductor tubercle); lateral → lateral supracondylar line. The flat popliteal surface lies between them distally.</td>
+        </tr>
+        <tr>
+          <td>Gluteal tuberosity</td>
+          <td>Roughened area on the lateral posterior shaft, proximal continuation of the lateral lip of the linea aspera</td>
+          <td>Gluteus maximus insertion (lower fibres). The most powerful hip extensor and external rotator.</td>
+        </tr>
+        <tr>
+          <td>Adductor tubercle</td>
+          <td>Small projection at the top of the medial supracondylar line, just proximal to the medial epicondyle</td>
+          <td>Adductor magnus insertion (adductor/vertical head — the most powerful hip adductor, also extends the hip via this portion).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Distal Femur</h3>
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Description</th>
+          <th>Attachment / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Medial condyle</td>
+          <td>Medial articular prominence — projects further inferiorly than the lateral condyle (compensates for valgus angulation of the femur to produce a horizontal knee joint)</td>
+          <td>Articulates with the medial tibial plateau and medial meniscus. Medial epicondyle above: medial collateral ligament (MCL) + ACL origin (posterior aspect of medial condyle).</td>
+        </tr>
+        <tr>
+          <td>Lateral condyle</td>
+          <td>Lateral articular prominence — larger anteriorly (helps prevent patellar dislocation)</td>
+          <td>Articulates with the lateral tibial plateau and lateral meniscus. Lateral epicondyle above: lateral collateral ligament (LCL). ACL also partly originates from the medial aspect of the lateral condyle. PCL: lateral aspect of the medial condyle.</td>
+        </tr>
+        <tr>
+          <td>Intercondylar (patellar) groove</td>
+          <td>The anterior channel between the condyles that accommodates the patella</td>
+          <td>Patella articulates here — the patellofemoral joint. The lateral condyle is more prominent anteriorly, acting as a wall to prevent lateral patellar dislocation. A shallow groove is a risk factor for patellar instability.</td>
+        </tr>
+        <tr>
+          <td>Intercondylar fossa (notch)</td>
+          <td>Deep posterior notch between the condyles</td>
+          <td>ACL attachment: medial aspect of the lateral condyle. PCL attachment: lateral aspect of the medial condyle. Intercondylar notch stenosis has been proposed as a risk factor for ACL injury. Intercondyloplasty is occasionally performed to widen a narrow notch.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="clinical">
+      <strong>Clinical — Neck of Femur (NOF) Fractures: Intracapsular vs Extracapsular</strong>
+      NOF fractures are classified as intracapsular (within the joint capsule — femoral neck and femoral head) or extracapsular (outside the capsule — intertrochanteric and subtrochanteric). This distinction is critical because it determines AVN risk and surgical approach. <strong>Intracapsular</strong>: displaced fractures disrupt the retinacular blood supply → high AVN risk (up to 30%). Management: hemiarthroplasty or total hip replacement in the elderly; internal fixation (dynamic hip screw + cannulated screws) in younger patients. <strong>Extracapsular</strong>: blood supply intact → AVN rare. Management: dynamic hip screw (intertrochanteric) or intramedullary nail (subtrochanteric). Physiotherapy: early mobilisation (Day 1 post-op weight-bearing as tolerated) is the standard of care to prevent DVT, pneumonia, pressure sores, and delirium in the elderly.
+    </div>
+  </section>
+
+  <!-- 4. PATELLA -->
+  <section id="patella">
+    <h2>4. Patella</h2>
+    <p>The patella is the largest <strong>sesamoid bone</strong> in the body — it develops within the quadriceps tendon and is embedded within it. It is triangular in shape: the <strong>base</strong> (superior) receives the quadriceps tendon, while the <strong>apex</strong> (inferior) gives attachment to the <strong>patellar ligament</strong>, which descends to the tibial tuberosity. The posterior surface has medial and lateral articular facets that contact the medial and lateral condyles of the femur respectively.</p>
+    <p>The patella serves two primary functions: (1) it <strong>increases the lever arm</strong> of the quadriceps, improving mechanical advantage for knee extension by ~30%; (2) it <strong>protects the anterior knee</strong> from direct trauma.</p>
+
+    <div class="concept">
+      <strong>Patellofemoral Joint Mechanics — Q-Angle</strong>
+      The Q-angle (quadriceps angle) is the angle between the line of pull of the quadriceps (from ASIS to mid-patella) and the patellar tendon (from mid-patella to tibial tuberosity). Normal: ~14° in males, ~17° in females. Increased Q-angle (wider pelvis, tibial torsion, flat feet) increases the lateral vector on the patella, predisposing to patellar maltracking and patellofemoral pain syndrome (PFPS). The vastus medialis oblique (VMO) — the distal fibres of vastus medialis — is the primary medial stabiliser of the patella; VMO weakness is a major contributor to patellar maltracking. VMO strengthening is a cornerstone of PFPS physiotherapy.
+    </div>
+
+    <div class="clinical">
+      <strong>Clinical — Patellar Dislocation</strong>
+      Patellar dislocation occurs almost invariably in the <em>lateral</em> direction — the patella is forced out of the patellofemoral groove. Risk factors: increased Q-angle, shallow trochlear groove (trochlear dysplasia), patella alta (high-riding patella), ligamentous laxity, and hypoplastic VMO. The medial patellofemoral ligament (MPFL) is torn in almost all first-time patellar dislocations. First-time dislocation management: acute reduction (often spontaneous), MRI to assess MPFL and osteochondral injury, physiotherapy (VMO strengthening, hip abductor strengthening, proprioception). Recurrent dislocation: MPFL reconstruction (surgical). Physiotherapy is the first-line treatment for first-time dislocation without osteochondral fracture.
+    </div>
+  </section>
+
+  <!-- 5. TIBIA -->
+  <section id="tibia">
+    <h2>5. Tibia</h2>
+    <p>The tibia is the <strong>medial</strong> and primary weight-bearing bone of the leg — it transmits approximately 85% of the body's weight from the knee to the ankle. It is the second largest bone in the body. The tibia articulates superiorly with the femur (knee joint), medially with the fibula (superior and inferior tibiofibular joints), and inferiorly with the talus (ankle mortice).</p>
+
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Description</th>
+          <th>Attachment / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tibial plateau</td>
+          <td>Flat superior surface of the widened proximal tibia, divided into medial and lateral condyles</td>
+          <td>Articulates with the femoral condyles + menisci (knee joint). The medial plateau is larger and more concave; the lateral is smaller, more convex. Medial condyle: MCL, medial meniscus. Lateral condyle: articulates with fibular head (superior tibiofibular joint, a plane synovial joint).</td>
+        </tr>
+        <tr>
+          <td>Intercondylar eminence</td>
+          <td>Central raised area with medial and lateral tubercles (spines), between the tibial condyles</td>
+          <td>Primary attachment for the ACL (anterior intercondylar area), PCL (posterior intercondylar area), and menisci. Intercondylar eminence avulsion (tibial spine fracture) = ACL equivalent injury in children — the ACL avulses the bone rather than tearing the ligament itself.</td>
+        </tr>
+        <tr>
+          <td>Tibial tuberosity</td>
+          <td>Prominent anterior projection below the tibial plateau, on the anterior border</td>
+          <td>Patellar ligament insertion — the final link of the extensor mechanism (quadriceps → quadriceps tendon → patella → patellar ligament → tibial tuberosity). Osgood-Schlatter disease: traction apophysitis at the tibial tuberosity in adolescents from repetitive quadriceps loading during growth spurts. Treated conservatively (activity modification, physiotherapy).</td>
+        </tr>
+        <tr>
+          <td>Anterior border (shin)</td>
+          <td>Sharp ridge palpable throughout the length of the leg under the skin; subcutaneous throughout</td>
+          <td>No muscle attachments — purely subcutaneous. Site of direct trauma (shin splints = medial tibial stress syndrome, which is actually at the posteromedial border, despite the colloquial name). Tibial shin fractures: common open fractures due to thin subcutaneous coverage.</td>
+        </tr>
+        <tr>
+          <td>Soleal line</td>
+          <td>Oblique ridge on the posterior surface, running from the lateral condyle inferomedially</td>
+          <td>Soleus muscle origin (the proximal portion). The popliteus muscle inserts above the soleal line. A nutrient foramen is usually present just proximal to the soleal line.</td>
+        </tr>
+        <tr>
+          <td>Interosseous (lateral) border</td>
+          <td>Sharp lateral border of the tibial shaft</td>
+          <td>Attachment for the interosseous membrane (IOM) — binds tibia and fibula, transmits force from fibula to tibia, provides origin for deep compartment muscles.</td>
+        </tr>
+        <tr>
+          <td>Medial malleolus</td>
+          <td>Bony projection at the distal medial tibia, palpable as the medial "ankle bump"</td>
+          <td>Deltoid ligament (medial collateral ligament of the ankle — very strong, rarely isolated tear) attaches here. The groove on the posterior malleolus carries the tibialis posterior tendon. Fracture (over-inversion): tibiotalar impaction → spiral fracture. Usually associated with lateral malleolus fracture.</td>
+        </tr>
+        <tr>
+          <td>Fibular notch</td>
+          <td>Lateral concavity at the distal tibia</td>
+          <td>Articulates with the fibula at the distal tibiofibular joint (syndesmosis — fibrous joint held by the anterior and posterior inferior tibiofibular ligaments + IOM). Syndesmosis disruption = "high ankle sprain" — important to recognise as it requires longer recovery and may need surgical stabilisation.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 6. FIBULA -->
+  <section id="fibula">
+    <h2>6. Fibula</h2>
+    <p>The fibula is the slender <strong>lateral</strong> bone of the leg. Despite its size, it contributes only approximately 15% of the leg's weight-bearing capacity — its primary role is to provide muscle attachment and form the lateral malleolus of the ankle mortice. The fibula articulates with the tibia proximally (superior tibiofibular joint — synovial plane) and distally (inferior tibiofibular syndesmosis), but does NOT articulate with the femur or form part of the knee joint.</p>
+
+    <table class="lm-table">
+      <thead>
+        <tr>
+          <th>Landmark</th>
+          <th>Description</th>
+          <th>Attachment / Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Head of fibula</td>
+          <td>Expanded proximal end, with a styloid process superiorly</td>
+          <td>Articulates with the lateral tibial condyle (superior tibiofibular joint). LCL of the knee inserts here (plus biceps femoris tendon). The <strong>common fibular (peroneal) nerve</strong> winds around the fibular neck immediately distal to the head — the most vulnerable nerve in the lower limb. Fibular neck fractures and pressure (tight plaster cast, positioning) cause common fibular nerve palsy: foot drop (tibialis anterior, EHL, EDL paralysis) + sensory loss dorsum of foot.</td>
+        </tr>
+        <tr>
+          <td>Fibular neck</td>
+          <td>Narrow region immediately below the head</td>
+          <td>Common fibular nerve runs directly around here — subcutaneous and exposed. Key palpation point for nerve assessment after lateral knee/fibular injury.</td>
+        </tr>
+        <tr>
+          <td>Shaft</td>
+          <td>Slender shaft, four borders (anterior, posterior, medial, interosseous), four surfaces</td>
+          <td>Extensive muscle origins: anterior compartment (extensor digitorum longus, extensor hallucis longus, fibularis tertius), lateral compartment (fibularis longus, fibularis brevis), and posterior compartment (flexor hallucis longus, tibialis posterior — partly). Interosseous border: IOM attachment.</td>
+        </tr>
+        <tr>
+          <td>Lateral malleolus</td>
+          <td>The distal fibula, forming the lateral "ankle bump" — extends approximately 1 cm more distally than the medial malleolus</td>
+          <td>Forms the lateral wall of the ankle mortice. The three lateral ankle ligaments: Anterior talofibular ligament (ATFL — most commonly torn, resists ankle inversion in plantar flexion), calcaneofibular ligament (CFL — resists inversion in neutral/dorsiflexion), posterior talofibular ligament (PTFL — rarely torn alone). The fibularis longus and brevis tendons curve behind the lateral malleolus within the peroneal groove, held by the superior peroneal retinaculum.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="mnemonic">
+      <strong>Mnemonic — Ankle Ligaments (Lateral), Medial to Posterior</strong>
+      "All Cats Play" — ATFL · CFL · PTFL<br>
+      (Anterior talofibular · Calcaneofibular · Posterior talofibular)<br>
+      ATFL = most commonly injured. PTFL = least commonly injured.
+    </div>
+  </section>
+
+  <!-- 7. TARSALS -->
+  <section id="tarsals">
+    <h2>7. Tarsals — The Seven Tarsal Bones</h2>
+    <p>The seven tarsal bones form the proximal foot skeleton and correspond functionally (though not numerically) to the carpals of the wrist. They are organised into three groups — <strong>hindfoot</strong> (talus + calcaneus), <strong>midfoot</strong> (navicular + cuboid + 3 cuneiforms). Unlike the carpals, tarsal bones bear body weight and are therefore larger and more constrained in their movement.</p>
+
+    <div class="tarsal-grid">
+      <div class="tarsal-card">
+        <div class="tc-name">Talus</div>
+        <div class="tc-region">Hindfoot</div>
+        <div class="tc-art">Ankle joint (superiorly with tibia/fibula), subtalar joint (inferiorly with calcaneus), talonavicular joint (anteriorly). No muscle attachments. Wider anteriorly — provides stability in dorsiflexion.</div>
+        <div class="tc-note">Avascular necrosis risk in talar fractures (especially talar neck) — no muscle attachments means blood supply is entirely via capsular/ligamentous vessels. Hawkins' sign (subchondral osteoporosis) on X-ray at 6–8 weeks indicates vascular integrity.</div>
+      </div>
+      <div class="tarsal-card">
+        <div class="tc-name">Calcaneus</div>
+        <div class="tc-region">Hindfoot · Largest tarsal</div>
+        <div class="tc-art">Subtalar joint (superiorly with talus), calcaneocuboid joint (anteriorly). Sustentaculum tali: medial shelf supporting the talus; groove for FHL tendon. Calcaneal tuberosity (posterior): Achilles tendon insertion.</div>
+        <div class="tc-note">Most commonly fractured tarsal bone (axial loading — fall from height). Computed by Böhler's angle on lateral X-ray (~20–40°); reduced angle suggests depressed fracture. Associated lumbar spine and tibial plateau fractures ("lover's fracture" mechanism — check the whole chain).</div>
+      </div>
+      <div class="tarsal-card">
+        <div class="tc-name">Navicular</div>
+        <div class="tc-region">Midfoot · Medial</div>
+        <div class="tc-art">Articulates with talus posteriorly, three cuneiforms anteriorly, and cuboid laterally. Boat-shaped. Navicular tuberosity (medial): tibialis posterior main insertion.</div>
+        <div class="tc-note">Navicular stress fractures in athletes (long-distance runners). High risk of non-union — poor blood supply in the central third. Müller-Weiss disease: spontaneous navicular osteonecrosis. Accessory navicular bone (~5–14% population) can cause medial foot pain where the tibialis posterior tendon inserts.</div>
+      </div>
+      <div class="tarsal-card">
+        <div class="tc-name">Cuboid</div>
+        <div class="tc-region">Midfoot · Lateral</div>
+        <div class="tc-art">Articulates with calcaneus posteriorly, 4th and 5th metatarsals anteriorly, navicular medially, lateral cuneiform anteromedially. Groove on inferior surface for fibularis longus tendon (acts as a pulley).</div>
+        <div class="tc-note">Cuboid syndrome: subluxation of the cuboid at the calcaneocuboid joint, causing lateral midfoot pain. May occur after ankle sprains. Physiotherapy treatment: cuboid manipulation ("cuboid whip" or plantar push technique).</div>
+      </div>
+      <div class="tarsal-card">
+        <div class="tc-name">Medial Cuneiform</div>
+        <div class="tc-region">Midfoot · Largest cuneiform</div>
+        <div class="tc-art">Articulates with navicular posteriorly, 1st (and part of 2nd) metatarsal anteriorly, intermediate cuneiform laterally. Key muscle insertions: tibialis anterior (plantar medial surface), fibularis longus (plantar surface).</div>
+        <div class="tc-note">The medial cuneiform is the "keystone" of the medial longitudinal arch. Lisfranc injuries often involve disruption at the medial cuneiform–2nd metatarsal base joint (the anchoring "Lisfranc ligament").</div>
+      </div>
+      <div class="tarsal-card">
+        <div class="tc-name">Intermediate Cuneiform</div>
+        <div class="tc-region">Midfoot · Smallest cuneiform</div>
+        <div class="tc-art">Articulates with navicular posteriorly, 2nd metatarsal anteriorly, medial and lateral cuneiforms on either side. The 2nd metatarsal base is "locked" between the medial and lateral cuneiforms — the most stable tarsometatarsal joint.</div>
+        <div class="tc-note">The locking of the 2nd metatarsal makes the Lisfranc joint most vulnerable at this point. The "fleck sign" on X-ray (small avulsion at the medial base of the 2nd metatarsal or medial cuneiform) is pathognomonic of Lisfranc injury.</div>
+      </div>
+      <div class="tarsal-card">
+        <div class="tc-name">Lateral Cuneiform</div>
+        <div class="tc-region">Midfoot</div>
+        <div class="tc-art">Articulates with navicular posteriorly, 3rd metatarsal anteriorly, intermediate cuneiform medially, cuboid laterally. Flexor hallucis brevis origin (part).</div>
+        <div class="tc-note">The three cuneiforms and the cuboid together form the transverse arch of the foot distally, with the keystone position at the intermediate cuneiform. Wedge shapes of the cuneiforms interlock to maintain arch integrity under load.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. METATARSALS AND PHALANGES -->
+  <section id="metatarsals">
+    <h2>8. Metatarsals &amp; Phalanges</h2>
+    <p>The five <strong>metatarsal bones</strong> (numbered I–V, medial to lateral) form the central skeleton of the forefoot. Each has a base (proximal), shaft, and head (distal). They articulate proximally at the tarsometatarsal joints (Lisfranc joint complex) and distally at the metatarsophalangeal joints (MTP joints — condyloid type, allowing flexion/extension + abduction/adduction).</p>
+    <p>The <strong>first metatarsal</strong> is the shortest and widest — it bears approximately one-third of the body's weight and is critical for the push-off phase of gait. Two sesamoid bones are embedded in the flexor hallucis brevis tendon on the plantar surface of the 1st metatarsal head.</p>
+    <p>The <strong>fifth metatarsal base</strong> has a prominent tuberosity (styloid process) where the fibularis brevis tendon inserts. This is the site of avulsion fracture (Zone 1 — "Dancer's fracture" from acute inversion) and stress fracture (Zone 2 — "Jones fracture" at the metaphyseal-diaphyseal junction, poor blood supply, high non-union rate, often requires surgery).</p>
+    <p>The <strong>14 phalanges</strong> per foot (28 total) mirror the hand: the great toe has 2 (proximal and distal), digits 2–5 have 3 each (proximal, middle, distal). MTP joints are condyloid (biaxial), IP joints are hinge (uniaxial). The plantar plates and collateral ligaments stabilise the MTP joints against hyperextension during toe-off.</p>
+
+    <div class="mnemonic">
+      <strong>Mnemonic — 5th Metatarsal Fracture Zones</strong>
+      Zone 1 (tuberosity): avulsion — treated conservatively (boot/cast 4–6 weeks)<br>
+      Zone 2 (Jones fracture at junction): poor blood supply — risk of delayed union/non-union, may need intramedullary screw<br>
+      Zone 3 (proximal shaft): stress fracture in athletes — treat with intramedullary screw<br>
+      "Going further from the base = going further from good healing"
+    </div>
+  </section>
+
+  <!-- 9. ARCHES -->
+  <section id="arches">
+    <h2>9. Foot Arches</h2>
+    <p>The foot is not a flat platform — it is a <strong>dynamic, arched structure</strong> that acts as a shock absorber under load and a rigid lever during propulsion. Three interlocking arches are present.</p>
+
+    <div class="arch-grid">
+      <div class="arch-card">
+        <div class="ac-name">Medial Longitudinal Arch</div>
+        <div class="ac-bones">Calcaneus → Talus → Navicular → 3 Cuneiforms → Metatarsals I–III</div>
+        <div class="ac-support">The highest and most important arch. Supported by: plantar fascia (static), tibialis posterior tendon (dynamic), plantar calcaneonavicular (spring) ligament (passive). Failure → pes planus (flat foot). Excessive arch → pes cavus.</div>
+      </div>
+      <div class="arch-card">
+        <div class="ac-name">Lateral Longitudinal Arch</div>
+        <div class="ac-bones">Calcaneus → Cuboid → Metatarsals IV–V</div>
+        <div class="ac-support">Low, nearly flat arch — nearly always in contact with the ground under body weight. Supported by the long and short plantar ligaments. Provides lateral stability during stance.</div>
+      </div>
+      <div class="arch-card">
+        <div class="ac-name">Transverse Arch</div>
+        <div class="ac-bones">Cuboid + 3 Cuneiforms + bases of all 5 metatarsals</div>
+        <div class="ac-support">Runs mediolaterally across the midfoot. The intermediate cuneiform is the "keystone." Supported by: fibularis longus (runs obliquely under the foot, tying the arch together dynamically), interosseous ligaments. Collapse → metatarsalgia.</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The Plantar Fascia — Windlass Mechanism</strong>
+      The plantar fascia (plantar aponeurosis) runs from the calcaneal tuberosity to the bases of the proximal phalanges. It acts as a truss, keeping the arch tensioned under load. During toe-off, dorsiflexion of the MTP joints winds the plantar fascia around the metatarsal heads (the <em>windlass mechanism</em>), raising the medial longitudinal arch and converting the foot from a mobile adapter (during loading) to a rigid lever (for push-off). Plantar fasciitis is degeneration/micro-tearing at the calcaneal insertion — most common cause of heel pain. First-step morning pain is the hallmark. Physiotherapy: plantar fascia stretching, calf stretching, night splints, load management, eccentric foot intrinsic strengthening, custom orthoses.
+    </div>
+  </section>
+
+  <!-- 10. CLINICAL -->
+  <section id="clinical">
+    <h2>10. Clinical Applications</h2>
+
+    <table class="clinical-table">
+      <thead>
+        <tr>
+          <th>Condition</th>
+          <th>Bone / Structure</th>
+          <th>Pathology / Mechanism</th>
+          <th>Physiotherapy Relevance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NOF Fracture</td>
+          <td>Femoral neck / head</td>
+          <td>Intracapsular (AVN risk, managed with arthroplasty) or extracapsular (DHS). Low-energy fall in elderly osteoporotic patients. Shortened, externally rotated limb. 30-day mortality ~8% due to complications of immobility.</td>
+          <td>Early mobilisation (Day 1 post-op is standard of care). Weight-bearing as tolerated. Hip precautions (avoid extremes of ROM) post-arthroplasty. Strength, balance, proprioception, functional independence programme. Fall prevention education and environmental assessment.</td>
+        </tr>
+        <tr>
+          <td>Tibial Plateau Fracture</td>
+          <td>Proximal tibia</td>
+          <td>Valgus/varus stress + axial load (RTA, fall from height). Schatzker I–VI. Associated meniscal tears, ligament injuries, vascular injury. High risk of compartment syndrome.</td>
+          <td>Non-weight-bearing until fracture healed (6–8 weeks), then progressive WB. Physiotherapy: knee ROM (prevent stiffness), quadriceps and hamstring strengthening, proprioception, return to function. Monitor for knee OA long-term.</td>
+        </tr>
+        <tr>
+          <td>Common Fibular Nerve Palsy</td>
+          <td>Fibular neck</td>
+          <td>Nerve compressed/damaged at fibular neck — tight cast, pressure from bed, fibular fracture, surgical positioning. Foot drop: loss of ankle dorsiflexion + eversion + toe extension. High-stepping gait.</td>
+          <td>Remove the causative factor (repad/bivalve cast). Physiotherapy: AFO (ankle-foot orthosis) to prevent equinus contracture, dorsiflexion strengthening if partial palsy, sensory re-education. Prognosis good if neuropraxia; axonotmesis requires nerve regeneration (1 mm/day).</td>
+        </tr>
+        <tr>
+          <td>Calcaneal Fracture</td>
+          <td>Calcaneus</td>
+          <td>Axial loading (fall from height). Subtalar joint often disrupted → secondary OA. Böhler's angle reduced. Associated spinal and tibial plateau fractures — always image the spine after calcaneal fracture.</td>
+          <td>Non-weight-bearing 8–12 weeks (surgical or conservative). Physiotherapy: ankle ROM, intrinsic foot strengthening, proprioception, gait re-education. Secondary subtalar OA may require subtalar fusion.</td>
+        </tr>
+        <tr>
+          <td>Lisfranc Injury</td>
+          <td>Tarsometatarsal joints (Lisfranc complex)</td>
+          <td>Disruption of the Lisfranc joint complex (tarsometatarsal joints) — from low-energy indirect rotational injury (stepping in a pothole, equestrian injuries) or high-energy trauma. Fleck sign on X-ray. Plantar ecchymosis is a clinical hallmark. Missed in up to 20% of cases.</td>
+          <td>Undisplaced: non-weight-bearing cast 6 weeks. Displaced/unstable: surgical ORIF. Physiotherapy: graduated return to weight-bearing, foot intrinsic strengthening, proprioception, custom orthotics. Return to sport 4–6 months+.</td>
+        </tr>
+        <tr>
+          <td>Lateral Ankle Sprain</td>
+          <td>ATFL (most common), CFL</td>
+          <td>Inversion + plantar flexion = ATFL tear. Most common musculoskeletal injury overall. Ottawa Ankle Rules determine need for X-ray. Grade I (stretch) → Grade III (complete rupture).</td>
+          <td>PEACE and LOVE framework (replace RICE). Physiotherapy: balance and proprioception retraining (peroneal strengthening), range of motion, progressive loading. High recurrence rate (up to 70%) without proper rehabilitation. Chronic instability → surgical ATFL reconstruction (Broström procedure).</td>
+        </tr>
+        <tr>
+          <td>Plantar Fasciitis</td>
+          <td>Plantar fascia (calcaneal insertion)</td>
+          <td>Degenerative change/microtrauma at the calcaneal origin of the plantar fascia. Causes: prolonged standing, obesity, sudden increase in activity, pes planus, tight calf. First-step pain in the morning is characteristic — eases with walking, worsens with prolonged standing.</td>
+          <td>Most evidence-based interventions: plantar fascia and calf stretching, load management, insoles/heel cups. Night splints for persistent cases. Shockwave therapy (ESWT) for chronic cases. Corticosteroid injection short-term relief. Surgery (plantar fascia release) rarely needed.</td>
+        </tr>
+        <tr>
+          <td>Achilles Tendinopathy / Rupture</td>
+          <td>Calcaneal tuberosity / Achilles tendon</td>
+          <td>Tendinopathy: mid-portion (most common, 2–6 cm above insertion) or insertional. Rupture: "pop" during push-off, Thompson test positive (squeeze calf → no plantar flexion = positive = ruptured). Most common in active men 30–50 years old.</td>
+          <td>Tendinopathy: progressive tendon loading programme (Alfredson protocol — heavy slow resistance + eccentric), load management. Rupture: surgical repair vs. functional conservative management (equivalent outcomes in RCTs for primary ruptures). Physiotherapy essential either way: progressive loading, balance, gait retraining, return to sport protocol (6–9 months).</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="sources">
+    <h3>Sources &amp; Further Reading</h3>
+    <ol>
+      <li>Jones O. <em>The Femur / The Patella / The Tibia / Bones of the Foot</em>. TeachMeAnatomy, 2025–2026. <a href="https://teachmeanatomy.info/lower-limb/bones/" target="_blank">teachmeanatomy.info</a></li>
+      <li>LUNEX University. <em>BPTY04 Lecture Slides — Lower Limb Osteology</em>. 2026.</li>
+      <li>Standring S (ed). <em>Gray's Anatomy</em>, 42nd ed. Elsevier, 2021.</li>
+      <li>Marieb EN, Hoehn KN. <em>Human Anatomy &amp; Physiology</em>, 11th ed. Pearson, 2019.</li>
+      <li>Parker MJ. The management of intracapsular fractures of the proximal femur. <em>J Bone Joint Surg Br</em> 2000; 82:937.</li>
+      <li>McPoil TG et al. Heel pain — plantar fasciitis: clinical practice guidelines. <em>J Orthop Sports Phys Ther</em> 2008; 38(4):A1–A18.</li>
+      <li>Willits K et al. Operative vs nonoperative treatment of acute Achilles tendon ruptures. <em>J Bone Joint Surg Am</em> 2010; 92:2767–75.</li>
+      <li>Netter FH. <em>Atlas of Human Anatomy</em>, 7th ed. Elsevier, 2019.</li>
+    </ol>
+  </div>
+
+</div>
+
+<footer>
+  BPTY04 Musculoskeletal Anatomy · LUNEX University · For personal study use only
+</footer>
+
+</body>
+</html>
