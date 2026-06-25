@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 — Knee &amp; Thigh — Arthrology &amp; Myology Practice Q&amp;A</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; font-size: 15px; line-height: 1.65; }
+  header { background: linear-gradient(135deg, #1a3d1a, #2e7a3a); color: white; padding: 36px 40px 28px; }
+  header h1 { font-size: 2em; margin-bottom: 6px; }
+  header p { font-size: 0.95em; opacity: 0.85; }
+  header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85em; display: inline-block; margin-bottom: 14px; }
+  header a:hover { color: white; }
+  .instructions { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); max-width: 860px; margin: 24px auto; padding: 18px 24px; font-size: 0.9em; color: #555; }
+  .filter-bar { max-width: 860px; margin: 0 auto 20px; display: flex; gap: 10px; flex-wrap: wrap; padding: 0 16px; }
+  .filter-btn { padding: 7px 16px; border-radius: 20px; border: 2px solid #ccc; background: white; cursor: pointer; font-size: 0.85em; font-weight: 600; }
+  .filter-btn.active { border-color: #2e7a3a; background: #2e7a3a; color: white; }
+  .container { max-width: 860px; margin: 0 auto 40px; padding: 0 16px; }
+  .question { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 18px; overflow: hidden; }
+  .q-header { display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid #eee; }
+  .q-number { font-weight: 700; font-size: 0.9em; color: #888; }
+  .q-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: white; }
+  .badge-recall { background: #2e6fa8; }
+  .badge-application { background: #c07020; }
+  .badge-clinical { background: #c0392b; }
+  .q-text { padding: 16px 20px 4px; }
+  .q-text p { margin-bottom: 10px; }
+  .options { margin: 10px 0 4px; }
+  .options label { display: block; margin: 6px 0; cursor: pointer; padding: 6px 10px; border-radius: 5px; }
+  .options label:hover { background: #f4f6f9; }
+  .options input[type="radio"] { margin-right: 8px; }
+  .reveal-btn { display: block; margin: 12px 20px 16px; padding: 9px 20px; background: #2e7a3a; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.88em; font-weight: 600; }
+  .reveal-btn:hover { opacity: 0.88; }
+  .answer { margin: 0 20px 20px; background: #f8f9fb; border-left: 4px solid #2e7a3a; border-radius: 0 5px 5px 0; padding: 14px 18px; font-size: 0.9em; line-height: 1.7; display: none; }
+  footer { text-align: center; padding: 24px; font-size: 0.8em; color: #999; }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html">← Back to BPTY04 Resources</a>
+  <h1>Knee &amp; Thigh — Arthrology &amp; Myology — Practice Q&amp;A</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · 11 Questions · Recall · Application · Clinical</p>
+</header>
+<div class="instructions">Work through each question, formulate a response, then click <strong>Reveal Answer</strong>. Use the filter buttons to focus on a category.</div>
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterQuestions('all',this)">All (11)</button>
+  <button class="filter-btn" onclick="filterQuestions('recall',this)">Recall</button>
+  <button class="filter-btn" onclick="filterQuestions('application',this)">Application</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical',this)">Clinical</button>
+</div>
+<div class="container">
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q1</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the four major ligaments of the knee and state what each resists.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>ACL</strong> (Anterior cruciate ligament): prevents <em>anterior tibial displacement</em> on femur; resists tibial internal rotation; secondary valgus/varus restraint<br>• <strong>PCL</strong> (Posterior cruciate ligament): prevents <em>posterior tibial displacement</em>; the strongest knee ligament<br>• <strong>MCL</strong> (Medial collateral ligament): resists <em>valgus stress</em>; also attached to medial meniscus<br>• <strong>LCL</strong> (Lateral collateral ligament): resists <em>varus stress</em>; attaches to fibular head (not meniscus)</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q2</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Describe the differences between the medial and lateral menisci in terms of shape and mobility, and explain why the medial meniscus is more commonly torn.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Medial meniscus</strong>: C-shaped (larger); firmly attached to the MCL and deep capsule → <em>less mobile</em><br>• <strong>Lateral meniscus</strong>: O-shaped (nearly circular); no MCL attachment; loosely attached to capsule → <em>more mobile</em> (can escape impingement)<br><br><strong>Why medial is torn more:</strong> Because the medial meniscus is tethered to the MCL, it cannot move out of the way during sudden twisting or valgus injuries. The lateral meniscus can escape. This is also why it is involved in the <strong>Unhappy Triad</strong> (ACL + MCL + medial meniscus from valgus contact force).</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q3</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What is the pes anserinus? Name the three tendons, their muscles, and their common nerve supplies.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The <strong>pes anserinus</strong> (goosefoot) is the conjoined insertion of three tendons on the anteromedial proximal tibia:<br>• <strong>Sartorius</strong> — femoral nerve (L2–L3)<br>• <strong>Gracilis</strong> — obturator nerve (L2–L3)<br>• <strong>Semitendinosus</strong> — sciatic nerve, tibial division (L5–S1)<br><br>Mnemonic: <strong>Say Grace before Tea</strong> (Sartorius · Gracilis · semiTendinosus)<br><br>Clinically: pes anserine bursitis (medial knee pain below the joint line, worse climbing stairs) is common in obese patients with knee OA. The three muscles also act as medial knee stabilisers and knee flexors.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q4</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the four muscles of the quadriceps group, their origins, and their shared insertion.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Rectus femoris</strong> — AIIS (straight head) + acetabular ridge (reflected head); the only biarticular quad (also flexes hip)<br>• <strong>Vastus lateralis</strong> — linea aspera, lateral femoral shaft, greater trochanter<br>• <strong>Vastus medialis</strong> — linea aspera, medial intermuscular septum; VMO fibres attach at 50–55° to control patellar tracking<br>• <strong>Vastus intermedius</strong> — anterior/lateral femoral shaft (deep, beneath RF)<br><br><strong>Shared insertion:</strong> All four converge into the <strong>quadriceps tendon</strong> → patella (via sesamoid) → <strong>patellar tendon</strong> → <strong>tibial tuberosity</strong>.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q5</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What is the Q-angle and what is its clinical significance?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The <strong>Q-angle</strong> (quadriceps angle) is the angle between: (1) a line from the ASIS to the centre of the patella, and (2) a line from the centre of the patella to the tibial tuberosity.<br><br>Normal values: ~13–18° in males; ~15–22° in females (greater due to wider pelvis).<br><br>An increased Q-angle increases the lateral patellar pull of the quadriceps → lateral patellar malalignment/tilt → patellofemoral pain syndrome (PFPS). High Q-angle is also associated with increased ACL injury risk in females. Factors influencing Q-angle: genu valgum, femoral anteversion, tibial external rotation, tibial tuberosity lateral offset.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q6</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>Explain the 'screw-home mechanism' of the knee and its importance for standing.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The <strong>screw-home mechanism</strong> is automatic tibial external rotation (~5°) during the final 30° of knee extension to full extension ('locking' the knee). It occurs because the medial femoral condyle is longer than the lateral, so as the knee extends, the tibia must externally rotate to maintain congruity with the longer medial condyle.<br><br>At full extension: cruciate and collateral ligaments are wound tight, menisci are compressed between condyles, the knee is mechanically 'locked' in a close-packed position requiring minimal muscular effort to maintain.<br><br><strong>Unlocking:</strong> The popliteus muscle internally rotates the tibia ~5° to unlock the knee before flexion can begin — hence popliteus is called the 'key that unlocks the knee'.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q7</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>What is the mechanism of a non-contact ACL injury in female athletes and what anatomical factors increase risk?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Mechanism:</strong> ACL injuries commonly occur with sudden deceleration, cutting, or landing from a jump — particularly with the knee in slight flexion, valgus, and tibial internal rotation. The ground reaction force creates a large anterior tibial shear and valgus moment that exceeds ACL load tolerance.<br><br><strong>Risk factors in females:</strong><br>• Greater Q-angle (wider pelvis) → increased valgus vector<br>• Smaller ACL cross-sectional area relative to body mass<br>• Narrower intercondylar notch (space-restricts ACL)<br>• Hormonal influences (relaxin/oestrogen affecting ligamentous laxity mid-cycle)<br>• Neuromuscular: reduced quadriceps/hamstring co-activation; valgus collapse pattern during landing<br>• Femoral anteversion → internal rotation during weight-bearing<br><br>Prevention programmes (FIFA 11+, PEP programme) targeting landing mechanics and hip/knee neuromuscular control reduce ACL injury incidence by 50–70%.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q8</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>What is ITB syndrome and what anatomical and biomechanical factors contribute to it?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>ITB syndrome (ITBS)</strong> is a lateral knee overuse injury — pain at the lateral femoral epicondyle (LFE) where the ITB passes over the prominence during knee flexion/extension cycling.<br><br><strong>Anatomy:</strong> The ITB (a thickening of the lateral fascia) originates from the iliac tubercle and thoracolumbar fascia, receives contributions from gluteus maximus and TFL, and inserts at Gerdy's tubercle. At approximately <strong>30° knee flexion</strong> during the stance phase, the ITB transitions from anterior to posterior to the LFE — the 'impingement zone'.<br><br><strong>Contributing factors:</strong><br>• Weak hip abductors (gluteus medius) → excessive hip adduction → increased ITB tension<br>• Varus alignment → lateral compartment overload<br>• Sudden increase in running volume ('too much, too fast')<br>• Cambered road running; downhill running<br><br><strong>Treatment:</strong> Load management; hip abductor strengthening (primary intervention); gait retraining (increase step cadence, reduce crossover step); NOT passive ITB stretching (ITB doesn't significantly lengthen); progressive return to running.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q9</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 22-year-old netball player lands awkwardly from a jump with a 'pop', immediate swelling (within 2 hours), and cannot continue. Lachman's test is positive. What structures are likely involved and what is the surgical vs conservative decision?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Likely structures:</strong> ACL rupture (positive Lachman's; haemarthrosis within 2 hours = intra-articular bleeding from ACL's rich vascular supply).<br><br><strong>Associated injuries to check (valgus landing):</strong> Medial meniscus (McMurray test), MCL (valgus stress), articular cartilage (bone bruising seen on MRI).<br><br><strong>Surgical vs conservative decision:</strong><br>Decision based on: patient age, activity demands, degree of instability, associated injuries, knee laxity<br>• <strong>Young active athlete in pivoting/cutting sport</strong> → ACL reconstruction (ACLR) — strong evidence for preventing re-injury and returning to sport<br>• <strong>Older patient or sedentary individual</strong> → structured physiotherapy (neuromuscular rehabilitation) ± delayed ACLR if functional instability persists<br><br><strong>Post-ACLR physiotherapy:</strong> Milestone-based return to sport (9–12 months minimum); quadriceps symmetry ≥90% LSI; hop tests; neuromuscular retraining; evidence shows psychological readiness is an independent predictor of re-injury.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q10</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 45-year-old cyclist has medial knee pain below the joint line that is worst when climbing stairs. They are 20 kg overweight. There is tenderness at the anteromedial proximal tibia, no joint effusion, and knee X-ray shows moderate medial compartment OA. What is the likely diagnosis and physiotherapy approach?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Likely diagnosis:</strong> Pes anserine bursitis — the bursa between the conjoined tendon insertion and the MCL becomes inflamed, particularly in overweight individuals with medial knee OA (varus thrust increases compressive load on the pes anserine bursa).<br><br><strong>Physiotherapy approach:</strong><br>• Differentiate from medial meniscal pathology (different tenderness location — pes anserine is below joint line; meniscal tenderness is AT joint line; McMurray negative in bursitis)<br>• <strong>Activity modification:</strong> reduce stair climbing temporarily<br>• <strong>Ice and anti-inflammatory measures</strong> acutely<br>• <strong>Knee OA management (concurrent):</strong> quadriceps and hip strengthening; weight management referral; aerobic exercise programme<br>• <strong>Valgus offloading:</strong> lateral wedge insole or knee brace can reduce medial compartment compressive load<br>• <strong>Corticosteroid injection</strong> into the bursa: effective short-term; refer if not responding to conservative measures</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q11</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 17-year-old male football player develops anterior knee pain, specifically over the tibial tuberosity, which is visibly enlarged. Pain is reproduced by resisted knee extension and quadriceps stretch. He is a rapid-growth-phase adolescent. What is the diagnosis?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Diagnosis:</strong> <strong>Osgood-Schlatter disease</strong> — traction apophysitis of the tibial tuberosity at the patellar tendon attachment.<br><br><strong>Anatomical basis:</strong> During the adolescent growth spurt, the tibial tuberosity apophysis (secondary ossification centre) is vulnerable to repetitive traction from the powerful quadriceps via the patellar tendon. Rapid skeletal growth makes the apophysis temporarily weaker than the tendon. Repeated tension causes partial avulsion and inflammatory reaction, producing the characteristic painful bony prominence.<br><br><strong>Management (self-limiting condition):</strong><br>• Reassurance — resolves when the apophysis ossifies (typically 12–24 months, at skeletal maturity)<br>• Activity modification — reduce intensity/volume of quadriceps-loading activities (jumping, sprinting) during acute flares<br>• Quadriceps and hamstring flexibility exercises — reduce traction force<br>• Patellar tendon strap (infrapatellar band) — redirects traction force<br>• Ice post-activity<br>• Pain should guide participation — not dangerous to continue activity if tolerable<br>• Surgical (excision of ununited ossicle) only in rare adult symptomatic cases</div>
+  </div>
+</div>
+<footer>BPTY04 · LUNEX University · For personal study use only</footer>
+<script>
+function toggleAnswer(btn) {
+  const a = btn.nextElementSibling;
+  const h = a.style.display === 'none' || a.style.display === '';
+  a.style.display = h ? 'block' : 'none';
+  btn.textContent = h ? 'Hide Answer' : 'Reveal Answer';
+}
+function filterQuestions(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(q => {
+    q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>

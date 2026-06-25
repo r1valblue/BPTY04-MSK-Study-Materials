@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 — Lower Limb Osteology Practice Q&amp;A</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; font-size: 15px; line-height: 1.65; }
+  header { background: linear-gradient(135deg, #0a2a3a, #126a5a); color: white; padding: 36px 40px 28px; }
+  header h1 { font-size: 2em; margin-bottom: 6px; }
+  header p { font-size: 0.95em; opacity: 0.85; }
+  header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85em; display: inline-block; margin-bottom: 14px; }
+  header a:hover { color: white; }
+  .instructions { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); max-width: 860px; margin: 24px auto; padding: 18px 24px; font-size: 0.9em; color: #555; }
+  .filter-bar { max-width: 860px; margin: 0 auto 20px; display: flex; gap: 10px; flex-wrap: wrap; padding: 0 16px; }
+  .filter-btn { padding: 7px 16px; border-radius: 20px; border: 2px solid #ccc; background: white; cursor: pointer; font-size: 0.85em; font-weight: 600; }
+  .filter-btn.active { border-color: #126a5a; background: #126a5a; color: white; }
+  .container { max-width: 860px; margin: 0 auto 40px; padding: 0 16px; }
+  .question { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 18px; overflow: hidden; }
+  .q-header { display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid #eee; }
+  .q-number { font-weight: 700; font-size: 0.9em; color: #888; }
+  .q-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: white; }
+  .badge-recall { background: #2e6fa8; }
+  .badge-application { background: #c07020; }
+  .badge-clinical { background: #c0392b; }
+  .q-text { padding: 16px 20px 4px; }
+  .q-text p { margin-bottom: 10px; }
+  .options { margin: 10px 0 4px; }
+  .options label { display: block; margin: 6px 0; cursor: pointer; padding: 6px 10px; border-radius: 5px; }
+  .options label:hover { background: #f4f6f9; }
+  .options input[type="radio"] { margin-right: 8px; }
+  .reveal-btn { display: block; margin: 12px 20px 16px; padding: 9px 20px; background: #126a5a; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.88em; font-weight: 600; }
+  .reveal-btn:hover { opacity: 0.88; }
+  .answer { margin: 0 20px 20px; background: #f8f9fb; border-left: 4px solid #126a5a; border-radius: 0 5px 5px 0; padding: 14px 18px; font-size: 0.9em; line-height: 1.7; display: none; }
+  .answer strong { color: #0a2a3a; }
+  footer { text-align: center; padding: 24px; font-size: 0.8em; color: #999; }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html">← Back to BPTY04 Resources</a>
+  <h1>Lower Limb Osteology — Practice Q&amp;A</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · 11 Questions · Recall · Application · Clinical</p>
+</header>
+<div class="instructions">Work through each question, formulate a response, then click <strong>Reveal Answer</strong>. Use the filter buttons to focus on a category.</div>
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterQuestions('all',this)">All (11)</button>
+  <button class="filter-btn" onclick="filterQuestions('recall',this)">Recall</button>
+  <button class="filter-btn" onclick="filterQuestions('application',this)">Application</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical',this)">Clinical</button>
+</div>
+<div class="container">
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q1</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the three bones that fuse to form the hip bone (coxal / innominate bone) and identify where they fuse.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Ilium</strong> — largest, most superior<br>• <strong>Ischium</strong> — posterior and inferior<br>• <strong>Pubis</strong> — anterior and inferior<br><br>All three fuse at the <strong>acetabulum</strong> — the cup-shaped socket for the femoral head. Fusion is complete by approximately 14–16 years of age (Y-shaped triradiate cartilage ossifies).</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q2</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What are the four key bony landmarks of the iliac crest and what structures attach to each?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>ASIS (Anterior Superior Iliac Spine)</strong> — inguinal ligament (medial), sartorius, tensor fasciae latae (TFL)<br>• <strong>AIIS (Anterior Inferior Iliac Spine)</strong> — direct head of rectus femoris<br>• <strong>PSIS (Posterior Superior Iliac Spine)</strong> — overlies the S2 level; skin dimple; interosseous sacroiliac ligament<br>• <strong>PIIS (Posterior Inferior Iliac Spine)</strong> — posterior sacroiliac ligament<br><br>The iliac crest itself (from ASIS to PSIS) is the origin of external oblique (outer lip), internal oblique (intermediate zone), and transversus abdominis (inner lip).</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q3</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the four parts of the femur and key landmarks at the proximal end.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Proximal femur:</strong> Head (articulates with acetabulum at hip joint; fovea for ligamentum teres) · Neck (anteversion ~15°; neck-shaft angle ~126°) · Greater trochanter (gluteus medius/minimus, short external rotators) · Lesser trochanter (iliopsoas insertion)<br><br><strong>Shaft:</strong> cylindrical; linea aspera (posterior ridge; multiple muscle origins/insertions)<br><br><strong>Distal femur:</strong> medial and lateral condyles (knee articulation); medial and lateral epicondyles (ligament/muscle attachments); intercondylar notch (ACL/PCL); popliteal surface</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q4</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Describe the gender differences in pelvic morphology and their clinical significance.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><table style='font-size:0.9em;width:100%;'><tr><th>Feature</th><th>Female</th><th>Male</th></tr><tr><td>Weight/thickness</td><td>Lighter, thinner</td><td>Heavier, thicker</td></tr><tr><td>Pelvic inlet</td><td>Round/oval</td><td>Heart-shaped (deeper)</td></tr><tr><td>Lesser cavity</td><td>Shorter, wider</td><td>Longer, narrower</td></tr><tr><td>Subpubic angle</td><td>&gt;80°</td><td>&lt;70°</td></tr><tr><td>Pelvic outlet</td><td>Larger</td><td>Smaller</td></tr></table><br><strong>Clinical significance:</strong> The wider, rounder female pelvis accommodates fetal passage during labour. The subpubic angle is assessed in obstetrics to predict whether vaginal delivery is possible. The greater Q-angle in females (due to wider pelvis with same tibial alignment) is a biomechanical risk factor for patellofemoral pain and ACL injury.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q5</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What structures pass through the greater and lesser sciatic foramina?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Greater sciatic foramen</strong> (above sacrospinous ligament, bounded by sacrotuberous ligament):<br>Piriformis, sciatic nerve, superior and inferior gluteal nerves and vessels, pudendal nerve (briefly), nerve to obturator internus, posterior femoral cutaneous nerve<br><br><strong>Lesser sciatic foramen</strong> (below sacrospinous ligament, above sacrotuberous ligament):<br>Obturator internus tendon, pudendal nerve and internal pudendal vessels (re-enter after passing through greater foramen)</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q6</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>A 65-year-old with a hip replacement fractures her femur around the prosthesis. The orthopaedic report describes a 'Vancouver B2 periprosthetic fracture' involving the mid-femoral shaft. What structures near the femoral shaft are at risk during this injury or its surgical repair?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The femoral shaft is in close proximity to:<br>• <strong>Femoral artery and vein</strong> (anteromedially in the adductor canal / Hunter's canal between mid and distal thirds)<br>• <strong>Sciatic nerve</strong> (posteriorly at the hip level) — risk during posterior surgical approach<br>• <strong>Profunda femoris artery</strong> — large branch supplying thigh muscles; laceration causes significant haemorrhage<br>• <strong>Perforating arteries</strong> — pass through adductor magnus insertions to supply the posterior compartment<br>• <strong>Linea aspera muscle origins</strong> — vastus medialis, vastus lateralis, adductors — can be stripped during surgical fixation<br><br>Physiotherapy post-operatively focuses on protected weight-bearing (as per fracture fixation stability), quadriceps activation, and progressive rehabilitation within precautions for the specific fixation type.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q7</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>Explain the significance of femoral neck anteversion and its relevance to physiotherapy assessment.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Femoral neck anteversion</strong> is the anterior rotation of the femoral neck relative to the femoral condyles (normally ~15°). Excessive anteversion (>20°) means the femoral head points more anteriorly than normal relative to a straight-ahead femoral shaft.<br><br>Clinically: in standing, the person internally rotates the hip to centre the femoral head in the acetabulum, producing a characteristic posture:<br>• Internally rotated lower limbs ("in-toeing")<br>• Increased knee valgus<br>• Reduced range of external rotation (relative to internal rotation)<br><br>Physiotherapy significance: children with excessive anteversion often W-sit (internally rotated hips); most self-correct with growth. In adults, excessive anteversion increases patellofemoral joint stress (due to increased valgus vector) and is a contributing factor in PFPS and ACL injury. It also affects hip replacement surgery (component positioning).</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q8</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>The tibia and fibula are bound by the interosseous membrane. What is the functional significance of this structure for load transfer?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The <strong>interosseous membrane (IOM)</strong> between the tibia and fibula is a broad sheet of fibrous tissue whose fibres run obliquely from the tibia (superolaterally) to the fibula (inferomedially). This orientation enables the IOM to:<br>• Transmit forces between tibia and fibula<br>• Convert axial compressive loads on the tibia into tensile forces in the IOM that are then delivered to the fibula<br>• Approximately 17% of the total lower limb axial load reaches the fibula via the IOM and proximal/distal tibiofibular joints<br><br>The IOM also creates anterior and posterior compartments of the leg (housing the deep peroneal nerve and anterior tibial vessels anteriorly; tibial nerve and vessels posteriorly) — relevant to <strong>compartment syndrome</strong>, where swelling within these fascial compartments compromises neurovascular supply.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q9</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 40-year-old cyclist falls and impacts the lateral knee. X-ray is negative, but there is lateral hip and thigh pain and weakness of hip abduction. Neurological examination shows reduced sensation over the lateral thigh. What is the likely diagnosis?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Meralgia paraesthetica</strong> (entrapment of the <strong>lateral femoral cutaneous nerve</strong>) — although a direct lateral knee/hip impact could also suggest superior gluteal nerve injury.<br><br>The <strong>lateral femoral cutaneous nerve</strong> (L2–L3) exits the pelvis just medial to the ASIS, passing under or through the inguinal ligament. It is a <em>purely sensory</em> nerve supplying the lateral and anterior thigh. Compression causes burning, tingling, and numbness over the lateral thigh without motor deficit.<br><br>However, weakness of hip abduction points to <strong>superior gluteal nerve injury</strong> (L4–L5–S1), which supplies gluteus medius, gluteus minimus, and TFL — suggesting the impact may have affected the nerve as it exits the greater sciatic foramen above piriformis. This is assessed with electromyography (EMG). Physiotherapy: activity modification, taping/padding to reduce compression at ASIS, hip abductor strengthening if superior gluteal nerve is involved.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q10</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 75-year-old woman falls and presents with a shortened, externally rotated right leg. X-ray confirms a subcapital femoral neck fracture. Why is the leg in this position and what complication is the treating team most worried about?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Position:</strong> The hip is shortened and externally rotated because the pull of the iliopsoas (attached to the lesser trochanter) and the short external rotators (posterior greater trochanter) are unopposed — the femoral neck is fractured, removing the mechanical link that would resist these forces. Gravity also aids external rotation.<br><br><strong>Primary complication:</strong> <strong>Avascular necrosis (AVN) of the femoral head.</strong> The femoral head receives its blood supply primarily from the medial and lateral circumflex femoral arteries (branches of profunda femoris), which pass along the femoral neck and penetrate the head retrogradely. A subcapital fracture disrupts these vessels. The ligamentum teres artery (small, from the obturator artery) is insufficient to sustain the femoral head alone in adults. Without surgical reduction and internal fixation (or hemiarthroplasty/THA), AVN and femoral head collapse is likely. Physiotherapy begins within 24–48 hours post-surgery.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q11</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A physiotherapist is assessing a 17-year-old male football player with gradual onset groin pain over several months. The pain is deep and reproducible on hip flexion, adduction, and internal rotation (FADIR). X-ray shows a 'pistol-grip deformity' at the femoral head-neck junction. What is the diagnosis and anatomical basis?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Diagnosis:</strong> <strong>Cam-type Femoroacetabular Impingement (FAI)</strong>.<br><br><strong>Anatomical basis:</strong> A cam lesion is an aspherical bony prominence at the anterosuperior femoral head-neck junction (the 'pistol-grip deformity'). During hip flexion and internal rotation, this non-spherical bone is forced into the acetabulum, impinging against the anterior acetabular rim, the cartilage, and the acetabular labrum — causing pain and, over time, labral tears and cartilage damage (hip OA precursor).<br><br>Common in adolescent male athletes during the growth period when femoral head shape is determined by mechanical loading.<br><br><strong>Physiotherapy approach:</strong> Activity modification (avoid provocative flexion-loaded positions); deep external rotator and hip stabiliser strengthening; movement pattern retraining; education on the condition and conservative management options. Current evidence supports physiotherapy as the first-line approach for symptomatic FAI.</div>
+  </div>
+</div>
+<footer>BPTY04 · LUNEX University · For personal study use only</footer>
+<script>
+function toggleAnswer(btn) {
+  const a = btn.nextElementSibling;
+  const h = a.style.display === 'none' || a.style.display === '';
+  a.style.display = h ? 'block' : 'none';
+  btn.textContent = h ? 'Hide Answer' : 'Reveal Answer';
+}
+function filterQuestions(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(q => {
+    q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 — Elbow &amp; Forearm — Arthrology &amp; Myology Practice Q&amp;A</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; font-size: 15px; line-height: 1.65; }
+  header { background: linear-gradient(135deg, #1a2040, #3a5090); color: white; padding: 36px 40px 28px; }
+  header h1 { font-size: 2em; margin-bottom: 6px; }
+  header p { font-size: 0.95em; opacity: 0.85; }
+  header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85em; display: inline-block; margin-bottom: 14px; }
+  header a:hover { color: white; }
+  .instructions { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); max-width: 860px; margin: 24px auto; padding: 18px 24px; font-size: 0.9em; color: #555; }
+  .filter-bar { max-width: 860px; margin: 0 auto 20px; display: flex; gap: 10px; flex-wrap: wrap; padding: 0 16px; }
+  .filter-btn { padding: 7px 16px; border-radius: 20px; border: 2px solid #ccc; background: white; cursor: pointer; font-size: 0.85em; font-weight: 600; }
+  .filter-btn.active { border-color: #3a5090; background: #3a5090; color: white; }
+  .container { max-width: 860px; margin: 0 auto 40px; padding: 0 16px; }
+  .question { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 18px; overflow: hidden; }
+  .q-header { display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid #eee; }
+  .q-number { font-weight: 700; font-size: 0.9em; color: #888; }
+  .q-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: white; }
+  .badge-recall { background: #2e6fa8; }
+  .badge-application { background: #c07020; }
+  .badge-clinical { background: #c0392b; }
+  .q-text { padding: 16px 20px 4px; }
+  .q-text p { margin-bottom: 10px; }
+  .options { margin: 10px 0 4px; }
+  .options label { display: block; margin: 6px 0; cursor: pointer; padding: 6px 10px; border-radius: 5px; }
+  .options label:hover { background: #f4f6f9; }
+  .options input[type="radio"] { margin-right: 8px; }
+  .reveal-btn { display: block; margin: 12px 20px 16px; padding: 9px 20px; background: #3a5090; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.88em; font-weight: 600; }
+  .reveal-btn:hover { opacity: 0.88; }
+  .answer { margin: 0 20px 20px; background: #f8f9fb; border-left: 4px solid #3a5090; border-radius: 0 5px 5px 0; padding: 14px 18px; font-size: 0.9em; line-height: 1.7; display: none; }
+  footer { text-align: center; padding: 24px; font-size: 0.8em; color: #999; }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html">← Back to BPTY04 Resources</a>
+  <h1>Elbow &amp; Forearm — Arthrology &amp; Myology — Practice Q&amp;A</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · 11 Questions · Recall · Application · Clinical</p>
+</header>
+<div class="instructions">Work through each question, formulate a response, then click <strong>Reveal Answer</strong>. Use the filter buttons to focus on a category.</div>
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterQuestions('all',this)">All (11)</button>
+  <button class="filter-btn" onclick="filterQuestions('recall',this)">Recall</button>
+  <button class="filter-btn" onclick="filterQuestions('application',this)">Application</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical',this)">Clinical</button>
+</div>
+<div class="container">
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q1</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the three joints enclosed within the elbow joint capsule and classify each by type.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Humeroulnar joint</strong> — Hinge (ginglymus); trochlea of humerus + trochlear notch of ulna → allows flexion/extension only<br>• <strong>Humeroradial joint</strong> — Spheroidal (ball and socket); capitulum of humerus + radial head → flexion/extension + rotation<br>• <strong>Proximal radioulnar joint</strong> — Pivot (trochoid); radial head + radial notch of ulna + annular ligament → pronation/supination<br><br>Mnemonic: <strong>CRAzy TULips</strong> — Capitulum = RAdius; Trochlea = ULna</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q2</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Describe the medial collateral ligament (MCL) of the elbow. Name its three bands.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Anterior band (AMCL)</strong>: medial epicondyle → coronoid process — the strongest and primary restraint to valgus stress (especially at 0–30° and >70° flexion)<br>• <strong>Posterior band (PMCL)</strong>: medial epicondyle → olecranon — taut in flexion; secondary valgus restraint<br>• <strong>Transverse band</strong>: coronoid process → olecranon — deepens the trochlear notch; minimal stability contribution</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q3</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Which muscles are responsible for forearm pronation? Which for supination?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Pronation (turn palm down):</strong><br>• Pronator teres (primary — medial epicondyle + coronoid → lateral radius; musculocutaneous + median n. dual supply; actually median nerve only)<br>• Pronator quadratus (deep; distal ulna → distal radius; median nerve, anterior interosseous branch)<br><br><strong>Supination (turn palm up):</strong><br>• Supinator (deep; lateral epicondyle + annular ligament → radius; radial nerve — posterior interosseous branch)<br>• Biceps brachii (most powerful supinator when elbow at 90° — also flexes at elbow; musculocutaneous nerve)<br><br>Tip: Supination is stronger than pronation in most people — hence screws are right-handed.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q4</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the muscles arising from the common flexor tendon (CFT) and common extensor tendon (CET) at the elbow.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Common Flexor Tendon (CFT) — medial epicondyle:</strong><br>Pronator teres · Flexor carpi radialis · Palmaris longus · Flexor carpi ulnaris · Flexor digitorum superficialis (part)<br><br><strong>Common Extensor Tendon (CET) — lateral epicondyle:</strong><br>Extensor carpi radialis brevis (ECRB) · Extensor digitorum · Extensor digiti minimi · Extensor carpi ulnaris</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q5</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What is the function of the annular ligament and which nerve is at risk when it is disrupted in children?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The <strong>annular ligament</strong> is a fibro-osseous ring that encircles the radial head, attaching at both ends to the radial notch of the ulna. It maintains the proximal radioulnar joint and stabilises the radial head during pronation/supination.<br><br>In children under 5, the radial head is small and the annular ligament can slip over it when the arm is suddenly pulled — causing <strong>"nursemaid's elbow"</strong> (pulled elbow / radial head subluxation). The child holds the arm in slight flexion and pronation and refuses to use it. Reduction is by supination + flexion (or hyperpronation). No nerve is typically damaged, but the diagnosis involves the annular ligament, not the radial nerve.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q6</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>A patient after elbow dislocation has paraesthesia in the little finger and medial ring finger, weakness of intrinsic hand muscles, and a 'claw hand' deformity of the 4th and 5th digits. Which nerve is injured and why is it vulnerable at the elbow?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Ulnar nerve injury.</strong> The ulnar nerve passes posterior to the medial epicondyle through the <strong>cubital tunnel</strong>, where it lies in a tight fibro-osseous groove with very little soft tissue protection. Elbow dislocation can directly stretch or compress it here.<br><br>Effects of cubital tunnel syndrome / ulnar nerve palsy at elbow:<br>• Sensory: medial 1½ fingers (little finger + medial ring)<br>• Motor weakness: intrinsic hand muscles (interossei, hypothenar muscles, medial two lumbricals)<br>• <strong>Claw hand</strong> ("intrinsic minus") at 4th and 5th digits: MCP hyperextension + PIP/DIP flexion, due to loss of lumbrical function (normally flex MCP and extend PIP/DIP)</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q7</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>Explain the anatomical basis of lateral epicondylalgia ("tennis elbow"). Why is ECRB specifically the most affected tendon?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">Lateral epicondylalgia is a degenerative tendinopathy (not primarily inflammatory) at the <strong>common extensor tendon origin</strong>, most commonly affecting <strong>extensor carpi radialis brevis (ECRB)</strong>.<br><br><strong>Why ECRB specifically?</strong><br>• ECRB lies deep to ECRL and its origin is directly on the lateral epicondyle — subjected to the greatest compressive and shear forces during gripping + wrist extension<br>• Its fibres are at an acute angle, concentrating stress at the bone-tendon junction<br>• It is avascular at this critical zone (watershed area), impairing repair<br><br>Repetitive wrist extension under load (e.g., backhand tennis, manual work) causes cumulative micro-tears that outpace healing capacity, resulting in angiofibroblastic hyperplasia (tendinosis). Physiotherapy: eccentric and progressive loading of wrist extensors (Tyler's wrist extension protocol); load management; elbow strap reduces force transmission through the tendon; evidence supports structured progressive loading over passive modalities.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q8</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>The posterior interosseous nerve (PIN) passes through the radial tunnel. What are the boundaries of this tunnel and what condition results from PIN compression?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The <strong>radial tunnel</strong> runs from the radial head to the inferior border of the supinator, approximately 5 cm in length. The PIN (deep branch of the radial nerve) may be compressed at several points within the tunnel:<br>• Fibrous bands anterior to the radial head<br>• Leash of Henry (radial recurrent arteries)<br>• Extensor carpi radialis brevis edge<br>• <strong>Arcade of Frohse</strong> (fibrous edge of supinator) — the most common compression site<br><br><strong>PIN compression syndrome:</strong> aching pain in the forearm without sensory loss (PIN is motor only below the arcade of Frohse); weakness of finger and thumb extension (extensor digitorum, EPL, EPB, APL). Misdiagnosed as lateral epicondylalgia. Distinguishing features: pain over the radial tunnel (4 cm distal to lateral epicondyle, not at the epicondyle itself); weakness of extension rather than pain with resisted extension.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q9</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 30-year-old baseball pitcher presents with medial elbow pain during the late cocking and acceleration phases of throwing. Valgus stress test is positive at 70° flexion. MRI confirms MCL tear. What is the physiotherapy approach if non-surgical management is chosen?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Anatomical context:</strong> During throwing, the elbow experiences extreme valgus load during late cocking and early acceleration. The anterior MCL is the primary restraint. Repetitive stress causes cumulative ligamentous failure.<br><br><strong>Conservative physiotherapy:</strong><br>• Absolute rest from throwing (4–6 weeks minimum)<br>• Progressive elbow flexor strengthening (flexor-pronator mass acts as a dynamic valgus stabiliser — synergistic with MCL)<br>• Wrist flexor and pronator strengthening<br>• Scapular and rotator cuff strengthening to improve throwing mechanics and reduce elbow load<br>• Gradual throwing return programme (Interval Throwing Program — Jobe protocol)<br>• Biomechanics assessment: arm slot, lead with pelvis, avoid 'inverted W' position<br><br>Surgical reconstruction (Tommy John — ulnar collateral ligament reconstruction with palmaris longus or gracilis graft) is indicated if conservative management fails or if the patient requires return to high-demand throwing at elite level.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q10</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 6-year-old child falls on an outstretched hand. X-ray shows a supracondylar humerus fracture (Gartland Type III — completely displaced). Which nerve and vessel are most at risk and what is the feared ischaemic complication?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Nerve most at risk:</strong> <strong>Anterior interosseous nerve (AIN)</strong> — branch of the median nerve. Injury causes weakness of thumb IP flexion (FPL) and index DIP flexion (FDP), producing inability to make the "OK" sign. The radial nerve (posterior interosseous) is the second most commonly injured.<br><br><strong>Vessel at risk:</strong> <strong>Brachial artery</strong> — passes anterior to the distal humerus and is tethered there; displaced fracture can lacerate, kink, or compress it.<br><br><strong>Feared complication:</strong> <strong>Volkmann's ischaemic contracture</strong> — compartment syndrome of the forearm from vascular compromise, resulting in ischaemic fibrosis of the forearm flexors. Produces a characteristic fixed posture: wrist and fingers flexed, forearm pronated — irreversible without early fasciotomy. The "5 P's" of acute vascular compromise: Pain (with passive stretch), Pallor, Pulselessness, Paraesthesia, Paralysis. Physiotherapy post-treatment focuses on scar management, passive stretching, and splinting to prevent contracture progression.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q11</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 45-year-old barista complains of pain in the central volar forearm, worse with resistance to wrist flexion and pronation. You note tenderness 4 cm below the medial epicondyle, positive Tinel's over this area, and night-time paraesthesia in the thumb and index finger. What is your diagnosis?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Diagnosis:</strong> Pronator teres syndrome (median nerve entrapment in the proximal forearm).<br><br>The <strong>median nerve</strong> passes between the two heads of pronator teres approximately 4–6 cm below the medial epicondyle. Hypertrophy of pronator teres (repetitive gripping and forearm rotation in baristas, manual workers) can compress the nerve here.<br><br><strong>Distinguishing from carpal tunnel syndrome (CTS):</strong><br>• Pronator syndrome: tenderness over pronator teres (not the carpal tunnel); symptoms worsen with forearm use; Tinel's over proximal forearm; negative Phalen's test<br>• Pronator syndrome may also compress the AIN branch, causing weakness of FPL and FDP to index<br><br><strong>Physiotherapy:</strong> Activity modification (reduce repetitive gripping + pronation); neural mobilisation (median nerve sliders); pronator teres stretching; progressive return to gripping activities. Distinguish from CTS — corticosteroid injection appropriate for CTS but less so for pronator syndrome; surgery reserved for refractory cases.</div>
+  </div>
+</div>
+<footer>BPTY04 · LUNEX University · For personal study use only</footer>
+<script>
+function toggleAnswer(btn) {
+  const a = btn.nextElementSibling;
+  const h = a.style.display === 'none' || a.style.display === '';
+  a.style.display = h ? 'block' : 'none';
+  btn.textContent = h ? 'Hide Answer' : 'Reveal Answer';
+}
+function filterQuestions(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(q => {
+    q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>

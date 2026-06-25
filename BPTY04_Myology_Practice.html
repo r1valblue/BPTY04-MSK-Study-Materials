@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 — Introduction to Myology Practice Q&amp;A</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; font-size: 15px; line-height: 1.65; }
+  header { background: linear-gradient(135deg, #2a1a5a, #5a3a9a); color: white; padding: 36px 40px 28px; }
+  header h1 { font-size: 2em; margin-bottom: 6px; }
+  header p { font-size: 0.95em; opacity: 0.85; }
+  header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85em; display: inline-block; margin-bottom: 14px; }
+  header a:hover { color: white; }
+  .instructions { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); max-width: 860px; margin: 24px auto; padding: 18px 24px; font-size: 0.9em; color: #555; }
+  .filter-bar { max-width: 860px; margin: 0 auto 20px; display: flex; gap: 10px; flex-wrap: wrap; padding: 0 16px; }
+  .filter-btn { padding: 7px 16px; border-radius: 20px; border: 2px solid #ccc; background: white; cursor: pointer; font-size: 0.85em; font-weight: 600; }
+  .filter-btn.active { border-color: #5a3a9a; background: #5a3a9a; color: white; }
+  .container { max-width: 860px; margin: 0 auto 40px; padding: 0 16px; }
+  .question { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 18px; overflow: hidden; }
+  .q-header { display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid #eee; }
+  .q-number { font-weight: 700; font-size: 0.9em; color: #888; }
+  .q-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: white; }
+  .badge-recall { background: #2e6fa8; }
+  .badge-application { background: #c07020; }
+  .badge-clinical { background: #c0392b; }
+  .q-text { padding: 16px 20px 4px; }
+  .q-text p { margin-bottom: 10px; }
+  .options { margin: 10px 0 4px; }
+  .options label { display: block; margin: 6px 0; cursor: pointer; padding: 6px 10px; border-radius: 5px; }
+  .options label:hover { background: #f4f6f9; }
+  .options input[type="radio"] { margin-right: 8px; }
+  .reveal-btn { display: block; margin: 12px 20px 16px; padding: 9px 20px; background: #5a3a9a; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.88em; font-weight: 600; }
+  .reveal-btn:hover { opacity: 0.88; }
+  .answer { margin: 0 20px 20px; background: #f8f9fb; border-left: 4px solid #5a3a9a; border-radius: 0 5px 5px 0; padding: 14px 18px; font-size: 0.9em; line-height: 1.7; display: none; }
+  .answer strong { color: #2a1a5a; }
+  footer { text-align: center; padding: 24px; font-size: 0.8em; color: #999; }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html">← Back to BPTY04 Resources</a>
+  <h1>Introduction to Myology — Practice Q&amp;A</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · 13 Questions · Recall · Application · Clinical</p>
+</header>
+<div class="instructions">Work through each question, formulate a response, then click <strong>Reveal Answer</strong>. Use the filter buttons to focus on a category.</div>
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterQuestions('all',this)">All (13)</button>
+  <button class="filter-btn" onclick="filterQuestions('recall',this)">Recall</button>
+  <button class="filter-btn" onclick="filterQuestions('application',this)">Application</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical',this)">Clinical</button>
+</div>
+<div class="container">
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q1</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What are the three types of muscle tissue? Name one location for each.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Cardiac muscle</strong> — heart wall; involuntary; striated; generates continuous rhythmic contractions<br>• <strong>Smooth muscle</strong> — walls of hollow organs, blood vessels, bronchioles; involuntary; unstriated; generates peristalsis<br>• <strong>Skeletal muscle</strong> — attached to bones via tendons; voluntary; striated; ~640+ muscles; produces joint movement</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q2</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Describe the hierarchical connective tissue organisation of skeletal muscle from cell to whole muscle.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Muscle fibre</strong> (single cell) → wrapped in <strong>endomysium</strong><br><strong>Fascicle</strong> (bundle of fibres) → wrapped in <strong>perimysium</strong><br><strong>Whole muscle</strong> (bundles of fascicles) → wrapped in <strong>epimysium</strong><br><br>All layers converge distally to form the <strong>tendon</strong> at the <strong>musculotendinous junction (MTJ)</strong>. Force generated by the sarcomeres is transmitted through this hierarchy to the skeleton.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q3</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What is the difference between a pennate and a parallel muscle arrangement, and what is the trade-off?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Parallel (fusiform) arrangement:</strong> fibres run parallel to the long axis → greater <strong>range of motion / speed</strong> but lower force production (e.g., biceps brachii, sartorius)<br><br><strong>Pennate arrangement:</strong> fibres attach obliquely to a central tendon → greater <strong>force production / power</strong> (more fibres per cross-sectional area) but shorter excursion (e.g., unipennate: tibialis posterior; bipennate: rectus femoris; multipennate: deltoid)<br><br>The <strong>pennation angle</strong> determines the degree of force transmitted to the tendon — the greater the angle, the less directly the fibre force transfers.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q4</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Define the terms origin, insertion, and action as used in myology.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Origin</strong>: the proximal (usually more stationary) attachment of a muscle<br>• <strong>Insertion</strong>: the distal (usually more mobile) attachment<br>• <strong>Action</strong>: the movement produced when the muscle shortens (brings insertion toward origin)<br><br><em>Note:</em> Origin/insertion are conventional terms — muscles are capable of <strong>reverse action</strong> where the insertion becomes fixed and the origin moves (e.g., in closed-chain exercises). The terms describe the <em>typical</em> function but do not limit the possible directions of contraction.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q5</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What are the four named roles of muscles in a movement? Define each.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Agonist (prime mover)</strong> — the primary muscle producing the desired movement<br>• <strong>Antagonist</strong> — the muscle opposing the movement; must relax/lengthen to allow it<br>• <strong>Synergist</strong> — assists the agonist; may produce a component of the same movement or stabilise the joint<br>• <strong>Fixator (stabiliser)</strong> — holds the proximal segment stationary so the agonist can act effectively</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q6</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What are the three types of muscle contraction? Define each and give an example.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Concentric</strong>: muscle shortens while generating force (e.g., biceps during curl going up)<br>• <strong>Eccentric</strong>: muscle lengthens while generating force — controls movement against load (e.g., biceps lowering a weight)<br>• <strong>Isometric</strong>: muscle generates force without change in length (e.g., holding a weight still)</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q7</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>A parallel-fibred muscle and a pennate muscle are each 10 cm long. Which can lift a heavier weight and which can move through a greater arc? Explain the mechanism.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>The pennate muscle lifts more.</strong> It has a larger physiological cross-sectional area (PCSA) — more sarcomeres in parallel — despite the same total length. Force is proportional to PCSA.<br><br><strong>The parallel muscle moves through a greater arc.</strong> Its fibres run the full length of the muscle belly, so each fibre's total excursion contributes fully to tendon displacement. In a pennate muscle, fibres are shorter (many sarcomeres in series are lost to the oblique angle), so excursion per fibre is less.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q8</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>Explain why eccentric muscle contraction is more efficient yet more prone to causing delayed onset muscle soreness (DOMS) than concentric contraction.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Efficiency:</strong> During eccentric work, cross-bridges are forcibly detached rather than completing their power stroke — this requires less ATP per unit of force generated. Eccentric contraction produces greater force at lower metabolic cost than concentric (estimated 30–50% greater force production at the same activation level).<br><br><strong>DOMS:</strong> The mechanical stress of forced cross-bridge detachment during eccentric loading causes microscopic disruption of sarcomeres, particularly at the Z-disc level. This triggers an inflammatory response peaking at 24–72 hours post-exercise, manifesting as DOMS. This is why eccentric-focused training (downhill running, lowering weights) produces more soreness than concentric-only exercise.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q9</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>A patient has weakness of right hip abduction. You notice the pelvis drops to the left during right single-leg stance. Name the muscle likely weakened, explain the anatomical mechanism, and name this clinical sign.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Muscle:</strong> Right gluteus medius (and possibly gluteus minimus).<br><br><strong>Mechanism:</strong> During single-leg stance on the right, the right gluteus medius normally contracts isometrically as a <strong>fixator</strong> to hold the pelvis level. If it is weak, the non-weight-bearing side (left) drops — the pelvis tilts away from the stance leg.<br><br><strong>Clinical sign:</strong> <strong>Trendelenburg sign</strong> (positive on the right — the sign is named for the stance leg side, not the drop side). This indicates gluteus medius weakness (L4/L5 myotome; superior gluteal nerve). Physiotherapy addresses hip abductor strengthening — a key element in many rehabilitation programmes.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q10</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>Why is the musculotendinous junction (MTJ) a common site of injury, and what makes it biomechanically vulnerable?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The MTJ is the transition zone where the highly elastic contractile muscle tissue meets the relatively inelastic collagenous tendon. During rapid eccentric loading (e.g., sprinting, sudden deceleration), the mismatch in mechanical properties at this interface creates a stress concentration. The folded infoldings of the sarcolemma at the MTJ increase surface area to distribute load, but when eccentric forces exceed tissue tolerance, the MTJ ruptures. This is why hamstring strains typically occur at the proximal MTJ (rather than the mid-belly), and why eccentric loading programmes are used in rehabilitation to progressively remodel and strengthen this zone.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q11</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 25-year-old sprinter feels a sudden 'pop' in the posterior thigh during a 100 m race. He cannot weight-bear and has a palpable defect in the mid-posterior thigh with extensive bruising. What is the likely diagnosis and what determines management?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Diagnosis:</strong> Acute complete hamstring rupture (proximal MTJ or mid-belly).<br><br><strong>Anatomical structures:</strong> The hamstring group (biceps femoris, semitendinosus, semimembranosus) undergo extreme eccentric loading during the late swing phase of sprinting, when the muscle is simultaneously lengthened and contracting maximally to decelerate the extending leg.<br><br><strong>Management determinants:</strong> Location (proximal tendon avulsion from ischial tuberosity → surgical reattachment strongly considered, especially in active athletes; mid-belly tear → typically conservative); extent of damage (grade III complete tear vs. partial); functional demands. Conservative management involves progressive loading through the Askling protocol (L-protocol for sprinting hamstring injuries). Surgical cases return faster to sport with lower re-rupture rates.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q12</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 60-year-old sedentary patient is told to start resistance training. They ask why their physiotherapist wants them to include eccentric exercises specifically. What evidence-based explanation do you give?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">Eccentric exercises are prescribed because they:<br><br>1. <strong>Produce greater force at lower metabolic cost</strong> — efficient for deconditioned patients with limited cardiovascular reserve<br>2. <strong>Stimulate tendon remodelling</strong> — eccentric loading is the most evidence-supported intervention for tendinopathy (Alfredson protocol for Achilles; reverse wrist curl for lateral epicondylalgia)<br>3. <strong>Induce muscle hypertrophy efficiently</strong> — eccentric loading causes greater post-exercise muscle protein synthesis<br>4. <strong>Improve neuromuscular coordination</strong> — controlling deceleration is critical for fall prevention in older adults<br><br>You would emphasise <em>progressive loading</em> — starting at low intensity to avoid excessive DOMS, and building over weeks.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q13</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A patient presents with anterior knee pain. You observe that during a single-leg squat, their knee collapses into valgus and their hip internally rotates. Which muscles are likely weak or underactivated, and what is your rehabilitation priority?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Weak/underactivated muscles:</strong> Gluteus medius, gluteus maximus (hip external rotators and abductors), and vastus medialis oblique (VMO).<br><br><strong>Mechanism:</strong> Gluteus medius weakness allows hip adduction and internal rotation during loading. This produces a valgus vector at the knee, increasing patellofemoral joint stress — a key mechanism in patellofemoral pain syndrome (PFPS) and ACL injury risk.<br><br><strong>Rehabilitation priority:</strong> Hip abductor and external rotator strengthening (clamshells, side-lying hip abduction, lateral band walks, step-ups) takes priority over isolated VMO training. The evidence shows that hip-focused programmes are as effective as or more effective than knee-focused programmes for PFPS. Motor control retraining — observing and cueing movement patterns during squats and stairs — is essential.</div>
+  </div>
+</div>
+<footer>BPTY04 · LUNEX University · For personal study use only</footer>
+<script>
+function toggleAnswer(btn) {
+  const a = btn.nextElementSibling;
+  const h = a.style.display === 'none' || a.style.display === '';
+  a.style.display = h ? 'block' : 'none';
+  btn.textContent = h ? 'Hide Answer' : 'Reveal Answer';
+}
+function filterQuestions(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(q => {
+    q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>

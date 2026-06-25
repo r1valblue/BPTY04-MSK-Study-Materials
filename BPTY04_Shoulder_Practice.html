@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 — Shoulder Girdle — Arthrology &amp; Myology Practice Q&amp;A</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; font-size: 15px; line-height: 1.65; }
+  header { background: linear-gradient(135deg, #4a2010, #9a5020); color: white; padding: 36px 40px 28px; }
+  header h1 { font-size: 2em; margin-bottom: 6px; }
+  header p { font-size: 0.95em; opacity: 0.85; }
+  header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85em; display: inline-block; margin-bottom: 14px; }
+  header a:hover { color: white; }
+  .instructions { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); max-width: 860px; margin: 24px auto; padding: 18px 24px; font-size: 0.9em; color: #555; }
+  .filter-bar { max-width: 860px; margin: 0 auto 20px; display: flex; gap: 10px; flex-wrap: wrap; padding: 0 16px; }
+  .filter-btn { padding: 7px 16px; border-radius: 20px; border: 2px solid #ccc; background: white; cursor: pointer; font-size: 0.85em; font-weight: 600; }
+  .filter-btn.active { border-color: #9a5020; background: #9a5020; color: white; }
+  .container { max-width: 860px; margin: 0 auto 40px; padding: 0 16px; }
+  .question { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 18px; overflow: hidden; }
+  .q-header { display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid #eee; }
+  .q-number { font-weight: 700; font-size: 0.9em; color: #888; }
+  .q-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: white; }
+  .badge-recall { background: #2e6fa8; }
+  .badge-application { background: #c07020; }
+  .badge-clinical { background: #c0392b; }
+  .q-text { padding: 16px 20px 4px; }
+  .q-text p { margin-bottom: 10px; }
+  .options { margin: 10px 0 4px; }
+  .options label { display: block; margin: 6px 0; cursor: pointer; padding: 6px 10px; border-radius: 5px; }
+  .options label:hover { background: #f4f6f9; }
+  .options input[type="radio"] { margin-right: 8px; }
+  .reveal-btn { display: block; margin: 12px 20px 16px; padding: 9px 20px; background: #9a5020; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.88em; font-weight: 600; }
+  .reveal-btn:hover { opacity: 0.88; }
+  .answer { margin: 0 20px 20px; background: #f8f9fb; border-left: 4px solid #9a5020; border-radius: 0 5px 5px 0; padding: 14px 18px; font-size: 0.9em; line-height: 1.7; display: none; }
+  footer { text-align: center; padding: 24px; font-size: 0.8em; color: #999; }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html">← Back to BPTY04 Resources</a>
+  <h1>Shoulder Girdle — Arthrology &amp; Myology — Practice Q&amp;A</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · 12 Questions · Recall · Application · Clinical</p>
+</header>
+<div class="instructions">Work through each question, formulate a response, then click <strong>Reveal Answer</strong>. Use the filter buttons to focus on a category.</div>
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterQuestions('all',this)">All (12)</button>
+  <button class="filter-btn" onclick="filterQuestions('recall',this)">Recall</button>
+  <button class="filter-btn" onclick="filterQuestions('application',this)">Application</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical',this)">Clinical</button>
+</div>
+<div class="container">
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q1</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the four joints of the shoulder complex and classify each by type.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Sternoclavicular (SC) joint</strong> — Saddle joint; only true skeletal connection between upper limb and axial skeleton<br>• <strong>Acromioclavicular (AC) joint</strong> — Plane joint; 3 degrees of freedom<br>• <strong>Scapulothoracic (ST) joint</strong> — Not a true synovial joint; functional articulation between scapula and thoracic wall<br>• <strong>Glenohumeral (GH) joint</strong> — Ball and socket (spheroidal); most mobile joint in the body</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q2</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the four rotator cuff muscles, their origin, insertion, and primary action.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Supraspinatus</strong>: supraspinous fossa → greater tubercle (superior facet) → initiation of abduction (0–15°); depression of humeral head<br>• <strong>Infraspinatus</strong>: infraspinous fossa → greater tubercle (middle facet) → external rotation; humeral head depression<br>• <strong>Teres minor</strong>: lateral border scapula → greater tubercle (inferior facet) → external rotation; humeral head depression<br>• <strong>Subscapularis</strong>: subscapular fossa → lesser tubercle → internal rotation; humeral head depression<br><br>Mnemonic: <strong>SITS</strong></div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q3</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What is the scapulohumeral rhythm and what does a disruption indicate?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">During shoulder abduction, the glenohumeral and scapulothoracic joints move in a coordinated ratio of <strong>2:1 (GH:ST)</strong> — for every 3° of shoulder abduction, 2° occurs at GH and 1° at scapulothoracic (scapular upward rotation).<br><br>Total 180° shoulder abduction = ~120° GH + ~60° scapular upward rotation.<br><br>Disruption (scapular dyskinesis): altered scapular motion reduces the subacromial space, increases impingement risk, alters rotator cuff length-tension, and reduces force transmission. Assessed clinically by observing scapular position and movement during arm elevation.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q4</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What are the glenohumeral ligaments (GHL)? Name and describe all three.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Superior GHL</strong>: superior glenoid → lesser tubercle; resists inferior translation and external rotation<br>• <strong>Middle GHL</strong>: anterior glenoid → anatomical neck; resists anterior translation at 45° abduction<br>• <strong>Inferior GHL (IGHL)</strong>: inferior glenoid rim → surgical neck; the primary stabiliser at 90° abduction + external rotation (the position of dislocation)<br><br>The IGHL is the most important of the three and forms the "hammock" supporting the humeral head. It is the structure most commonly damaged in anterior GH dislocation.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q5</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What muscles produce scapular upward rotation and why is this important for shoulder function?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">Scapular upward rotation is produced by the <strong>force couple</strong> of:<br>• <strong>Upper trapezius</strong> (pulls superior angle up and laterally)<br>• <strong>Lower trapezius</strong> (pulls inferior angle medially)<br>• <strong>Serratus anterior</strong> (pulls inferior angle laterally and anteriorly around the chest wall)<br><br>This is critical because: (1) it directs the glenoid fossa superiorly to face the elevating humerus, maintaining congruency; (2) it prevents subacromial impingement by maintaining or increasing the subacromial space; (3) it positions the deltoid-rotator cuff force couple optimally. Serratus anterior paralysis (long thoracic nerve injury) causes winging of the scapula and loss of effective arm elevation.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q6</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>Explain the 'force couple' mechanism that allows the deltoid to abduct the shoulder despite its line of pull creating superior shear on the humeral head.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The deltoid's superior fibres pull the humerus directly upward — alone, this would impinge the greater tubercle under the acromion and produce superior subluxation. The rotator cuff (particularly subscapularis anteriorly and infraspinatus/teres minor posteriorly) acts as a <strong>depressor</strong> — their line of pull compresses and depresses the humeral head. Together, deltoid and rotator cuff form a <strong>force couple</strong>: deltoid creates the abduction moment, rotator cuff counteracts the shear and keeps the humeral head centred. Without a functioning rotator cuff (e.g., massive tear), deltoid action produces superior head migration and loss of effective abduction.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q7</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>A patient has a positive Neer's impingement test (passive forward flexion produces superior shoulder pain at ~80–120°). What anatomical structure is being compressed and between what?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Neer's sign:</strong> Passive forward flexion (with the arm medially rotated) reproduces pain when the greater tubercle (with attached supraspinatus/subacromial bursa) is forced against the anterior edge of the acromion and the coracoacromial ligament.<br><br>The structure compressed is most commonly the <strong>supraspinatus tendon</strong> and/or the <strong>subacromial bursa</strong>, caught between the greater tubercle and the coracoacromial arch. Structural factors contributing to narrowing include:<br>• Hooked (Type III) acromion<br>• Thickened coracoacromial ligament<br>• Subacromial bursal thickening<br>• Loss of scapular upward rotation (reducing subacromial space)<br>• Decreased superior GH joint glide (posteroinferior capsule tightness)</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q8</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>Why is the glenohumeral joint the most commonly dislocated joint in the body? What structural factors contribute?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The GH joint prioritises <strong>mobility over stability</strong>. Structural factors predisposing to dislocation:<br>• <strong>Shallow glenoid fossa</strong> — only covers ~25–30% of the humeral head surface (a golf ball on a tee analogy)<br>• <strong>Large humeral head</strong> relative to glenoid<br>• <strong>Loose articular capsule</strong> — allows enormous ROM<br>• <strong>No bony restraint</strong> anteroinferiorly — where 95% of dislocations occur<br><br>Stability relies heavily on <em>dynamic</em> factors (rotator cuff), the labrum (+deepening), the GHLs, negative intra-articular pressure, and adhesion-cohesion of synovial fluid. Anterior dislocations occur in ABER (abduction, external rotation, extension). The IGHL and anteroinferior labrum (Bankart lesion) are typically injured.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q9</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 25-year-old rugby player dislocates his right shoulder anteriorly for the third time. He has a positive apprehension test at 90° abduction / external rotation. MRI shows a Bankart lesion and a large Hill-Sachs defect. Outline the anatomy of these lesions.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Bankart lesion:</strong> Avulsion of the anteroinferior glenoid labrum (and often the IGHL attachment) from the glenoid rim. The labrum provides approximately 22% of glenoid depth; its loss significantly reduces static stability. A <em>bony Bankart</em> involves fracture of the anterior glenoid rim itself.<br><br>• <strong>Hill-Sachs defect:</strong> Compression fracture (impaction) of the posterosuperior humeral head, created when the humeral head drives into the anterior glenoid rim at the moment of dislocation. Large Hill-Sachs defects can engage with the anterior glenoid during external rotation ('engaging' Hill-Sachs), mechanically blocking reduction and requiring surgical consideration (Latarjet procedure or remplissage).<br><br><strong>Physiotherapy role:</strong> Conservative management after first-time anterior dislocation (especially in older patients); post-surgical rehabilitation (Latarjet: 12+ weeks return to contact sport) focusing on rotator cuff and periscapular strengthening, proprioception, and graduated sport-specific loading.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q10</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 68-year-old woman has been unable to actively abduct her shoulder beyond 20° for 6 months following a minor fall. MRI shows a complete supraspinatus tear and a small infraspinatus tear. She asks whether surgery is necessary.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Evidence-based answer:</strong> For symptomatic rotator cuff tears in older patients, high-quality evidence supports conservative management as the first-line approach.<br><br>Key points:<br>• Many full-thickness tears (including complete supraspinatus) are asymptomatic — incidental finding rate increases with age (>50% of people over 70 have tears)<br>• RCT evidence (Kukkonen et al., 2015; Moosmayer et al., 2019) shows physiotherapy-based rehabilitation achieves equivalent outcomes to surgical repair for non-traumatic tears in patients over 55–60<br>• Physiotherapy: periscapular strengthening (trapezius, serratus anterior to optimise scapulohumeral rhythm); intact rotator cuff strengthening (infraspinatus, subscapularis force couple); deltoid strengthening; posterior capsule stretching; proprioception<br>• Surgical referral should be considered if: trauma in a young patient, rapid onset of complete loss of function, failure of 3–6 months of structured physiotherapy</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q11</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A patient is post-op day 3 following a Bankart repair (labral re-attachment). Their surgical protocol says 'avoid ER beyond neutral for 6 weeks'. What anatomical structure are you protecting and why?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">You are protecting the <strong>repaired anteroinferior labrum and the IGHL complex</strong>.<br><br>The Bankart repair re-attaches the torn labrum to the anterior glenoid rim (via suture anchors). The IGHL attaches to the anteroinferior labrum — together they resist anterior translation at 90° ABER. External rotation at 90° abduction places the maximum tensile stress on the anteroinferior capsulolabral complex. Allowing full external rotation before the repair has healed (~6 weeks for initial ligamentous healing) risks re-tearing the suture anchor fixation or re-avulsing the labrum.<br><br>The 6-week restriction allows type III collagen (scar tissue) formation to bridge the repair; subsequent physiotherapy gradually restores external rotation with progressive loading once the repair is mechanically sufficient.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q12</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 55-year-old presents with a painful, severely restricted shoulder — passive ROM is reduced in all planes (ER limited to 10°, abduction to 80°, flexion to 100°). She reports gradual onset over 6 months. What is the likely diagnosis and what is the physiotherapy approach?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Diagnosis:</strong> Adhesive capsulitis (frozen shoulder) — characterised by global restriction in a capsular pattern (ER > ABD > IR most restricted) with pain at end range.<br><br><strong>Anatomical basis:</strong> Inflammation and fibrosis of the GH joint capsule — particularly the anteroinferior pouch and coracohumeral ligament. The capsule thickens and contracts, obliterating the axillary fold (normally capacious). Volume of the joint cavity reduces from ~28 mL to &lt;10 mL.<br><br><strong>Physiotherapy approach (evidence-based):</strong><br>• Pain management phase: gentle pendular exercises, pain-free ROM, heat before exercise<br>• Progressive mobilisation: grade III-IV joint mobilisations targeting inferior and anterior GH glides; stretching of the posteroinferior capsule<br>• Home programme: progressive capsular stretching, particularly ER and elevation<br>• Corticosteroid injection: highly effective in the painful/freezing phase (refer for injection before intensive manual therapy)<br>• Realistic timeline: natural history 1–3 years; physiotherapy accelerates recovery but does not always change final outcome</div>
+  </div>
+</div>
+<footer>BPTY04 · LUNEX University · For personal study use only</footer>
+<script>
+function toggleAnswer(btn) {
+  const a = btn.nextElementSibling;
+  const h = a.style.display === 'none' || a.style.display === '';
+  a.style.display = h ? 'block' : 'none';
+  btn.textContent = h ? 'Hide Answer' : 'Reveal Answer';
+}
+function filterQuestions(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(q => {
+    q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>

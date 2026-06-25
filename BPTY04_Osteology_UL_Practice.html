@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 — Upper Limb Osteology Practice Q&amp;A</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; font-size: 15px; line-height: 1.65; }
+  header { background: linear-gradient(135deg, #1a2a4a, #2a5a9a); color: white; padding: 36px 40px 28px; }
+  header h1 { font-size: 2em; margin-bottom: 6px; }
+  header p { font-size: 0.95em; opacity: 0.85; }
+  header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85em; display: inline-block; margin-bottom: 14px; }
+  header a:hover { color: white; }
+  .instructions { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); max-width: 860px; margin: 24px auto; padding: 18px 24px; font-size: 0.9em; color: #555; }
+  .filter-bar { max-width: 860px; margin: 0 auto 20px; display: flex; gap: 10px; flex-wrap: wrap; padding: 0 16px; }
+  .filter-btn { padding: 7px 16px; border-radius: 20px; border: 2px solid #ccc; background: white; cursor: pointer; font-size: 0.85em; font-weight: 600; }
+  .filter-btn.active { border-color: #2a5a9a; background: #2a5a9a; color: white; }
+  .container { max-width: 860px; margin: 0 auto 40px; padding: 0 16px; }
+  .question { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 18px; overflow: hidden; }
+  .q-header { display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid #eee; }
+  .q-number { font-weight: 700; font-size: 0.9em; color: #888; }
+  .q-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: white; }
+  .badge-recall { background: #2e6fa8; }
+  .badge-application { background: #c07020; }
+  .badge-clinical { background: #c0392b; }
+  .q-text { padding: 16px 20px 4px; }
+  .q-text p { margin-bottom: 10px; }
+  .options { margin: 10px 0 4px; }
+  .options label { display: block; margin: 6px 0; cursor: pointer; padding: 6px 10px; border-radius: 5px; }
+  .options label:hover { background: #f4f6f9; }
+  .options input[type="radio"] { margin-right: 8px; }
+  .reveal-btn { display: block; margin: 12px 20px 16px; padding: 9px 20px; background: #2a5a9a; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.88em; font-weight: 600; }
+  .reveal-btn:hover { opacity: 0.88; }
+  .answer { margin: 0 20px 20px; background: #f8f9fb; border-left: 4px solid #2a5a9a; border-radius: 0 5px 5px 0; padding: 14px 18px; font-size: 0.9em; line-height: 1.7; display: none; }
+  .answer strong { color: #1a2a4a; }
+  footer { text-align: center; padding: 24px; font-size: 0.8em; color: #999; }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html">← Back to BPTY04 Resources</a>
+  <h1>Upper Limb Osteology — Practice Q&amp;A</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · 18 Questions · Recall · Application · Clinical</p>
+</header>
+<div class="instructions">Work through each question, formulate a response, then click <strong>Reveal Answer</strong>. Use the filter buttons to focus on a category.</div>
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterQuestions('all',this)">All (18)</button>
+  <button class="filter-btn" onclick="filterQuestions('recall',this)">Recall</button>
+  <button class="filter-btn" onclick="filterQuestions('application',this)">Application</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical',this)">Clinical</button>
+</div>
+<div class="container">
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q1</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the seven regions of the upper limb skeleton and the bones in each.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Shoulder girdle:</strong> Clavicle + Scapula<br><strong>Arm:</strong> Humerus<br><strong>Forearm:</strong> Radius + Ulna<br><strong>Hand:</strong> 8 Carpal bones, 5 Metacarpals, 14 Phalanges (3 per finger, 2 for thumb)</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q2</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What are the medial and lateral ends of the clavicle called, and with which bones do they articulate?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Medial (sternal) end</strong> → articulates with the manubrium of the sternum at the <strong>sternoclavicular (SC) joint</strong><br><strong>Lateral (acromial) end</strong> → articulates with the acromion of the scapula at the <strong>acromioclavicular (AC) joint</strong></div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q3</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What is the coracoclavicular ligament and what are its two parts?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The <strong>coracoclavicular ligament</strong> connects the coracoid process of the scapula to the inferior lateral clavicle. It has two parts:<br>• <strong>Conoid ligament</strong> — attaches to the conoid tubercle (more medial/posterior)<br>• <strong>Trapezoid ligament</strong> — attaches to the trapezoid line (more lateral/anterior)<br>Together they prevent dislocation of the AC joint and control scapular rotation.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q4</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the three fossae of the scapula and the muscles originating from each.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Subscapular fossa</strong> (anterior surface) → Subscapularis<br>• <strong>Supraspinous fossa</strong> (posterior, above spine) → Supraspinatus<br>• <strong>Infraspinous fossa</strong> (posterior, below spine) → Infraspinatus</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q5</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Identify four important landmarks on the proximal humerus and their clinical significance.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Greater tubercle</strong> — attachment of supraspinatus, infraspinatus, teres minor (SITS external rotators)<br>• <strong>Lesser tubercle</strong> — attachment of subscapularis (internal rotator)<br>• <strong>Intertubercular (bicipital) groove</strong> — long head of biceps tendon passes here; bicipital tendinopathy occurs here<br>• <strong>Surgical neck</strong> — most common site of proximal humerus fracture; axillary nerve at risk</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q6</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What are the two joints of the forearm and what type of movement does each allow?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Proximal radioulnar joint</strong> — pivot joint at the elbow; allows pronation/supination<br>• <strong>Distal radioulnar joint</strong> — pivot joint at the wrist; allows pronation/supination<br>The radius rotates around the ulna at both ends; the ulna is the fixed axis.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q7</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the 8 carpal bones in order (proximal then distal row) using a mnemonic.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Proximal row (lateral → medial):</strong> Scaphoid · Lunate · Triquetrum · Pisiform<br><strong>Distal row (lateral → medial):</strong> Trapezium · Trapezoid · Capitate · Hamate<br><strong>Mnemonic:</strong> <em>She Likes To Play / Try To Catch Her</em></div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q8</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>A patient presents with point tenderness in the anatomical snuffbox after a fall on an outstretched hand. Which carpal bone is most likely fractured, and why is this clinically important?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Scaphoid fracture.</strong> The scaphoid sits in the floor of the anatomical snuffbox (bounded by APL/EPB laterally and EPL medially). The scaphoid has a precarious blood supply — the radial artery enters distally, so fractures at the waist risk avascular necrosis of the proximal pole if missed or inadequately immobilised. Scaphoid fractures often do not appear on initial X-ray; if clinical suspicion is high, MRI is indicated within 24–48 hours.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q9</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>What is the carrying angle of the elbow and how does it differ between sexes? What clinical condition results from its exaggeration?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The <strong>carrying angle</strong> is the valgus angle at the fully extended elbow (forearm angled laterally from the arm). Normal range: <strong>5–10° in males, 10–15° in females</strong> (greater due to wider female pelvis). Exaggeration is called <strong>cubitus valgus</strong>; this stretches the ulnar nerve around the medial epicondyle, potentially causing tardy ulnar nerve palsy. Reduction is <strong>cubitus varus</strong> ("gunstock deformity"), a common complication of supracondylar humerus fractures in children.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q10</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>The radial nerve passes posterior to the humerus in the radial (spiral) groove. What is the clinical consequence of a mid-shaft humerus fracture?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">A mid-shaft humerus fracture risks <strong>radial nerve palsy</strong>. The radial nerve is closely applied to the posterior humerus in the spiral groove at the junction of the middle and distal thirds. Injury produces:<br>• <strong>Wrist drop</strong> (loss of wrist extensors — extensor carpi radialis longus/brevis, extensor digitorum)<br>• Loss of finger MCP extension (extensor digitorum)<br>• Weakness of thumb extension/abduction (EPL, EPB, APL)<br>Sensation is lost over the dorsum of the hand and lateral forearm. Most radial nerve injuries at this level recover with conservative management.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q11</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>A patient after a Colles' fracture has paraesthesia in the thumb, index, and middle finger. Which nerve is involved and what is the anatomical mechanism?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The <strong>median nerve</strong> is compressed, likely at the carpal tunnel. A Colles' fracture (distal radius fracture with dorsal displacement) can acutely displace carpal tunnel contents or cause swelling post-reduction, compressing the median nerve within the carpal tunnel (bounded by the flexor retinaculum superficially and carpal bones on three sides). The median nerve supplies the lateral 3½ digits (thumb, index, middle, lateral half of ring finger).</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q12</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 70-year-old falls onto her outstretched right hand. X-ray shows a distal radius fracture with dorsal angulation (Colles' fracture). She also reports weakness opening jars since the injury. Which tendon is likely involved?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Diagnosis:</strong> Rupture of the extensor pollicis longus (EPL) tendon — a delayed complication of Colles' fractures occurring 6–8 weeks post-injury.<br><br>EPL passes around Lister's tubercle on the dorsal distal radius. Fractures can disrupt blood supply to the tendon or cause friction from fracture fragments, leading to attritional rupture even after the bone has healed. The patient loses the ability to extend the interphalangeal joint of the thumb and to retropulse the thumb (raise it away from the palm). Management is surgical tendon transfer (EIP to EPL).</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q13</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 45-year-old woman presents with pain and tenderness over the radial styloid process, worse with thumb movements and gripping. Finkelstein's test is positive. Identify the structures involved and outline physiotherapy management.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Diagnosis:</strong> De Quervain's tenosynovitis — inflammation of the tendon sheaths of the 1st dorsal compartment: <strong>abductor pollicis longus (APL)</strong> and <strong>extensor pollicis brevis (EPB)</strong>, which pass in a tight fibro-osseous tunnel at the radial styloid.<br><br><strong>Physiotherapy management:</strong> Activity modification (avoid repetitive thumb gripping/pinching); thumb spica splint immobilising the CMC and MCP joints; eccentric tendon loading exercises as pain allows; ice for acute inflammation; patient education on load management. Corticosteroid injection is effective if conservative management fails. Surgical release of the 1st compartment is reserved for refractory cases.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q14</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A cricket bowler presents with medial elbow pain after delivering at high speed. Examination reveals tenderness at the medial epicondyle, pain with resisted wrist flexion, and mild ulnar nerve symptoms (4th/5th finger tingling). What is the likely diagnosis?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Diagnosis:</strong> Medial epicondylitis ("golfer's elbow") with possible concomitant cubital tunnel syndrome.<br><br>The common flexor tendon (CFT) attaching to the medial epicondyle is overloaded by repetitive valgus stress and wrist flexion during bowling, causing degenerative tendinopathy at the CFT origin. The ulnar nerve runs in the cubital tunnel immediately posterior to the medial epicondyle; inflammation or traction here can produce ulnar neuropathy (4th/5th finger paraesthesia, intrinsic hand weakness).<br><br><strong>Physiotherapy:</strong> Activity modification; eccentric and progressive loading of wrist flexors/pronators; neural mobilisation (ulnar nerve sliders); elbow pad to protect the cubital tunnel; address biomechanical contributors (bowling technique, trunk rotation).</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q15</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A surgeon is planning a procedure at the wrist and asks you to identify the superficial landmarks for the ulnar nerve and artery. What structures guide you?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The ulnar nerve and artery pass through <strong>Guyon's canal</strong> (ulnar tunnel) — bounded by the pisiform medially, the hook of hamate laterally, the flexor retinaculum on the floor, and the palmar carpal ligament as the roof. They lie lateral to the pisiform and medial to the hook of hamate. The pisiform is easily palpated at the base of the hypothenar eminence (wrist flexed, ulnar deviation). The hook of hamate is 1 cm distal and radial to the pisiform. Compression at Guyon's canal (handlebar palsy in cyclists, fracture of hook of hamate) produces ulnar nerve symptoms in the hand without affecting the dorsum of the hand — distinguishing it from cubital tunnel syndrome at the elbow.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q16</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What are the four SITS muscles and what does each do at the glenohumeral joint?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>SITS = Rotator Cuff:</strong><br>• <strong>S</strong>upraspinatus — initiates abduction (0–15°); depresses humeral head<br>• <strong>I</strong>nfraspinatus — external rotation; depresses humeral head<br>• <strong>T</strong>eres minor — external rotation; depresses humeral head<br>• <strong>S</strong>ubscapularis — internal rotation; depresses humeral head<br><br>Collectively they compress the humeral head into the glenoid (dynamic stabilisation) and counteract the superior pull of deltoid during abduction.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q17</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>What is the "painful arc" and what does it suggest anatomically?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The <strong>painful arc</strong> is pain during active shoulder abduction between approximately <strong>60–120°</strong>, which then resolves in full elevation. It suggests compression of structures passing under the coracoacromial arch (subacromial space) — most commonly the supraspinatus tendon or subacromial bursa. The impingement occurs as the greater tubercle approximates the undersurface of the acromion and coracoacromial ligament in this range. Pain below 60° or above 120° (which may indicate AC joint pathology at the extreme) changes the differential.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q18</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 55-year-old man cannot actively abduct his shoulder beyond 30°. Passive abduction is full and painless. Empty can test is positive. Ultrasound shows a full-thickness supraspinatus tear. Outline the anatomical basis and physiotherapy approach.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Anatomical basis:</strong> Full-thickness supraspinatus tears disrupt the musculotendinous unit completely. Supraspinatus initiates abduction (0–15°) and is critical to the force couple mechanism with deltoid; without it, deltoid's upward shear cannot be converted into abduction. The anterior fibres of supraspinatus are the most commonly torn (watershed zone with poor blood supply).<br><br><strong>Physiotherapy approach (conservative management):</strong> Patient education on tear size, prognosis, and realistic goals; pain management (activity modification, analgesia); posterior capsule stretching (reduces superior humeral head migration); periscapular strengthening (trapezius, serratus anterior) to optimise scapular position; rotator cuff strengthening of intact muscles (infraspinatus, subscapularis) to compensate; progressive overhead loading. Surgical repair may be indicated if conservative management fails after 3–6 months.</div>
+  </div>
+</div>
+<footer>BPTY04 · LUNEX University · For personal study use only</footer>
+<script>
+function toggleAnswer(btn) {
+  const a = btn.nextElementSibling;
+  const h = a.style.display === 'none' || a.style.display === '';
+  a.style.display = h ? 'block' : 'none';
+  btn.textContent = h ? 'Hide Answer' : 'Reveal Answer';
+}
+function filterQuestions(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(q => {
+    q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>

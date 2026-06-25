@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 — Trunk Anatomy (Osteology) In-Depth</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: #f6f4f0; color: #1a1a1a; font-size: 15.5px; line-height: 1.85; }
+
+  header { background: linear-gradient(135deg, #3a3510, #7a6a20); color: white; padding: 36px 40px 28px; }
+  header h1 { font-size: 2em; margin-bottom: 6px; }
+  header p { font-size: 0.95em; opacity: 0.85; }
+  header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85em; display: inline-block; margin-bottom: 14px; }
+  header a:hover { color: white; }
+
+  .toc { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin: 28px auto; max-width: 940px; padding: 22px 28px; }
+  .toc h2 { font-size: 1em; color: #7a6a20; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+  .toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+  .toc ul li a { color: #5a4e10; text-decoration: none; font-size: 0.9em; }
+  .toc ul li a:hover { text-decoration: underline; }
+
+  .container { max-width: 940px; margin: 0 auto 40px; padding: 0 16px; }
+
+  section { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 28px; overflow: hidden; }
+  .section-header { background: #7a6a20; color: white; padding: 14px 24px; }
+  .section-header h2 { font-size: 1.1em; font-weight: 600; }
+  .section-body { padding: 26px 32px; }
+
+  h3 { color: #5a4e10; font-size: 1em; font-weight: bold; margin: 22px 0 10px; font-family: 'Segoe UI', Arial, sans-serif; }
+  p { margin-bottom: 14px; }
+  ul, ol { margin: 8px 0 14px 24px; }
+  li { margin-bottom: 5px; }
+
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: 0.87em; }
+  th { background: #7a6a20; color: white; padding: 9px 12px; text-align: left; }
+  td { padding: 8px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+  tr:nth-child(even) td { background: #faf9f2; }
+
+  .callout  { background: #edf3fb; border-left: 4px solid #2e6fa8; padding: 14px 20px; border-radius: 5px; margin: 22px 0; }
+  .clinical { background: #fdf0ef; border-left: 4px solid #c0392b; padding: 14px 20px; border-radius: 5px; margin: 22px 0; }
+  .mnemonic { background: #fff8ee; border-left: 4px solid #d4820a; padding: 14px 20px; border-radius: 5px; margin: 22px 0; }
+  .concept  { background: #f3eefb; border-left: 4px solid #6a2a9a; padding: 14px 20px; border-radius: 5px; margin: 22px 0; }
+  .evidence { background: #eefaf0; border-left: 4px solid #2a7a3a; padding: 14px 20px; border-radius: 5px; margin: 22px 0; }
+
+  .slides-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+  .slide-img { flex: 1 1 300px; max-width: 480px; }
+  .slide-img img { width: 100%; border-radius: 4px; border: 1px solid #ccc; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  .slide-img p { font-size: 0.78em; color: #777; text-align: center; margin-top: 4px; font-style: italic; }
+
+  #sources h3 { color: #3a3a3a; }
+  #sources ul { margin-left: 20px; }
+  #sources li { margin-bottom: 8px; font-size: 0.88em; }
+
+  footer { text-align: center; padding: 24px; font-size: 0.8em; color: #999; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">← Back to BPTY04 Resources</a>
+  <h1>Trunk Anatomy — Osteology: In-Depth</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · Dr. Alexandre Pelegrinelli · LUNEX University</p>
+</header>
+
+<div class="toc">
+  <h2>Contents</h2>
+  <ul>
+    <li><a href="#design">1. The Design Logic of the Axial Skeleton</a></li>
+    <li><a href="#curves">2. Spinal Curves — Function and Clinical Significance</a></li>
+    <li><a href="#vertebral-architecture">3. Vertebral Architecture and Load Distribution</a></li>
+    <li><a href="#regional">4. Regional Specialisation — Why Each Region is Different</a></li>
+    <li><a href="#upper-cervical">5. The Upper Cervical Complex (C0–C2)</a></li>
+    <li><a href="#thoracic-cage">6. The Thoracic Cage as a Functional Unit</a></li>
+    <li><a href="#sacrum-pelvis">7. The Sacrum and Pelvic Load Transfer</a></li>
+    <li><a href="#clinical">8. Clinical Applications</a></li>
+    <li><a href="#sources">Sources &amp; Further Reading</a></li>
+  </ul>
+</div>
+
+<div class="container">
+
+  <!-- 1. DESIGN LOGIC -->
+  <section id="design">
+    <div class="section-header"><h2>1. The Design Logic of the Axial Skeleton</h2></div>
+    <div class="section-body">
+      <div class="slides-row">
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-03.png"><p>Slide 3 – Trunk composition and functions</p></div>
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-06.png"><p>Slide 6 – The full spinal column</p></div>
+      </div>
+      <p>The trunk skeleton — comprising the vertebral column, sternum, and twelve pairs of ribs — is one of the most elegant solutions in vertebrate anatomy to a deeply conflicting set of demands. It must simultaneously be rigid enough to protect the spinal cord and thoracic viscera, yet flexible enough to permit the trunk movements essential for human locomotion and function. It must transfer colossal compressive loads between the head, upper limbs, and lower extremities without fracturing, while also providing attachment for virtually every major muscle group in the body.</p>
+      <p>Understanding the trunk skeleton is not merely an exercise in naming bones. Each structural feature — from the graduated size of vertebral bodies to the orientation of facet joints, from the curvature of ribs to the triangular shape of the sacrum — encodes a functional logic that directly informs how pathology develops and how physiotherapy intervention should be designed. The slides for this topic are relatively sparse on text because so much of the content is conveyed through visual anatomy; this document provides the mechanistic and clinical context that transforms those images into genuine understanding.</p>
+      <div class="concept">
+        <strong>Fundamental Design Principle:</strong> The vertebral column is a segmented structure, not a solid rod. This segmentation is the architectural compromise that achieves both movement and protection simultaneously. Each intervertebral joint contributes a small range of motion; summed across 23 intervertebral discs and facet joints, the total spinal movement is substantial. The cost of this design is the creation of multiple potential pain generators — discs, facets, ligaments, muscles — any of which can become clinically relevant.
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SPINAL CURVES -->
+  <section id="curves">
+    <div class="section-header"><h2>2. Spinal Curves — Function and Clinical Significance</h2></div>
+    <div class="section-body">
+      <div class="slides-row">
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-05.png"><p>Slide 5 – Spinal regions</p></div>
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-22.png"><p>Slide 22 – Comparison of spinal column regions</p></div>
+      </div>
+      <p>When viewed in the sagittal plane, the adult vertebral column is not a straight column but a series of four alternating curves. Two of these — the thoracic and sacropelvic kyphoses — are <em>primary curves</em>, present from fetal development and reflecting the original C-shaped fetal spine. The cervical and lumbar lordoses are <em>secondary curves</em>, developing postnatally in response to gravity and muscular development: cervical lordosis emerges as the infant learns to hold up its head (approximately 3 months), and lumbar lordosis appears as the child begins to stand and walk.</p>
+      <p>These curves are not imperfections — they are adaptive features. A curved column can withstand axial compressive loads approximately ten times greater than a straight column of the same dimensions, due to the column's ability to flex and recover elastically under load rather than buckling suddenly. The curves also position the body's centre of gravity optimally for bipedal stance with minimal muscular effort.</p>
+      <div class="evidence">
+        <strong>Research evidence:</strong> Excessive deviation from optimal spinal curvature is now well-established as a biomechanical risk factor. A 2025 observational study (PMC12195201) found that individuals with hyperlordotic lumbar angles combined with increased thoracic kyphosis showed reduced muscle activation in most back exercises compared to those with neutral curves, suggesting that altered sagittal alignment actively changes the neuromuscular recruitment strategy — with implications for both injury risk assessment and rehabilitation exercise prescription.
+      </div>
+      <p>Clinically, exaggerated spinal curves take three common forms. <em>Hyperkyphosis</em> of the thoracic spine (Scheuermann's disease in adolescents; age-related deformity in older adults) is associated with anterior vertebral wedging and increased anterior shear load on the cervical spine. <em>Hyperlordosis</em> of the lumbar spine loads the facet joints posteriorly and can contribute to spondylolysis and spondylolisthesis. <em>Scoliosis</em> — a lateral curvature of the spine exceeding 10° on Cobb angle measurement — introduces asymmetric loading across all spinal structures and, in severe cases, compromises thoracic cage volume and respiratory function.</p>
+    </div>
+  </section>
+
+  <!-- 3. VERTEBRAL ARCHITECTURE -->
+  <section id="vertebral-architecture">
+    <div class="section-header"><h2>3. Vertebral Architecture and Load Distribution</h2></div>
+    <div class="section-body">
+      <div class="slides-row">
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-07.png"><p>Slide 7 – Typical vertebra components</p></div>
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-21.png"><p>Slide 21 – Regional differences comparison</p></div>
+      </div>
+      <p>The vertebral body is the primary load-bearing element of each vertebral unit. It is composed of trabecular (cancellous) bone surrounded by a thin cortical shell. The trabecular architecture is oriented along lines of principal stress — vertical trabeculae resist axial compression, while oblique trabeculae resist bending and shear forces. This internal lattice allows the body to be simultaneously lightweight and strong. The superior and inferior surfaces (endplates) are covered with hyaline cartilage and serve as the interface with the intervertebral disc.</p>
+      <p>The vertebral arch and its processes serve multiple roles simultaneously. The pedicles transmit forces from the arch to the body and form the lateral walls of the intervertebral foramina through which spinal nerve roots exit. The laminae complete the protective arch around the spinal cord — and are the target of surgical decompression (laminectomy) when the canal is stenosed. The spinous and transverse processes act as lever arms for the paraspinal muscles: the further they project from the column's centre of rotation, the greater the mechanical advantage for the muscles attaching to them.</p>
+      <p>The zygapophyseal (facet) joints formed by the articular processes are the key determinants of movement direction at each spinal level. These small synovial joints, one on each side per level, direct motion like railway tracks: depending on their orientation, they can permit or block flexion, extension, rotation, or lateral flexion. Their capsular ligaments contain nociceptors and mechanoreceptors, making them both pain generators and proprioceptive organs — a combination with important implications for understanding chronic spinal pain and sensorimotor rehabilitation.</p>
+      <div class="evidence">
+        <strong>Research insight:</strong> A systematic review published in the European Journal of Neurology (Pickar &amp; Bolton, 2021; PMC8416873) demonstrated that vertebral column joint dysfunction produces measurable changes in both joint mechanics and neuromuscular control. Spinal joint mechanoreceptors signal continuously to the central nervous system, modulating motor neuron excitability and postural muscle activity. This explains why physiotherapy interventions targeting spinal joint mobility can produce effects beyond simple pain relief — including changes in muscle activation timing and postural stability.
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. REGIONAL SPECIALISATION -->
+  <section id="regional">
+    <div class="section-header"><h2>4. Regional Specialisation — Why Each Region is Different</h2></div>
+    <div class="section-body">
+      <div class="slides-row">
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-09.png"><p>Slide 9 – Orientation rules</p></div>
+      </div>
+      <p>Each region of the vertebral column has evolved a distinct morphology that reflects its specific mechanical demands. These differences are not arbitrary — every structural variation from cervical to lumbar represents a deliberate architectural trade-off between mobility, stability, and load capacity.</p>
+      <p>The <strong>cervical spine</strong> prioritises mobility above all. It must allow the head to scan the environment in all directions. This is achieved through the smallest vertebral bodies (least load, greatest agility), the largest vertebral foramina relative to body size (the cervical spinal cord enlargement here supplies the entire upper limb), flat 45° facet joints that allow movement in all three planes, and the specialised transverse foramina protecting the vital vertebral arteries as they ascend to the brain. The uncinate processes at the posterolateral borders of cervical vertebral bodies (forming the uncovertebral joints or joints of Luschka) are a unique cervical feature that guides flexion-extension movement and resists posterior disc herniation — though they can also develop osteophytes with age, contributing to cervical radiculopathy.</p>
+      <p>The <strong>thoracic spine</strong> is the most constrained mobile region. Its primary role is to form the rigid posterior wall of the thoracic cage, and this demands the sacrifice of mobility. The nearly vertical orientation of the facets (60–80° from horizontal, 20° from the frontal plane) allows rotation but severely restricts flexion and extension — which would otherwise compromise the articulations with the rib cage. The long, inferiorly angled spinous processes of the middle thoracic segments act as a structural bracing system, overlapping the vertebrae below and creating a posterior strut that resists excessive flexion. This is the spinal region least often injured in healthy individuals, largely because the rib cage shares load so effectively.</p>
+      <p>The <strong>lumbar spine</strong> is the workhorse. It bears the greatest compressive loads in the body — at L5/S1, the load during lifting can exceed ten times body weight. The interlocking sagittal facets trade rotational freedom almost completely for resistance to anteroposterior shear and stability during heavy loading. The massive vertebral bodies and thick intervertebral discs maximise energy absorption. The "mammillary processes" on the superior articular processes are evidence of the magnitude of multifidus muscle forces acting at this level — physiotherapy that targets lumbar multifidus recruitment is directly supported by this anatomy.</p>
+    </div>
+  </section>
+
+  <!-- 5. UPPER CERVICAL COMPLEX -->
+  <section id="upper-cervical">
+    <div class="section-header"><h2>5. The Upper Cervical Complex (C0–C2)</h2></div>
+    <div class="section-body">
+      <div class="slides-row">
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-14.png"><p>Slide 14 – Atlas (C1)</p></div>
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-15.png"><p>Slide 15 – Axis (C2)</p></div>
+      </div>
+      <p>The craniocervical junction — comprising the occiput (C0), atlas (C1), and axis (C2) — is arguably the most complex and clinically significant region of the entire spinal column. It is a region where functional brilliance and vulnerability coexist: the same anatomy that allows the head to nod, tilt, and rotate with extraordinary freedom sits immediately adjacent to the brainstem and vertebral arteries, where compression or instability can have catastrophic neurological consequences.</p>
+      <p>The atlantooccipital joint (C0–C1) is optimised purely for head flexion and extension — the "yes" nodding movement. The paired kidney-shaped condylar joints provide approximately 25° of flexion and 20–25° of extension. There is minimal rotation available here. The atlantoaxial joint (C1–C2) is a completely different design — a pivot joint centred on the dens of the axis. Here, approximately 40–45° of rotation in each direction is possible, accounting for roughly 50% of all cervical axial rotation. The dens is held in place against the anterior arch of the atlas by the transverse ligament of the atlas — the critical restraint against anterior subluxation.</p>
+      <div class="evidence">
+        <strong>Clinical evidence:</strong> Atlantoaxial instability — whether congenital (as in Down syndrome, where ligamentous laxity is common) or post-traumatic — creates a situation where abnormal C1–C2 movement threatens the spinal cord directly. StatPearls (Fiani et al., NCBI Bookshelf NBK519563) describes atlantoaxial instability as occurring when the dens–anterior atlas distance (ADI) exceeds 3 mm in adults on lateral flexion/extension radiographs. Physiotherapy management must include screening for upper cervical instability before manual therapy; the IFOMPT upper cervical instability testing protocol specifically assesses transverse ligament integrity before cervical manipulation.
+      </div>
+      <p>A vertebral artery consideration that is often underappreciated: the vertebral arteries enter the transverse foramina at C6 (not C7) and ascend through C6 to C1, making a sharp turn around the posterior arch of the atlas before entering the foramen magnum. At C1, the artery is particularly vulnerable to kinking during combined extension and rotation. The vertebral artery dissection risk associated with upper cervical manipulation is low in absolute terms but is the reason why cervical manipulation screening protocols include vascular assessment — and why understanding the anatomy of C1 is not merely academic.</p>
+    </div>
+  </section>
+
+  <!-- 6. THORACIC CAGE -->
+  <section id="thoracic-cage">
+    <div class="section-header"><h2>6. The Thoracic Cage as a Functional Unit</h2></div>
+    <div class="section-body">
+      <div class="slides-row">
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-29.png"><p>Slide 29 – Sternum</p></div>
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-31.png"><p>Slide 31 – Rib classification</p></div>
+      </div>
+      <div class="slides-row">
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-32.png"><p>Slide 32 – Parts of a rib</p></div>
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-33.png"><p>Slide 33 – Rib anatomy</p></div>
+      </div>
+      <p>The thoracic cage — formed by the twelve thoracic vertebrae posteriorly, the twelve pairs of ribs laterally, and the sternum anteriorly — functions as far more than a protective bony shell. It is an active mechanical structure whose cyclical deformation during breathing is precisely coordinated, and whose integrity is essential for effective respiratory mechanics, upper limb force transmission, and thoracic spinal stability.</p>
+      <p>During normal tidal breathing, the rib cage contributes to inspiration through the coordinated contraction of the external intercostal muscles and the scalenes, which elevate the ribs and increase thoracic volume in both the anteroposterior and transverse dimensions. The pump-handle motion describes the anteroposterior expansion of the upper ribs around a near-horizontal axis; the bucket-handle motion describes the lateral expansion of the lower ribs around a near-anteroposterior axis. The costal cartilages are elastic enough to accommodate this cyclical distortion without fracturing — but this elasticity diminishes progressively with age as the cartilages ossify, contributing to the reduced chest wall compliance seen in older adults and in conditions such as thoracic hyperkyphosis.</p>
+      <div class="evidence">
+        <strong>Research evidence — thoracic cage biomechanics:</strong> A biomechanical study by Watkins et al. (2012; ResearchGate: Biomechanical Contribution of the Rib Cage to Thoracic Stability) demonstrated that the rib cage contributes approximately 40% of total thoracic spine stiffness in flexion-extension. This means that thoracic vertebrae stripped of their rib attachments are substantially less stable than in their intact configuration — a finding that underlies the relative protection of the thoracic spine from fracture in healthy adults compared to the vulnerable lumbar and cervical regions.
+      </div>
+      <p>The classification of ribs into true, false, and floating reflects genuine biomechanical differences. True ribs (1–7), with their direct sternocostal attachments, form the stiffest part of the thoracic cage and provide the firmest scaffolding for the pectoralis major and serratus anterior origins. False ribs (8–10) allow greater lateral expansion during deep breathing because their shared costal cartilage connection is more flexible. The floating ribs (11–12) have the greatest mobility and serve primarily as attachment points for the diaphragm (rib 12), quadratus lumborum, and the deep abdominal muscles.</p>
+      <div class="clinical">
+        <strong>Clinical relevance — rib fractures and respiratory physiotherapy:</strong> An international expert consensus study (PMC10045972, Nolan et al., 2023) established best-practice guidelines for respiratory physiotherapy following rib fractures. The key findings were that incentive spirometry, breathing exercises, early mobilisation, and effective analgesia are the cornerstones of management. The primary danger of rib fractures is not the fracture itself but the pain-driven inhibition of deep breathing and coughing, leading to retained secretions, atelectasis, and pneumonia — particularly in older patients with multiple rib fractures. Physiotherapists play the central role in preventing this cascade.
+      </div>
+      <p>The sternal angle (angle of Louis) at the manubriosternal junction deserves special mention as a physiotherapy surface anatomy landmark. It marks the second rib attachment and is the starting point for counting ribs to identify auscultation zones, to locate the cardiac apex beat at the fifth intercostal space in the mid-clavicular line, and to determine the level of the tracheal bifurcation — information directly relevant to chest physiotherapy assessment.</p>
+    </div>
+  </section>
+
+  <!-- 7. SACRUM AND PELVIC LOAD TRANSFER -->
+  <section id="sacrum-pelvis">
+    <div class="section-header"><h2>7. The Sacrum and Pelvic Load Transfer</h2></div>
+    <div class="section-body">
+      <div class="slides-row">
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-25.png"><p>Slide 25 – Sacrum and coccyx</p></div>
+        <div class="slide-img"><img src="bpty04_images/trunk_anatomy/slide-26.png"><p>Slide 26 – Sacrum views</p></div>
+      </div>
+      <p>The sacrum is not simply the tail end of the vertebral column — it is the keystone of the entire musculoskeletal system. Every load generated by standing, walking, running, or lifting passes through the sacrum on its way from the spine to the lower extremities. The sacroiliac joints (SIJ), formed between the sacral and iliac auricular surfaces, are the mechanism through which this load transfer occurs, and the self-locking geometry of these joints is one of the most sophisticated mechanical arrangements in the human body.</p>
+      <p>Two complementary mechanisms stabilise the SIJ: <em>form closure</em> and <em>force closure</em>. Form closure refers to the passive stability provided by the shape of the joint surfaces themselves — the sacrum is slightly wedge-shaped, widening superiorly, and is suspended between the two ilia in a manner that causes compressive loading to increase joint surface contact and friction, passively resisting movement. Force closure refers to the active stability generated by the muscles and ligaments whose tension compresses the joint surfaces together, further increasing friction and stiffness. The muscles most critical to SIJ force closure include the gluteus maximus, biceps femoris, multifidus, and the deep abdominal muscles — virtually all of the "core" muscles that physiotherapy rehabilitation programmes target.</p>
+      <div class="evidence">
+        <strong>Research evidence — SIJ biomechanics:</strong> A landmark review by Vleeming et al. (2012) in the <em>Journal of Anatomy</em> (doi: 10.1111/j.1469-7580.2012.01564.x) consolidated the evidence on SIJ form and force closure, establishing that SIJ pain is responsible for 15–30% of all low back pain presentations. Importantly, the review demonstrated that the SIJ moves by only 2–4° of rotation and 1–2 mm of translation during normal gait — extremely small movements that nonetheless require precise neuromuscular coordination for efficient load transfer. Dysfunction in this coordination, rather than gross SIJ instability, is the mechanism in most clinical SIJ pain presentations.
+      </div>
+      <p>The sacral promontory — the anterior lip of the S1 superior surface — has particular clinical significance in obstetrics, where it is one of the defining bony landmarks of the pelvic inlet. The obstetric conjugate (from the sacral promontory to the posterior surface of the pubic symphysis) must be wide enough to permit fetal passage. During pregnancy, the hormone relaxin increases ligamentous laxity throughout the pelvic ring, including the SIJ and pubic symphysis, to facilitate delivery — but this same laxity can produce the pelvic girdle pain experienced by many pregnant women. Physiotherapy management of pregnancy-related pelvic girdle pain, including SIJ stabilisation belts, targeted deep muscle activation exercises, and postural education, is directly grounded in this anatomy.</p>
+    </div>
+  </section>
+
+  <!-- 8. CLINICAL APPLICATIONS -->
+  <section id="clinical">
+    <div class="section-header"><h2>8. Clinical Applications</h2></div>
+    <div class="section-body">
+      <table>
+        <tr><th>Condition</th><th>Anatomical Basis</th><th>Key Signs</th><th>Physiotherapy Reasoning</th></tr>
+        <tr>
+          <td><strong>Cervical Radiculopathy</strong></td>
+          <td>Compression of nerve roots at intervertebral foramina (C5–C8 most common) — from disc prolapse, osteophytes at uncovertebral joints, or facet joint hypertrophy</td>
+          <td>Dermatomal pain/numbness radiating to arm; Spurling's test positive; reduced cervical ROM; myotomal weakness</td>
+          <td>Neural mobilisation, cervical traction, deep neck flexor strengthening; posture correction to reduce foraminal narrowing; nerve root-specific exercise prescription</td>
+        </tr>
+        <tr>
+          <td><strong>Atlantoaxial Instability</strong></td>
+          <td>Laxity or rupture of transverse ligament of atlas → excess ADI distance; risk of cord compression at dens</td>
+          <td>Upper cervical pain; "heavy head" sensation; myelopathy signs; positive Sharp-Purser test; radiological ADI &gt;3 mm</td>
+          <td>MANDATORY pre-treatment screening; refer if instability confirmed; gentle suboccipital muscle work only; avoid end-range cervical manipulation; proprioceptive retraining</td>
+        </tr>
+        <tr>
+          <td><strong>Thoracic Outlet Syndrome</strong></td>
+          <td>Compression of brachial plexus / subclavian vessels between clavicle, first rib, and scalene muscles — anatomical space defined by trunk osteology</td>
+          <td>Arm pain/numbness; scalene tenderness; positive Adson's / ROOS test; vascular symptoms (Raynaud's, colour change)</td>
+          <td>Thoracic mobility exercises; rib 1 / scalene release; postural correction (head-forward posture increases compression); shoulder girdle strengthening</td>
+        </tr>
+        <tr>
+          <td><strong>Lumbar Disc Prolapse / Radiculopathy</strong></td>
+          <td>Nucleus pulposus herniation through annulus fibrosus → compression of exiting nerve root at intervertebral foramen; L4/L5 and L5/S1 most common</td>
+          <td>Sciatic pain; positive SLR; dermatomal sensory loss; myotomal weakness; reflexes (L4: patellar, S1: Achilles)</td>
+          <td>Neural mobilisation; McKenzie assessment (often extension-biased); lumbar multifidus and deep core activation; avoid sustained flexion in acute phase; progressive loading rehabilitation</td>
+        </tr>
+        <tr>
+          <td><strong>Sacroiliac Joint Dysfunction</strong></td>
+          <td>Impaired form or force closure → abnormal SIJ mechanics; pain generators include SIJ capsule, sacrotuberous/sacrospinous ligaments, dorsal SIJ ligament</td>
+          <td>Unilateral posterior pelvic pain; positive cluster of SIJ tests (FABER, thigh thrust, compression, Gaenslen); pain below L5</td>
+          <td>Force closure restoration through gluteus maximus, biceps femoris, and deep multifidus activation; SIJ belt for acute load management; motor control retraining; pelvic floor assessment</td>
+        </tr>
+        <tr>
+          <td><strong>Rib Fracture / Chest Wall Pain</strong></td>
+          <td>Rib cortex failure under impact; intercostal NVB in costal groove may be involved; multiple fractures risk flail chest and paradoxical breathing</td>
+          <td>Localised chest wall pain; splinting on inspiration; reduced breath sounds; atelectasis; positive rib spring test</td>
+          <td>Active cycle of breathing; incentive spirometry; secretion clearance; adequate analgesia (essential prerequisite for effective physiotherapy); early mobilisation; monitor for respiratory deterioration</td>
+        </tr>
+        <tr>
+          <td><strong>Scheuermann's Disease (Adolescent Thoracic Kyphosis)</strong></td>
+          <td>Vertebral body anterior wedging ≥5° at ≥3 consecutive thoracic vertebrae; Schmorl's nodes (disc material intrudes through endplate)</td>
+          <td>Visible thoracic hyperkyphosis; non-reducible on hyperextension; adolescent onset; radiological wedging; pain in moderate-severe cases</td>
+          <td>Thoracic mobility and extension exercises; deep cervical / scapular strengthening to offset kyphotic posture; bracing in skeletally immature patients with curves &gt;60°; avoid heavy axial loading during growth</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <section id="sources">
+    <div class="section-header"><h2>Sources &amp; Further Reading</h2></div>
+    <div class="section-body">
+      <p>All biomechanical data, clinical statistics, and evidence-based statements in this document are drawn from or consistent with the following primary and secondary sources.</p>
+
+      <h3>Spinal Biomechanics and Vertebral Architecture</h3>
+      <ul>
+        <li>Pickar JG, Bolton PS. (2021). <em>The contemporary model of vertebral column joint dysfunction and impact of high-velocity, low-amplitude controlled vertebral thrusts on neuromuscular function.</em> European Journal of Neurology. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8416873/" target="_blank">PMC8416873</a></li>
+        <li>Lumbosacral Biomechanics. <em>Physiopedia.</em> <a href="https://www.physio-pedia.com/Lumbosacral_Biomechanics" target="_blank">Physiopedia — Lumbosacral Biomechanics</a></li>
+        <li>General Spinal Biomechanics — Chapter 6. <em>ACA Press (Chiro.org).</em> <a href="https://chiro.org/ACAPress/General_Spinal_Biomechanics.html" target="_blank">Chiro.org — General Spinal Biomechanics</a></li>
+      </ul>
+
+      <h3>Spinal Curvature and Sagittal Alignment</h3>
+      <ul>
+        <li>Kusztor I et al. (2025). <em>Association Between Lumbar Lordosis, Thoracic Kyphosis, and Muscle Activations During Different Lower Back Exercises: An Observational Study.</em> Medicina. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12195201/" target="_blank">PMC12195201</a></li>
+        <li>Clinical Lecture upon Spinal Curve. <em>PMC / Hist Arch.</em> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9451330/" target="_blank">PMC9451330</a></li>
+      </ul>
+
+      <h3>Upper Cervical Spine (C0–C2)</h3>
+      <ul>
+        <li>Fiani B et al. <em>Atlantoaxial Instability.</em> StatPearls [Internet]. NCBI Bookshelf. <a href="https://www.ncbi.nlm.nih.gov/books/NBK519563/" target="_blank">NBK519563</a></li>
+        <li>Atlanto-axial joint. <em>Physiopedia.</em> <a href="https://www.physio-pedia.com/Atlanto-axial_joint" target="_blank">Physiopedia — Atlanto-axial joint</a></li>
+        <li>Post-Traumatic Atlanto-Axial Instability. (2023). <em>Journal of Clinical Medicine.</em> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9964642/" target="_blank">PMC9964642</a></li>
+      </ul>
+
+      <h3>Thoracic Cage and Rib Fractures</h3>
+      <ul>
+        <li>Nolan JP et al. (2023). <em>Expert consensus guidance on respiratory physiotherapy and rehabilitation of patients with rib fractures: an international, multidisciplinary e-Delphi study.</em> BMJ Open Respiratory Research. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10045972/" target="_blank">PMC10045972</a></li>
+        <li>Biomechanics of flail chest injuries: tidal volume and respiratory work changes. (2025). <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11742335/" target="_blank">PMC11742335</a></li>
+        <li>Basic Biomechanics of the Thoracic Spine and Rib Cage. <em>ScienceDirect / Elsevier.</em> <a href="https://www.sciencedirect.com/science/article/abs/pii/B9780128128510000033" target="_blank">ScienceDirect — Thoracic Cage Biomechanics</a></li>
+      </ul>
+
+      <h3>Sacroiliac Joint and Pelvic Load Transfer</h3>
+      <ul>
+        <li>Vleeming A et al. (2012). <em>The sacroiliac joint: an overview of its anatomy, function and potential clinical implications.</em> Journal of Anatomy. <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1469-7580.2012.01564.x" target="_blank">Wiley Online Library</a> | <a href="https://pubmed.ncbi.nlm.nih.gov/9436146/" target="_blank">PubMed 9436146</a></li>
+        <li>Biomechanical Fundamentals of Sacroiliac Joint Pain. <em>Physiopedia.</em> <a href="https://www.physio-pedia.com/Biomechanical_Fundamentals_of_Sacroiliac_Joint_Pain" target="_blank">Physiopedia — SIJ Pain</a></li>
+        <li>Biomechanics of the Sacroiliac Joint. (2020). <em>International Journal of Spine Surgery.</em> <a href="https://www.ijssurgery.com/content/14/s1/S3" target="_blank">IJSS — SIJ Biomechanics</a></li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<footer>BPTY04 · LUNEX University · For personal study use only</footer>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 — Arthrology — Classification of Joints Practice Q&amp;A</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; font-size: 15px; line-height: 1.65; }
+  header { background: linear-gradient(135deg, #0a3a4a, #1a7a6a); color: white; padding: 36px 40px 28px; }
+  header h1 { font-size: 2em; margin-bottom: 6px; }
+  header p { font-size: 0.95em; opacity: 0.85; }
+  header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85em; display: inline-block; margin-bottom: 14px; }
+  header a:hover { color: white; }
+  .instructions { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); max-width: 860px; margin: 24px auto; padding: 18px 24px; font-size: 0.9em; color: #555; }
+  .filter-bar { max-width: 860px; margin: 0 auto 20px; display: flex; gap: 10px; flex-wrap: wrap; padding: 0 16px; }
+  .filter-btn { padding: 7px 16px; border-radius: 20px; border: 2px solid #ccc; background: white; cursor: pointer; font-size: 0.85em; font-weight: 600; }
+  .filter-btn.active { border-color: #1a7a6a; background: #1a7a6a; color: white; }
+  .container { max-width: 860px; margin: 0 auto 40px; padding: 0 16px; }
+  .question { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 18px; overflow: hidden; }
+  .q-header { display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid #eee; }
+  .q-number { font-weight: 700; font-size: 0.9em; color: #888; }
+  .q-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: white; }
+  .badge-recall { background: #2e6fa8; }
+  .badge-application { background: #c07020; }
+  .badge-clinical { background: #c0392b; }
+  .q-text { padding: 16px 20px 4px; }
+  .q-text p { margin-bottom: 10px; }
+  .options { margin: 10px 0 4px; }
+  .options label { display: block; margin: 6px 0; cursor: pointer; padding: 6px 10px; border-radius: 5px; }
+  .options label:hover { background: #f4f6f9; }
+  .options input[type="radio"] { margin-right: 8px; }
+  .reveal-btn { display: block; margin: 12px 20px 16px; padding: 9px 20px; background: #1a7a6a; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.88em; font-weight: 600; }
+  .reveal-btn:hover { opacity: 0.88; }
+  .answer { margin: 0 20px 20px; background: #f8f9fb; border-left: 4px solid #1a7a6a; border-radius: 0 5px 5px 0; padding: 14px 18px; font-size: 0.9em; line-height: 1.7; display: none; }
+  .answer strong { color: #0a3a4a; }
+  footer { text-align: center; padding: 24px; font-size: 0.8em; color: #999; }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html">← Back to BPTY04 Resources</a>
+  <h1>Arthrology — Classification of Joints — Practice Q&amp;A</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · 12 Questions · Recall · Application · Clinical</p>
+</header>
+<div class="instructions">Work through each question, formulate a response, then click <strong>Reveal Answer</strong>. Use the filter buttons to focus on a category.</div>
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterQuestions('all',this)">All (12)</button>
+  <button class="filter-btn" onclick="filterQuestions('recall',this)">Recall</button>
+  <button class="filter-btn" onclick="filterQuestions('application',this)">Application</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical',this)">Clinical</button>
+</div>
+<div class="container">
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q1</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What are the three structural classifications of joints? Briefly describe the union material in each.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Fibrous joints</strong> — bones united by fibrous connective tissue (collagen fibres)<br>• <strong>Cartilaginous joints</strong> — bones united by cartilage (hyaline or fibrocartilage)<br>• <strong>Synovial joints</strong> — bones separated by a joint cavity lined with synovial membrane, enclosed in a fibrous capsule</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q2</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name and describe the four sub-types of fibrous joints.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Sutures</strong> — thin fibrous tissue between skull bones; no movement; unique to the skull<br>• <strong>Gomphoses</strong> — peg-in-socket; teeth in dental alveoli via periodontal ligament; no movement<br>• <strong>Syndesmoses</strong> — substantial fibrous tissue or interosseous membrane between two bones (e.g., distal tibiofibular joint); slight movement<br>• <strong>Synostoses</strong> — complete bony fusion (e.g., sacral vertebrae); no movement (these eventually ossify from other joint types)</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q3</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What are the two types of cartilaginous joints? Give an example of each.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Symphyses</strong> — fibrocartilage disc joins two bones coated in hyaline cartilage; allows slight movement; found at midline (e.g., pubic symphysis, intervertebral discs, manubriosternal joint)<br>• <strong>Synchondroses</strong> — hyaline cartilage unites two bones; epiphyseal (growth) plates are the prime example; normally ossify in adulthood (becoming synostoses)</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q4</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>List six characteristic features of a synovial joint.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">1. <strong>Articular cartilage</strong> (hyaline) covering joint surfaces — reduces friction, absorbs shock<br>2. <strong>Articular capsule</strong> — outer fibrous layer (strength) + inner synovial membrane (secretes fluid)<br>3. <strong>Synovial cavity</strong> — fluid-filled space<br>4. <strong>Synovial fluid</strong> — lubricates and nourishes avascular cartilage<br>5. <strong>Ligaments</strong> — reinforce capsule, guide movement<br>6. Additional: <strong>Intra-articular discs/menisci</strong>, <strong>fat pads</strong>, <strong>bursae</strong> (where present)</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q5</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What are the six types of synovial joint? For each, state the movement(s) permitted and give an example.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Hinge (ginglymus)</strong> — flexion/extension in one plane (e.g., elbow/humeroulnar)<br>• <strong>Pivot (trochoid)</strong> — rotation around a single axis (e.g., atlantoaxial, proximal radioulnar)<br>• <strong>Ball and socket (spheroidal)</strong> — multiaxial: flexion/extension, abduction/adduction, rotation (e.g., hip, shoulder GH joint)<br>• <strong>Condyloid (ellipsoid)</strong> — biplanar: flexion/extension + abduction/adduction; no rotation (e.g., radiocarpal, MCP joints)<br>• <strong>Saddle (sellar)</strong> — biplanar + rotation → opposition (e.g., 1st CMC joint of thumb)<br>• <strong>Plane (gliding)</strong> — translation/gliding; multiaxial but small range (e.g., intercarpal, facet joints, AC joint)</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q6</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>What is the three-way classification of joints by mobility?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Synarthrosis</strong> — immovable (e.g., sutures, gomphoses, synostoses)<br>• <strong>Amphiarthrosis</strong> — slightly movable (e.g., symphyses, syndesmoses)<br>• <strong>Diarthrosis</strong> — freely movable (all synovial joints)</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q7</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>The intervertebral disc is classified as a joint. What structural type is it and what does this classification tell us about its expected properties?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The intervertebral disc is a <strong>symphysis</strong> — a secondary cartilaginous joint. The vertebral endplates are covered in hyaline cartilage, and the fibrocartilaginous disc (annulus fibrosus + nucleus pulposus) unites adjacent vertebral bodies.<br><br>Being a symphysis tells us: (1) it allows <em>only slight movement</em> at each level (though summed across 23 discs, total spinal movement is substantial); (2) it has no synovial cavity, so it cannot become a synovitis target; (3) it can sustain compressive and torsional loads through fibrocartilage; (4) it is avascular (the disc itself, especially the inner annulus and nucleus, has no blood supply in adults) — explaining the poor healing capacity and the reliance on diffusion through the endplate for nutrition.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q8</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>A patient has a diagnosis of 'osteoarthritis of the knee'. Based on your knowledge of synovial joint structure, explain the pathological changes occurring in each major component of the joint.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">Osteoarthritis (OA) is a disease of the whole synovial joint:<br>• <strong>Articular cartilage</strong>: fibrillation, erosion, and loss of proteoglycan matrix → reduced shock absorption, exposed bone<br>• <strong>Subchondral bone</strong>: sclerosis (thickening), cyst formation, osteophyte (marginal bone spur) formation<br>• <strong>Synovial membrane</strong>: reactive synovitis in active OA → effusion, warmth, pain<br>• <strong>Synovial fluid</strong>: reduced volume, altered composition, decreased lubrication<br>• <strong>Articular capsule/ligaments</strong>: fibrosis, reduced joint mobility<br>• <strong>Periarticular muscles</strong>: quadriceps wasting (reduced load-protective function) → accelerates cartilage loss<br><br>Physiotherapy targets the muscle component (strengthening quadriceps) and overall joint loading (weight management, gait retraining) — two of the highest-evidence OA interventions.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q9</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>The distal tibiofibular joint is described as a syndesmosis. Why does this matter clinically in ankle sprains?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The distal tibiofibular <strong>syndesmosis</strong> is a fibrous joint held by four ligaments (anterior and posterior tibiofibular, inferior transverse, and the interosseous membrane). Unlike the lateral ligament complex (ATFL, CFL, PTFL) injured in typical ankle sprains, a <strong>high ankle sprain</strong> (syndesmosis injury) disrupts these ligaments, causing diastasis (widening) of the tibiofibular mortise. The mortise must be a precise fit for the talus — even 1 mm of diastasis significantly increases contact pressure on the lateral talar dome cartilage. Syndesmosis sprains are more disabling and take significantly longer to heal than lateral ankle sprains. External rotation/dorsiflexion stress tests are used to diagnose them. Severe cases require surgical fixation (syndesmosis screw or suture-button device).</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q10</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 28-year-old runner has been told she has 'inflamed bursae' at the knee. What is a bursa, why are they located where they are, and which bursae at the knee are most clinically relevant?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">A <strong>bursa</strong> is a fluid-filled sac lined with synovial membrane (related to but separate from the joint), located wherever tendons, muscles, or skin slide over bony prominences. They reduce friction.<br><br><strong>Clinically relevant knee bursae:</strong><br>• <strong>Prepatellar bursa</strong> (between skin and patella) — inflamed in "housemaid's knee" (prolonged kneeling)<br>• <strong>Infrapatellar bursa</strong> (below patellar tendon) — inflamed in "clergyman's knee"<br>• <strong>Suprapatellar bursa</strong> (large; communicates with joint) — distends in knee effusion<br>• <strong>Pes anserine bursa</strong> (medial tibia, deep to sartorius/gracilis/semitendinosus tendons) — bursitis common in obese patients with OA<br>• <strong>Popliteal (Baker's) cyst</strong> — distension of the gastrocnemio-semimembranosus bursa, often secondary to knee effusion<br><br>Physiotherapy management targets the underlying cause (OA, overuse, valgus stress) rather than the bursa alone.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q11</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 65-year-old man with longstanding lumbar spondylosis asks why the doctor said his spine has both 'synovial' and 'cartilaginous' joints. Explain this to him in clinical terms and what conditions can affect each type.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">The lumbar spine has two types of joints at each level:<br><br>1. <strong>Intervertebral disc (symphysis / cartilaginous joint)</strong> — the fibrocartilage disc between vertebral bodies. Can degenerate (disc dehydration, annular tears, disc prolapse/herniation). Responsible for disc-related back pain and radiculopathy when prolapse compresses nerve roots.<br><br>2. <strong>Facet (zygapophyseal) joints (synovial joints)</strong> — the paired joints between articular processes. Like all synovial joints they can develop synovitis, effusion, and osteoarthritis. Facet joint degeneration is a major cause of axial lower back pain and can contribute to foraminal stenosis. Medial branch nerve blocks and radiofrequency denervation target these joints when they are the dominant pain generator.<br><br>Both types degenerate together in spondylosis — physiotherapy addresses movement, loading, and neuromuscular control regardless of which tissue is symptomatic.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q12</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A patient asks why their physiotherapist keeps emphasising 'keeping the joint moving' after their knee replacement. What are two joint physiology principles that support this advice?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">1. <strong>Synovial fluid nutrition:</strong> Articular cartilage (and in fact all intra-articular tissues) is avascular and depends on diffusion from synovial fluid for nutrition and waste removal. Movement causes synovial fluid to circulate through the joint, delivering nutrients and clearing metabolic waste. Immobility leads to cartilage degeneration (disuse atrophy), adhesion formation, and capsular contracture.<br><br>2. <strong>Mechanotransduction:</strong> Physiological loading of cartilage stimulates chondrocytes to maintain extracellular matrix (proteoglycans and collagen). Cyclical loading is necessary for cartilage health — both over-loading and under-loading lead to matrix degradation. Post-surgical movement programmes restore mechanotransduction without exceeding tissue tolerance, which is why intensity and range are carefully titrated.</div>
+  </div>
+</div>
+<footer>BPTY04 · LUNEX University · For personal study use only</footer>
+<script>
+function toggleAnswer(btn) {
+  const a = btn.nextElementSibling;
+  const h = a.style.display === 'none' || a.style.display === '';
+  a.style.display = h ? 'block' : 'none';
+  btn.textContent = h ? 'Hide Answer' : 'Reveal Answer';
+}
+function filterQuestions(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(q => {
+    q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>

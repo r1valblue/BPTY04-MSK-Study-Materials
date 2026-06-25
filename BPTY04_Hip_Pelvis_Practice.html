@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 — Hip &amp; Pelvis — Arthrology &amp; Myology Practice Q&amp;A</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; font-size: 15px; line-height: 1.65; }
+  header { background: linear-gradient(135deg, #5c1a1a, #b04020); color: white; padding: 36px 40px 28px; }
+  header h1 { font-size: 2em; margin-bottom: 6px; }
+  header p { font-size: 0.95em; opacity: 0.85; }
+  header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85em; display: inline-block; margin-bottom: 14px; }
+  header a:hover { color: white; }
+  .instructions { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); max-width: 860px; margin: 24px auto; padding: 18px 24px; font-size: 0.9em; color: #555; }
+  .filter-bar { max-width: 860px; margin: 0 auto 20px; display: flex; gap: 10px; flex-wrap: wrap; padding: 0 16px; }
+  .filter-btn { padding: 7px 16px; border-radius: 20px; border: 2px solid #ccc; background: white; cursor: pointer; font-size: 0.85em; font-weight: 600; }
+  .filter-btn.active { border-color: #a83a2e; background: #a83a2e; color: white; }
+  .container { max-width: 860px; margin: 0 auto 40px; padding: 0 16px; }
+  .question { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 18px; overflow: hidden; }
+  .q-header { display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid #eee; }
+  .q-number { font-weight: 700; font-size: 0.9em; color: #888; }
+  .q-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: white; }
+  .badge-recall { background: #2e6fa8; }
+  .badge-application { background: #c07020; }
+  .badge-clinical { background: #c0392b; }
+  .q-text { padding: 16px 20px 4px; }
+  .q-text p { margin-bottom: 10px; }
+  .options { margin: 10px 0 4px; }
+  .options label { display: block; margin: 6px 0; cursor: pointer; padding: 6px 10px; border-radius: 5px; }
+  .options label:hover { background: #f4f6f9; }
+  .options input[type="radio"] { margin-right: 8px; }
+  .reveal-btn { display: block; margin: 12px 20px 16px; padding: 9px 20px; background: #a83a2e; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.88em; font-weight: 600; }
+  .reveal-btn:hover { opacity: 0.88; }
+  .answer { margin: 0 20px 20px; background: #f8f9fb; border-left: 4px solid #a83a2e; border-radius: 0 5px 5px 0; padding: 14px 18px; font-size: 0.9em; line-height: 1.7; display: none; }
+  footer { text-align: center; padding: 24px; font-size: 0.8em; color: #999; }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html">← Back to BPTY04 Resources</a>
+  <h1>Hip &amp; Pelvis — Arthrology &amp; Myology — Practice Q&amp;A</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · 11 Questions · Recall · Application · Clinical</p>
+</header>
+<div class="instructions">Work through each question, formulate a response, then click <strong>Reveal Answer</strong>. Use the filter buttons to focus on a category.</div>
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterQuestions('all',this)">All (11)</button>
+  <button class="filter-btn" onclick="filterQuestions('recall',this)">Recall</button>
+  <button class="filter-btn" onclick="filterQuestions('application',this)">Application</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical',this)">Clinical</button>
+</div>
+<div class="container">
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q1</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the five major ligaments reinforcing the sacroiliac joint (SIJ).</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Interosseous sacroiliac ligament</strong> — deepest and strongest; prevents distraction of SIJ<br>• <strong>Posterior sacroiliac ligament</strong> — thick; primary posterior support (PSIS/PIIS → lateral sacral crests)<br>• <strong>Anterior sacroiliac ligament</strong> — thinner anterior capsule reinforcement<br>• <strong>Sacrotuberous ligament</strong> — sacrum/coccyx → ischial tuberosity; resists anterior sacral nutation (gap between sacrum and ilium)<br>• <strong>Sacrospinous ligament</strong> — sacrum/coccyx → ischial spine; divides greater from lesser sciatic foramen</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q2</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the structures passing under the inguinal ligament using the NAVY mnemonic, from lateral to medial.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>NAVY</strong> (lateral → medial):<br>• <strong>N</strong>erve — femoral nerve (L2–L4)<br>• <strong>A</strong>rtery — femoral artery<br>• <strong>V</strong>ein — femoral vein<br>• (l<strong>Y</strong>mphatics) — deep inguinal lymph nodes / lymphatic vessels<br><br>Mnemonic device: the femoral triangle contains these structures in this order deep to the inguinal ligament. The femoral nerve is most lateral (outside the femoral sheath); the artery and vein are within the femoral sheath.</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q3</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the five ligaments of the hip joint and identify the strongest.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Iliofemoral ligament (Y-ligament of Bigelow)</strong> — strongest ligament in the body; anterior; resists extension and prevents hyperextension; Y-shaped<br>• <strong>Pubofemoral ligament</strong> — anterior-inferior; resists abduction and extension<br>• <strong>Ischiofemoral ligament</strong> — posterior; resists internal rotation and extension<br>• <strong>Zona orbicularis</strong> — circular fibres around the femoral neck; deepens the capsule<br>• <strong>Ligamentum teres (round ligament)</strong> — intracapsular; fovea capitis → acetabular fossa; carries branch of obturator artery to femoral head; minimal mechanical contribution in adults</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q4</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the muscles of the anterior hip (hip flexors) with their nerve supply.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">• <strong>Iliopsoas</strong> (iliacus + psoas major): iliac fossa + lumbar vertebrae → lesser trochanter; femoral nerve (iliacus), lumbar plexus direct (psoas); primary hip flexor<br>• <strong>Rectus femoris</strong>: AIIS → tibial tuberosity (via quadriceps); femoral nerve; flexes hip + extends knee<br>• <strong>Sartorius</strong>: ASIS → pes anserinus; femoral nerve; flexes, ABDs, and ER hip; also flexes knee<br>• <strong>Tensor fasciae latae (TFL)</strong>: ASIS/iliac crest → iliotibial band; superior gluteal nerve; flexes + medially rotates hip; abducts</div>
+  </div>
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q5</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text"><p>Name the muscles of the posterior hip. Which produces the Trendelenburg sign when weak?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Gluteal muscles:</strong><br>• <strong>Gluteus maximus</strong>: posterior ilium/sacrum/coccyx → gluteal tuberosity + ITB; inferior gluteal nerve; hip extension, external rotation<br>• <strong>Gluteus medius</strong>: between posterior/anterior gluteal lines → greater trochanter; superior gluteal nerve; hip abduction (primary), internal rotation<br>• <strong>Gluteus minimus</strong>: between anterior/inferior gluteal lines → greater trochanter (anterior); superior gluteal nerve; abduction, internal rotation<br><br><strong>Trendelenburg sign:</strong> <strong>Gluteus medius</strong> weakness — ipsilateral hip drops during single-leg stance (contralateral pelvis drops).</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q6</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>What are the 'form closure' and 'force closure' mechanisms of the SIJ? Which muscles are most critical for force closure?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Form closure:</strong> The sacrum's slightly wedge shape combined with the irregular, interlocking auricular surface geometry creates inherent passive stability — compressive loading increases friction without muscular effort.<br><br><strong>Force closure:</strong> Muscle and ligament tension compresses the joint surfaces, increasing friction and stability dynamically. Key muscles:<br>• <strong>Gluteus maximus</strong> (contralateral) — via the posterior oblique sling (latissimus dorsi → contralateral gluteus maximus via thoracolumbar fascia)<br>• <strong>Biceps femoris</strong> — via sacrotuberous ligament attachment<br>• <strong>Multifidus</strong> — posterior SIJ compression<br>• <strong>Transversus abdominis + pelvic floor</strong> — increase intra-abdominal pressure and create anterior SIJ compression<br><br>Rehabilitation for SIJ dysfunction targets these force-closure muscles.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q7</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>Explain the concept of hip joint reaction force (HJRF) during gait and how abductor muscle strength affects it.</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">During single-leg stance, the body weight acts through the centre of mass (medial to the hip joint), creating a large adduction moment. To prevent pelvic drop, the hip abductors (primarily gluteus medius) must contract with a force 2–3 times body weight to balance this moment.<br><br>The <strong>hip joint reaction force</strong> = the resultant of body weight + abductor muscle force. Because the abductor lever arm is short (~5 cm) relative to the load arm (~10–15 cm), the abductors must generate 2–3× body weight to produce equilibrium — giving a total HJRF of approximately <strong>3–5× body weight</strong> during walking.<br><br>Clinical relevance: hip OA and arthroplasty biomechanics depend critically on abductor strength. A lateral wedge insole, cane held contralaterally, or lateral trunk lean (Trendelenburg lean) reduces HJRF by shifting the body's CoM toward the stance leg — reducing the abductor force needed.</div>
+  </div>
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q8</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text"><p>What is the FADIR test? What structures does it compress and what conditions is it positive in?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>FADIR</strong> = Flexion · Adduction · Internal Rotation of the hip in supine.<br><br>This combination drives the anterosuperior femoral head-neck junction against the anterior acetabular rim, compressing:<br>• <strong>Anterior acetabular labrum</strong><br>• Anterosuperior articular cartilage<br>• Cam or pincer bony lesion in FAI<br><br>Positive FADIR (reproduction of deep anterior groin pain) is the most sensitive test for:<br>• <strong>Femoroacetabular impingement (FAI)</strong> — sensitivity ~94%; low specificity<br>• <strong>Acetabular labral tears</strong><br><br>A positive test alone is not diagnostic (many asymptomatic people have positive FADIR) but combined with imaging and clinical context confirms the diagnosis.</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q9</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 55-year-old overweight man presents with deep groin pain and referred pain to the medial knee, worse with weight-bearing and at end-range hip movements. Internal rotation is most limited. X-ray shows joint space narrowing superolaterally. What is the diagnosis and what is the physiotherapy approach?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Diagnosis:</strong> Hip osteoarthritis (OA) — the pattern of pain (groin + medial knee referral), limitation in a capsular pattern (IR > ABD > Flex most limited), and superior joint space narrowing are characteristic.<br><br><strong>Evidence-based physiotherapy (NICE/OARSI guidelines):</strong><br>• <strong>Exercise therapy (highest evidence):</strong> Land and aquatic exercise; strengthening of hip flexors, extensors, and abductors; aerobic exercise; these are equivalent in efficacy — tailor to patient preference<br>• <strong>Education:</strong> OA is not 'bone on bone' inevitable decline; activity is protective, not harmful<br>• <strong>Weight management</strong> referral — every kg of body weight loss reduces hip joint load by ~3 kg<br>• <strong>Walking aids</strong> if needed; footwear assessment<br>• <strong>Manual therapy</strong> (mobilisation/manipulation): short-term benefit as adjunct to exercise<br>• <strong>Referral for total hip arthroplasty (THA)</strong> when conservative management fails and quality of life is significantly impaired</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q10</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 32-year-old recreational runner presents with lateral hip pain worse when running, particularly downhill or on cambered roads. She has tenderness over the greater trochanter but no inguinal pain. FABER is painful but not mechanically restricted. What is the likely diagnosis?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Diagnosis:</strong> Greater trochanteric pain syndrome (GTPS) — previously called trochanteric bursitis but now understood to be primarily <strong>gluteal tendinopathy</strong> (gluteus medius and/or minimus tendons at their greater trochanter attachment).<br><br><strong>Anatomical basis:</strong> The gluteal tendons wrap over the greater trochanter and are subject to compressive and tensile loading. Provocative positions include hip adduction (crossing legs, cambered running, side-lying) — these positions increase compressive load on the tendon against the trochanteric surface. 'Bursitis' plays a secondary role.<br><br><strong>Physiotherapy (load management + progressive tendon loading):</strong><br>• Avoid provocative postures: no leg crossing; no hip adduction in standing<br>• Progressive gluteal tendon loading programme: isometric holds → isotonic → plyometric<br>• Avoid passive stretching (compresses the tendon — worsens symptoms)<br>• Gait retraining: reduce hip adduction during running<br>• Return to running: graduated interval programme</div>
+  </div>
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q11</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text"><p><strong>Scenario:</strong> A 22-year-old female dancer presents with a 'clicking' sensation and intermittent sharp catching pain in the anterior hip during relevé (rising onto toes with hip flexed). Examination reveals a reproducible click/thud over the anterior hip in flexion. MRI arthrogram confirms no labral tear. What is the diagnosis?</p></div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Diagnosis:</strong> <strong>Internal snapping hip syndrome</strong> (coxa saltans interna) — the iliopsoas tendon snapping over the iliopectineal eminence or the femoral head as the hip moves from flexion to extension.<br><br><strong>Mechanism:</strong> During hip flexion, the iliopsoas tendon lies lateral to the hip joint. As the hip extends (relevé), the tendon shifts medially over the iliopectineal eminence, producing a sudden 'clunk'. Repetitive snapping can cause iliopsoas tendon bursitis.<br><br><strong>Physiotherapy:</strong><br>• Load management — modify training volume and provocative positions<br>• Iliopsoas lengthening and eccentric loading programme<br>• Hip flexor flexibility work<br>• Gradual return to dance — most cases respond to conservative management<br>• Ultrasound-guided corticosteroid injection into the iliopsoas bursa if symptomatic bursitis persists</div>
+  </div>
+</div>
+<footer>BPTY04 · LUNEX University · For personal study use only</footer>
+<script>
+function toggleAnswer(btn) {
+  const a = btn.nextElementSibling;
+  const h = a.style.display === 'none' || a.style.display === '';
+  a.style.display = h ? 'block' : 'none';
+  btn.textContent = h ? 'Hide Answer' : 'Reveal Answer';
+}
+function filterQuestions(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(q => {
+    q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>

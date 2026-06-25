@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 — Trunk Anatomy Practice Q&amp;A</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; font-size: 15px; line-height: 1.65; }
+
+  header { background: linear-gradient(135deg, #3a3510, #7a6a20); color: white; padding: 36px 40px 28px; }
+  header h1 { font-size: 2em; margin-bottom: 6px; }
+  header p { font-size: 0.95em; opacity: 0.85; }
+  header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85em; display: inline-block; margin-bottom: 14px; }
+  header a:hover { color: white; }
+
+  .instructions { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); max-width: 860px; margin: 24px auto; padding: 18px 24px; font-size: 0.9em; color: #555; }
+  .filter-bar { max-width: 860px; margin: 0 auto 20px; display: flex; gap: 10px; flex-wrap: wrap; padding: 0 16px; }
+  .filter-btn { padding: 7px 16px; border-radius: 20px; border: 2px solid #ccc; background: white; cursor: pointer; font-size: 0.85em; font-weight: 600; }
+  .filter-btn.active { border-color: #7a6a20; background: #7a6a20; color: white; }
+
+  .container { max-width: 860px; margin: 0 auto 40px; padding: 0 16px; }
+
+  .question { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 18px; overflow: hidden; }
+  .q-header { display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid #eee; }
+  .q-number { font-weight: 700; font-size: 0.9em; color: #888; }
+  .q-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: white; }
+  .badge-recall   { background: #2e6fa8; }
+  .badge-application { background: #c07020; }
+  .badge-clinical { background: #c0392b; }
+
+  .q-text { padding: 16px 20px 4px; }
+  .q-text p { margin-bottom: 10px; }
+
+  .options { margin: 10px 0 4px; }
+  .options label { display: block; margin: 6px 0; cursor: pointer; padding: 6px 10px; border-radius: 5px; transition: background 0.15s; }
+  .options label:hover { background: #f4f6f9; }
+  .options input[type="radio"] { margin-right: 8px; }
+
+  .reveal-btn { display: block; margin: 12px 20px 16px; padding: 9px 20px; background: #7a6a20; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.88em; font-weight: 600; transition: background 0.15s; }
+  .reveal-btn:hover { background: #5a4e10; }
+
+  .answer { margin: 0 20px 20px; background: #f8f9fb; border-left: 4px solid #7a6a20; border-radius: 0 5px 5px 0; padding: 14px 18px; font-size: 0.9em; line-height: 1.7; }
+  .answer strong { color: #3a3510; }
+
+  .reveal-btn-2 { display: inline-block; margin-top: 10px; padding: 7px 16px; background: #2e6fa8; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.84em; font-weight: 600; }
+  .reveal-btn-2:hover { background: #1a4a7a; }
+  .answer-2 { margin-top: 10px; background: #edf3fb; border-left: 3px solid #2e6fa8; padding: 10px 14px; border-radius: 0 4px 4px 0; font-size: 0.88em; }
+
+  .score-bar { background: white; border-radius: 8px; padding: 16px 24px; margin-bottom: 24px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  .score-bar span { font-size: 0.88em; color: #555; }
+  .score-bar strong { color: #3a3510; font-size: 1.1em; }
+  .reset-btn { margin-left: auto; padding: 7px 16px; background: #eee; border: none; border-radius: 5px; cursor: pointer; font-size: 0.84em; }
+
+  footer { text-align: center; padding: 24px; font-size: 0.8em; color: #999; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">← Back to BPTY04 Resources</a>
+  <h1>Trunk Anatomy — Osteology: Practice Q&amp;A</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · 22 Questions · Recall · Application · Clinical</p>
+</header>
+
+<div class="instructions">
+  Work through each question, select your answer or formulate a response, then click <strong>Reveal Answer</strong>. Clinical scenarios use a two-step reveal. Use the filter buttons to focus on a category.
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterQuestions('all', this)">All (22)</button>
+  <button class="filter-btn" onclick="filterQuestions('recall', this)">Recall (9)</button>
+  <button class="filter-btn" onclick="filterQuestions('application', this)">Application (7)</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical', this)">Clinical (6)</button>
+</div>
+
+<div class="container">
+
+  <!-- Q1 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q1</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>How many vertebrae are in each region of the spinal column? List all five regions with their counts.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Answer:</strong><br>
+      Cervical: <strong>7</strong> (C1–C7)<br>
+      Thoracic: <strong>12</strong> (T1–T12)<br>
+      Lumbar: <strong>5</strong> (L1–L5)<br>
+      Sacrum: <strong>5 fused</strong> (S1–S5)<br>
+      Coccyx: <strong>3–4 fused</strong><br><br>
+      Total mobile vertebrae = 24 (7 + 12 + 5). Total vertebrae including fused = 33–34.
+    </div>
+  </div>
+
+  <!-- Q2 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q2</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>Name the five bony processes of a typical vertebra.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Answer:</strong><br>
+      1. <strong>Spinous process</strong> (Proc. spinosus) — single posterior projection<br>
+      2. <strong>Transverse processes</strong> (Proc. transversi) — two lateral projections<br>
+      3. <strong>Superior articular processes</strong> (×2) — articulate with inferior facets of vertebra above<br>
+      4. <strong>Inferior articular processes</strong> (×2) — articulate with superior facets of vertebra below<br><br>
+      The body and arch (pedicle + lamina) complete the vertebra but are not processes.
+    </div>
+  </div>
+
+  <!-- Q3 RECALL MCQ -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q3</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>Which of the following correctly orders vertebral body size from <em>largest</em> to <em>smallest</em>?</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="A"> A. Cervical &gt; Thoracic &gt; Lumbar</label>
+        <label><input type="radio" name="q3" value="B"> B. Lumbar &gt; Thoracic &gt; Cervical</label>
+        <label><input type="radio" name="q3" value="C"> C. Thoracic &gt; Lumbar &gt; Cervical</label>
+        <label><input type="radio" name="q3" value="D"> D. Lumbar &gt; Cervical &gt; Thoracic</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Correct: B — Lumbar &gt; Thoracic &gt; Cervical.</strong><br>
+      Body size increases progressively from C to L because each successive region bears more cumulative body weight. Lumbar vertebrae carry the load of the entire trunk, so they need the largest bodies. Vertebral foramen size is the inverse: Cervical &gt; Lumbar &gt; Thoracic.
+    </div>
+  </div>
+
+  <!-- Q4 RECALL MCQ -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q4</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>What makes the atlas (C1) anatomically unique compared to all other vertebrae?</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="A"> A. It has the largest vertebral body in the cervical spine</label>
+        <label><input type="radio" name="q4" value="B"> B. It has no vertebral body and no spinous process</label>
+        <label><input type="radio" name="q4" value="C"> C. It has transverse foramina that transmit the internal carotid artery</label>
+        <label><input type="radio" name="q4" value="D"> D. Its superior articular facets are flat and face anteriorly</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Correct: B — No vertebral body and no spinous process.</strong><br>
+      The atlas is a bony ring consisting of anterior and posterior arches with two lateral masses. Its vertebral body was incorporated into C2 as the odontoid process (dens) during development. It has a posterior tubercle instead of a spinous process. Its concave superior articular facets receive the occipital condyles.
+    </div>
+  </div>
+
+  <!-- Q5 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q5</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>Through which vertebral levels does the vertebral artery pass within the transverse foramina?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Answer: C1 through C6.</strong><br>
+      The vertebral artery enters the transverse foramen at C6 and ascends through C6, C5, C4, C3, C2, and C1 before winding around the posterior arch of the atlas to enter the foramen magnum. It does <em>not</em> pass through C7, even though C7 has transverse foramina (they transmit only accessory veins).
+    </div>
+  </div>
+
+  <!-- Q6 RECALL MCQ -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q6</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>How are the 12 pairs of ribs classified? Which are true, false, and floating?</p>
+      <div class="options">
+        <label><input type="radio" name="q6" value="A"> A. True: 1–6 · False: 7–10 · Floating: 11–12</label>
+        <label><input type="radio" name="q6" value="B"> B. True: 1–7 · False: 8–10 · Floating: 11–12</label>
+        <label><input type="radio" name="q6" value="C"> C. True: 1–8 · False: 9–10 · Floating: 11–12</label>
+        <label><input type="radio" name="q6" value="D"> D. True: 1–7 · False: 8–12 · Floating: none</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Correct: B — True: 1–7 · False: 8–10 · Floating: 11–12.</strong><br>
+      True (vertebrosternal) ribs 1–7 each have their own costal cartilage attaching directly to the sternum. False (vertebrochondral) ribs 8–10 attach to the cartilage of rib 7. Floating (vertebral) ribs 11–12 have free anterior ends with no sternal attachment.
+    </div>
+  </div>
+
+  <!-- Q7 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q7</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>What is the sternal angle (angle of Louis) and what four structures does it mark?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Answer:</strong><br>
+      The sternal angle is a palpable horizontal ridge at the <strong>manubriosternal joint</strong>. It marks:<br>
+      1. Articulation of the <strong>2nd costal cartilage</strong> (start rib counting here)<br>
+      2. Level of the <strong>T4/T5 intervertebral disc</strong> posteriorly<br>
+      3. <strong>Tracheal bifurcation (carina)</strong><br>
+      4. Boundary between <strong>superior and inferior mediastinum</strong>
+    </div>
+  </div>
+
+  <!-- Q8 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q8</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>Describe the orientation of lumbar articular facets and explain what movement this primarily allows and restricts.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Answer:</strong><br>
+      Lumbar facets are oriented <strong>nearly sagittally</strong> (concave/convex, interlocking). This allows <strong>flexion and extension</strong> (and some lateral flexion) but <strong>significantly restricts axial rotation</strong>. The interlocking concave-convex design prevents the superior facets from sliding anteriorly — protecting against shear at high lumbar loads. Contrast this with cervical facets (~45°, allow all planes) and thoracic facets (60–80° from horizontal, allows rotation).
+    </div>
+  </div>
+
+  <!-- Q9 RECALL MCQ -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q9</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>Where does the neurovascular bundle (NVB) run in relation to the ribs, and in what order do the structures appear?</p>
+      <div class="options">
+        <label><input type="radio" name="q9" value="A"> A. Superior inner surface; Artery, Vein, Nerve (AVN)</label>
+        <label><input type="radio" name="q9" value="B"> B. Inferior inner surface; Vein, Artery, Nerve (VAN)</label>
+        <label><input type="radio" name="q9" value="C"> C. Outer surface; Nerve, Artery, Vein (NAV)</label>
+        <label><input type="radio" name="q9" value="D"> D. Inferior inner surface; Nerve, Vein, Artery (NVA)</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Correct: B — Inferior inner surface; Vein, Artery, Nerve (VAN) from superior to inferior.</strong><br>
+      The intercostal NVB runs in the costal groove on the <em>inferior inner border</em> of each rib. Remember <strong>VAN</strong> (superior → inferior). Always insert a chest drain or intercostal injection <em>just above the upper border of the rib below</em> to stay below the NVB and avoid iatrogenic injury.
+    </div>
+  </div>
+
+  <!-- Q10 APPLICATION MCQ -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q10</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>A patient has a fixed thoracic hyperkyphosis. Which of the following physiological consequences would you expect as a result of this spinal alignment change?</p>
+      <div class="options">
+        <label><input type="radio" name="q10" value="A"> A. Increased cervical extension and reduced cervical extension range</label>
+        <label><input type="radio" name="q10" value="B"> B. Compensatory cervical protraction and increased anterior shear load on the cervical spine</label>
+        <label><input type="radio" name="q10" value="C"> C. Increased thoracic rotation due to stretched facet capsules</label>
+        <label><input type="radio" name="q10" value="D"> D. Reduced lumbar lordosis with no compensatory change in the cervical spine</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Correct: B — Compensatory cervical protraction and increased anterior shear load on the cervical spine.</strong><br>
+      A fixed thoracic kyphosis shifts the head anterior to the body's line of gravity. To maintain horizontal gaze, the cervical spine compensates with increased extension and anterior head translation (forward head posture). For every inch of anterior head displacement, approximately 10 lbs of additional load is placed on the cervical extensors and facet joints. This posture is strongly associated with cervicogenic headache, upper cervical facet pain, and suboccipital muscle tension.
+    </div>
+  </div>
+
+  <!-- Q11 APPLICATION -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q11</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>A physiotherapist is about to perform a high-velocity manipulation of the upper cervical spine. What anatomical structure must be screened for integrity before proceeding, and why?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Answer:</strong><br>
+      The <strong>transverse ligament of the atlas</strong> must be screened. This ligament holds the dens of C2 against the posterior surface of the anterior arch of C1. If it is lax or ruptured (e.g., due to rheumatoid arthritis, Down syndrome, trauma, or infection), the dens can compress the spinal cord during cervical manipulation — potentially causing quadriplegia or death.<br><br>
+      The <strong>Sharp-Purser test</strong> is the clinical screen for transverse ligament integrity. The IFOMPT upper cervical instability protocol should be followed before any upper cervical manipulation. Vertebral artery patency must also be considered (posterior vascular testing).
+    </div>
+  </div>
+
+  <!-- Q12 APPLICATION MCQ -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q12</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>When palpating a patient's back to count vertebral levels, you identify the most prominent non-bifid spinous process in the lower neck. What level is this, and what clinical use does it serve?</p>
+      <div class="options">
+        <label><input type="radio" name="q12" value="A"> A. C5 — used to locate the brachial plexus roots</label>
+        <label><input type="radio" name="q12" value="B"> B. C6 — used to estimate the thyroid cartilage level</label>
+        <label><input type="radio" name="q12" value="C"> C. C7 — used as the starting landmark for counting thoracic vertebral levels</label>
+        <label><input type="radio" name="q12" value="D"> D. T1 — used to locate the superior thoracic aperture</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Correct: C — C7 (vertebra prominens), used as the starting landmark for counting thoracic levels.</strong><br>
+      C7 has the longest, most prominent spinous process in the cervical spine, and uniquely, it is <em>not bifid</em>. It is visible through the skin in many patients (particularly those with a low body mass index) and is palpable in virtually all patients. From C7, count downward to identify thoracic levels — important for needle placement, acupuncture, surgical planning, and surface anatomy assessment.
+    </div>
+  </div>
+
+  <!-- Q13 APPLICATION -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q13</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>A patient has reduced lumbar lordosis following a period of prolonged bed rest. Explain how this change in spinal alignment affects load distribution across the lumbar intervertebral discs and facet joints.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Answer:</strong><br>
+      In the neutral lumbar lordosis, compressive loads are shared between the <strong>intervertebral discs anteriorly</strong> (~80%) and the <strong>facet joints posteriorly</strong> (~20%). In a flattened lumbar spine (reduced lordosis), the spine adopts a more kyphotic posture:<br><br>
+      • The anterior disc bears <em>more</em> load, increasing intradiscal pressure and posterior annular stress — predisposing to posterior disc herniation<br>
+      • The posterior facets bear <em>less</em> load and may become deloaded, but the posterior ligamentous system (supraspinous, interspinous ligaments) is placed under greater tension<br>
+      • The lumbosacral angle decreases, altering shear force direction at L5/S1<br><br>
+      This is the biomechanical basis for why sustained flexed postures (e.g., prolonged sitting with posterior pelvic tilt) are associated with disc-related low back pain.
+    </div>
+  </div>
+
+  <!-- Q14 APPLICATION MCQ -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q14</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>The sacroiliac joint is stabilised by two mechanisms. Which of the following correctly describes both?</p>
+      <div class="options">
+        <label><input type="radio" name="q14" value="A"> A. Anterior closure (ligamentous force) and posterior closure (bony geometry)</label>
+        <label><input type="radio" name="q14" value="B"> B. Form closure (bony geometry/shape) and force closure (muscular/ligamentous compression)</label>
+        <label><input type="radio" name="q14" value="C"> C. Static closure (capsular ligaments) and dynamic closure (intra-articular pressure)</label>
+        <label><input type="radio" name="q14" value="D"> D. Passive closure (cartilage friction) and active closure (synovial fluid viscosity)</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Correct: B — Form closure and force closure (Vleeming et al., 2012).</strong><br>
+      <strong>Form closure</strong>: the wedge-shaped sacrum and the rough, interlocking auricular surfaces create inherent stability through geometry alone — compressive loading increases friction and resists movement passively.<br>
+      <strong>Force closure</strong>: muscles (gluteus maximus, biceps femoris, multifidus, transversus abdominis, pelvic floor) and ligaments generate compressive forces that increase joint surface friction further. SIJ dysfunction typically involves a loss of force closure, which is why core and hip stabiliser rehabilitation is central to SIJ physiotherapy management.
+    </div>
+  </div>
+
+  <!-- Q15 APPLICATION -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q15</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>Why is it important to place a chest drain or intercostal needle injection just <em>above the upper border of the lower rib</em> rather than just below the upper rib?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Answer:</strong><br>
+      The intercostal <strong>neurovascular bundle (vein, artery, nerve — VAN)</strong> runs in the <strong>costal groove on the inferior inner surface of each rib</strong>. Inserting a needle or drain immediately below the upper rib risks puncturing the intercostal artery (which can cause haemothorax), the vein, or the nerve (causing significant pain and possible intercostal neuralgia).<br><br>
+      Inserting just above the upper border of the <em>lower</em> rib avoids this bundle entirely, entering the intercostal space in its "safe" zone. This is standard clinical practice for thoracentesis, chest drain insertion, and intercostal nerve blocks.
+    </div>
+  </div>
+
+  <!-- Q16 APPLICATION -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q16</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>A thoracic vertebra is described as having "costal demi-facets on both the superior and inferior body margins, plus a facet on the transverse process." Which rib number articulates with the demi-facets of T6, and where does the rib tubercle facet sit?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Answer:</strong><br>
+      The <strong>head of rib 6</strong> articulates with two demi-facets: the <strong>inferior demi-facet of T5</strong> and the <strong>superior demi-facet of T6</strong>.<br><br>
+      The <strong>rib 6 tubercle</strong> articulates with the <strong>transverse process of T6</strong>.<br><br>
+      The general rule is: rib N articulates with the bodies of T(N-1) (inferior demi-facet) and T(N) (superior demi-facet), plus the transverse process of T(N). This double-vertebral articulation pattern constrains thoracic mobility and contributes significantly to thoracic cage stiffness.
+    </div>
+  </div>
+
+  <!-- Q17 CLINICAL -->
+  <div class="question" data-category="clinical">
+    <div class="q-header">
+      <span class="q-number">Q17</span>
+      <span class="q-badge badge-clinical">Clinical</span>
+    </div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 45-year-old office worker presents with unilateral right-sided neck pain and burning pain radiating down the right arm into the thumb and index finger. Spurling's test is positive on the right. Cervical rotation is limited to 40° left and 30° right. The patient reports worsening with sustained computer posture.</p>
+      <p>What is the likely diagnosis, involved level, and outline your initial physiotherapy approach?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Likely diagnosis:</strong> Right C6 cervical radiculopathy (C5/C6 intervertebral foramen compression).<br><br>
+      <strong>Anatomical basis:</strong> Numbness/burning in the thumb and index finger is the C6 dermatome. The C5/C6 disc or osteophyte at the uncovertebral joint is compressing the C6 nerve root as it exits the intervertebral foramen. Sustained flexed cervical posture narrows the foramen further. Spurling's test (extension + ipsilateral lateral flexion) reproduces symptoms by further compressing the foramen.<br><br>
+      <strong>Initial physiotherapy:</strong>
+      <ul style="margin:8px 0 0 16px;">
+        <li>Postural education — correct forward head posture, workstation ergonomics</li>
+        <li>Deep cervical flexor strengthening (longus colli/capitis) — reduces forward head load</li>
+        <li>Neural mobilisation — median nerve slider exercises to reduce neural mechanosensitivity</li>
+        <li>Cervical traction (manual or mechanical) — opens intervertebral foramina, reduces nerve root compression</li>
+        <li>Avoid end-range cervical extension — narrows foramina further</li>
+        <li>Reassess for upper cervical instability before any manipulation</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Q18 CLINICAL -->
+  <div class="question" data-category="clinical">
+    <div class="q-header">
+      <span class="q-number">Q18</span>
+      <span class="q-badge badge-clinical">Clinical</span>
+    </div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 30-year-old pregnant woman (32 weeks) presents with posterior pelvic pain that is worse with walking, rising from a chair, and turning in bed. She reports a positive FABER test and pain with the thigh thrust test. Pain is localised below L5 on the left side.</p>
+      <p>What is the likely diagnosis and what are the key physiotherapy management principles?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Likely diagnosis:</strong> Pregnancy-related Sacroiliac Joint (SIJ) dysfunction / Pelvic Girdle Pain (PGP).<br><br>
+      <strong>Anatomical basis:</strong> Relaxin-induced ligamentous laxity during pregnancy reduces SIJ force closure capacity. The asymmetrical loading of the pelvis with a growing uterus further stresses the SIJ. Positive SIJ cluster tests (FABER, thigh thrust) confirm the diagnosis. Pain below L5 is characteristically posterior pelvic / SIJ rather than lumbar.<br><br>
+      <strong>Physiotherapy management:</strong>
+      <ul style="margin:8px 0 0 16px;">
+        <li>SIJ compression belt — provides external force closure to stabilise the joint</li>
+        <li>Deep muscle activation — transversus abdominis, multifidus, pelvic floor co-contraction to improve force closure</li>
+        <li>Avoidance of provocative positions — asymmetrical loading (standing on one leg, wide-stride activities)</li>
+        <li>Activity modification — sit-to-stand using equal weight bearing; rolling in bed with knees together</li>
+        <li>Gentle hip strengthening (gluteus medius/maximus) in non-provocative range</li>
+        <li>Patient education — condition normally resolves post-partum as relaxin levels fall</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Q19 CLINICAL MCQ -->
+  <div class="question" data-category="clinical">
+    <div class="q-header">
+      <span class="q-number">Q19</span>
+      <span class="q-badge badge-clinical">Clinical</span>
+    </div>
+    <div class="q-text">
+      <p>A 70-year-old patient presents after a fall with multiple fractured ribs (5th–9th on the left) and is observed to have paradoxical chest wall movement. Which of the following is the greatest immediate respiratory concern?</p>
+      <div class="options">
+        <label><input type="radio" name="q19" value="A"> A. Reduced chest wall stability allowing scoliosis to develop</label>
+        <label><input type="radio" name="q19" value="B"> B. Flail chest with impaired ventilation, risk of atelectasis and pneumonia</label>
+        <label><input type="radio" name="q19" value="C"> C. Thoracic facet joint irritation from rib head displacement</label>
+        <label><input type="radio" name="q19" value="D"> D. Loss of rib cage contribution to thoracic spinal stiffness</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Correct: B — Flail chest with impaired ventilation, risk of atelectasis and pneumonia.</strong><br>
+      Five consecutive rib fractures create a <strong>flail segment</strong> — a portion of chest wall mechanically disconnected from the rest of the thoracic cage. During inspiration, negative intrathoracic pressure causes this segment to collapse inward instead of expanding outward (paradoxical movement), reducing tidal volume and the efficiency of ventilation.<br><br>
+      In a 70-year-old, pain-limited shallow breathing leads rapidly to retained secretions, atelectasis, and pneumonia — the leading cause of death in elderly rib fracture patients. Physiotherapy priorities: adequate analgesia (prerequisite), incentive spirometry, active cycle of breathing, early mobilisation, secretion clearance.
+    </div>
+  </div>
+
+  <!-- Q20 CLINICAL -->
+  <div class="question" data-category="clinical">
+    <div class="q-header">
+      <span class="q-number">Q20</span>
+      <span class="q-badge badge-clinical">Clinical</span>
+    </div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 14-year-old male presents with gradual-onset thoracic back pain worsening with activity. Examination reveals a visible thoracic hyperkyphosis that does not correct on extension. X-ray shows anterior wedging of ≥5° at T6–T9 with Schmorl's nodes. He is still growing (open growth plates).</p>
+      <p>What is the diagnosis and outline appropriate physiotherapy management goals?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Diagnosis:</strong> Scheuermann's Disease (adolescent thoracic kyphosis).<br><br>
+      <strong>Anatomical basis:</strong> Anterior vertebral body wedging (≥5° at ≥3 consecutive vertebrae) causes fixed thoracic kyphosis. Schmorl's nodes represent disc material herniating through the cartilaginous endplate into the vertebral body — a sign of disc and endplate pathology. The non-correctable nature distinguishes it from postural kyphosis.<br><br>
+      <strong>Physiotherapy goals:</strong>
+      <ul style="margin:8px 0 0 16px;">
+        <li>Pain management — heat, activity modification, relative rest from high-impact activities</li>
+        <li>Thoracic extension exercises — counteract anterior forces on the kyphosis</li>
+        <li>Scapular retractor and deep cervical flexor strengthening — reduce compensatory forward head posture</li>
+        <li>Hip flexor stretching — tight hip flexors increase anterior pelvic tilt and compensatory lumbar lordosis, worsening thoracic load</li>
+        <li>Bracing referral — for curves &gt;60° in a skeletally immature patient, Milwaukee or TLSO brace may be indicated; physiotherapy supports brace compliance</li>
+        <li>Avoid heavy axial loading (weight-bearing exercises) during peak growth</li>
+        <li>Education — condition can stabilise and become asymptomatic in adulthood with appropriate management</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Q21 CLINICAL -->
+  <div class="question" data-category="clinical">
+    <div class="q-header">
+      <span class="q-number">Q21</span>
+      <span class="q-badge badge-clinical">Clinical</span>
+    </div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 55-year-old manual worker presents with central lower back pain radiating into the left buttock and thigh, worse with prolonged standing and lumbar extension. MRI shows bilateral L4/L5 facet joint hypertrophy with mild lateral recess stenosis but no significant disc prolapse. Straight-leg raise is negative.</p>
+      <p>Explain the structural mechanism and outline a physiotherapy management strategy.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Mechanism:</strong> Lumbar facet syndrome with lateral recess stenosis at L4/L5.<br><br>
+      The near-sagittal facet joints of the lumbar spine bear ~20% of axial load in neutral and significantly more in extension. Years of repetitive loading have caused hypertrophic changes (osteophytes, capsular thickening) of the L4/L5 facets, narrowing the lateral recesses where the L5 nerve roots travel before exiting the intervertebral foramina. Extension further narrows the foramina (facets approximate + ligamentum flavum buckles inward), explaining why symptoms worsen with extension and prolonged standing. The negative SLR distinguishes this from disc prolapse.<br><br>
+      <strong>Physiotherapy strategy:</strong>
+      <ul style="margin:8px 0 0 16px;">
+        <li>Postural and movement education — avoid sustained extension; encourage mild flexion bias in ADLs</li>
+        <li>Core stabilisation — deep lumbar multifidus + TrA activation to improve segmental control and reduce facet overload</li>
+        <li>Hip mobility — limited hip extension shifts load to lumbar extension; hip flexor stretching and hip extension mobility work</li>
+        <li>Neurodynamic exercises — if radicular component present (lateral recess involvement)</li>
+        <li>Hydrotherapy/aquatic therapy — offloads spine while allowing movement</li>
+        <li>Manual therapy — gentle lumbar mobilisation in flexion to temporarily open foramina; not manipulation into extension</li>
+        <li>Referral for facet joint injections or medial branch blocks if conservative management plateaus</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Q22 CLINICAL -->
+  <div class="question" data-category="clinical">
+    <div class="q-header">
+      <span class="q-number">Q22</span>
+      <span class="q-badge badge-clinical">Clinical</span>
+    </div>
+    <div class="q-text">
+      <p>A patient with Down syndrome is referred for physiotherapy for general conditioning. What specific screening step must you perform before commencing any cervical exercise or manual therapy, and why?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer" style="display:none;">
+      <strong>Answer:</strong><br>
+      Screen for <strong>atlantoaxial instability (AAI)</strong> before any cervical exercise, mobilisation, or manipulation.<br><br>
+      <strong>Why:</strong> Individuals with Down syndrome have a high prevalence of transverse ligament laxity (estimated 10–30% have radiological AAI; ~1–2% have symptomatic AAI). The transverse ligament normally holds the dens within 3 mm of the anterior atlas arch. If lax, the dens can compress the spinal cord during cervical flexion, rotation, or manipulation — producing quadriplegia.<br><br>
+      <strong>Screening:</strong> Sharp-Purser test clinically; lateral cervical flexion-extension radiograph to measure the atlantodental interval (ADI &gt;3 mm in adults = instability). If AAI is confirmed, avoid cervical end-range movements and manipulation entirely; refer to neurosurgery for assessment. Even with clear screening, avoid axial loading and excessive cervical flexion activities in this population.
+    </div>
+  </div>
+
+</div>
+
+<footer>BPTY04 · LUNEX University · For personal study use only</footer>
+
+<script>
+function toggleAnswer(btn) {
+  const answer = btn.nextElementSibling;
+  const isHidden = answer.style.display === 'none';
+  answer.style.display = isHidden ? 'block' : 'none';
+  btn.textContent = isHidden ? 'Hide Answer' : 'Reveal Answer';
+}
+
+function filterQuestions(category, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(q => {
+    if (category === 'all' || q.dataset.category === category) {
+      q.style.display = 'block';
+    } else {
+      q.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>

@@ -57,6 +57,7 @@
     .ld-summary  { background: #111; }
     .ld-cards    { background: #fff; border: 1px solid #111; }
     .ld-indepth  { background: #5a3080; }
+    .ld-qa       { background: #c07020; }
     .ld-pending  { background: #ccc; }
 
     .section-header {
@@ -75,6 +76,10 @@
     .s-osteology   { color: #3a5a7a; border: 2px solid #3a5a7a; }
     .s-upper       { color: #6b3d6b; border: 2px solid #6b3d6b; }
     .s-lower       { color: #1a5c3a; border: 2px solid #1a5c3a; }
+    .s-trunk       { color: #7a6a20; border: 2px solid #7a6a20; }
+
+    /* Colour strip on left for trunk rows */
+    .s-trunk-row td:first-child { border-left: 4px solid #7a6a20; color: #7a6a20; }
 
     table {
       width: 100%;
@@ -156,6 +161,18 @@
     .btn-indepth:hover {
       background: #3d1f5a;
       border-color: #3d1f5a;
+      color: #fff;
+    }
+
+    /* Practice Q&A button */
+    .btn-qa {
+      background: #c07020;
+      color: #fff;
+      border-color: #c07020;
+    }
+    .btn-qa:hover {
+      background: #8a5015;
+      border-color: #8a5015;
       color: #fff;
     }
 
@@ -267,7 +284,7 @@
 
 <header>
   <h1>BPTY04 – Musculoskeletal Anatomy</h1>
-  <p>LUNEX University · Physiotherapy · Study Summaries · Anki Flashcard Decks · In-Depth Guides</p>
+  <p>LUNEX University · Physiotherapy · Study Summaries · Anki Flashcard Decks · In-Depth Guides · Practice Q&amp;A</p>
 </header>
 
 <main>
@@ -277,7 +294,8 @@
     <div class="legend-item"><span class="legend-dot ld-summary"></span> Summary — concise slide-based overview</div>
     <div class="legend-item"><span class="legend-dot ld-cards"></span> Flashcards — Anki deck for active recall</div>
     <div class="legend-item"><span class="legend-dot ld-indepth"></span> In-Depth — explanatory guide with clinical context</div>
-    <div class="legend-item"><span class="legend-dot ld-pending"></span> In-Depth coming soon</div>
+    <div class="legend-item"><span class="legend-dot ld-qa"></span> Practice Q&amp;A — self-testing questions with reveal</div>
+    <div class="legend-item"><span class="legend-dot ld-pending"></span> Coming soon</div>
   </div>
 
   <!-- FOUNDATIONS -->
@@ -290,6 +308,7 @@
         <a class="btn btn-primary" href="BPTY04_Myology_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Myology_Flashcards.apkg" download>Flashcards</a>
         <a class="btn btn-indepth" href="BPTY04_Myology_InDepth.html">In-Depth</a>
+        <a class="btn btn-qa" href="BPTY04_Myology_Practice.html">Practice Q&amp;A</a>
       </td>
     </tr>
     <tr class="s-foundations">
@@ -299,6 +318,7 @@
         <a class="btn btn-primary" href="BPTY04_Arthrology_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Arthrology_Flashcards.apkg" download>Flashcards</a>
         <a class="btn btn-indepth" href="BPTY04_Arthrology_InDepth.html">In-Depth</a>
+        <a class="btn btn-qa" href="BPTY04_Arthrology_Practice.html">Practice Q&amp;A</a>
       </td>
     </tr>
   </table>
@@ -313,6 +333,7 @@
         <a class="btn btn-primary" href="BPTY04_Osteology_UL_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Osteology_UL_Flashcards.apkg" download>Flashcards</a>
         <a class="btn btn-indepth" href="BPTY04_UL_Osteology_InDepth.html">In-Depth</a>
+        <a class="btn btn-qa" href="BPTY04_Osteology_UL_Practice.html">Practice Q&amp;A</a>
       </td>
     </tr>
     <tr class="s-osteology">
@@ -322,6 +343,22 @@
         <a class="btn btn-primary" href="BPTY04_LowerLimb_Osteology_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_LowerLimb_Osteology_Flashcards.apkg" download>Flashcards</a>
         <a class="btn btn-indepth" href="BPTY04_LL_Osteology_InDepth.html">In-Depth</a>
+        <a class="btn btn-qa" href="BPTY04_LL_Osteology_Practice.html">Practice Q&amp;A</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- TRUNK ANATOMY -->
+  <div class="section-header s-trunk">Trunk — Osteology</div>
+  <table>
+    <tr class="s-trunk-row">
+      <td class="topic">Trunk Anatomy</td>
+      <td class="desc">Spinal column regions · Typical vertebra · Atlas &amp; Axis · Cervical · Thoracic · Lumbar · Sacrum · Coccyx · Sternum · Ribs</td>
+      <td class="actions">
+        <a class="btn btn-primary" href="BPTY04_Trunk_Anatomy_Summary.html">Summary</a>
+        <a class="btn" href="BPTY04_Trunk_Anatomy_Flashcards.apkg" download>Flashcards</a>
+        <a class="btn btn-indepth" href="BPTY04_Trunk_Anatomy_InDepth.html">In-Depth</a>
+        <a class="btn btn-qa" href="BPTY04_Trunk_Anatomy_Practice.html">Practice Q&amp;A</a>
       </td>
     </tr>
   </table>
@@ -336,6 +373,7 @@
         <a class="btn btn-primary" href="BPTY04_Shoulder_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Shoulder_Flashcards.apkg" download>Flashcards</a>
         <a class="btn btn-indepth" href="BPTY04_Shoulder_InDepth.html">In-Depth</a>
+        <a class="btn btn-qa" href="BPTY04_Shoulder_Practice.html">Practice Q&amp;A</a>
       </td>
     </tr>
     <tr class="s-upper">
@@ -345,6 +383,7 @@
         <a class="btn btn-primary" href="BPTY04_Elbow_Forearm_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Elbow_Forearm_Flashcards.apkg" download>Flashcards</a>
         <a class="btn btn-indepth" href="BPTY04_Elbow_Forearm_InDepth.html">In-Depth</a>
+        <a class="btn btn-qa" href="BPTY04_Elbow_Forearm_Practice.html">Practice Q&amp;A</a>
       </td>
     </tr>
     <tr class="s-upper">
@@ -354,6 +393,7 @@
         <a class="btn btn-primary" href="BPTY04_Wrist_Hand_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Wrist_Hand_Flashcards.apkg" download>Flashcards</a>
         <a class="btn btn-indepth" href="BPTY04_Wrist_Hand_InDepth.html">In-Depth</a>
+        <a class="btn btn-qa" href="BPTY04_Wrist_Hand_Practice.html">Practice Q&amp;A</a>
       </td>
     </tr>
   </table>
@@ -368,6 +408,7 @@
         <a class="btn btn-primary" href="BPTY04_Hip_Pelvis_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Hip_Pelvis_Flashcards.apkg" download>Flashcards</a>
         <a class="btn btn-indepth" href="BPTY04_Hip_Pelvis_InDepth.html">In-Depth</a>
+        <a class="btn btn-qa" href="BPTY04_Hip_Pelvis_Practice.html">Practice Q&amp;A</a>
       </td>
     </tr>
     <tr class="s-lower">
@@ -377,6 +418,7 @@
         <a class="btn btn-primary" href="BPTY04_Knee_Thigh_Summary.html">Summary</a>
         <a class="btn" href="BPTY04_Knee_Thigh_Flashcards.apkg" download>Flashcards</a>
         <a class="btn btn-indepth" href="BPTY04_Knee_Thigh_InDepth.html">In-Depth</a>
+        <a class="btn btn-qa" href="BPTY04_Knee_Thigh_Practice.html">Practice Q&amp;A</a>
       </td>
     </tr>
   </table>
@@ -409,6 +451,10 @@
         <td>In-Depth</td>
         <td>Scholarly explanatory guide going beyond the slides — anatomical reasoning, clinical applications, mnemonics, and the "why" behind the facts. Use this when you want to <em>understand</em> material, not just memorise it, or to prepare for case-based assessments.</td>
       </tr>
+      <tr>
+        <td>Practice Q&amp;A</td>
+        <td>Self-testing question set with hidden reveal answers — Recall, Application, and Clinical categories. Use this to consolidate knowledge after a lecture or summary review, check gaps before an exam, or simulate case-based reasoning without the passive reading of flashcards.</td>
+      </tr>
     </table>
   </div>
 
@@ -431,6 +477,3 @@
 
 </body>
 </html>
-
- 
- 
