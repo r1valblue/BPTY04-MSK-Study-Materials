@@ -71,20 +71,6 @@
       background: #fff;
     }
 
-    /* Section accent colours — outline + text only */
-    .s-foundations { color: #4a6741; border: 2px solid #4a6741; }
-    .s-osteology   { color: #3a5a7a; border: 2px solid #3a5a7a; }
-    .s-upper       { color: #6b3d6b; border: 2px solid #6b3d6b; }
-    .s-lower       { color: #1a5c3a; border: 2px solid #1a5c3a; }
-    .s-trunk       { color: #7a6a20; border: 2px solid #7a6a20; }
-
-    /* Colour strip on left for trunk rows */
-    .s-trunk-row td:first-child { border-left: 4px solid #7a6a20; color: #7a6a20; }
-
-    /* Ankle & Foot section */
-    .s-ankle { color: #6a4800; border: 2px solid #6a4800; }
-    .s-ankle-row td:first-child { border-left: 4px solid #6a4800; color: #6a4800; }
-
     table {
       width: 100%;
       border-collapse: collapse;
@@ -99,11 +85,22 @@
       border-bottom: 2px solid #111;
     }
 
-    /* Colour strip on left + topic text colour by section */
+    /* Section accent colours — border on header div; left strip on topic td.
+       RULE: use the SAME class on both the <div class="section-header"> and the <tr>.
+       This gives the header its closed rectangle and the row its coloured left strip. */
+    .s-foundations { color: #4a6741; border: 2px solid #4a6741; }
+    .s-osteology   { color: #3a5a7a; border: 2px solid #3a5a7a; }
+    .s-upper       { color: #6b3d6b; border: 2px solid #6b3d6b; }
+    .s-lower       { color: #1a5c3a; border: 2px solid #1a5c3a; }
+    .s-trunk       { color: #7a6a20; border: 2px solid #7a6a20; }
+    .s-ankle       { color: #6a4800; border: 2px solid #6a4800; }
+
     .s-foundations td:first-child { border-left: 4px solid #4a6741; color: #4a6741; }
     .s-osteology   td:first-child { border-left: 4px solid #3a5a7a; color: #3a5a7a; }
     .s-upper       td:first-child { border-left: 4px solid #6b3d6b; color: #6b3d6b; }
     .s-lower       td:first-child { border-left: 4px solid #1a5c3a; color: #1a5c3a; }
+    .s-trunk       td:first-child { border-left: 4px solid #7a6a20; color: #7a6a20; }
+    .s-ankle       td:first-child { border-left: 4px solid #6a4800; color: #6a4800; }
 
     td {
       padding: 0.75rem 0.8rem;
@@ -355,7 +352,7 @@
   <!-- ANKLE & FOOT -->
   <div class="section-header s-ankle">Ankle &amp; Foot — Osteology</div>
   <table>
-    <tr class="s-ankle-row">
+    <tr class="s-ankle">
       <td class="topic">Ankle &amp; Foot</td>
       <td class="desc">Tibia &amp; Fibula review · Mortise anatomy · Talus · Calcaneus · Navicular · Cuneiforms · Cuboid · Metatarsals · Phalanges</td>
       <td class="actions">
@@ -370,7 +367,7 @@
   <!-- TRUNK ANATOMY -->
   <div class="section-header s-trunk">Trunk — Osteology</div>
   <table>
-    <tr class="s-trunk-row">
+    <tr class="s-trunk">
       <td class="topic">Trunk Anatomy</td>
       <td class="desc">Spinal column regions · Typical vertebra · Atlas &amp; Axis · Cervical · Thoracic · Lumbar · Sacrum · Coccyx · Sternum · Ribs</td>
       <td class="actions">
