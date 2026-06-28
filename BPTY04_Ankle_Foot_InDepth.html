@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankle & Foot Osteology — In-Depth Guide · BPTY04</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Georgia, 'Times New Roman', serif; background: #f6f4f0; color: #1a1a1a; font-size: 15.5px; line-height: 1.85; }
+
+    header {
+      background: linear-gradient(135deg, #2a1800, #6a4800);
+      color: #fff;
+      padding: 2.5rem 2.5rem 2rem;
+    }
+    header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.3rem; }
+    header p { color: #e0c88a; font-size: 0.95rem; }
+    header a { color: #f5d88a; text-decoration: none; font-size: 0.88rem; display: inline-block; margin-top: 0.8rem; }
+    header a:hover { text-decoration: underline; }
+
+    .toc {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem auto;
+      max-width: 860px;
+    }
+    .toc h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #6a4800; margin-bottom: 0.6rem; font-family: 'Segoe UI', Arial, sans-serif; }
+    .toc ol { padding-left: 1.3rem; }
+    .toc li { margin: 0.2rem 0; }
+    .toc a { color: #6a4800; text-decoration: none; font-size: 0.88rem; font-family: 'Segoe UI', Arial, sans-serif; }
+    .toc a:hover { text-decoration: underline; }
+
+    main { max-width: 860px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+    section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+    }
+    .section-title {
+      background: #6a4800;
+      color: #fff;
+      padding: 14px 24px;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .section-body { padding: 1.6rem 1.8rem; }
+
+    h2 { color: #6a4800; font-size: 1.2rem; margin: 1.6rem 0 0.6rem; }
+    h3 { color: #8a6010; font-size: 1rem; margin: 1.2rem 0 0.5rem; font-style: italic; }
+    p { margin-bottom: 1rem; }
+
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.88rem; font-family: 'Segoe UI', Arial, sans-serif; }
+    th { background: #6a4800; color: #fff; padding: 9px 12px; text-align: left; }
+    td { padding: 8px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+    tr:nth-child(even) td { background: #fdf8f0; }
+
+    .callout  { background: #edf3fb; border-left: 4px solid #2e6fa8; padding: 14px 18px; border-radius: 5px; margin: 20px 0; }
+    .clinical { background: #fdf0ef; border-left: 4px solid #c0392b; padding: 14px 18px; border-radius: 5px; margin: 20px 0; }
+    .mnemonic { background: #fff8ee; border-left: 4px solid #d4820a; padding: 14px 18px; border-radius: 5px; margin: 20px 0; }
+    .concept  { background: #f3eefb; border-left: 4px solid #6a2a9a; padding: 14px 18px; border-radius: 5px; margin: 20px 0; }
+    .evidence { background: #eefaf0; border-left: 4px solid #2a7a3a; padding: 14px 18px; border-radius: 5px; margin: 20px 0; }
+
+    .slides-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+    .slide-img { flex: 1 1 300px; max-width: 480px; }
+    .slide-img img { width: 100%; border-radius: 4px; border: 1px solid #ccc; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+    .slide-img p { font-size: 0.78em; color: #777; text-align: center; margin-top: 4px; font-style: italic; font-family: 'Segoe UI', Arial, sans-serif; }
+
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.3rem; }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      color: #888;
+      border-top: 1px solid #ddd;
+      margin-top: 2rem;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ankle &amp; Foot — Osteology: In-Depth Guide</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · LUNEX University · Dr. Alexandre Pelegrinelli</p>
+  <a href="index.html">← Back to BPTY04 Resources</a>
+</header>
+
+<div class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#intro">Why the Foot &amp; Ankle Matter in Physiotherapy</a></li>
+    <li><a href="#mortise">The Ankle Mortise — Architecture &amp; Biomechanics</a></li>
+    <li><a href="#talus">The Talus — Keystone Bone, Unique Vulnerabilities</a></li>
+    <li><a href="#subtalar">The Subtalar Joint Complex &amp; Foot Adaptation</a></li>
+    <li><a href="#midfoot">The Midfoot — Arches, Navicular &amp; Cuneiforms</a></li>
+    <li><a href="#forefoot">Forefoot Osteology — Metatarsals &amp; Phalanges</a></li>
+    <li><a href="#lateral-ligaments">Lateral Ankle Ligaments — Anatomy &amp; Injury</a></li>
+    <li><a href="#clinical">Clinical Applications</a></li>
+    <li><a href="#sources">Sources &amp; Further Reading</a></li>
+  </ol>
+</div>
+
+<main>
+
+  <!-- SECTION 1 -->
+  <section id="intro">
+    <div class="section-title">1. Why the Foot &amp; Ankle Matter in Physiotherapy</div>
+    <div class="section-body">
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-03.png" alt="Slide 3">
+          <p>Slide 3 – Ankle &amp; foot relevance to ADLs</p>
+        </div>
+      </div>
+
+      <p>The ankle and foot complex is the body's primary interface with the ground. Every upright human activity — walking, running, jumping, standing — is mediated by this structure. Its dual demands of stability and mobility are unique: the foot must be rigid enough to transmit propulsive force at toe-off and supple enough to adapt to uneven terrain milliseconds later. This functional duality is achieved through specialised bony architecture, a rich ligamentous system, and dynamic muscular control.</p>
+
+      <p>From a physiotherapy perspective, the foot and ankle region is among the most frequently injured in the human body. Lateral ankle sprains account for approximately 10–30% of all sport-related injuries and are the single most common musculoskeletal injury in recreational sport. Beyond acute injury, the foot's structural alignment powerfully influences proximal mechanics — excessive subtalar pronation has been associated with medial tibial stress syndrome, patellofemoral pain, iliotibial band syndrome, and even lumbar pain, making foot osteology foundational knowledge for any clinician working with the lower limb.</p>
+
+      <div class="callout">
+        <strong>The kinetic chain principle:</strong> Because the foot is the lowest link in the weight-bearing kinetic chain, its positional deviations are amplified proximally. A 1° increase in forefoot valgus can produce a corresponding 1.5° change in subtalar joint eversion, a 0.5° change in tibial rotation, and downstream effects at the knee and hip. Understanding foot bone anatomy is therefore inseparable from understanding whole-limb biomechanics.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section id="mortise">
+    <div class="section-title">2. The Ankle Mortise — Architecture &amp; Biomechanics</div>
+    <div class="section-body">
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-04.png" alt="Slide 4">
+          <p>Slide 4 – Tibia and fibula as the lower leg</p>
+        </div>
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-12.png" alt="Slide 12">
+          <p>Slide 12 – Medial and lateral malleoli</p>
+        </div>
+      </div>
+
+      <p>The ankle (talocrural) joint is a synovial hinge joint formed by the articulation of the talar trochlea with the bony mortise. The mortise is the U-shaped socket created by the distal tibia above (the tibial plafond), the medial malleolus on the medial side, and the lateral malleolus of the fibula on the lateral side. The integrity of this mortise is fundamental to ankle stability, and disruption of any component — whether osseous or ligamentous — alters load distribution across the joint surface.</p>
+
+      <h3>Why the talar trochlea shape matters</h3>
+      <p>The talar trochlea is wider anteriorly than posteriorly, typically by 3–6 mm. This geometric difference has critical biomechanical consequences. In ankle dorsiflexion, the wider anterior portion of the trochlea is wedged firmly into the mortise: the fibula is pushed laterally and the syndesmosis is slightly widened, creating a stable, congruent joint. Conversely, in plantarflexion, the narrower posterior portion occupies the mortise, leaving relative laxity. This is why lateral ankle sprains almost exclusively occur in plantarflexion and inversion — the ligaments must substitute for the lost bony constraint.</p>
+
+      <h3>The distal tibiofibular syndesmosis</h3>
+      <p>The inferior tibiofibular joint is a fibrous syndesmosis held together by the anterior and posterior inferior tibiofibular ligaments and the interosseous ligament. It is not a true synovial joint but rather a highly stable fibrous articulation that allows only 1–2 mm of fibular movement during dorsiflexion. Injury to the syndesmosis — commonly called a "high ankle sprain" — disrupts mortise integrity and can allow the talus to sublux laterally, dramatically altering joint loading. Recovery from syndesmotic injuries is typically 2–3 times longer than simple lateral ankle sprains and may require surgical stabilisation if the mortise is widened.</p>
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-06.png" alt="Slide 6">
+          <p>Slide 6 – Superior tibiofibular joint anatomy</p>
+        </div>
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-09.png" alt="Slide 9">
+          <p>Slide 9 – Interosseous border and posterior tibia</p>
+        </div>
+      </div>
+
+      <div class="concept">
+        <strong>Mortise width clinical assessment:</strong> On a mortise X-ray view (taken with the ankle in 15–20° internal rotation), the joint space between the medial malleolus and talus (medial clear space) should equal the space between the tibial plafond and talar dome (superior clear space). A medial clear space &gt;4 mm suggests syndesmotic disruption and potential deltoid ligament injury, warranting further investigation or surgical review.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section id="talus">
+    <div class="section-title">3. The Talus — Keystone Bone, Unique Vulnerabilities</div>
+    <div class="section-body">
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-18.png" alt="Slide 18">
+          <p>Slide 18 – Talus overview</p>
+        </div>
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-19.png" alt="Slide 19">
+          <p>Slide 19 – Talar articular surfaces</p>
+        </div>
+      </div>
+
+      <p>The talus is the structural keystone connecting the leg to the foot. Approximately 60% of its surface is covered by articular cartilage, making it one of the most extensively cartilage-covered bones in the body. It articulates with four bones: the tibia (superiorly), the fibula (laterally), the calcaneus (inferiorly), and the navicular (anteriorly). This complex engagement with multiple structures demands precision in its anatomy — even small deformities or fractures significantly impair ankle and foot function.</p>
+
+      <h3>The vascular problem — no muscle attachments</h3>
+      <p>The talus is unique among the major bones of the lower limb in that no muscles or tendons attach to it. All mechanical force transmission is ligamentous or articular. This architectural fact has a critical consequence: the talus's blood supply is derived almost entirely from vessels that enter through its ligamentous attachments and the bone at its margins — the superior neck, the deltoid ligament medially, and the sinus tarsi laterally. When the talar neck is displaced in a fracture, these entry vessels are stretched or torn, and the avascular necrosis (AVN) risk rises dramatically.</p>
+
+      <div class="evidence">
+        A systematic review and meta-analysis of talar fracture outcomes (PMC8393919) found that AVN occurred in approximately 25% of all talar fractures across 987 cases. For Hawkins type III and IV injuries (complete dislocation), AVN rates exceed 50%. The Hawkins sign — subchondral lucency visible on X-ray 6–8 weeks post-injury — reflects revascularisation-driven bone resorption and is the most reliable early radiographic indicator that blood supply has returned. Its absence at 8 weeks should prompt MRI evaluation (Rammelt et al., 2022; PMC5961266).
+      </div>
+
+      <h3>The Hawkins classification and AVN risk</h3>
+      <table>
+        <tr><th>Hawkins Type</th><th>Description</th><th>AVN Risk</th></tr>
+        <tr><td>Type I</td><td>Non-displaced talar neck fracture</td><td>~0–10%</td></tr>
+        <tr><td>Type II</td><td>Displaced + subtalar subluxation/dislocation</td><td>~20–30%</td></tr>
+        <tr><td>Type III</td><td>Displaced + subtalar + ankle dislocation</td><td>~50–80%</td></tr>
+        <tr><td>Type IV</td><td>Displaced + subtalar + ankle + talonavicular dislocation</td><td>&gt;80%</td></tr>
+      </table>
+
+      <div class="clinical">
+        <strong>Physiotherapy after talar fracture:</strong> Management depends on fracture type. Type I fractures are typically managed conservatively with 6 weeks non-weight-bearing, followed by progressive loading. For operatively treated fractures, physiotherapy focuses on: (1) oedema management; (2) joint mobilisation of the ankle and subtalar joints once healing is confirmed; (3) progressive strengthening of tibialis anterior, peroneals, and calf; (4) proprioceptive rehabilitation — critical given the talus's role in all functional loading. For confirmed AVN, protected weight-bearing for 12–24 months may be required.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section id="subtalar">
+    <div class="section-title">4. The Subtalar Joint Complex &amp; Foot Adaptation</div>
+    <div class="section-body">
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-20.png" alt="Slide 20">
+          <p>Slide 20 – Calcaneus and subtalar motion</p>
+        </div>
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-21.png" alt="Slide 21">
+          <p>Slide 21 – Calcaneal surfaces and landmarks</p>
+        </div>
+      </div>
+
+      <p>The subtalar joint is technically a complex of three facets between the talus above and the calcaneus below: the posterior, middle, and anterior facets. Together they allow the primary foot motion of inversion and eversion, occurring about an oblique axis that runs approximately 42° from the horizontal and 23° from the sagittal plane (Manter's axis). Because this axis is oblique, subtalar motion is actually triplanar — inversion couples with plantarflexion and adduction, while eversion couples with dorsiflexion and abduction. This triplanar motion is the basis for the clinical concepts of pronation and supination.</p>
+
+      <h3>Pronation and supination — not just foot position</h3>
+      <p>Pronation at the subtalar joint (calcaneal eversion + forefoot abduction + dorsiflexion) is essential during early stance phase of walking — it allows the foot to absorb impact forces and adapt to terrain. Excessive or prolonged pronation, however, is a risk factor for multiple lower limb pathologies. When the subtalar joint remains everted during late midstance and propulsion, it prevents the foot from resupinating for efficient push-off and transmits abnormal rotational forces to the tibia, knee, and hip.</p>
+
+      <div class="evidence">
+        A 2023 study on foot biomechanics in patients with advanced subtalar and mid-tarsal osteoarthritis (PMC10683126, n=76) found that tibiotalar range of motion in the sagittal plane was significantly reduced in affected patients during pre-swing phase, while tarsometatarsal joint motion increased compensatorily. Patients adopted a cautious, stiff walking strategy driven by pain and kinesiophobia, highlighting how subtalar pathology cascades to compensatory changes throughout the kinetic chain. Conservative physiotherapy (mobilisation, strengthening, proprioceptive exercises, orthotics) remains the primary management approach before surgical consideration.
+      </div>
+
+      <h3>The calcaneus as weight-bearing foundation</h3>
+      <p>The calcaneus is the largest tarsal bone and the primary weight-bearing bone of the hindfoot. The posterior calcaneal tuberosity contacts the ground in heel-strike, making it the initial point of ground reaction force transmission in walking gait. Two critical soft tissue structures originate from the calcaneus and have enormous clinical relevance: the Achilles tendon (inserting on the posterior tuberosity) and the plantar fascia (originating from the medial calcaneal tubercle). Overload of either structure produces the two most common causes of heel pain in active adults — Achilles tendinopathy and plantar fasciitis respectively.</p>
+
+      <div class="callout">
+        <strong>Sustentaculum tali:</strong> This medial shelf of the calcaneus performs two critical functions. It supports the head of the talus (contributing to the medial longitudinal arch) and forms the floor of a groove through which the flexor hallucis longus (FHL) tendon passes — the classic site of FHL tendinopathy in ballet dancers who spend extended time en pointe. The sustentaculum is also an important landmark in tarsal tunnel anatomy and in the surgical approach to calcaneal fractures.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section id="midfoot">
+    <div class="section-title">5. The Midfoot — Arches, Navicular &amp; Cuneiforms</div>
+    <div class="section-body">
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-22.png" alt="Slide 22">
+          <p>Slide 22 – Navicular overview</p>
+        </div>
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-24.png" alt="Slide 24">
+          <p>Slide 24 – Cuneiforms and their articulations</p>
+        </div>
+      </div>
+
+      <h3>The medial longitudinal arch — a dynamic structure</h3>
+      <p>The medial longitudinal arch (MLA) spans from the calcaneus posteriorly through the talus, navicular, and medial cuneiform to the 1st metatarsal head anteriorly. The navicular sits at its apex and is therefore the primary indicator of arch height. The arch is maintained by a combination of bony geometry (the wedge shape of the bones), passive ligamentous support (spring ligament, plantar fascia), and active dynamic support (tibialis posterior, flexor hallucis longus, intrinsic foot muscles). The windlass mechanism — in which toe dorsiflexion tightens the plantar fascia, raising the arch — is central to efficient propulsion during toe-off.</p>
+
+      <h3>The navicular — clinical importance beyond its size</h3>
+      <p>The navicular is a relatively small bone, but its position at the apex of the MLA and its status as the sole insertion of tibialis posterior make it disproportionately important clinically. Tibialis posterior is the primary active support of the medial arch; it eccentrically controls pronation during stance and concentrically supinates the foot for propulsion. Weakness or tendon degeneration leads to progressive arch collapse — adult-acquired flatfoot deformity (AAFD) — with downstream consequences at the ankle, knee, and spine.</p>
+
+      <div class="clinical">
+        <strong>Navicular stress fractures:</strong> One of the most serious and frequently missed stress fractures in sport. The navicular has a relatively avascular central third — a watershed zone analogous to the Jones fracture in the 5th metatarsal. Navicular stress fractures typically present as vague dorsomedial midfoot pain in runners or jumping athletes. N-spot tenderness (localised dorsal navicular tenderness) is highly sensitive. Plain X-ray sensitivity is only ~40%; CT or MRI is required for diagnosis. Management requires strict non-weight-bearing for 6–8 weeks.
+      </div>
+
+      <h3>The Lisfranc complex — an often-missed injury</h3>
+      <p>The tarsometatarsal (Lisfranc) joint complex includes the three cuneiforms, the cuboid, and the bases of all five metatarsals. The 2nd metatarsal base sits in a recessed mortise between the medial and lateral cuneiforms — this makes it the keystone of the complex. The Lisfranc ligament itself connects the medial cuneiform to the 2nd metatarsal base on the plantar-lateral side. Disruption of this ligament, with or without fracture, destabilises the entire forefoot. Lisfranc injuries are notoriously under-diagnosed on non-weight-bearing X-rays; subtle diastasis (&gt;2 mm between the medial cuneiform and 2nd metatarsal base on weight-bearing views) is pathognomonic. Untreated, they lead to chronic midfoot instability, pain, and post-traumatic arthritis.</p>
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-25.png" alt="Slide 25">
+          <p>Slide 25 – Cuneiform positions in the foot</p>
+        </div>
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-27.png" alt="Slide 27">
+          <p>Slide 27 – Cuboid and its plantar groove</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section id="forefoot">
+    <div class="section-title">6. Forefoot Osteology — Metatarsals &amp; Phalanges</div>
+    <div class="section-body">
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-28.png" alt="Slide 28">
+          <p>Slide 28 – Metatarsals</p>
+        </div>
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-29.png" alt="Slide 29">
+          <p>Slide 29 – Phalanges</p>
+        </div>
+      </div>
+
+      <h3>The Jones fracture — watershed blood supply and high non-union risk</h3>
+      <p>Of all the forefoot bones, the 5th metatarsal attracts disproportionate clinical attention due to two fracture patterns with markedly different prognoses. The styloid avulsion (Zone 1), caused by a sudden peroneus brevis contraction or inversion injury, occurs at a region of robust blood supply and typically heals reliably with 4–6 weeks of conservative management in a stiff-soled shoe.</p>
+      <p>The Jones fracture (Zone 2), at the metaphyseal-diaphyseal junction, is in a vascular watershed zone where the nutrient artery and metaphyseal perforators fail to provide adequate overlap. This biological vulnerability, combined with the high mechanical loads this region sustains, results in significantly elevated non-union rates — particularly in athletes who return prematurely to loading.</p>
+
+      <div class="evidence">
+        A 2021 review of Jones fracture management in athletes (PMC8472442) reported that early surgical fixation with an intramedullary screw resulted in return-to-sport rates &gt;30% faster than casting, with non-union rates below 5% versus 15–25% with conservative management. StatPearls (NBK544369) confirms that athletic patients with Zone 2 fractures are generally best served by early operative fixation, with progressive weight-bearing from 2–4 weeks post-surgery under physiotherapy supervision.
+      </div>
+
+      <h3>Metatarsal stress fractures</h3>
+      <p>The 2nd and 3rd metatarsal shafts are the most common sites of metatarsal stress fractures — sometimes called "march fractures" due to their prevalence in military recruits. They result from repetitive submaximal loading that exceeds the bone's remodelling capacity. Risk is elevated by rapid training load increases, low bone mineral density, nutritional insufficiency (especially the female athlete triad), and structural foot abnormalities. Early physiotherapy includes load management, insole offloading, and addressing training errors; rarely do they require surgical intervention.</p>
+
+      <h3>The hallux and 1st MTP joint</h3>
+      <p>The 1st metatarsophalangeal joint is the focal point of propulsion in normal gait. It requires approximately 65° of dorsiflexion for normal walking and up to 90° for running. The two sesamoid bones beneath the 1st MTP head — embedded in the tendons of flexor hallucis brevis — distribute compressive forces at this point of high pressure and protect the underlying FHL tendon from direct contact with the ground. Sesamoiditis (inflammation), sesamoid fracture, and bipartite sesamoid (a developmental variant often confused with fracture) are common causes of plantar forefoot pain in dancers and runners.</p>
+
+    </div>
+  </section>
+
+  <!-- SECTION 7 -->
+  <section id="lateral-ligaments">
+    <div class="section-title">7. Lateral Ankle Ligaments — Anatomy &amp; Injury</div>
+    <div class="section-body">
+
+      <div class="slides-row">
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-11.png" alt="Slide 11">
+          <p>Slide 11 – Tibia articular surfaces (context for ankle mortise)</p>
+        </div>
+        <div class="slide-img">
+          <img src="bpty04_images/ankle_foot/slide-12.png" alt="Slide 12">
+          <p>Slide 12 – Distal tibia and fibula — malleolar region</p>
+        </div>
+      </div>
+
+      <p>Although the slides focus on osteology, an understanding of the lateral ankle ligaments is inseparable from understanding the bony anatomy they connect. The lateral ligament complex consists of three distinct ligaments, each attaching to the lateral malleolus of the fibula and diverging to different distal bony attachments on the talus and calcaneus.</p>
+
+      <table>
+        <tr><th>Ligament</th><th>Origin</th><th>Insertion</th><th>Function</th><th>Injury Rate</th></tr>
+        <tr><td>ATFL (anterior talofibular)</td><td>Anterior border of lateral malleolus</td><td>Lateral talar neck</td><td>Resists anterior drawer of talus; primary stabiliser in plantarflexion</td><td>~85% of lateral sprains</td></tr>
+        <tr><td>CFL (calcaneofibular)</td><td>Tip of lateral malleolus</td><td>Lateral calcaneus (posterior to peroneal tendons)</td><td>Resists calcaneal inversion; stabilises both ankle and subtalar joints</td><td>~35% of lateral sprains</td></tr>
+        <tr><td>PTFL (posterior talofibular)</td><td>Posterior aspect of lateral malleolus</td><td>Posterior talar tubercle</td><td>Resists posterior talar displacement; rarely injured alone</td><td>&lt;5% of lateral sprains</td></tr>
+      </table>
+
+      <div class="evidence">
+        A 2024 anatomical study on lateral ankle ligament functional anatomy (PMC10924277) confirmed that the ATFL has two fascicles — a superior and an inferior — with distinct biomechanical roles. The superior fascicle is taut in neutral, while the inferior fascicle is taut in plantarflexion, explaining the vulnerability of the ATFL across a range of positions. The CFL uniquely crosses two joints (talocrural and subtalar), making its integrity essential for both ankle and hindfoot stability.
+      </div>
+
+      <p>Evidence-based rehabilitation after lateral ankle sprain follows a graduated algorithm: immediate phase (POLICE principles, early weight-bearing as tolerated, ankle mobilisation); sub-acute phase (progressive strengthening of peroneals and intrinsic muscles, balance training); return-to-sport phase (hop testing progressing from frontal to sagittal to multidirectional). A 2024 rehabilitation algorithm study (published in IJSPT) confirmed that sequencing rehabilitation in this order reflects both the anatomical healing sequence and the biomechanical demands of sport-specific movement.</p>
+
+      <div class="mnemonic">
+        <strong>Lateral ligament order (anterior → posterior):</strong><br>
+        <strong>A</strong>nterior talofibular · <strong>C</strong>alcaneofibular · <strong>P</strong>osterior talofibular<br>
+        <em>"Always Comes Posted"</em> — or simply remember they fan out from anterior to posterior around the lateral malleolus.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 8 -->
+  <section id="clinical">
+    <div class="section-title">8. Clinical Applications</div>
+    <div class="section-body">
+
+      <table>
+        <tr><th>Condition</th><th>Anatomical Basis</th><th>Key Signs</th><th>Physiotherapy Reasoning</th></tr>
+        <tr>
+          <td>Lateral ankle sprain</td>
+          <td>ATFL ± CFL tear; occurs in plantarflexion-inversion when bony mortise is unstable</td>
+          <td>Lateral swelling, ATFL tenderness, positive anterior drawer test, positive talar tilt test</td>
+          <td>POLICE early phase; progressive peroneal &amp; proprioceptive retraining; graduated hop testing for RTS</td>
+        </tr>
+        <tr>
+          <td>High ankle sprain (syndesmotic)</td>
+          <td>Inferior tibiofibular syndesmosis disruption; mortise widening; external rotation mechanism</td>
+          <td>Proximal fibular pain, positive squeeze test, positive external rotation stress test; slow recovery</td>
+          <td>Confirm syndesmotic integrity (X-ray mortise view); non-weight-bearing if widened; surgical stabilisation if unstable; rehabilitation 2–3× longer than lateral sprain</td>
+        </tr>
+        <tr>
+          <td>Plantar fasciitis</td>
+          <td>Degenerative microtrauma to plantar fascia at medial calcaneal tubercle; altered windlass mechanism</td>
+          <td>Inferior heel pain worst with first steps; point tenderness at medial tubercle; positive windlass test</td>
+          <td>Evidence-based: plantar fascia &amp; gastrocnemius stretching, load management, foot orthoses, shockwave therapy for chronic cases (PMC12294660)</td>
+        </tr>
+        <tr>
+          <td>Adult-acquired flatfoot (AAFD)</td>
+          <td>Tibialis posterior tendon dysfunction; progressive navicular drop; spring ligament attenuation</td>
+          <td>"Too many toes" sign, navicular drop &gt;10mm, single-leg heel raise inability</td>
+          <td>Tibialis posterior strengthening; foot orthoses to support MLA; address ankle dorsiflexion restriction; surgical referral for stage III–IV</td>
+        </tr>
+        <tr>
+          <td>Jones fracture (5th metatarsal)</td>
+          <td>Watershed blood supply at Zone 2 metaphyseal-diaphyseal junction</td>
+          <td>5th metatarsal shaft pain, swelling, weight-bearing pain; confirm with X-ray</td>
+          <td>Athletes: early surgical fixation (intramedullary screw) → early progressive weight-bearing under physio supervision; non-athletes: non-weight-bearing boot for 6–8 weeks with close monitoring for non-union</td>
+        </tr>
+        <tr>
+          <td>Talar avascular necrosis (post-fracture)</td>
+          <td>Loss of ligamentous blood supply after displaced talar neck fracture; 60% cartilage coverage = high vulnerability</td>
+          <td>Persistent ankle pain, stiffness, absence of Hawkins sign at 8 weeks; confirmed by MRI</td>
+          <td>Protected weight-bearing 12–24 months; progressive ROM and strengthening when tolerated; core decompression for early AVN; tibiotalocalcaneal fusion as salvage in late collapse</td>
+        </tr>
+        <tr>
+          <td>Navicular stress fracture</td>
+          <td>Avascular central third of navicular; repetitive axial loading in jumpers/runners</td>
+          <td>N-spot tenderness; vague dorsomedial midfoot pain; plain X-ray often negative; CT/MRI required</td>
+          <td>Strict non-weight-bearing in boot for 6–8 weeks; gradual return to impact loading from 10–12 weeks; address training errors and nutritional deficiencies</td>
+        </tr>
+        <tr>
+          <td>Cuboid syndrome</td>
+          <td>Minor subluxation of calcaneocuboid joint; peroneus longus groove involvement</td>
+          <td>Lateral midfoot pain; reproduction with cuboid compression; common in dancers, runners</td>
+          <td>Cuboid manipulation (whip or squeeze technique); peroneal strengthening; assess for underlying lateral ankle instability</td>
+        </tr>
+      </table>
+
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <section id="sources">
+    <div class="section-title">Sources &amp; Further Reading</div>
+    <div class="section-body">
+
+      <p>The following sources informed the clinical and biomechanical content of this in-depth guide. All are peer-reviewed or authoritative clinical references.</p>
+
+      <h3>Subtalar Joint &amp; Foot Biomechanics</h3>
+      <ul>
+        <li>Dijk-Koppenaal M et al. (2023). <em>Foot biomechanics in patients with advanced subtalar- and mid-tarsal joint osteoarthritis and poorly responding to conservative treatment.</em> Journal of Foot and Ankle Research.
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10683126/" target="_blank">PMC10683126</a></li>
+        <li>Physiopedia. <em>Subtalar Joint.</em>
+          <a href="https://www.physio-pedia.com/Subtalar_Joint" target="_blank">Physiopedia — Subtalar Joint</a></li>
+        <li>Randomised controlled trial on ankle biomechanics with joint mobilisation in functional ankle instability. PMC, 2024.
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11436913/" target="_blank">PMC11436913</a></li>
+      </ul>
+
+      <h3>Talar Fractures &amp; Avascular Necrosis</h3>
+      <ul>
+        <li>Orapin J et al. (2021). <em>Conservative and Surgical Treatment of Talar Fractures: A Systematic Review and Meta-Analysis on Clinical Outcomes and Complications.</em> PMC.
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8393919/" target="_blank">PMC8393919</a></li>
+        <li>Rammelt S et al. (2018). <em>Management Options in Avascular Necrosis of Talus.</em> PMC.
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5961266/" target="_blank">PMC5961266</a></li>
+        <li>Post-traumatic avascular necrosis of the talus. PMC, 2024.
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11384039/" target="_blank">PMC11384039</a></li>
+      </ul>
+
+      <h3>Lateral Ankle Ligaments &amp; Sprain Management</h3>
+      <ul>
+        <li>Vega J et al. (2024). <em>Lateral Ankle Ligaments: An Insight Into Their Functional Anatomy, Variations, and Surgical Importance.</em> PMC.
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10924277/" target="_blank">PMC10924277</a></li>
+        <li>Rehabilitation Algorithm After Lateral Ankle Sprains in Professional Football. <em>International Journal of Sports Physical Therapy,</em> 2024.
+          <a href="https://ijspt.scholasticahq.com/article/120205" target="_blank">IJSPT 2024</a></li>
+      </ul>
+
+      <h3>Plantar Fasciitis</h3>
+      <ul>
+        <li>Comprehensive Review and Evidence-Based Treatment Framework for Optimizing Plantar Fasciitis Diagnosis and Management. PMC, 2025.
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12294660/" target="_blank">PMC12294660</a></li>
+      </ul>
+
+      <h3>Metatarsal Fractures</h3>
+      <ul>
+        <li>Hunt KJ et al. (2021). <em>Jones type fifth metatarsal fracture fixation in athletes: A review and current concept.</em> PMC.
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8472442/" target="_blank">PMC8472442</a></li>
+        <li>StatPearls. <em>5th Metatarsal Fracture.</em> NCBI Bookshelf.
+          <a href="https://www.ncbi.nlm.nih.gov/books/NBK544369/" target="_blank">NBK544369</a></li>
+      </ul>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  BPTY04 Musculoskeletal Anatomy · LUNEX University · For personal study use only
+</footer>
+
+</body>
+</html>

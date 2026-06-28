@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankle & Foot Osteology — Practice Q&A · BPTY04</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; font-size: 15px; line-height: 1.6; }
+
+    header {
+      background: linear-gradient(135deg, #2a1800, #6a4800);
+      color: #fff;
+      padding: 2.5rem 2.5rem 2rem;
+    }
+    header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.3rem; }
+    header p { color: #e0c88a; font-size: 0.95rem; }
+    header a { color: #f5d88a; text-decoration: none; font-size: 0.88rem; display: inline-block; margin-top: 0.8rem; }
+    header a:hover { text-decoration: underline; }
+
+    .controls {
+      max-width: 820px;
+      margin: 1.5rem auto 0;
+      padding: 0 1.5rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .controls span { font-size: 0.82rem; color: #666; margin-right: 0.3rem; }
+    .filter-btn {
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      border: 2px solid #ccc;
+      background: #fff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #555;
+      transition: all 0.15s;
+    }
+    .filter-btn.active, .filter-btn:hover { border-color: #6a4800; background: #6a4800; color: #fff; }
+
+    main { max-width: 820px; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
+
+    .question {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+      margin-bottom: 1.4rem;
+      padding: 1.3rem 1.5rem;
+    }
+    .q-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.8rem;
+    }
+    .q-number {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #6a4800;
+      min-width: 30px;
+    }
+    .q-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 0.18rem 0.6rem;
+      border-radius: 12px;
+      color: #fff;
+    }
+    .badge-recall      { background: #2e6fa8; }
+    .badge-application { background: #c07020; }
+    .badge-clinical    { background: #c0392b; }
+
+    .q-text p { margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .options { margin: 0.6rem 0 0.8rem; }
+    .options label { display: block; margin: 0.3rem 0; font-size: 0.9rem; cursor: pointer; }
+    .options input { margin-right: 0.4rem; }
+
+    .reveal-btn {
+      background: #6a4800;
+      color: #fff;
+      border: none;
+      padding: 0.45rem 1.1rem;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 0.4rem;
+      transition: background 0.15s;
+    }
+    .reveal-btn:hover { background: #4a3000; }
+
+    .answer {
+      margin-top: 0.9rem;
+      padding: 0.9rem 1.1rem;
+      background: #fdf8f0;
+      border-left: 4px solid #6a4800;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      display: none;
+    }
+    .answer strong { color: #6a4800; }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      color: #888;
+      border-top: 1px solid #ddd;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ankle &amp; Foot — Osteology: Practice Q&amp;A</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · LUNEX University · 22 Questions</p>
+  <a href="index.html">← Back to BPTY04 Resources</a>
+</header>
+
+<div class="controls">
+  <span>Filter:</span>
+  <button class="filter-btn active" onclick="filterQuestions('all', this)">All (22)</button>
+  <button class="filter-btn" onclick="filterQuestions('recall', this)">Recall (9)</button>
+  <button class="filter-btn" onclick="filterQuestions('application', this)">Application (7)</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical', this)">Clinical (6)</button>
+</div>
+
+<main>
+
+  <!-- Q1 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q1</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>Name the seven tarsal bones of the foot.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Talus · Calcaneus · Navicular · Cuboid · Medial cuneiform · Intermediate cuneiform · Lateral cuneiform</strong><br><br>
+      Mnemonic: <em>"Tiger Cubs Need MILC"</em> — Talus, Calcaneus, Navicular, Medial, Intermediate, Lateral cuneiform, Cuboid.
+    </div>
+  </div>
+
+  <!-- Q2 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q2</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>What are the three regions of the foot and which bones belong to each?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Rearfoot (hindfoot):</strong> Talus + Calcaneus<br>
+      <strong>Midfoot:</strong> Navicular + Cuboid + 3 Cuneiforms<br>
+      <strong>Forefoot:</strong> 5 Metatarsals + 14 Phalanges
+    </div>
+  </div>
+
+  <!-- Q3 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q3</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>Which is the only muscle that inserts directly onto the navicular bone?</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="A"> A. Tibialis anterior</label>
+        <label><input type="radio" name="q3" value="B"> B. Tibialis posterior</label>
+        <label><input type="radio" name="q3" value="C"> C. Flexor hallucis longus</label>
+        <label><input type="radio" name="q3" value="D"> D. Peroneus longus</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Correct: B — Tibialis posterior.</strong><br><br>
+      Tibialis posterior inserts primarily on the navicular tuberosity (the medial bony projection of the navicular). It also fans distally to the cuneiforms, cuboid, and metatarsal bases 2–4, but the navicular is its primary and defining insertion. This makes it the key active support of the medial longitudinal arch.
+    </div>
+  </div>
+
+  <!-- Q4 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q4</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>Name the three ligaments of the lateral ankle complex and their distal bony attachments.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>ATFL</strong> (Anterior talofibular ligament) → lateral talar neck<br>
+      <strong>CFL</strong> (Calcaneofibular ligament) → lateral calcaneus<br>
+      <strong>PTFL</strong> (Posterior talofibular ligament) → posterior talar tubercle<br><br>
+      All three originate from the lateral malleolus of the fibula. ATFL is injured in ~85% of lateral sprains; CFL in ~35%.
+    </div>
+  </div>
+
+  <!-- Q5 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q5</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>What is the sustentaculum tali and which tendon passes beneath it?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Sustentaculum tali:</strong> A medial bony shelf of the calcaneus that supports the head of the talus above.<br><br>
+      The <strong>flexor hallucis longus (FHL)</strong> tendon passes in a groove on the inferior surface of the sustentaculum. It is also an important landmark for tarsal tunnel anatomy.
+    </div>
+  </div>
+
+  <!-- Q6 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q6</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>How many phalanges are in the foot, and what is unique about the 1st toe?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>14 phalanges total.</strong><br><br>
+      Toes 2–5: 3 phalanges each (proximal, intermediate/middle, distal) = 12<br>
+      Hallux (1st toe): 2 phalanges only (proximal and distal — <strong>no intermediate</strong>) = 2<br><br>
+      Two sesamoid bones also lie within the flexor hallucis brevis tendons on the plantar surface of the 1st MTP joint.
+    </div>
+  </div>
+
+  <!-- Q7 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q7</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>What is Hawkins sign and when does it appear?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Hawkins sign:</strong> Subchondral lucency (radiolucent band) visible on X-ray in the talar dome, typically seen 6–8 weeks after a talar neck fracture.<br><br>
+      It indicates <strong>revascularisation</strong> — the returning blood supply causes subchondral bone resorption (disuse osteoporosis). Its presence is a positive prognostic sign that avascular necrosis (AVN) has not occurred. Absence at 8 weeks should prompt MRI.
+    </div>
+  </div>
+
+  <!-- Q8 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q8</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>What is the Lisfranc joint complex and which bone is its keystone?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Lisfranc joint complex:</strong> The tarsometatarsal (TMT) joint complex — the articulation between the three cuneiforms and cuboid (tarsals) and the bases of all five metatarsals.<br><br>
+      Keystone: the <strong>2nd metatarsal base</strong>, which sits in a recessed mortise between the medial and lateral cuneiforms. The Lisfranc ligament connects the medial cuneiform to the 2nd metatarsal base on the plantar side.
+    </div>
+  </div>
+
+  <!-- Q9 RECALL -->
+  <div class="question" data-category="recall">
+    <div class="q-header">
+      <span class="q-number">Q9</span>
+      <span class="q-badge badge-recall">Recall</span>
+    </div>
+    <div class="q-text">
+      <p>What two muscles insert on the plantar surface of the medial (1st) cuneiform, and why is this functionally significant?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Tibialis anterior</strong> and <strong>peroneus (fibularis) longus</strong> both insert on the plantar surface of the medial cuneiform (and 1st metatarsal base).<br><br>
+      They cross the sole from opposite sides and together form a <strong>muscular stirrup</strong> that supports and dynamically controls the medial longitudinal arch.
+    </div>
+  </div>
+
+  <!-- Q10 APPLICATION -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q10</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>Explain why the ankle joint is more stable in dorsiflexion than in plantarflexion, using knowledge of talar trochlea anatomy.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      The talar trochlea is <strong>wider anteriorly</strong> (by 3–6 mm) than posteriorly. In <strong>dorsiflexion</strong>, the wider anterior portion of the trochlea is engaged within the ankle mortise, creating a tight, congruent fit — the fibula is pushed slightly laterally and the syndesmosis is stressed, but bony contact is maximal. In <strong>plantarflexion</strong>, the narrower posterior portion occupies the mortise, leaving relative laxity. The lateral ligaments (ATFL in particular) must substitute for the lost bony constraint, explaining why nearly all lateral ankle sprains occur in a plantarflexed, inverted position.
+    </div>
+  </div>
+
+  <!-- Q11 APPLICATION -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q11</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>A patient has weakness of tibialis posterior. Describe the likely bony and postural changes you would observe clinically.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      Tibialis posterior is the primary active support of the medial longitudinal arch. Its weakness leads to:<br><br>
+      • <strong>Navicular drop</strong> — the navicular descends as the arch collapses (measurable with navicular drop test)<br>
+      • <strong>Calcaneal valgus</strong> — the heel everts due to loss of subtalar inversion control<br>
+      • <strong>"Too many toes" sign</strong> — with the patient viewed from behind, more than 1–2 lateral toes are visible due to forefoot abduction<br>
+      • <strong>Inability to perform single-leg heel raise</strong> — or pain and deformity on attempting it<br>
+      • Clinically: adult-acquired flatfoot deformity (AAFD) in progressive cases
+    </div>
+  </div>
+
+  <!-- Q12 APPLICATION -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q12</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>Why does a displaced talar neck fracture carry a high risk of avascular necrosis (AVN), compared to a fracture of the femoral shaft?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Key factor: the talus has no muscle or tendon attachments.</strong><br><br>
+      In most bones, the periosteum and surrounding musculature provide alternative vascular routes if a primary vessel is compromised. The talus is covered ~60% by articular cartilage and receives its blood supply entirely through ligamentous attachments and periosteal entry points at its margins. When talar neck displacement ruptures these ligamentous entry vessels, there is no muscular alternative supply — hence AVN rates of 20–80% depending on fracture displacement (Hawkins classification). A femoral shaft fracture by contrast has the surrounding thigh musculature providing rich collateral periosteal supply.
+    </div>
+  </div>
+
+  <!-- Q13 APPLICATION -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q13</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>Explain the biomechanical difference between a Zone 1 and Zone 2 fracture of the 5th metatarsal base, and how this determines management.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Zone 1 (styloid avulsion):</strong> At the 5th metatarsal tuberosity, caused by peroneus brevis pull or inversion force. This zone has robust metaphyseal blood supply from multiple perforators → heals reliably in 4–6 weeks with conservative management (stiff shoe/boot).<br><br>
+      <strong>Zone 2 (Jones fracture):</strong> At the metaphyseal-diaphyseal junction, a vascular watershed between the nutrient artery and metaphyseal perforators with poor supply overlap → high non-union risk (15–25% conservatively). In athletes, early intramedullary screw fixation is preferred, with evidence showing &gt;30% faster return-to-sport and &lt;5% non-union.
+    </div>
+  </div>
+
+  <!-- Q14 APPLICATION -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q14</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>The windlass mechanism describes how the foot prepares for push-off. Using your knowledge of plantar fascia anatomy, explain how it works.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      The plantar fascia originates from the <strong>medial calcaneal tubercle</strong> and inserts into the plantar plates of the MTP joints and the base of the proximal phalanges. During toe-off, the MTP joints dorsiflex. This <strong>winds the plantar fascia</strong> around the metatarsal heads (like a windlass pulling a rope), tensioning the fascia and <strong>raising the medial longitudinal arch</strong>. The raised arch converts the foot into a rigid lever, efficiently transmitting propulsive force. A stiff 1st MTP (hallux rigidus) impairs this mechanism and reduces push-off efficiency, forcing compensatory strategies (external rotation, increased knee flexion).
+    </div>
+  </div>
+
+  <!-- Q15 APPLICATION -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q15</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>What is the clinical significance of the peroneus longus tendon's relationship to the cuboid?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      Peroneus longus runs posterior to the lateral malleolus, then changes direction at the <strong>plantar groove of the cuboid</strong>, acting as a pulley. It then crosses obliquely under the foot to insert on the medial cuneiform and 1st metatarsal base.<br><br>
+      Clinical relevance:<br>
+      • <strong>Cuboid syndrome</strong>: Minor subluxation of the calcaneocuboid joint disrupts this pulley mechanism, causing lateral midfoot pain reproduced by palpation and cuboid loading. Treatment is cuboid manipulation.<br>
+      • <strong>Peroneus longus function</strong>: By crossing to the medial side, it forms a stirrup with tibialis anterior supporting the medial arch — relevant in peroneal weakness and lateral ankle instability.
+    </div>
+  </div>
+
+  <!-- Q16 APPLICATION -->
+  <div class="question" data-category="application">
+    <div class="q-header">
+      <span class="q-number">Q16</span>
+      <span class="q-badge badge-application">Application</span>
+    </div>
+    <div class="q-text">
+      <p>A runner presents with insidious dorsomedial midfoot pain that has not improved after 4 weeks of relative rest. What diagnosis must be excluded, and what imaging is required?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Navicular stress fracture</strong> must be excluded.<br><br>
+      The navicular has an avascular central third (watershed zone), making it vulnerable to stress fractures in runners and jumping athletes. N-spot tenderness (dorsal navicular palpation) is highly sensitive.<br><br>
+      <strong>Plain X-ray sensitivity is only ~40%</strong> — a normal X-ray does not rule it out. <strong>CT or MRI is required</strong> for diagnosis. Management: strict non-weight-bearing in a boot for 6–8 weeks. Delayed diagnosis and continued loading risk displacement and chronic non-union.
+    </div>
+  </div>
+
+  <!-- Q17 CLINICAL -->
+  <div class="question" data-category="clinical">
+    <div class="q-header">
+      <span class="q-number">Q17</span>
+      <span class="q-badge badge-clinical">Clinical</span>
+    </div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 24-year-old football player inverts his ankle during a match and reports significant lateral ankle pain and swelling. He is unable to weight-bear. Ottawa rules are negative for fracture. After initial management, he is referred to physiotherapy at day 5. Outline your evidence-based rehabilitation approach.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Diagnosis:</strong> Lateral ankle ligament sprain (likely Grade II ATFL ± CFL involvement).<br><br>
+      <strong>Phase 1 — Immediate (Days 0–5):</strong> POLICE (Protection, Optimal Loading, Ice, Compression, Elevation); early weight-bearing as tolerated; ankle joint mobilisation (anterior-posterior talar glides) to restore dorsiflexion.<br><br>
+      <strong>Phase 2 — Sub-acute (Week 1–4):</strong> Progressive peroneal strengthening (eversion against resistance); proprioceptive and balance training (single-leg stance, balance board); tibialis posterior and intrinsic strengthening; progressive walking, then jogging.<br><br>
+      <strong>Phase 3 — Return to Sport (Week 4–8+):</strong> Graduated hop testing — frontal (lateral hop), then sagittal (forward hop), then multidirectional (star excursion). Return to sport when &gt;90% limb symmetry index on hop tests and no pain.
+    </div>
+  </div>
+
+  <!-- Q18 CLINICAL -->
+  <div class="question" data-category="clinical">
+    <div class="q-header">
+      <span class="q-number">Q18</span>
+      <span class="q-badge badge-clinical">Clinical</span>
+    </div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 50-year-old woman complains of 6 months of insidious medial ankle and arch pain, worsening with activity. Examination reveals bilateral navicular drop of 14 mm, a "too many toes" sign on the right, and inability to perform a single-leg heel raise on the right without pain. What is the likely diagnosis and initial physiotherapy plan?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Diagnosis:</strong> Adult-acquired flatfoot deformity (AAFD) secondary to tibialis posterior tendon dysfunction (likely Stage II — flexible flatfoot).<br><br>
+      <strong>Physiotherapy plan:</strong><br>
+      • Foot orthoses with medial arch support to offload the TP tendon and support the navicular<br>
+      • Tibialis posterior eccentric strengthening (heel raise to heel drop with inversion bias)<br>
+      • Calf and gastrocnemius stretching (limited ankle dorsiflexion increases pronatory stress)<br>
+      • Intrinsic foot muscle activation (short foot exercises)<br>
+      • Address training load and footwear<br>
+      • Monitor for progression to Stage III (rigid flatfoot) — surgical referral if conservative management fails after 3–6 months
+    </div>
+  </div>
+
+  <!-- Q19 CLINICAL -->
+  <div class="question" data-category="clinical">
+    <div class="q-header">
+      <span class="q-number">Q19</span>
+      <span class="q-badge badge-clinical">Clinical</span>
+    </div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 35-year-old basketball player reports plantar heel pain, worst with the first steps in the morning and after prolonged sitting. Palpation reproduces pain at the medial calcaneal tubercle. Windlass test is positive. Outline your management approach and explain the anatomical basis of each treatment.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Diagnosis:</strong> Plantar fasciitis (degenerative fasciosis at medial calcaneal tubercle origin).<br><br>
+      <strong>Management with anatomical rationale:</strong><br>
+      • <strong>Plantar fascia stretching</strong> — stretches the contracted fascia from its calcaneal origin; reduces tensile load at insertion<br>
+      • <strong>Gastrocnemius/calf stretching</strong> — limited ankle dorsiflexion → increased fascial tension during push-off; stretching reduces this<br>
+      • <strong>Foot orthoses</strong> — support medial arch, reduce tensile stress at calcaneal origin during weight-bearing<br>
+      • <strong>Load management</strong> — reduce running/jumping volume; graduated return to basketball<br>
+      • <strong>ESWT (shockwave)</strong> — for cases persisting beyond 3–6 months; promotes neovascularisation at the degenerated origin (PMC12294660)<br>
+      • <strong>Night splint</strong> — maintains ankle in slight dorsiflexion overnight to prevent fascial contracture and reduce first-step pain
+    </div>
+  </div>
+
+  <!-- Q20 CLINICAL -->
+  <div class="question" data-category="clinical">
+    <div class="q-header">
+      <span class="q-number">Q20</span>
+      <span class="q-badge badge-clinical">Clinical</span>
+    </div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 28-year-old dancer complains of lateral midfoot pain that developed gradually over several weeks. She reports that the pain is reproducible with single-leg relevé (heel raise on one leg). There is no history of acute injury. On examination, cuboid compression reproduces the pain. What is your suspected diagnosis, and what is your treatment?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Diagnosis:</strong> Cuboid syndrome — minor subluxation or disruption of the calcaneocuboid joint affecting the peroneus longus pulley mechanism.<br><br>
+      <strong>Treatment:</strong><br>
+      • <strong>Cuboid manipulation</strong> — cuboid whip technique (prone, rapid plantarflexion/eversion force) or cuboid squeeze (supine, thumb pressure on plantar cuboid); often provides rapid relief<br>
+      • <strong>Peroneal muscle strengthening</strong> — peroneus longus is the primary user of the cuboid groove; strengthening reduces eccentric overload<br>
+      • <strong>Lateral foot offloading</strong> — temporary padding or orthotics<br>
+      • <strong>Assess for lateral ankle instability</strong> — an underlying lax ATFL/CFL may predispose to cuboid subluxation; address if present
+    </div>
+  </div>
+
+  <!-- Q21 CLINICAL -->
+  <div class="question" data-category="clinical">
+    <div class="q-header">
+      <span class="q-number">Q21</span>
+      <span class="q-badge badge-clinical">Clinical</span>
+    </div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 22-year-old rugby player is assessed in the clinic following an ankle injury sustained during a match. He describes the mechanism as a forced external rotation of the foot while weight-bearing. Examination reveals pain over the anterior distal tibiofibular area, a positive squeeze test (pain with fibular compression at mid-shaft), and a positive external rotation stress test. X-ray shows no fracture. How does this presentation differ from a standard lateral ankle sprain, and what is the significance?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Diagnosis:</strong> High ankle sprain (syndesmotic sprain) — disruption of the inferior tibiofibular syndesmosis.<br><br>
+      <strong>Difference from lateral sprain:</strong><br>
+      • Mechanism: <em>external rotation</em> vs. plantarflexion-inversion<br>
+      • Location: <em>proximal</em> to the lateral malleolus (syndesmosis/anterior ITFL) vs. ATFL at malleolus level<br>
+      • Recovery: <em>2–3× longer</em> (often 6–12+ weeks vs. 2–6 weeks)<br><br>
+      <strong>Clinical significance:</strong> If the syndesmosis is completely torn, the mortise can widen with loading, allowing the talus to sublux laterally. This dramatically alters joint load distribution. Check for mortise widening on stress X-ray. If unstable: surgical stabilisation (syndesmotic screw or tightrope fixation). If stable: non-weight-bearing initially, then progressive rehabilitation with close monitoring.
+    </div>
+  </div>
+
+  <!-- Q22 CLINICAL -->
+  <div class="question" data-category="clinical">
+    <div class="q-header">
+      <span class="q-number">Q22</span>
+      <span class="q-badge badge-clinical">Clinical</span>
+    </div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 19-year-old sprinter is referred post-operatively following surgical fixation of a talar neck fracture (Hawkins Type II) with open reduction and internal fixation (ORIF) two weeks ago. The surgeon requests physiotherapy for early rehabilitation. What are your initial goals and how do you monitor for avascular necrosis?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>Initial physiotherapy goals (weeks 2–6):</strong><br>
+      • Oedema management (elevation, compression, gentle active foot/toe exercises)<br>
+      • Maintain ankle and subtalar ROM within pain-free range (gentle AROM — dorsiflexion, plantarflexion, inversion/eversion)<br>
+      • Non-weight-bearing on crutches as per surgical instruction<br>
+      • Maintain proximal strength (quadriceps, gluteals) and cardiovascular fitness (pool running, upper limb)<br><br>
+      <strong>AVN monitoring:</strong><br>
+      • X-ray at 6–8 weeks — look for <strong>Hawkins sign</strong> (subchondral lucency in talar dome = good prognosis)<br>
+      • Absence of Hawkins sign at 8 weeks → MRI to assess vascularity<br>
+      • If AVN confirmed: extended protected weight-bearing (up to 24 months); defer progressive loading and return to sport until revascularisation is documented; surgical options (core decompression, arthrodesis) if collapse occurs<br><br>
+      Communication with the surgical team is essential — physiotherapy progression is dictated by radiological findings, not timeline alone.
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  BPTY04 Musculoskeletal Anatomy · LUNEX University · For personal study use only
+</footer>
+
+<script>
+function toggleAnswer(btn) {
+  const answer = btn.nextElementSibling;
+  const isHidden = answer.style.display === 'none' || answer.style.display === '';
+  answer.style.display = isHidden ? 'block' : 'none';
+  btn.textContent = isHidden ? 'Hide Answer' : 'Reveal Answer';
+}
+
+function filterQuestions(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(q => {
+    q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>
