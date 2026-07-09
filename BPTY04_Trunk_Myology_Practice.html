@@ -476,7 +476,7 @@
 
   function toggleAnswer(btn) {
     var answer = btn.closest('.question').querySelector('.answer');
-    var isHidden = answer.style.display === 'none' || answer.style.display === '';
+    var isHidden = window.getComputedStyle(answer).display === 'none';
     answer.style.display = isHidden ? 'block' : 'none';
     btn.textContent = isHidden ? 'Hide Answer' : 'Reveal Answer';
     if (isHidden) {
