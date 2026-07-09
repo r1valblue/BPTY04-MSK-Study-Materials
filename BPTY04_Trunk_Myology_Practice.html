@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trunk Myology — BPTY04 Practice Q&A</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; line-height: 1.65; }
+
+  header {
+    background: linear-gradient(135deg, #4a0a20, #9a2050);
+    color: #fff; padding: 40px 32px 28px;
+  }
+  header h1 { font-size: 1.9rem; font-weight: 700; margin-bottom: 6px; }
+  header p { opacity: 0.82; font-size: 0.9rem; }
+  .back-link { display: inline-block; margin-bottom: 14px; color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.82rem; }
+  .back-link:hover { color: #fff; }
+
+  .controls {
+    max-width: 900px; margin: 24px auto 0; padding: 0 16px;
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  }
+  .controls span { font-size: 0.82rem; color: #666; margin-right: 4px; }
+  .filter-btn {
+    padding: 6px 16px; border: 2px solid #9a2050; background: transparent;
+    color: #9a2050; border-radius: 20px; cursor: pointer; font-size: 0.82rem; font-weight: 600;
+    transition: all 0.2s;
+  }
+  .filter-btn.active, .filter-btn:hover { background: #9a2050; color: #fff; }
+  .score-display { margin-left: auto; font-size: 0.85rem; color: #555; font-weight: 600; }
+
+  .container { max-width: 900px; margin: 20px auto 60px; padding: 0 16px; }
+
+  .section-label { margin: 28px 0 10px; }
+  .section-label h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: #9a2050; font-weight: 700; border-bottom: 2px solid #9a2050; padding-bottom: 5px; }
+
+  .question {
+    background: #fff; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+    margin-bottom: 14px; overflow: hidden;
+  }
+  .q-body { padding: 18px 22px; }
+  .q-number { font-size: 0.72rem; font-weight: 700; color: #9a2050; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+  .q-text { font-size: 0.95rem; font-weight: 600; margin-bottom: 12px; }
+  .q-hint { font-size: 0.8rem; color: #777; font-style: italic; margin-bottom: 12px; }
+
+  .reveal-btn {
+    padding: 7px 18px; border: none; background: #9a2050; color: #fff;
+    border-radius: 5px; cursor: pointer; font-size: 0.83rem; font-weight: 600;
+    transition: background 0.2s;
+  }
+  .reveal-btn:hover { background: #7a1040; }
+
+  .answer {
+    display: none;
+    border-top: 2px solid #f0e0e6;
+    padding: 16px 22px;
+    background: #fdf5f8;
+    font-size: 0.92rem;
+  }
+  .answer strong { color: #4a0a20; display: block; margin-bottom: 6px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .answer ul, .answer ol { padding-left: 20px; margin-top: 6px; }
+  .answer li { margin-bottom: 4px; }
+
+  .tag {
+    display: inline-block; font-size: 0.68rem; font-weight: 700; padding: 2px 7px;
+    border-radius: 3px; margin-right: 6px; letter-spacing: 0.03em; vertical-align: middle;
+  }
+  .tag-recall { background: #dbeafe; color: #1d4ed8; }
+  .tag-application { background: #dcfce7; color: #166534; }
+  .tag-clinical { background: #fee2e2; color: #991b1b; }
+  .tag-exam { background: #9a2050; color: #fff; }
+
+  footer { text-align: center; padding: 20px; font-size: 0.78rem; color: #888; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="index.html">← Back to BPTY04 Resources</a>
+  <h1>Trunk Myology — Practice Q&amp;A</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · 24 questions · Recall, Application, and Clinical</p>
+</header>
+
+<div class="controls">
+  <span>Filter:</span>
+  <button class="filter-btn active" onclick="filterQuestions('all', this)">All (24)</button>
+  <button class="filter-btn" onclick="filterQuestions('recall', this)">Recall (8)</button>
+  <button class="filter-btn" onclick="filterQuestions('application', this)">Application (8)</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical', this)">Clinical (8)</button>
+  <span class="score-display" id="score-display">Revealed: 0 / 24</span>
+</div>
+
+<div class="container">
+
+<!-- RECALL -->
+<div class="section-label" id="label-recall">
+  <h2>Recall Questions — Q1–Q8</h2>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-body">
+    <div class="q-number">Q1 · <span class="tag tag-recall">Recall</span> <span class="tag tag-exam">EXAM</span></div>
+    <div class="q-text">Name the four muscles of mastication and state their shared innervation.</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    The four muscles of mastication are: <strong>temporalis</strong> (elevation + retraction), <strong>masseter</strong> (elevation + protraction), <strong>lateral pterygoid</strong> (opens/protrudes jaw), and <strong>medial pterygoid</strong> (elevation). All four are innervated by <strong>CN V (trigeminal nerve)</strong>.
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-body">
+    <div class="q-number">Q2 · <span class="tag tag-recall">Recall</span></div>
+    <div class="q-text">What is the origin, insertion, and innervation of M. sternocleidomastoid?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    <ul>
+      <li><strong>Origin:</strong> Sternal head — anterior surface of manubrium; Clavicular head — medial 1/3 of clavicle</li>
+      <li><strong>Insertion:</strong> Mastoid process of temporal bone + lateral part of superior nuchal line</li>
+      <li><strong>Innervation:</strong> CN XI (spinal accessory nerve) for motor; C2–C3 for sensation</li>
+    </ul>
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-body">
+    <div class="q-number">Q3 · <span class="tag tag-recall">Recall</span></div>
+    <div class="q-text">Name the three columns of the erector spinae from lateral to medial.</div>
+    <div class="q-hint">Hint: There is a useful mnemonic for these.</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    From lateral to medial: <strong>Iliocostalis → Longissimus → Spinalis</strong><br>
+    Mnemonic: <em>"I Love Spaniels"</em>
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-body">
+    <div class="q-number">Q4 · <span class="tag tag-recall">Recall</span> <span class="tag tag-exam">EXAM</span></div>
+    <div class="q-text">What are the origin and insertion of M. multifidus? How many levels does it span?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    <ul>
+      <li><strong>Origin:</strong> Sacrum, ilium, mamillary processes L1–L5, transverse and articular processes C4–T4</li>
+      <li><strong>Insertion:</strong> Spinous processes <strong>2–4 vertebral levels higher</strong></li>
+    </ul>
+    This spans 2–4 segments, making it a segmental stabiliser rather than a global mover (unlike erector spinae which span many levels).
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-body">
+    <div class="q-number">Q5 · <span class="tag tag-recall">Recall</span> <span class="tag tag-exam">EXAM</span></div>
+    <div class="q-text">Which intercostal muscle is active in inspiration and which in expiration? Describe the fibre direction of each.</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    <ul>
+      <li><strong>Intercostales externi</strong> → <strong>Inspiration</strong>. Fibre direction: <em>ventrocaudal</em> (like hands in pockets going down-forward). Contraction raises ribs → increases thoracic volume.</li>
+      <li><strong>Intercostales interni</strong> → <strong>Expiration</strong>. Fibre direction: <em>dorsocaudal</em> (like crossed arms). Contraction lowers ribs → decreases thoracic volume.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-body">
+    <div class="q-number">Q6 · <span class="tag tag-recall">Recall</span></div>
+    <div class="q-text">What nerve innervates the diaphragm? From which spinal cord levels?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    The diaphragm is innervated by the <strong>N. phrenicus (phrenic nerve)</strong>, arising from the <strong>cervical plexus at C3, C4, C5</strong>.<br>
+    Mnemonic: <em>"C3, 4, 5 keeps the diaphragm alive."</em>
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-body">
+    <div class="q-number">Q7 · <span class="tag tag-recall">Recall</span></div>
+    <div class="q-text">Name the four suprahyoid muscles and describe their common function.</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    The suprahyoid muscles are: <strong>digastricus, stylohyoideus, mylohyoideus, geniohyoideus</strong>.<br>
+    Common function: They elevate the hyoid bone during swallowing and assist in opening the mouth (depressing the mandible) when the hyoid is fixed.
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-body">
+    <div class="q-number">Q8 · <span class="tag tag-recall">Recall</span></div>
+    <div class="q-text">State the three parts of M. longus colli and the spinal levels they connect.</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    <ul>
+      <li><strong>Pars recta</strong> (vertical): T1–T3 vertebral bodies → C4–C6 vertebral bodies</li>
+      <li><strong>Pars obliqua superior</strong>: TP C3–C6 → anterior tubercle of atlas (C1)</li>
+      <li><strong>Pars obliqua inferior</strong>: T1–T3 vertebral bodies → TP C5–C6</li>
+    </ul>
+    Together they flex the cervical spine; pars recta also rotates ipsilaterally.
+  </div>
+</div>
+
+<!-- APPLICATION -->
+<div class="section-label" id="label-application">
+  <h2>Application Questions — Q9–Q16</h2>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-body">
+    <div class="q-number">Q9 · <span class="tag tag-application">Application</span></div>
+    <div class="q-text">A patient needs to rotate their trunk to the RIGHT. Which two oblique abdominal muscles contract to produce this movement? Explain the anatomical reasoning.</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    Right trunk rotation is produced by an <strong>oblique force couple</strong>:
+    <ul>
+      <li><strong>Right obliquus internus abdominis</strong>: fibres run caudoventrally; unilateral contraction rotates ipsilaterally (to the right)</li>
+      <li><strong>Left obliquus externus abdominis</strong>: fibres run ventrocaudally (hands in pockets direction); unilateral contraction produces contralateral rotation (also to the right)</li>
+    </ul>
+    Rule: For any rotation, the <em>ipsilateral internus + contralateral externus</em> act together.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-body">
+    <div class="q-number">Q10 · <span class="tag tag-application">Application</span></div>
+    <div class="q-text">A patient is performing a heavy deadlift. Describe the role of the diaphragm, transversus abdominis, pelvic floor, and multifidus during the lifting phase.</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    Before lifting, the four "inner core" muscles co-contract simultaneously to form a pressurised cylinder:
+    <ul>
+      <li><strong>Diaphragm</strong>: descends (breath held against closed glottis) → forms the roof</li>
+      <li><strong>Pelvic floor</strong>: contracts → forms the floor</li>
+      <li><strong>Transversus abdominis</strong>: wraps around trunk → forms the lateral walls; increases intra-abdominal pressure (IAP)</li>
+      <li><strong>Multifidus</strong>: tonic segmental contraction → forms the posterior wall; stiffens individual motion segments</li>
+    </ul>
+    This generates high IAP and spinal stiffness, offloading the intervertebral discs and allowing the erector spinae to extend the trunk against the load.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-body">
+    <div class="q-number">Q11 · <span class="tag tag-application">Application</span></div>
+    <div class="q-text">What structures pass through the scalene triangle, and what anatomical relationship makes the subclavian vein different from the other structures passing here?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    The scalene triangle is bounded by the anterior scalene, middle scalene, and first rib. Through it pass the <strong>brachial plexus</strong> (between anterior and middle scalenes) and the <strong>subclavian artery</strong> (immediately anterior to the plexus).<br><br>
+    The <strong>subclavian vein</strong> does <em>not</em> pass through the scalene triangle — it passes <em>anterior</em> to the anterior scalene muscle, outside the triangle. This is clinically important because venous TOS (subclavian vein compression) occurs at a different anatomical site than neurogenic/arterial TOS.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-body">
+    <div class="q-number">Q12 · <span class="tag tag-application">Application</span></div>
+    <div class="q-text">Explain why transversus abdominis is described as a "tonic stabiliser" rather than a "phasic mover," and how this differs from the other abdominal muscles.</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    Unlike the obliques and rectus abdominis — which produce rotation and flexion torques that vary with movement direction — TrA's horizontal fibre arrangement means its stabilising contribution is <strong>direction-independent</strong>. It increases IAP and tensions the thoracolumbar fascia regardless of which way the trunk is moving, making it suitable for continuous low-level (tonic) activation to maintain spinal stiffness throughout dynamic tasks. In healthy individuals it shows <em>feedforward</em> activation before limb movements begin; in LBP patients this anticipatory response is delayed, suggesting a motor control deficit rather than just weakness.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-body">
+    <div class="q-number">Q13 · <span class="tag tag-application">Application</span></div>
+    <div class="q-text">During a cough, which muscles are most active? Trace the sequence of muscle activity from inspiration to the expulsive phase.</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    <ol>
+      <li><strong>Preparatory inspiration</strong>: Diaphragm + external intercostals contract → deep inspiration fills lungs</li>
+      <li><strong>Compression phase</strong>: Glottis closes; diaphragm, pelvic floor, TrA, and multifidus co-contract → rapid rise in intrathoracic and intra-abdominal pressure</li>
+      <li><strong>Expulsive phase</strong>: Glottis suddenly opens; internal intercostals, transversus thoracis, subcostales, rectus abdominis, and abdominal obliques contract forcefully → explosive expulsion of air clearing secretions</li>
+    </ol>
+    A spinal cord injury above C5 preserves diaphragmatic function but eliminates intercostal and abdominal contribution, making effective coughing impossible without assisted techniques.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-body">
+    <div class="q-number">Q14 · <span class="tag tag-application">Application</span></div>
+    <div class="q-text">How do the rotatores, multifidus, and semispinalis differ in the number of vertebral segments they span? What is the functional significance of this difference?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    <ul>
+      <li><strong>Rotatores</strong>: span 1–2 levels → finest segmental control, richest in proprioceptors</li>
+      <li><strong>Multifidus</strong>: span 2–4 levels → segmental stabilisation + some extensor torque</li>
+      <li><strong>Semispinalis</strong>: span 4–6 levels → larger-scale extension and rotation</li>
+    </ul>
+    This graduated architecture creates a hierarchical system: the shortest muscles provide precise intersegmental positional feedback (proprioception) and small stabilising forces; the longer muscles generate gross extension torques. The shorter muscles are thus more important for proprioceptive control, while the longer muscles are primary extensors.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-body">
+    <div class="q-number">Q15 · <span class="tag tag-application">Application</span></div>
+    <div class="q-text">Bilateral action of M. sternocleidomastoid is cervical flexion. But if the head is fixed (e.g., supine), what does unilateral SCM contraction produce, and why is this counter-intuitive?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    When the head is fixed, unilateral SCM contraction elevates the sternum and clavicle on that side — functioning as an <strong>accessory respiratory muscle</strong> in forced inspiration. This is why SCM is visibly active during respiratory distress (e.g., acute asthma attack). The counter-intuitive aspect is that a muscle normally described as a neck flexor becomes a rib elevator when its proximal attachment (neck/head) is stabilised and its distal attachment (sternum/clavicle) is free to move.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-body">
+    <div class="q-number">Q16 · <span class="tag tag-application">Application</span></div>
+    <div class="q-text">What is the functional difference between the serratus posterior superior and serratus posterior inferior?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    <ul>
+      <li><strong>Serratus posterior superior</strong> (SP C7–T3 → superior border ribs 2–5): elevates the upper ribs → <strong>inspiration</strong> (accessory inspiratory muscle)</li>
+      <li><strong>Serratus posterior inferior</strong> (SP T11–L2 → inferior border ribs 9–11): pulls the lower ribs downward and outward, anchoring them against the diaphragm's pull → prevents lower thoracic narrowing during deep inspiration; active in <strong>expiration</strong> as well</li>
+    </ul>
+    Despite the similar names, their actions are opposite — superior assists inspiration, inferior assists expiration.
+  </div>
+</div>
+
+<!-- CLINICAL -->
+<div class="section-label" id="label-clinical">
+  <h2>Clinical Questions — Q17–Q24</h2>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-body">
+    <div class="q-number">Q17 · <span class="tag tag-clinical">Clinical</span></div>
+    <div class="q-text">A 35-year-old office worker presents with unilateral occipital headaches, worse in the morning. Palpation reveals tightness in the suboccipital region. What muscles are most likely involved, and what is the proposed anatomical mechanism?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    Most likely involved: <strong>rectus capitis posterior major, obliquus capitis inferior, obliquus capitis superior</strong> (suboccipital triangle muscles).<br><br>
+    Mechanism: These muscles form the suboccipital triangle, through which the <strong>greater occipital nerve (C2 posterior ramus)</strong> and vertebral artery pass. Tightness compresses or irritates the greater occipital nerve, referring pain over the occiput and scalp — <em>cervicogenic headache / suboccipital headache</em>. A myodural bridge connecting these muscles to the spinal dura (PMC7425638) may also transmit tension to the dura. Sustained forward head posture (common in screen workers) causes sustained suboccipital compression.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-body">
+    <div class="q-number">Q18 · <span class="tag tag-clinical">Clinical</span></div>
+    <div class="q-text">A patient presents with paraesthesia and weakness in C8–T1 distribution of the right hand, aggravated by overhead arm work. Which diagnosis should you suspect, and which muscles and structures are implicated?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    Suspect <strong>neurogenic thoracic outlet syndrome (TOS)</strong>.<br><br>
+    Implicated structures: The <strong>scalene triangle</strong> (bounded by scalene anterior, scalene medius, and the first rib) compresses the <strong>lower trunk of the brachial plexus</strong> (C8–T1) — the most common compressed structure in neurogenic TOS. Overhead work closes the scalene triangle and narrows the costoclavicular space, worsening compression. Predisposing factors: scalene hypertrophy or spasm, poor posture, and anomalies such as a cervical rib.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-body">
+    <div class="q-number">Q19 · <span class="tag tag-clinical">Clinical</span></div>
+    <div class="q-text">Explain why multifidus does NOT spontaneously recover after an episode of acute low back pain, and what the implication is for physiotherapy management.</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    After acute LBP (especially disc or facet joint injury), multifidus rapidly undergoes <strong>ipsilateral segmental atrophy</strong> — loss of Type I (slow-twitch, fatigue-resistant) muscle fibres and fatty infiltration. This atrophy does not spontaneously reverse when pain resolves because pain inhibits segmental motor neuron drive, and general activity does not specifically target the deep segmental fibres.<br><br>
+    <strong>Implication:</strong> Patients who recover from acute LBP without specific multifidus rehabilitation have persistent motor control deficits that predispose them to recurrent episodes. Stage 1 of spinal stabilisation physiotherapy must specifically target segmental multifidus activation (palpation-guided contraction at the affected level, often confirmed with real-time ultrasound) before progressing to global exercises.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-body">
+    <div class="q-number">Q20 · <span class="tag tag-clinical">Clinical</span></div>
+    <div class="q-text">A postpartum patient reports difficulty activating her core and has a 3 cm inter-recti distance above the umbilicus. What is the diagnosis, which muscle is primarily at fault, and how does physiotherapy address it?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    Diagnosis: <strong>Diastasis Rectus Abdominis (DRA)</strong> (normal inter-recti distance &lt;2 cm above umbilicus).<br><br>
+    The <strong>linea alba</strong> has widened due to hormonal laxity + increased IAP during pregnancy. The primary deficit is in the ability of the deep abdominal wall (particularly <strong>transversus abdominis</strong>) to tension the linea alba from below — not simply the rectus abdominis muscles pulling apart.<br><br>
+    Management: Avoid high-IAP exercises (heavy abdominal crunches, double leg raises, heavy lifting). Begin with <strong>TrA isolation</strong> ("drawing-in" manoeuvre), then progressively load the linea alba as tension is restored. Graduated return to loading avoids provoking visible "doming" of the linea alba.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-body">
+    <div class="q-number">Q21 · <span class="tag tag-clinical">Clinical</span></div>
+    <div class="q-text">A patient with a C5 spinal cord injury asks why they can breathe on their own but cannot cough effectively. Explain using your knowledge of trunk myology.</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    At C5, the <strong>phrenic nerve (C3–C5) is intact</strong>, so the diaphragm functions normally → spontaneous breathing is preserved.<br><br>
+    However, the spinal injury eliminates innervation to:
+    <ul>
+      <li><strong>Intercostal muscles</strong> (T1–T11) → reduced chest wall expansion; weak forced expiration</li>
+      <li><strong>Abdominal wall muscles</strong> (T6–L1) → no abdominal compression possible</li>
+    </ul>
+    An effective cough requires sudden, forceful contraction of the intercostals and abdominals to generate high intrathoracic pressure for the expulsive phase — both are paralysed. Without effective cough, secretions accumulate → high risk of pneumonia. Management includes assisted cough techniques (manual abdominal thrust by carer or use of mechanical insufflation-exsufflation devices).
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-body">
+    <div class="q-number">Q22 · <span class="tag tag-clinical">Clinical</span></div>
+    <div class="q-text">During assessment of a patient with chronic LBP, you notice they breathe predominantly with their upper chest (accessory muscle pattern). Why might this impair lumbar stability, and what assessment and treatment approach would you use?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    Upper chest (apical) breathing relies on SCM and scalenes rather than the diaphragm. The diaphragm's postural role — descending to form the roof of the intra-abdominal pressure cylinder — is impaired when it is not recruited properly. Reduced diaphragm descent → reduced IAP → reduced lumbar spinal stiffness.<br><br>
+    <strong>Assessment:</strong> Observe rib cage expansion direction (vertical vs. lateral), palpate lateral rib flare during inhalation, assess breathing rate and pattern during loaded tasks.<br><br>
+    <strong>Treatment:</strong> Diaphragmatic breathing re-education (lateral costal expansion, 360° thoracic expansion); progress to integrated core stabilisation incorporating normal breathing pattern under load. Evidence (PMC10774616) shows adding diaphragmatic breathing to core stabilisation produces superior outcomes in chronic LBP compared to core stabilisation alone.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-body">
+    <div class="q-number">Q23 · <span class="tag tag-clinical">Clinical</span></div>
+    <div class="q-text">A patient has acute torticollis — head fixed in right lateral flexion and left rotation. Which muscle is in spasm and what nerve innervates it? What initial treatment options exist?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    The spasm is in the <strong>right sternocleidomastoid (SCM)</strong>:<br>
+    Unilateral SCM contraction produces ipsilateral lateral flexion and contralateral rotation. Right SCM spasm → right lateral flexion + left rotation → the classic acute torticollis posture.<br><br>
+    <strong>Innervation:</strong> CN XI (spinal accessory nerve) + C2–C3 (sensory).<br><br>
+    <strong>Initial treatment:</strong> Heat to the right SCM; muscle energy technique (MET) using isometric contraction into the pain-free direction followed by gentle stretch; soft collar for comfort only short-term; gentle mobilisation of C1–C2 if facet locking is the precipitating cause. Avoid forceful manipulation in acute phase.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-body">
+    <div class="q-number">Q24 · <span class="tag tag-clinical">Clinical</span></div>
+    <div class="q-text">A patient with left-sided chronic LBP is found on ultrasound to have significant atrophy and fat infiltration of the left L4–L5 multifidus compared to the right. How do you explain this finding, and what does stage 1 of a spinal stabilisation programme specifically involve for this patient?</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  </div>
+  <div class="answer">
+    <strong>Answer</strong>
+    <strong>Explanation:</strong> The ipsilateral (left) multifidus atrophies segmentally in response to injury or pain at L4–L5 on that side. This is caused by reflex inhibition of the deep multifidus motor neurons via joint afferents from the injured/painful facet joint or disc, resulting in disuse atrophy and progressive fat infiltration. The asymmetry reflects the segmental and unilateral nature of the injury — the right side is unaffected if the injury was left-sided. This does not resolve spontaneously even after pain settles (supported by 2025 systematic reviews).<br><br>
+    <strong>Stage 1:</strong>
+    <ol>
+      <li>Patient in crook-lying or prone position</li>
+      <li>Therapist palpates L4–L5 left multifidus with two fingers medial to the lumbar spinous process</li>
+      <li>Patient is cued to "gently swell the muscle under my fingers" — achieving isolated contraction without gross lumbar movement, Valsalva, or gluteal contraction</li>
+      <li>Hold 10 seconds × 10 reps; confirmed by palpable firmness (ideally real-time US confirmation)</li>
+      <li>Progress to co-contraction with TrA ("drawing-in" while maintaining multifidus activation) before advancing to loaded tasks</li>
+    </ol>
+  </div>
+</div>
+
+</div><!-- /container -->
+<footer>BPTY04 · LUNEX University · For personal study use only</footer>
+
+<script>
+  var totalRevealed = 0;
+  var totalQuestions = 24;
+
+  function toggleAnswer(btn) {
+    var answer = btn.nextElementSibling;
+    var isHidden = answer.style.display === 'none' || answer.style.display === '';
+    answer.style.display = isHidden ? 'block' : 'none';
+    btn.textContent = isHidden ? 'Hide Answer' : 'Reveal Answer';
+    if (isHidden) {
+      totalRevealed++;
+      document.getElementById('score-display').textContent = 'Revealed: ' + totalRevealed + ' / ' + totalQuestions;
+    }
+  }
+
+  function filterQuestions(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.question').forEach(function(q) {
+      q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+    });
+    document.querySelectorAll('.section-label').forEach(function(l) {
+      l.style.display = (cat === 'all') ? 'block' : 'none';
+    });
+  }
+</script>
+</body>
+</html>

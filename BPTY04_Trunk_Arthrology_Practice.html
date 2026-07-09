@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trunk Arthrology — Practice Q&A | BPTY04</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #222; line-height: 1.6; }
+
+  header { background: linear-gradient(135deg, #0a3050, #1a6a8a); color: #fff; padding: 36px 32px 28px; }
+  header h1 { font-size: 1.9rem; font-weight: 700; margin-bottom: 6px; }
+  header p { opacity: 0.85; font-size: 0.9rem; }
+  .back-link { display: inline-block; margin-bottom: 14px; color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+  .back-link:hover { color: #fff; }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 24px 16px 60px; }
+
+  .filter-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+  .filter-btn { padding: 7px 18px; border: 2px solid #1a6a8a; border-radius: 20px; background: #fff; color: #1a6a8a; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .filter-btn:hover, .filter-btn.active { background: #1a6a8a; color: #fff; }
+
+  .question { background: #fff; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 18px; overflow: hidden; }
+  .q-header { display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: #f0f4f8; border-bottom: 1px solid #e2e8f0; }
+  .q-number { font-weight: 700; font-size: 0.9rem; color: #0a3050; }
+  .q-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+  .badge-recall { background: #dbeafe; color: #1e40af; }
+  .badge-application { background: #fef3c7; color: #92400e; }
+  .badge-clinical { background: #fee2e2; color: #991b1b; }
+
+  .q-text { padding: 18px 20px 10px; }
+  .q-text p { margin-bottom: 10px; font-size: 0.95rem; }
+  .options { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+  .options label { display: flex; align-items: flex-start; gap: 8px; font-size: 0.9rem; cursor: pointer; padding: 6px 10px; border-radius: 5px; border: 1px solid #e2e8f0; }
+  .options label:hover { background: #f8fafc; }
+  .options input[type=radio] { margin-top: 2px; flex-shrink: 0; }
+
+  .reveal-btn { display: block; margin: 10px 20px 14px; padding: 8px 20px; background: #1a6a8a; color: #fff; border: none; border-radius: 5px; font-size: 0.88rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+  .reveal-btn:hover { background: #0a3050; }
+
+  .answer { display: none; padding: 16px 20px; background: #edf7f0; border-top: 2px solid #2a7a4a; font-size: 0.9rem; line-height: 1.65; }
+  .answer strong { color: #1a5a3a; }
+
+  .section-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin: 28px 0 10px; padding-left: 4px; }
+
+  footer { text-align: center; padding: 20px; font-size: 0.78rem; color: #888; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="index.html">← Back to BPTY04 Resources</a>
+  <h1>Trunk Arthrology — Practice Q&amp;A</h1>
+  <p>BPTY04 Musculoskeletal Anatomy · 22 questions · Recall · Application · Clinical</p>
+</header>
+
+<div class="container">
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterQuestions('all', this)">All Questions</button>
+    <button class="filter-btn" onclick="filterQuestions('recall', this)">Recall</button>
+    <button class="filter-btn" onclick="filterQuestions('application', this)">Application</button>
+    <button class="filter-btn" onclick="filterQuestions('clinical', this)">Clinical</button>
+  </div>
+
+  <!-- ===== RECALL ===== -->
+  <div class="section-label">Recall</div>
+
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q1</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text">
+      <p>What are the three components of an intervertebral disc?</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="A"> A. Nucleus pulposus, fibrous ring, periosteum</label>
+        <label><input type="radio" name="q1" value="B"> B. Nucleus pulposus, annulus fibrosus, cartilaginous endplate</label>
+        <label><input type="radio" name="q1" value="C"> C. Annulus fibrosus, hyaline cartilage, periosteum</label>
+        <label><input type="radio" name="q1" value="D"> D. Nucleus pulposus, articular cartilage, joint capsule</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Correct: B.</strong> The three components are the nucleus pulposus (central, gelatinous), annulus fibrosus (peripheral, 15–25 concentric lamellae), and cartilaginous endplate (thin hyaline cartilage layers superior and inferior). The periosteum and joint capsule are not components of the intervertebral disc.</div>
+  </div>
+
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q2</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text">
+      <p>The nucleus pulposus water content decreases with age from approximately __ to __.</p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="A"> A. 80% → 50%</label>
+        <label><input type="radio" name="q2" value="B"> B. 70% → 40%</label>
+        <label><input type="radio" name="q2" value="C"> C. 90% → 70%</label>
+        <label><input type="radio" name="q2" value="D"> D. 95% → 60%</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Correct: C — 90% → 70%.</strong> This progressive dehydration (Antoniou et al. 1996) reduces the NP's ability to distribute load hydrostatically, shifting more stress onto the annulus and facet joints.</div>
+  </div>
+
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q3</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text">
+      <p>What movement does the anterior longitudinal ligament (ALL) limit? What about the posterior longitudinal ligament (PLL)?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>ALL: limits extension.</strong> It runs along the anterior vertebral bodies from skull base to sacrum and reinforces the anterior IVD.<br><br><strong>PLL: limits flexion.</strong> It runs along the posterior vertebral bodies inside the spinal canal. The PLL is narrower than the ALL in the lumbar region — a contributing factor to posterolateral disc herniation.</div>
+  </div>
+
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q4</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text">
+      <p>What is unique about the ligamentum flavum compared to all other spinal ligaments?</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="A"> A. It is the longest ligament in the body</label>
+        <label><input type="radio" name="q4" value="B"> B. It is the only true elastic ligament of the body</label>
+        <label><input type="radio" name="q4" value="C"> C. It contains cartilaginous fibres</label>
+        <label><input type="radio" name="q4" value="D"> D. It attaches to all spinous processes</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Correct: B.</strong> The ligamentum flavum is the only true elastic ligament of the body. Its high elastin content gives it a yellowish colour ("flavum" = yellow in Latin). Its elasticity keeps it under pre-tension at neutral, preventing it from buckling into the spinal canal during movement.</div>
+  </div>
+
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q5</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text">
+      <p>Name the three ligaments connecting adjacent spinous processes and state the level at which each is found.</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">
+      <strong>1. Nuchal ligament</strong> — cervical spine only (occiput to C1–C7); limits cervical flexion; triangular fibroelastic septum.<br><br>
+      <strong>2. Interspinous ligament</strong> — C7–L5 (absent at cervical levels; stronger in lumbar); from base to apex of adjacent spinous processes; limits flexion.<br><br>
+      <strong>3. Supraspinous ligament</strong> — C7–L4 (L5); attached to apex of spinous processes; limits flexion.
+    </div>
+  </div>
+
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q6</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text">
+      <p>What are the Joints of Luschka, and where are they located?</p>
+      <div class="options">
+        <label><input type="radio" name="q6" value="A"> A. Joints between laminae in the thoracic spine</label>
+        <label><input type="radio" name="q6" value="B"> B. Small synovial joints between vertebral bodies C3–C7 (uncovertebral joints)</label>
+        <label><input type="radio" name="q6" value="C"> C. Joints between the sacrum and ilium</label>
+        <label><input type="radio" name="q6" value="D"> D. Joints between the atlas and axis</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Correct: B.</strong> Uncovertebral joints (Joints of Luschka) are small synovial joints between the lateral edges of adjacent cervical vertebral bodies C3–C7. They are unique to the cervical spine and guide flexion/extension while limiting lateral flexion.</div>
+  </div>
+
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q7</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text">
+      <p>What ligament holds the dens of the axis against the anterior arch of the atlas? What is its clinical significance?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>The transverse ligament of the atlas</strong> (part of the cruciform ligament). It links the two lateral masses of the atlas and holds the dens firmly against the anterior arch, preventing posterior displacement of the dens into the spinal cord.<br><br>Clinical significance: rupture (trauma, rheumatoid arthritis, Down syndrome) allows the dens to compress the spinal cord — a neurosurgical emergency. Screen with the Sharp-Purser Test before cervical manipulation.</div>
+  </div>
+
+  <div class="question" data-category="recall">
+    <div class="q-header"><span class="q-number">Q8</span><span class="q-badge badge-recall">Recall</span></div>
+    <div class="q-text">
+      <p>What type of joint is the manubriosternal joint, and what clinical landmark does it form?</p>
+      <div class="options">
+        <label><input type="radio" name="q8" value="A"> A. Synovial joint; forms the xiphoid angle</label>
+        <label><input type="radio" name="q8" value="B"> B. Primary cartilaginous joint; forms the jugular notch</label>
+        <label><input type="radio" name="q8" value="C"> C. Secondary cartilaginous joint; forms the sternal angle (Angle of Louis)</label>
+        <label><input type="radio" name="q8" value="D"> D. Fibrous joint; forms the sternal notch</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Correct: C.</strong> The manubriosternal joint is a secondary cartilaginous joint (symphysis). It forms the sternal angle (Angle of Louis) — a palpable horizontal ridge marking the 2nd rib, the carina of the trachea, and the aortic arch.</div>
+  </div>
+
+  <!-- ===== APPLICATION ===== -->
+  <div class="section-label">Application</div>
+
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q9</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text">
+      <p>A patient's MRI shows significant loss of disc height at L5/S1 with dehydration of the nucleus pulposus. How would this disc degeneration change the load distribution between the disc and the facet joints at this level?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">With disc height loss and NP dehydration, the disc loses its hydrostatic load distribution capacity. <strong>The proportion of compressive load borne by the facet joints increases significantly</strong> (from the normal 10–20% to a much higher proportion). This results in facet joint overloading, accelerating cartilage wear and producing facet joint pain — particularly in extension, when the facets are most loaded. The disc degeneration and facet degeneration thus co-evolve, forming a degenerative cascade at the three-joint complex (disc + bilateral facets).</div>
+  </div>
+
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q10</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text">
+      <p>Why are posterolateral disc herniations more common than anterior or purely posterior herniations at the lumbar level?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">Three factors combine to make the posterolateral location most vulnerable:<br><br>
+    1. <strong>PLL narrowing:</strong> The posterior longitudinal ligament is narrower in the lumbar region and widens only slightly over each disc — it provides incomplete coverage of the posterior disc, leaving the posterolateral disc unprotected.<br>
+    2. <strong>Annular thinning:</strong> The posterior annular lamellae are thinner than the anterior annulus.<br>
+    3. <strong>Flexion loading:</strong> The most common mechanism (bending and lifting) shifts the nucleus posteriorly, stressing the posterior annulus precisely at the point where protection is least. The nerve root exits nearby through the intervertebral foramen, making compression likely.</div>
+  </div>
+
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q11</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text">
+      <p>Lumbar facets are oriented in the sagittal plane; thoracic facets are in the coronal plane. How does this explain the different movement freedoms between the thoracic and lumbar spines?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Lumbar (sagittal orientation):</strong> Concave superior facets face medially and backwards. This allows large-amplitude flexion and extension (facets glide apart in flexion, approximate in extension) but strongly resists axial rotation — the facets impinge immediately during rotation. Lumbar contribution to total trunk rotation is less than 10°.<br><br><strong>Thoracic (coronal orientation):</strong> Superior facets face backwards and laterally. This arrangement allows significant rotation (30–35° per side) — needed for reaching across the body — but limits sagittal plane flexion, a restriction reinforced by the rib cage. Together the thoracic spine is the main provider of trunk rotation.</div>
+  </div>
+
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q12</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text">
+      <p>The atlanto-occipital joint allows nodding but restricts rotation, while the atlantoaxial joint allows rotation but restricts nodding. What anatomical feature of each joint explains this movement specialisation?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Atlanto-occipital:</strong> The occipital condyles are convex and egg-shaped; they rock within the concave superior facets of the atlas. This geometry allows anterior-posterior rocking (nodding = flexion/extension ≈15° each) but the curved shape prevents significant rotation — the condyles would have to translate out of the facets to rotate, which the tight capsule prevents.<br><br><strong>Atlantoaxial:</strong> The lateral joint surfaces are flat, allowing wide-amplitude rotation. The medial joint (dens/transverse ligament) acts as a pivot around which the atlas and head rotate. The flat geometry means almost no restriction to rotation (≈40–45° each side) but very limited flexion/extension.</div>
+  </div>
+
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q13</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text">
+      <p>How does the elasticity of the ligamentum flavum prevent it from causing spinal cord compression during normal movement?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">An inelastic ligament that slackens in one position would buckle (fold inward) when the load is removed or reversed. Because the ligamentum flavum is elastic, it is under continuous <strong>pre-tension</strong> even at neutral spine position. When the spine flexes, the ligament stretches; when it extends or returns to neutral, the elastic recoil contracts the ligament — it never goes slack enough to fold into the spinal canal. If the ligamentum flavum were replaced by collagen (inelastic), it would buckle posteriorly into the canal with every movement from flexion to extension.</div>
+  </div>
+
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q14</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text">
+      <p>Upper ribs move in a "pump-handle" direction and lower ribs in a "bucket-handle" direction during inspiration. Which joints produce these different movements, and what determines the difference?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer">Both movements occur at the <strong>costovertebral and costotransverse joints</strong> simultaneously. The difference arises from the shape of the costotransverse joint surfaces:<br><br>
+    <strong>Upper ribs (1–6):</strong> The rib facet is convex and the transverse process facet is concave → only rotation is possible → the rib head rotates around a mediolateral axis → anterior and posterior elevation (pump-handle = increased AP diameter).<br><br>
+    <strong>Lower ribs (7–10):</strong> Both facets are flat → rotation plus gliding is possible → the rib moves laterally and upward (bucket-handle = increased transverse diameter).</div>
+  </div>
+
+  <div class="question" data-category="application">
+    <div class="q-header"><span class="q-number">Q15</span><span class="q-badge badge-application">Application</span></div>
+    <div class="q-text">
+      <p>The temporomandibular joint contains a complete intraarticular disc dividing it into two compartments. What different movements occur in each compartment?</p>
+      <div class="options">
+        <label><input type="radio" name="q15" value="A"> A. Upper: rotation; Lower: translation</label>
+        <label><input type="radio" name="q15" value="B"> B. Upper: translation; Lower: rotation</label>
+        <label><input type="radio" name="q15" value="C"> C. Upper: compression; Lower: distraction</label>
+        <label><input type="radio" name="q15" value="D"> D. Both compartments allow equal amounts of all movements</label>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Correct: B.</strong> The <strong>upper compartment</strong> (disc–temporal bone) allows translation — the condyle and disc together slide forward during wide mouth opening and jaw protrusion. The <strong>lower compartment</strong> (condyle–disc) allows rotation — the hinge movement in early mouth opening. Normal mouth opening involves initial rotation followed by progressive anterior translation.</div>
+  </div>
+
+  <!-- ===== CLINICAL ===== -->
+  <div class="section-label">Clinical</div>
+
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q16</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 55-year-old male teacher presents with bilateral leg heaviness and pain that comes on after walking approximately 200 metres. He gets relief by sitting down or leaning over a supermarket trolley. Peripheral pulses are normal. Lumbar flexion is full and painless; extension is limited and reproduces leg symptoms.</p>
+      <p>What is the likely diagnosis and what is its anatomical basis?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Diagnosis: Lumbar Spinal Stenosis with Neurogenic Claudication.</strong><br><br>
+    <strong>Anatomical basis:</strong> Narrowing of the spinal canal or lateral recesses — typically multifactorial: posterior disc bulge + osteophytes from vertebral bodies and facets + ligamentum flavum hypertrophy (with loss of its elastic properties). In extension, the canal further narrows (facets approximate, ligamentum flavum buckles inward); in flexion, it widens (facets gap, ligamentum flavum stretches). This explains the symptom pattern: walking (extension-biased posture) provokes symptoms; sitting/leaning forward (flexion) relieves.<br><br>
+    <strong>Physiotherapy:</strong> Flexion-biased exercises, cycling (natural forward lean), aquatic therapy, core stabilisation. Distinguish from vascular claudication: vascular relieves with standing still; neurogenic only relieves with positional flexion.</div>
+  </div>
+
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q17</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 32-year-old woman presents with acute severe low back pain radiating to the left foot following an episode of lifting. She has reduced sensation over the lateral left foot, absent left ankle reflex, and weakness in left plantar flexion.</p>
+      <p>Which disc level is most likely herniated, which nerve root is involved, and what is the physiotherapy approach?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Level: L5/S1 disc herniation</strong> — the posterolateral herniation at this level compresses the <strong>S1 nerve root</strong>.<br><br>
+    <strong>S1 neurological deficit pattern:</strong> reduced sensation lateral foot and sole; absent ankle jerk (S1 reflex); plantar flexion weakness (gastrocnemius/soleus — S1 innervation).<br><br>
+    <strong>Physiotherapy:</strong> Assess directional preference — if extension reduces peripheralisation of symptoms (common in posterolateral herniation — McKenzie), use extension-biased exercises. Neurodynamic mobilisation (sciatic nerve slider/tensioner). Avoid sustained flexion in acute phase. Education regarding posture and activity modification. Monitor for cauda equina signs (bilateral symptoms, saddle anaesthesia, bladder/bowel changes) — if present, emergency referral.</div>
+  </div>
+
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q18</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> You are about to perform a high-velocity cervical thrust manipulation on a 45-year-old patient with chronic neck pain. What upper cervical screening should you complete beforehand, what are you assessing, and what findings would contraindicate proceeding?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Required screening tests:</strong><br><br>
+    <strong>1. Sharp-Purser Test</strong> — assesses atlantoaxial instability (transverse ligament integrity). A positive test (posterior translation of head on neck reduces symptoms of cord compression) indicates potential transverse ligament compromise.<br><br>
+    <strong>2. Transverse Ligament Stress Test (Anterior Shear)</strong> — applies anterior shear across the atlantoaxial joint. Positive if it reproduces neurological symptoms.<br><br>
+    <strong>3. Alar Ligament Stress Test</strong> — assesses integrity of alar ligaments (limits rotation of dens).<br><br>
+    <strong>Absolute contraindications to proceeding:</strong> Bilateral or quadrilateral neurological symptoms (numbness, weakness); upper motor neuron signs (hyperreflexia, clonus, Babinski); dysphagia; drop attacks; history of RA, Down syndrome, or recent cervical trauma; positive screening test findings. Any of these warrants imaging before manual therapy and referral to the appropriate specialist.</div>
+  </div>
+
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q19</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 28-year-old rugby player presents with central neck pain and an inability to rotate his head to the right after a tackle. He has no neurological symptoms. X-ray is normal. Palpation reveals marked restriction and pain at C1/C2 on right rotation.</p>
+      <p>What structure is most likely implicated, and what is your physiotherapy approach?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Most likely: Atlantoaxial joint restriction (C1/C2)</strong> — the atlantoaxial joint provides ~50% of total cervical rotation. Acute restriction here following trauma is often due to capsular irritation, synovial fold impingement, or post-traumatic protective muscle guarding. A rotatory subluxation should be excluded with imaging if the restriction is severe or if any neurological signs develop.<br><br>
+    <strong>Physiotherapy approach (provided no instability identified):</strong> Gentle soft tissue release of deep cervical extensors and suboccipital muscles; C1/C2 specific rotation mobilisation (grades I–II initially); graduated active rotation exercises; patient education. Monitor closely for onset of any neurological symptoms, which would warrant urgent imaging. Avoid high-velocity thrust until full assessment is completed and instability excluded.</div>
+  </div>
+
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q20</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 40-year-old woman with known ankylosing spondylitis presents with progressive breathlessness on exertion. Chest X-ray is normal. On examination, chest expansion at the xiphisternum is 1.5 cm (normal ≥5 cm). What is the mechanism of breathlessness, and how can physiotherapy help?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Mechanism:</strong> Ankylosing spondylitis progressively fuses the costovertebral joints, costotransverse joints, and sternocostal joints. This eliminates the twisting and gliding movements at these joints that are essential for rib elevation during inspiration. Both the pump-handle (upper ribs, AP diameter increase) and bucket-handle (lower ribs, transverse diameter increase) mechanisms are impaired. The result is a fixed, rigid thoracic cage with severely reduced inspiratory volume. The diaphragm must compensate — "belly breathing" becomes the dominant respiratory strategy.<br><br>
+    <strong>Physiotherapy:</strong> Respiratory physiotherapy (diaphragmatic breathing training, inspiratory muscle training); thoracic mobility exercises (while joints remain mobile in early disease); postural exercises to prevent hyperkyphosis; swimming/hydrotherapy; monitoring of chest expansion as outcome measure. Early intervention slows the progression of restriction.</div>
+  </div>
+
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q21</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text">
+      <p>Explain how a patient lifting a heavy box with combined lumbar flexion and rotation places specific structures at elevated risk. Which three anatomical factors converge to make this the most dangerous lifting posture?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Three anatomical factors converging in flexion + rotation:</strong><br><br>
+    <strong>1. Nucleus pulposus displacement:</strong> Lumbar flexion shifts the nucleus posteriorly. The posterior annulus bears increased tensile stress from both the load and the displaced nucleus, particularly at the posterolateral corner where PLL coverage is incomplete.<br><br>
+    <strong>2. Annular torsional stress:</strong> Rotation places the annular lamellae under torsional stress. The crossed-ply arrangement means rotation stretches half the lamellae and slackens the other half — reducing net tensile capacity. Combined with flexion, this produces the highest annular stresses recorded in vitro.<br><br>
+    <strong>3. Facet joint shear:</strong> Lumbar facets strongly resist rotation, but in flexion the joint surfaces partially unlock. The remaining capsular resistance must bear the full rotational shear load. This produces high capsular strain and can cause acute facet joint injury.<br><br>
+    Teaching point: Lifting technique training (neutral lumbar spine, load close to body, no trunk rotation during the lift) directly reduces all three risks.</div>
+  </div>
+
+  <div class="question" data-category="clinical">
+    <div class="q-header"><span class="q-number">Q22</span><span class="q-badge badge-clinical">Clinical</span></div>
+    <div class="q-text">
+      <p><strong>Scenario:</strong> A 35-year-old office worker presents with jaw pain, clicking on mouth opening, and morning headaches. She grinds her teeth at night. Cervical assessment reveals restriction at C2/C3. How do you explain the connection between the cervical and TMJ findings, and what does this mean for treatment?</p>
+    </div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+    <div class="answer"><strong>Cervicogenic contribution to TMD:</strong> The trigeminal nucleus caudalis (which receives TMJ afferent input) overlaps in the brainstem with the C2/C3 dorsal horn neurons. This convergence means that nociceptive input from the upper cervical spine can sensitise the trigeminal pathway, amplifying pain from the TMJ and vice versa. Upper cervical restriction (especially C0–C3) is documented to contribute to temporomandibular disorders through this trigeminocervical convergence and through its effect on craniocervical posture (a forward head posture increases masticatory muscle activity).<br><br>
+    <strong>Treatment implications:</strong> Address both regions — cervical mobilisation (C2/C3) alongside TMJ treatment (disc mobilisation, masticatory muscle therapy). Bruxism management (splint referral, stress management). Postural correction. Evidence supports combined physiotherapy as equivalent to splint therapy alone, and superior when cervical dysfunction co-exists.</div>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+function toggleAnswer(btn) {
+  const answer = btn.nextElementSibling;
+  const isHidden = answer.style.display === 'none' || answer.style.display === '';
+  answer.style.display = isHidden ? 'block' : 'none';
+  btn.textContent = isHidden ? 'Hide Answer' : 'Reveal Answer';
+}
+function filterQuestions(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(q => {
+    q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+  });
+  document.querySelectorAll('.section-label').forEach(l => {
+    l.style.display = (cat === 'all') ? 'block' : 'none';
+  });
+}
+</script>
+
+<footer>BPTY04 · LUNEX University · For personal study use only</footer>
+</body>
+</html>
