@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 – Ankle &amp; Foot Arthrology: Practice Q&amp;A</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #1a0808;
+    color: #f0e8e0;
+    min-height: 100vh;
+  }
+  header {
+    background: linear-gradient(135deg, #7a2010, #c05030);
+    padding: 28px 24px;
+    text-align: center;
+  }
+  header h1 { font-size: 1.7rem; font-weight: 700; color: #fff; }
+  header p { color: rgba(255,255,255,0.8); margin-top: 6px; font-size: 0.95rem; }
+
+  .controls {
+    max-width: 900px;
+    margin: 24px auto 0;
+    padding: 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  .filter-btn {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 2px solid #c05030;
+    background: transparent;
+    color: #f0e8e0;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: #c05030;
+    color: #fff;
+  }
+  #score-display {
+    margin-left: auto;
+    font-size: 0.9rem;
+    color: #e0b090;
+    font-weight: 600;
+  }
+
+  .main { max-width: 900px; margin: 28px auto 60px; padding: 0 16px; }
+
+  .section-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #c05030;
+    margin: 32px 0 12px;
+    border-bottom: 1px solid #3a1010;
+    padding-bottom: 6px;
+  }
+
+  .question {
+    background: #2a0c0c;
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+    border-left: 4px solid #7a2010;
+    transition: border-color 0.2s;
+  }
+  .question:hover { border-left-color: #c05030; }
+
+  .q-meta {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 10px;
+  }
+  .tag-recall    { background: #1a3a5a; color: #7abcff; }
+  .tag-apply     { background: #2a3a1a; color: #8de090; }
+  .tag-clinical  { background: #3a1a2a; color: #ff9fcc; }
+
+  .q-text {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    color: #f5e8d8;
+  }
+
+  .reveal-btn {
+    padding: 8px 20px;
+    background: #c05030;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .reveal-btn:hover { background: #e06840; }
+
+  .answer {
+    display: none;
+    margin-top: 14px;
+    background: #1a1010;
+    border: 1px solid #c05030;
+    border-radius: 8px;
+    padding: 16px 18px;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #e8d8c8;
+  }
+  .answer strong { color: #e07050; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ankle &amp; Foot Arthrology — Practice Q&amp;A</h1>
+  <p>BPTY04 · Musculoskeletal Anatomy · 24 Questions</p>
+</header>
+
+<div class="controls">
+  <button class="filter-btn active" onclick="filterQuestions('all', this)">All</button>
+  <button class="filter-btn" onclick="filterQuestions('recall', this)">Recall</button>
+  <button class="filter-btn" onclick="filterQuestions('application', this)">Application</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical', this)">Clinical</button>
+  <span id="score-display">Revealed: 0 / 24</span>
+</div>
+
+<div class="main">
+
+<!-- RECALL -->
+<div class="section-label">Recall Questions</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">1. Name the four bones that articulate to form the ankle mortise.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong> The distal tibia (plafond) superiorly, the medial malleolus (part of the tibia) medially, the lateral malleolus of the fibula laterally, and the trochlea (dome) of the talus inferiorly. Together the two malleoli form the mortise that grips the talar dome.
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">2. Describe the arthrokinematics of the talocrural joint during dorsiflexion.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong> During dorsiflexion, the talus <strong>rolls anteriorly</strong> and <strong>glides posteriorly</strong> within the mortise. The wider anterior talar dome is drawn into the mortise, spreading the malleoli slightly and placing the joint in its close-packed position — maximum bony congruency and stability.
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">3. What are the four ligaments that maintain the distal tibiofibular syndesmosis?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong> (1) Anterior inferior tibiofibular ligament (AITFL), (2) Posterior inferior tibiofibular ligament (PITFL), (3) Interosseous tibiofibular ligament (deep), and (4) the Interosseous membrane (proximal continuation).
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">4. List the three lateral ligaments of the ankle and their attachment points.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong><br>
+    • <strong>ATFL:</strong> Anterior fibula → anterolateral talus<br>
+    • <strong>CFL:</strong> Tip of fibula → lateral calcaneus<br>
+    • <strong>PTFL:</strong> Posterior fibula → posterolateral talus<br><br>
+    The ATFL is the weakest and most commonly injured; the PTFL is the strongest and rarely injured alone.
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">5. What layers comprise the deltoid ligament, and name two components of each layer.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Superficial layer:</strong> Tibionavicular ligament (TNL), tibiocalcaneal ligament (TCL), superficial posterior tibiotalar ligament (sPTTL).<br><br>
+    <strong>Deep layer:</strong> Deep anterior tibiotalar ligament (dATTL) and deep posterior tibiotalar ligament (dPTTL). The deep components are the primary restraints against talar external rotation.
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">6. Describe the windlass mechanism and name the anatomical structures involved.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong> When the toes (especially the hallux) are dorsiflexed during push-off, the plantar fascia winds around the metatarsal heads, shortening its effective length. This draws the calcaneus and metatarsals closer, elevating the longitudinal arch, supinating the subtalar joint, and externally rotating the tibia — stiffening the foot into a rigid propulsive lever without active muscle energy.<br><br>
+    <strong>Structures:</strong> Plantar aponeurosis (medial band), medial calcaneal tubercle (origin), plantar plates and bases of proximal phalanges (insertion), talar head, calcaneus, navicular, medial cuneiform, 1st metatarsal.
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">7. What is the axis of the subtalar joint, and what triplanar motions does it produce?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong> The subtalar joint axis is oblique — approximately <strong>42° from horizontal</strong> and <strong>23° from the sagittal plane</strong>. Because the axis is neither purely frontal nor sagittal, subtalar motion is triplanar:<br>
+    • <strong>Pronation</strong> = eversion + abduction + dorsiflexion<br>
+    • <strong>Supination</strong> = inversion + adduction + plantarflexion
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">8. Name the two joints comprising the transverse tarsal (Chopart) joint and their bony articulations.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong><br>
+    • <strong>Talonavicular joint</strong> (medial): head of talus → proximal navicular<br>
+    • <strong>Calcaneocuboid joint</strong> (lateral): anterior calcaneus → proximal cuboid<br><br>
+    Together they allow relative rotation (twisting) of the midfoot on the rearfoot and are governed by the axis-locking mechanism dependent on subtalar joint position.
+  </div>
+</div>
+
+<!-- APPLICATION -->
+<div class="section-label">Application Questions</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">9. Why is the ankle most vulnerable to lateral ligament sprain in plantarflexion rather than in dorsiflexion? Explain using joint mechanics.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong> In plantarflexion, the <strong>narrower posterior portion</strong> of the talar trochlea (wedge-shaped) occupies the mortise, reducing bony contact and making the joint less stable (open-packed position). The ATFL is most taut in plantarflexion and is therefore the primary passive restraint — when an inversion force is added, it is the first structure loaded to failure. In dorsiflexion, the wider anterior trochlea fills the mortise (close-packed), providing substantial bony stability and spreading load across the entire mortise.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">10. Explain how subtalar pronation during early stance contributes to tibial rotation. Why does this matter clinically?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong> The oblique subtalar axis mechanically couples rearfoot motion to tibial rotation. As the subtalar joint pronates after heel strike, it drives <strong>internal rotation of the tibia</strong>. Conversely, supination drives external tibial rotation. This coupling transmits forces up the kinetic chain — excessive or prolonged subtalar pronation imposes prolonged internal tibial rotation, increasing valgus stress at the knee (patellofemoral syndrome risk) and altering hip mechanics. This is the biomechanical rationale behind foot orthoses in lower limb conditions that appear remote from the foot.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">11. How does the Chopart joint axis-locking mechanism assist propulsion during the push-off phase of gait?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong> During push-off, the subtalar joint supinates. When supinated, the axes of the talonavicular and calcaneocuboid joints become <strong>parallel</strong> — they converge (lock), making the transverse tarsal joint rigid. This converts the midfoot from a flexible shock absorber into a rigid lever, allowing the gastrocnemius–soleus to generate propulsive force efficiently without energy being dissipated by midfoot collapse. If the subtalar joint is excessively pronated at push-off, axes diverge, the midfoot remains unlocked, and propulsive efficiency is compromised.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">12. What distinguishes a high ankle sprain (syndesmotic sprain) from a lateral ligament sprain clinically and anatomically?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Anatomically:</strong> A lateral sprain involves ATFL/CFL (below the ankle joint line, lateral malleolus). A syndesmotic sprain involves the AITFL/interosseous ligament above the ankle joint line.<br><br>
+    <strong>Clinically:</strong> Tenderness is located above the joint line (along the AITFL and interosseous membrane rather than at the fibular tip). A positive <strong>squeeze test</strong> (compressing fibula to tibia at mid-calf reproduces distal pain) and <strong>external rotation stress test</strong> (ER of the foot in neutral) are cardinal. Recovery is significantly longer (6–12 weeks vs 2–6 weeks) and failure to recognise syndesmotic instability risks chronic ankle mortise widening and early arthritis.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">13. Explain how the deep deltoid ligament resists talar external rotation, and why this matters during ankle fractures.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong> The deep posterior tibiotalar ligament (dPTTL) — the strongest deep deltoid component — runs from the medial malleolus to the posterior medial talus and is oriented to resist external talar rotation. When this is disrupted in the context of a lateral malleolus fracture (Weber B/C), the medial support is lost and the talus can externally rotate and shift laterally within the mortise, significantly widening the ankle mortise. Even 1 mm of talar shift increases contact pressure on the tibial plafond by ~42%, accelerating cartilage wear. This is why deltoid ligament integrity is assessed in all lateral ankle fractures and why persistent medial instability may require repair.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">14. Why does excessive subtalar pronation predispose to plantar fasciitis?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong> Efficient function of the windlass mechanism requires subtalar supination to tension the plantar fascia and elevate the arch. With excessive or prolonged pronation, the longitudinal arch drops and the plantar fascia is placed under <strong>chronic tensile strain</strong> across the gait cycle rather than a brief tensile peak at push-off. This repeated loading exceeds the fascial enthesis's capacity to repair, causing collagen fibre disruption at the medial calcaneal tubercle (enthesopathy). In addition, pronation disrupts the windlass, requiring greater intrinsic muscle effort that further stresses the enthesis.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">15. Describe the mechanism of a Grade III lateral ankle sprain and the sequence of ligament failure.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong> The mechanism is rapid <strong>plantarflexion + inversion + internal rotation</strong>, usually during landing. Ligament failure occurs in sequence:<br>
+    1. <strong>ATFL</strong> fails first (weakest; most taut in plantarflexion) — complete rupture (Grade III)<br>
+    2. <strong>CFL</strong> fails next — adds subtalar instability<br>
+    3. <strong>PTFL</strong> — rarely fails; only in severe dislocation-level trauma<br><br>
+    Grade III = complete ATFL rupture ± CFL rupture. Clinically: significant swelling, bruising, positive anterior drawer (ATFL) and talar tilt test (CFL), immediate inability to weight bear.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">16. During plantarflexion, why does the syndesmosis allow slight fibular motion, and what structure enables this?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Answer:</strong> As the foot moves from plantarflexion into full dorsiflexion, the wider anterior talar dome must enter the mortise. To accommodate this, the fibula translates slightly laterally (~1–2 mm) and rotates externally. This is permitted by the elastic (not rigid) nature of the syndesmotic ligaments — particularly the interosseous membrane — which allows controlled motion while maintaining mortise integrity. A rigid syndesmosis (as with a screw) that prevents this motion may restrict full dorsiflexion, which is the rationale for preferring suture-button (dynamic) fixation over static screws in active patients.
+  </div>
+</div>
+
+<!-- CLINICAL -->
+<div class="section-label">Clinical Questions</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">17. A 24-year-old basketballer lands awkwardly and presents with diffuse lateral ankle swelling and pain above the lateral malleolus. Ottawa rules are negative. What diagnosis should you suspect and what clinical tests would confirm it?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Suspected diagnosis:</strong> Syndesmotic (high ankle) sprain — pain above the joint line suggests AITFL/interosseous membrane involvement rather than a lateral ligament sprain.<br><br>
+    <strong>Clinical tests:</strong><br>
+    • <strong>Squeeze test:</strong> Compress the fibula to tibia at mid-calf — reproduces distal pain over the AITFL = positive (syndesmotic injury)<br>
+    • <strong>External rotation stress test:</strong> Dorsiflex foot to neutral, externally rotate — reproduction of AITFL pain = positive<br>
+    • <strong>Cotton test:</strong> Manual lateral talar shift — assesses mortise instability in complete syndesmotic disruption<br><br>
+    If confirmed, expect 6–12 weeks recovery; imaging (MRI or CT) to assess mortise stability; referral if >2 mm diastasis on weight-bearing X-ray.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">18. A patient with chronic ankle instability reports recurrent "giving way" and anterolateral ankle pain persisting 6 months after an inversion sprain. What is the differential and how do you assess?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Differential diagnosis:</strong><br>
+    1. Chronic lateral ankle instability (CLAI) — mechanical ± functional<br>
+    2. Sinus tarsi syndrome — anterolateral pain, subtalar instability<br>
+    3. Peroneal tendon pathology (subluxation, tendinopathy)<br>
+    4. Osteochondral defect of the talus<br><br>
+    <strong>Assessment:</strong><br>
+    • Anterior drawer test (ATFL laxity), talar tilt test (CFL laxity)<br>
+    • Palpation of sinus tarsi (just anterior to lateral malleolus)<br>
+    • Star Excursion Balance Test (dynamic proprioceptive deficit)<br>
+    • Peroneal resisted eversion + palpation (tendon assessment)<br>
+    • MRI if osteochondral lesion or sinus tarsi pathology suspected<br><br>
+    <strong>Management:</strong> Neuromuscular training for functional instability; if mechanical CLAI confirmed, Broström-Gould repair is gold standard surgical intervention.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">19. A 45-year-old recreational runner presents with first-step heel pain each morning that eases after 10 minutes of walking. Where do you palpate, what test confirms plantar fasciitis, and outline first-line management?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Palpation:</strong> Medial calcaneal tubercle — the enthesis of the plantar fascia origin. Maximal tenderness here is pathognomonic.<br><br>
+    <strong>Windlass test:</strong> Passively extend the hallux (MTP dorsiflexion) with the patient non-weight-bearing — reproduction of medial heel pain = positive; confirms plantar fascia involvement.<br><br>
+    <strong>First-line management (evidence-based):</strong><br>
+    1. <strong>Load management</strong> — reduce sudden training volume increases<br>
+    2. <strong>Stretching</strong> — plantar fascia (towel stretch, stair stretch) and gastrocnemius/soleus<br>
+    3. <strong>High-load slow resistance</strong> — single-leg heel raises (3 × 12–15, 3×/week) on a decline board: strongest evidence for long-term recovery<br>
+    4. <strong>Footwear/orthotics</strong> — temporary heel raise, medial arch support<br>
+    5. <strong>Night splint</strong> — if first-step pain is severe<br>
+    6. <strong>Shockwave therapy</strong> — if no improvement at 3–6 months; moderate evidence
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">20. A patient demonstrates excessive subtalar pronation throughout stance. List three possible contributing structural factors and describe one kinetic chain consequence proximal to the ankle.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Contributing factors (examples — 3 required):</strong><br>
+    1. Rearfoot valgus (calcaneal eversion alignment)<br>
+    2. Forefoot varus (medial forefoot elevated at rest, causing compensatory rearfoot eversion)<br>
+    3. Ankle dorsiflexion restriction (tight gastrocnemius/soleus → premature heel rise → forefoot pronation)<br>
+    4. Weakness of tibialis posterior (primary dynamic subtalar invertor)<br>
+    5. Ligamentous laxity (spring ligament, interosseous talocalcaneal ligament insufficiency)<br><br>
+    <strong>Proximal kinetic chain consequence:</strong> Prolonged subtalar pronation drives prolonged <strong>internal tibial rotation</strong>. At the knee, this increases lateral patellar tracking stress (patellofemoral syndrome) and alters the Q-angle. At the hip, internal femoral rotation increases — contributing to hip abductor overload and Trendelenburg-type gait deviations.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">21. Following a Grade II ankle sprain 10 days ago, a patient presents for physiotherapy. Outline a phased, evidence-based rehabilitation progression.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Phase 1 (Days 1–5): Acute management</strong><br>
+    PRICE (Protection, Rest, Ice, Compression, Elevation); early active range of motion within pain-free limits; protected weight-bearing if needed; avoid aggressive stretching.<br><br>
+    <strong>Phase 2 (Days 5–14): Restore mobility and strength</strong><br>
+    Full ROM; resisted eversion/dorsiflexion; calf raises; gait re-education; begin single-leg balance (static proprioception).<br><br>
+    <strong>Phase 3 (Weeks 2–6): Neuromuscular control</strong><br>
+    Dynamic balance (wobble board, BOSU); multi-directional agility; plyometric progression; sport-specific drills.<br><br>
+    <strong>Phase 4 (Weeks 4–8): Return to sport</strong><br>
+    Sports-specific load → full training → return to competition when functional testing (SEBT, hop tests) symmetric.<br><br>
+    <strong>Evidence:</strong> Functional treatment is superior to immobilisation; proprioceptive training reduces re-sprain rate; ankle bracing recommended for 6 months post-injury in sport.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">22. A patient has medial ankle pain following an eversion injury. The ATFL region is non-tender but there is deep medial malleolus tenderness. What structure is likely injured and what are you screening for?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Likely injury:</strong> Deep deltoid ligament — specifically the deep tibiotalar ligaments (dATTL/dPTTL), which are accessed by deep palpation at the medial joint line (posterior and anterior to the medial malleolus).<br><br>
+    <strong>Screen for associated injuries:</strong><br>
+    1. <strong>Ankle mortise instability</strong> — deltoid disruption ± fibular fracture = mortise widening (Weber B/C fracture complex)<br>
+    2. <strong>Syndesmotic injury</strong> — deltoid + syndesmosis disruption = rotational instability<br>
+    3. <strong>Osteochondral lesion of the talus (medial dome)</strong> — eversion mechanism can compress medial talus<br>
+    4. <strong>Spring ligament injury</strong> — eversion also stresses the calcaneonavicular (spring) ligament<br><br>
+    Weight-bearing X-ray (mortise view) to assess talar shift; MRI for ligament and cartilage assessment if clinically indicated.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">23. Explain why ankle dorsiflexion restriction is a clinical risk factor for multiple lower limb pathologies. Name three conditions it contributes to.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Mechanism:</strong> Normal gait requires approximately 10–15° of talocrural dorsiflexion for the tibia to advance over the foot during midstance. If the ankle cannot achieve this (due to gastrocnemius–soleus tightness, posterior capsule restriction, or bony block), the body compensates with one of several strategies:<br>
+    1. Excessive subtalar pronation (to achieve apparent "dorsiflexion")<br>
+    2. Early heel rise and forefoot loading<br>
+    3. Lateral trunk lean or hip flexion to advance the centre of mass<br><br>
+    <strong>Conditions contributed to:</strong><br>
+    1. <strong>Plantar fasciitis</strong> — early heel rise increases plantar fascia load<br>
+    2. <strong>Lateral ankle sprain</strong> — ankle restricted from dorsiflexion → foot stays in plantarflexion longer → more vulnerable to inversion<br>
+    3. <strong>Patellofemoral pain syndrome</strong> — compensatory subtalar pronation drives internal tibial rotation → lateral patellar compression<br>
+    (Also: Achilles tendinopathy, metatarsal stress fractures)
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">24. A soccerfootballer ruptures their ATFL and has surgical repair scheduled. Outline the key pre-operative and post-operative considerations from a physiotherapy perspective.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Pre-operative (prehabilitation):</strong><br>
+    • Reduce swelling and pain (elevation, NSAID short-term, ice)<br>
+    • Maintain cardiovascular fitness (pool running, upper limb exercise)<br>
+    • Restore as much ROM and muscle strength as possible (reduces post-op atrophy)<br>
+    • Educate on post-op protocol and expectations for return to sport<br><br>
+    <strong>Post-operative:</strong><br>
+    • Weeks 0–2: Non-weight-bearing in cast/boot; oedema management; toe/knee exercises<br>
+    • Weeks 2–6: Protected weight-bearing; active plantarflexion/dorsiflexion; scar mobilisation<br>
+    • Weeks 6–12: Progressive strengthening (calf raises, resisted eversion/inversion); balance training commences<br>
+    • Weeks 12–20: Plyometrics; sport-specific agility; ankle bracing for all sport<br>
+    • Return to full competition: Typically 4–6 months; functional testing criteria (hop tests, SEBT, sport-specific performance) must be met before full clearance.<br><br>
+    <strong>Key risk:</strong> CLAI patients operated on after failed conservative treatment show excellent outcomes (90%+ return to sport with Broström-Gould), but post-op proprioceptive deficit must be specifically targeted.
+  </div>
+</div>
+
+</div><!-- end .main -->
+
+<script>
+var totalRevealed = 0;
+var totalQuestions = 24;
+
+function toggleAnswer(btn) {
+  var answer = btn.closest('.question').querySelector('.answer');
+  var isHidden = window.getComputedStyle(answer).display === 'none';
+  answer.style.display = isHidden ? 'block' : 'none';
+  btn.textContent = isHidden ? 'Hide Answer' : 'Reveal Answer';
+  if (isHidden) {
+    totalRevealed++;
+    document.getElementById('score-display').textContent = 'Revealed: ' + totalRevealed + ' / ' + totalQuestions;
+  }
+}
+
+function filterQuestions(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(function(q) {
+    q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+  });
+  document.querySelectorAll('.section-label').forEach(function(l) {
+    l.style.display = (cat === 'all') ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>
