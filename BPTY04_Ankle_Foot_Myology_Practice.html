@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 – Ankle &amp; Foot Myology: Practice Q&amp;A</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #061a18;
+    color: #e8f0ef;
+    min-height: 100vh;
+  }
+  header {
+    background: linear-gradient(135deg, #0a3a35, #1a7065);
+    padding: 28px 24px;
+    text-align: center;
+  }
+  header h1 { font-size: 1.7rem; font-weight: 700; color: #fff; }
+  header p { color: rgba(255,255,255,0.8); margin-top: 6px; font-size: 0.95rem; }
+
+  .controls {
+    max-width: 900px;
+    margin: 24px auto 0;
+    padding: 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  .filter-btn {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 2px solid #1a7065;
+    background: transparent;
+    color: #e8f0ef;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: #1a7065;
+    color: #fff;
+  }
+  #score-display {
+    margin-left: auto;
+    font-size: 0.9rem;
+    color: #80c8c0;
+    font-weight: 600;
+  }
+
+  .main { max-width: 900px; margin: 28px auto 60px; padding: 0 16px; }
+
+  .section-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1a9080;
+    margin: 32px 0 12px;
+    border-bottom: 1px solid #0d2e2a;
+    padding-bottom: 6px;
+  }
+
+  .question {
+    background: #0d2e2a;
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+    border-left: 4px solid #0a4a40;
+    transition: border-color 0.2s;
+  }
+  .question:hover { border-left-color: #1a7065; }
+
+  .q-meta {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 10px;
+  }
+  .tag-recall    { background: #1a3a5a; color: #7abcff; }
+  .tag-apply     { background: #1a3a2a; color: #7adcb0; }
+  .tag-clinical  { background: #2a2a1a; color: #d4c060; }
+
+  .q-text {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    color: #d8eeec;
+  }
+
+  .reveal-btn {
+    padding: 8px 20px;
+    background: #1a7065;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .reveal-btn:hover { background: #22907f; }
+
+  .answer {
+    display: none;
+    margin-top: 14px;
+    background: #071a18;
+    border: 1px solid #1a7065;
+    border-radius: 8px;
+    padding: 16px 18px;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #c8e8e4;
+  }
+  .answer strong { color: #50c8b8; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ankle &amp; Foot Myology — Practice Q&amp;A</h1>
+  <p>BPTY04 · Musculoskeletal Anatomy · 24 Questions</p>
+</header>
+
+<div class="controls">
+  <button class="filter-btn active" onclick="filterQuestions('all', this)">All</button>
+  <button class="filter-btn" onclick="filterQuestions('recall', this)">Recall</button>
+  <button class="filter-btn" onclick="filterQuestions('application', this)">Application</button>
+  <button class="filter-btn" onclick="filterQuestions('clinical', this)">Clinical</button>
+  <span id="score-display">Revealed: 0 / 24</span>
+</div>
+
+<div class="main">
+
+<!-- RECALL -->
+<div class="section-label">Recall Questions</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">1. Name the four muscles of the anterior compartment of the leg and their single shared nerve supply.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Muscles:</strong> (1) Tibialis anterior, (2) Extensor hallucis longus (EHL), (3) Extensor digitorum longus (EDL), (4) Fibularis (peroneus) tertius.<br><br>
+    <strong>Nerve:</strong> Deep fibular (peroneal) nerve — L4–L5. All four share this innervation.
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">2. Describe the origin and insertion of tibialis anterior and list its two actions.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Origin:</strong> Lateral tibial condyle, upper 2/3 of lateral tibial shaft, interosseous membrane.<br>
+    <strong>Insertion:</strong> Plantar surface of medial cuneiform and base of 1st metatarsal.<br>
+    <strong>Actions:</strong> (1) Dorsiflexion of the ankle; (2) Inversion (supination) of the foot.
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">3. Name the two lateral compartment muscles, their nerve supply, and their primary action.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Muscles:</strong> Fibularis (peroneus) longus and fibularis (peroneus) brevis.<br>
+    <strong>Nerve:</strong> Superficial fibular (peroneal) nerve — L5–S1.<br>
+    <strong>Primary action:</strong> Eversion of the foot. Both also contribute to plantarflexion.
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">4. What are the Triceps Surae? Name the three muscles and state the key functional difference between gastrocnemius and soleus.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Triceps Surae:</strong> Gastrocnemius + soleus + plantaris. All insert via the Achilles tendon; all supplied by tibial nerve S1–S2.<br><br>
+    <strong>Key difference:</strong> Gastrocnemius is <strong>biarticular</strong> (crosses knee and ankle) → most effective with knee extended. Soleus is <strong>monoarticular</strong> (ankle only) → effective regardless of knee position. Soleus is predominantly slow-twitch (postural); gastrocnemius has more fast-twitch fibres (propulsive).
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">5. Name the four muscles of the deep posterior compartment and their common nerve supply.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Muscles:</strong> (1) Popliteus, (2) Tibialis posterior, (3) Flexor digitorum longus (FDL), (4) Flexor hallucis longus (FHL).<br><br>
+    <strong>Nerve:</strong> Tibial nerve — L4–S2 (specific roots vary per muscle).
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">6. Give the tarsal tunnel contents using the mnemonic "Tom Dick And a Nervous Harry." List the structures in order.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Tom</strong> = Tibialis Posterior<br>
+    <strong>Dick</strong> = Flexor Digitorum Longus (FDL)<br>
+    <strong>And a</strong> = posterior tibial Artery and veins<br>
+    <strong>Nervous</strong> = tibial Nerve<br>
+    <strong>Harry</strong> = Flexor Hallucis Longus (FHL)<br><br>
+    These structures pass posterior to the medial malleolus under the flexor retinaculum (through the tarsal tunnel), from anterior to posterior.
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">7. Describe the primary insertion of tibialis posterior and explain why it is so broad.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Primary insertion:</strong> Navicular tuberosity (the main attachment).<br>
+    <strong>Additional slips to:</strong> All three cuneiforms, cuboid, sustentaculum tali of the calcaneus, and the 2nd–4th metatarsal bases.<br><br>
+    <strong>Why broad:</strong> Because tibialis posterior acts as a "suspension cable" for the entire medial longitudinal arch — broad attachment distributes the arch-supporting force across multiple midfoot bones, making it the key dynamic invertor and arch support.
+  </div>
+</div>
+
+<div class="question" data-category="recall">
+  <div class="q-meta"><span class="tag tag-recall">Recall</span></div>
+  <div class="q-text">8. Name the three plantar intrinsic muscles of Layer 1 (superficial plantar layer) and which nerve innervates each.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    1. <strong>Abductor hallucis</strong> — Medial plantar nerve<br>
+    2. <strong>Flexor digitorum brevis (FDB)</strong> — Medial plantar nerve<br>
+    3. <strong>Abductor digiti minimi</strong> — Lateral plantar nerve<br><br>
+    All originate from the calcaneal tuberosity / plantar aponeurosis.
+  </div>
+</div>
+
+<!-- APPLICATION -->
+<div class="section-label">Application Questions</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">9. Why is tibialis anterior the primary muscle tested when screening for common fibular nerve palsy? Describe the resulting gait pattern if it fails.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Why tibialis anterior:</strong> It is the strongest and most clinically testable muscle of the deep fibular nerve territory (L4–L5). Loss of dorsiflexion is its hallmark deficit. It is the primary swing-phase dorsiflexor allowing toe clearance.<br><br>
+    <strong>Resulting gait (foot drop):</strong> During swing phase, the foot cannot clear the ground → patient compensates with <strong>steppage gait</strong> (exaggerated hip and knee flexion) and/or <strong>circumduction</strong> of the affected limb. On landing, the foot "slaps" down (flaccid anterior compartment).
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">10. Explain the unique course of fibularis longus and why it can support both the transverse and lateral arches despite arising from the fibula.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    Fibularis longus passes posterior to the lateral malleolus, then turns anteriorly and crosses under the cuboid through the fibular groove (plantar aspect). It then crosses the plantar surface of the foot <strong>obliquely</strong> from lateral to medial, inserting on the plantar surface of the medial cuneiform and base of the 1st metatarsal.<br><br>
+    This oblique plantar course creates a "stirrup" effect: combined with tibialis anterior (which also inserts on the medial cuneiform + 1st metatarsal, from the dorsal/medial side), they bind the medial and lateral foot together and bow the transverse arch. The lateral compartment position of the origin provides the eversion component.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">11. A runner can dorsiflex normally but cannot evert the foot against resistance. Which nerve and compartment are affected?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Nerve:</strong> Superficial fibular (peroneal) nerve — L5–S1.<br>
+    <strong>Compartment:</strong> Lateral compartment (fibularis longus and fibularis brevis).<br><br>
+    <strong>Key differentiation:</strong> Dorsiflexion is intact (deep fibular nerve, anterior compartment unaffected), but eversion is lost. This pattern isolates the superficial fibular nerve. Common causes: ankle sprain with nerve stretch, fibular head fracture, compartment syndrome of the lateral compartment, or entrapment at the fibular tunnel.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">12. Why is soleus called the "postural muscle" of plantarflexion while gastrocnemius is described as the "propulsive muscle"? Explain using fibre type and biarticulation.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Soleus — postural:</strong><br>
+    • Monoarticular → unaffected by knee position<br>
+    • Predominantly slow-twitch (Type I) fibres → fatigue-resistant, suited to continuous low-level contraction<br>
+    • Active during quiet standing to oppose anterior gravitational topple (prevents forward tibial drift)<br><br>
+    <strong>Gastrocnemius — propulsive:</strong><br>
+    • Biarticular (knee + ankle) → contributes flexion torque at both joints simultaneously<br>
+    • Higher proportion of fast-twitch (Type II) fibres → generates high force quickly<br>
+    • Most active during push-off in running and jumping when the knee is near extension<br>
+    • Less effective with a flexed knee (shortened proximally → active insufficiency)
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">13. Describe the role of quadratus plantae and explain why FDL requires it to produce effective toe flexion.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    FDL originates from the posterior tibia and its pull line runs obliquely — if uncorrected, it would flex the toes into an oblique diagonal direction rather than straight sagittal flexion.<br><br>
+    Quadratus plantae (layer 2) arises from two heads on the medial and lateral calcaneus and inserts into the posterolateral aspect of the FDL tendon. Its contraction redirects the FDL pull into a more straight plantar direction, producing effective sagittal toe flexion.<br><br>
+    This is analogous to the lumbrical origin from FDL tendons — both quadratus plantae and lumbricals modify the FDL's mechanical line of action.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">14. Apply the DAB/PAD rule to the foot interossei. Name the axis of abduction/adduction and compare to the hand.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>DAB:</strong> Dorsal interossei Abduct (spread toes apart)<br>
+    <strong>PAD:</strong> Plantar interossei Adduct (bring toes together)<br><br>
+    <strong>Axis:</strong> The 2nd toe is the reference axis in the foot (all abduction/adduction is relative to the line of the 2nd toe). This differs from the hand, where the middle finger (3rd digit) is the reference axis.<br><br>
+    There are 4 dorsal interossei (abductors of toes 2–4) and 3 plantar interossei (adductors of toes 3–5). All are supplied by the lateral plantar nerve. Both also flex the MTP joints and extend the IP joints via their extensor hood insertions.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">15. Explain why the Achilles hypovascular zone is at highest risk for both tendinopathy and rupture.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    The Achilles tendon receives its blood supply from three sources: musculotendinous junction (proximally), the paratenon (along its length), and the calcaneal insertion (distally). The zone approximately <strong>2–6 cm above the calcaneal insertion</strong> is a relative "watershed" area — where the terminal branches of all three sources are poorest, creating a zone of relative hypovascularity.<br><br>
+    In this zone, repetitive mechanical stress (tendinopathy) or acute overload (rupture) outpaces the reduced healing capacity of the hypovascular tissue. Collagen disarray develops (tendinosis), weakening the tendon matrix until an eccentric force (e.g., sudden push-off) causes rupture. This also explains why intratendinous corticosteroid injections in this zone carry a higher rupture risk — they further impair collagen synthesis.
+  </div>
+</div>
+
+<div class="question" data-category="application">
+  <div class="q-meta"><span class="tag tag-apply">Application</span></div>
+  <div class="q-text">16. What is the "knot of Henry" (master knot) and what structures are involved?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    The <strong>knot of Henry</strong> (master knot of Henry) is the anatomical crossing point on the plantar foot where FHL and FDL cross each other and are connected by a fibrous slip.<br><br>
+    It is located beneath the navicular / medial to the sustentaculum tali. At this point FHL is superficial (plantar) to FDL. A fibrous interconnection between the two tendons allows FHL to assist FDL flexion of the lateral toes. This crossing is clinically relevant in triggering: if FHL is thickened (from FHL tenosynovitis), it can snag at this crossing and cause a "trigger toe" — the hallux suddenly locks in flexion.
+  </div>
+</div>
+
+<!-- CLINICAL -->
+<div class="section-label">Clinical Questions</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">17. A 55-year-old woman presents with medial ankle pain, progressive flatfoot, and inability to perform a single-leg heel raise. What is your working diagnosis, and outline your assessment and management?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Working diagnosis:</strong> Posterior Tibial Tendon Dysfunction (PTTD) / Progressive Collapsing Foot Deformity (PCFD) — Stage II.<br><br>
+    <strong>Assessment:</strong><br>
+    • "Too many toes" sign (lateral toes visible from behind due to forefoot abduction)<br>
+    • Single-leg heel raise test: failure = tibialis posterior insufficiency<br>
+    • Navicular drop test: significant arch collapse<br>
+    • Palpation along tibialis posterior tendon (posterior to medial malleolus → navicular): swelling, thickening, tenderness<br>
+    • MRI to confirm tendon integrity and grade deformity<br><br>
+    <strong>Management (Stage II — flexible deformity):</strong><br>
+    • UCBL orthosis or custom arch support to offload the failing tendon<br>
+    • Eccentric tibialis posterior strengthening (single-leg heel raises on a decline board)<br>
+    • NSAIDs for acute pain<br>
+    • If conservative fails → surgical: tibialis posterior debridement + FDL transfer + calcaneal osteotomy
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">18. A recreational runner presents with midportion Achilles pain 3 cm above the heel, worse at the start of a run then easing. Outline evidence-based management.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Diagnosis:</strong> Midportion Achilles tendinopathy (hypovascular zone, degenerative tendinosis).<br><br>
+    <strong>Evidence-based management (2024 JOSPT CPG):</strong><br>
+    <strong>Phase 1 — Isometric loading:</strong> Sustained isometric heel raises (e.g., 5 × 45 s, twice daily) — immediate pain relief, tendon loading without provocative movement.<br>
+    <strong>Phase 2 — Heavy slow resistance:</strong> Single-leg heel raises with progressive load (knee straight for gastrocnemius, knee bent for soleus isolation), 3 × 15 reps → 3 × 6 heavy, 3×/week over 12 weeks. Target: highest load tolerable (per 2024 CPG).<br>
+    <strong>Phase 3 — Energy storage:</strong> Plyometric and running-specific loading once pain-free under heavy load.<br><br>
+    <strong>Adjuncts:</strong> Load management (reduce running volume ~20%, no complete rest); shockwave therapy if no improvement at 3 months; avoid intratendinous corticosteroid injection (rupture risk).<br>
+    <strong>Prognosis:</strong> Good — most resolve with 12 weeks of loading; recurrence risk reduced by ongoing maintenance exercise.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">19. A ballet dancer presents with posterior ankle pain during pointe work. What structure is most likely involved and how do you assess it?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Most likely structure:</strong> Flexor Hallucis Longus (FHL) tendon and/or posterior ankle impingement syndrome (PAIS), often involving the os trigonum.<br><br>
+    <strong>Assessment:</strong><br>
+    • Palpation of FHL sheath posterior to the medial malleolus and between the two malleoli in the posterior ankle<br>
+    • <strong>Thomasen's test:</strong> Passively flex/extend the hallux with the ankle in plantarflexion — reproduction of posterior ankle pain = positive for FHL tenosynovitis<br>
+    • FHL triggering: palpable "clunk" during hallux IP joint flexion/extension = FHL nodule catching in sheath<br>
+    • Pain with passive forced plantarflexion = posterior impingement (PAIS)<br>
+    • MRI or ultrasound to assess tendon morphology and os trigonum presence<br><br>
+    <strong>Management:</strong> Activity modification, anti-inflammatory measures, physiotherapy (calf flexibility, ankle mobility). If conservative treatment fails: FHL sheath surgical decompression ± os trigonum excision (mean return to dance 16 weeks post-op).
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">20. During a lateral ankle inversion sprain assessment you notice a "clunk" on the lateral ankle during eversion. What additional diagnosis should you suspect and how do you confirm it?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Suspected diagnosis:</strong> Peroneal (fibularis) tendon subluxation — the tendons snap anteriorly over the lateral malleolus when the superior fibular retinaculum is disrupted.<br><br>
+    <strong>Why missed:</strong> Up to 78% of peroneal subluxations co-occur with lateral ligament sprains, leading to frequent misdiagnosis. The clunk or snapping sensation is the key distinguishing feature not present in simple ATFL/CFL sprain.<br><br>
+    <strong>Confirmation:</strong><br>
+    • Dynamic ultrasound: most sensitive — visualises real-time tendon subluxation with active dorsiflexion/eversion<br>
+    • MRI: shows retinacular tear, peroneus brevis split tears, fluid in tendon sheath<br>
+    • Provocative test: active dorsiflexion/eversion against resistance reproduces subluxation<br><br>
+    <strong>Management:</strong> Acute — non-weight-bearing in eversion splint/cast 6 weeks; chronic — surgical retinaculum repair or fibular groove deepening procedure.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">21. Explain the clinical rationale for differentiating an eccentric calf raise with the knee straight vs. knee bent in Achilles tendinopathy rehabilitation.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Knee straight:</strong> Gastrocnemius is at near-optimal length → the eccentric load is directed primarily through the <strong>gastrocnemius</strong> musculotendinous unit → loads the proximal and mid-Achilles (relevant for midportion tendinopathy). This was the basis of the original <strong>Alfredson protocol</strong>.<br><br>
+    <strong>Knee bent (approximately 45°):</strong> Gastrocnemius is shortened proximally (biarticular active insufficiency) → significantly reduces gastrocnemius contribution → the eccentric load is shifted predominantly to the <strong>soleus</strong> musculotendinous unit → loads the distal Achilles (relevant for insertional tendinopathy and soleus-dominant presentations).<br><br>
+    <strong>Clinical implication:</strong> Both positions should be included in a complete rehab programme. The Alfredson protocol (3 × 15 each position, twice daily) uses both; modern high-load slow resistance protocols reduce repetitions but increase load. Knee-bent loading is particularly important for heavy athletes where soleus weakness is disproportionate.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">22. A patient reports burning, tingling, and numbness along the sole of the foot after a twisting ankle injury. Examination shows no motor deficit but positive Tinel's sign posterior to the medial malleolus. What is the diagnosis and what are possible causes?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Diagnosis:</strong> Tarsal tunnel syndrome — compression of the tibial nerve (or its branches) posterior to the medial malleolus within the tarsal tunnel (under the flexor retinaculum).<br><br>
+    <strong>Clinical findings:</strong><br>
+    • Positive Tinel's sign (tapping over the tarsal tunnel reproduces distal tingling = nerve irritability)<br>
+    • Burning/tingling/numbness in the plantar foot (tibial nerve distribution)<br>
+    • No motor deficit if mild/early<br><br>
+    <strong>Possible causes post-injury:</strong><br>
+    • Post-traumatic adhesions or tenosynovitis within the tunnel<br>
+    • Haematoma from inversion sprain compressing the tunnel<br>
+    • Space-occupying lesion (ganglion, varicosity)<br>
+    • Excessive subtalar pronation (dynamic narrowing of the tunnel)<br><br>
+    <strong>Management:</strong> Arch-supporting orthotics (reduces pronation-related narrowing); nerve gliding exercises; corticosteroid injection; surgical decompression for recalcitrant cases.
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">23. Distinguish between a pseudo-Jones fracture and a true Jones fracture. Which has a worse prognosis and why?</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <table style="width:100%;border-collapse:collapse;font-size:0.9rem;margin-top:8px;">
+      <tr style="background:#1a4a40;"><th style="padding:6px;text-align:left;">Feature</th><th style="padding:6px;">Pseudo-Jones</th><th style="padding:6px;">True Jones</th></tr>
+      <tr><td style="padding:6px;">Location</td><td style="padding:6px;">5th metatarsal styloid process (base)</td><td style="padding:6px;">5th metatarsal diaphysis-metaphysis junction (~1.5 cm distal to styloid)</td></tr>
+      <tr><td style="padding:6px;">Mechanism</td><td style="padding:6px;">Avulsion by fibularis brevis during inversion sprain</td><td style="padding:6px;">Repetitive stress or acute overload at the watershed vascular zone</td></tr>
+      <tr><td style="padding:6px;">Blood supply</td><td style="padding:6px;">Rich (tuberosity is highly vascular)</td><td style="padding:6px;">Poor (diaphyseal-metaphyseal junction is a watershed area)</td></tr>
+      <tr><td style="padding:6px;">Healing</td><td style="padding:6px;">Good — usually conservative (boot, 4–6 weeks)</td><td style="padding:6px;">Poor — high non-union rate; intramedullary screw fixation often recommended in athletes</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="question" data-category="clinical">
+  <div class="q-meta"><span class="tag tag-clinical">Clinical</span></div>
+  <div class="q-text">24. A patient with progressive hallux valgus asks why it is getting worse. Explain the muscular imbalance involved and what intrinsic muscle is particularly relevant.</div>
+  <button class="reveal-btn" onclick="toggleAnswer(this)">Reveal Answer</button>
+  <div class="answer">
+    <strong>Muscular imbalance in hallux valgus:</strong><br>
+    As the hallux drifts into valgus (laterally), the sesamoids sublux laterally beneath the 1st metatarsal head. The <strong>adductor hallucis</strong> (already pulling the hallux laterally) gains mechanical advantage and continues to pull the hallux further into valgus. The <strong>abductor hallucis</strong> (normally pulling medially to resist valgus) migrates inferiorly and its pull line becomes less effective at correcting the deformity.<br><br>
+    <strong>Key intrinsic muscle — Adductor hallucis:</strong> Its oblique and transverse heads normally provide the transverse arch support. In hallux valgus, the transverse head's attachment to the deep transverse metatarsal ligaments maintains a lateral pull on the hallux, progressively worsening the deformity in a positive feedback loop.<br><br>
+    <strong>Clinical relevance:</strong> Strengthening abductor hallucis (short-foot exercises, toe spreading) can slow early progression. Advanced deformity requires osteotomy (e.g., Scarf or Austin/chevron) to realign the metatarsophalangeal joint mechanically.
+  </div>
+</div>
+
+</div><!-- end .main -->
+
+<script>
+var totalRevealed = 0;
+var totalQuestions = 24;
+
+function toggleAnswer(btn) {
+  var answer = btn.closest('.question').querySelector('.answer');
+  var isHidden = window.getComputedStyle(answer).display === 'none';
+  answer.style.display = isHidden ? 'block' : 'none';
+  btn.textContent = isHidden ? 'Hide Answer' : 'Reveal Answer';
+  if (isHidden) {
+    totalRevealed++;
+    document.getElementById('score-display').textContent = 'Revealed: ' + totalRevealed + ' / ' + totalQuestions;
+  }
+}
+
+function filterQuestions(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.question').forEach(function(q) {
+    q.style.display = (cat === 'all' || q.dataset.category === cat) ? 'block' : 'none';
+  });
+  document.querySelectorAll('.section-label').forEach(function(l) {
+    l.style.display = (cat === 'all') ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>

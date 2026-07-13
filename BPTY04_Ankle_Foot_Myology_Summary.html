@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 – Ankle &amp; Foot Myology: Summary</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f0f4f3;
+    color: #1a1a1a;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, #0a3a35, #1a7065);
+    color: #fff;
+    padding: 2.5rem 3rem 2rem;
+  }
+  header .back-link {
+    display: inline-block;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-family: 'Courier New', monospace;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 0.2rem 0.55rem;
+    margin-bottom: 1rem;
+  }
+  header .back-link:hover { background: rgba(255,255,255,0.15); }
+  header .tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.9);
+    font-size: 0.7rem;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.15rem 0.6rem;
+    margin-bottom: 0.7rem;
+  }
+  header h1 { font-size: 2rem; font-weight: normal; }
+  header p { margin-top: 0.5rem; color: rgba(255,255,255,0.75); font-size: 0.88rem; }
+
+  /* NAV */
+  .section-nav {
+    background: #0a3a35;
+    padding: 0.6rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .section-nav a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-family: 'Courier New', monospace;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    transition: background 0.2s;
+  }
+  .section-nav a:hover { background: rgba(255,255,255,0.15); color: #fff; }
+
+  /* MAIN */
+  main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem 5rem; }
+
+  /* SECTION */
+  .section { margin-bottom: 3rem; }
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0a3a35;
+    border-left: 5px solid #1a7065;
+    padding-left: 0.8rem;
+    margin-bottom: 1rem;
+    scroll-margin-top: 1rem;
+  }
+
+  /* SLIDES */
+  .slides-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1.2rem;
+  }
+  .slide-img {
+    width: calc(50% - 5px);
+    border-radius: 6px;
+    border: 1px solid #c0d0ce;
+    display: block;
+  }
+  @media (max-width: 700px) { .slide-img { width: 100%; } }
+
+  /* MUSCLE TABLE */
+  .muscle-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin-bottom: 1rem;
+  }
+  .muscle-table th {
+    background: #1a7065;
+    color: #fff;
+    padding: 7px 10px;
+    text-align: left;
+    font-weight: 600;
+  }
+  .muscle-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #c8dbd9;
+    vertical-align: top;
+  }
+  .muscle-table tr:nth-child(even) td { background: #e8f0ef; }
+  .muscle-table td:first-child { font-weight: 600; color: #0a3a35; }
+
+  /* EXAM TAG */
+  .exam-tag {
+    display: inline-block;
+    background: #1a7065;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+
+  /* NERVE NOTE */
+  .nerve-note {
+    background: #e0f0ee;
+    border-left: 4px solid #1a7065;
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    border-radius: 0 4px 4px 0;
+  }
+  .nerve-note strong { color: #0a3a35; }
+
+  /* INFO BOX */
+  .info-box {
+    background: #fff;
+    border: 1px solid #c0d0ce;
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+    font-size: 0.88rem;
+  }
+  .info-box h4 { color: #0a3a35; margin-bottom: 0.5rem; font-size: 0.95rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="index.html">← Back to BPTY04 Resources</a>
+  <div class="tag">BPTY04 · Summary</div>
+  <h1>Ankle &amp; Foot Myology</h1>
+  <p>Dr. Alexandre Pelegrinelli · 19 slides · Anterior · Lateral · Posterior · Intrinsic compartments</p>
+</header>
+
+<nav class="section-nav">
+  <a href="#overview">Overview</a>
+  <a href="#anterior">Anterior Compartment</a>
+  <a href="#lateral">Lateral Compartment</a>
+  <a href="#superficial-post">Superficial Posterior</a>
+  <a href="#deep-post">Deep Posterior</a>
+  <a href="#tendons">Tendon Arrangements</a>
+  <a href="#intrinsic">Intrinsic Foot</a>
+</nav>
+
+<main>
+
+<!-- SECTION 1: OVERVIEW -->
+<div class="section" id="overview">
+  <h2 class="section-title">1. Overview &amp; Movements (Slides 1–3)</h2>
+  <div class="slides-row">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-01.png" alt="Title slide">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-02.png" alt="Leg ankle foot myology">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-03.png" alt="Ankle and foot movements">
+  </div>
+  <div class="info-box">
+    <h4>Leg &amp; Foot Compartments — at a glance</h4>
+    The muscles acting on the ankle and foot are grouped into four compartments of the leg plus the intrinsic foot muscles:
+    <ul style="margin-top:0.4rem; padding-left:1.2rem;">
+      <li><strong>Anterior compartment:</strong> Dorsiflexion &amp; toe extension — Deep fibular nerve (L4–L5)</li>
+      <li><strong>Lateral compartment:</strong> Eversion — Superficial fibular nerve (L5–S1)</li>
+      <li><strong>Superficial posterior:</strong> Plantarflexion (Triceps Surae) — Tibial nerve (S1–S2)</li>
+      <li><strong>Deep posterior:</strong> Plantarflexion, inversion &amp; toe flexion — Tibial nerve (L4–S2)</li>
+      <li><strong>Intrinsic foot:</strong> Fine toe control &amp; arch support — Plantar nerves (branches of tibial)</li>
+    </ul>
+  </div>
+
+  <table class="muscle-table">
+    <thead>
+      <tr>
+        <th>Movement</th>
+        <th>Primary Muscles</th>
+        <th>Nerve(s)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Dorsiflexion</td><td>Tibialis anterior, EDL, EHL, fibularis tertius</td><td>Deep fibular n. (L4–L5)</td></tr>
+      <tr><td>Plantarflexion</td><td>Gastrocnemius, soleus, FHL, FDL, tibialis posterior, fibularis longus &amp; brevis</td><td>Tibial n. (S1–S2)</td></tr>
+      <tr><td>Inversion (supination)</td><td>Tibialis anterior, tibialis posterior, FHL</td><td>Deep fibular &amp; tibial nn.</td></tr>
+      <tr><td>Eversion (pronation)</td><td>Fibularis longus, fibularis brevis, EDL, fibularis tertius</td><td>Superficial fibular n. (L5–S1)</td></tr>
+      <tr><td>Toe extension</td><td>EDL, EHL, EDB (intrinsic)</td><td>Deep fibular n. (L5–S1)</td></tr>
+      <tr><td>Toe flexion</td><td>FDL, FHL, FDB, lumbricals, interossei</td><td>Tibial &amp; plantar nn.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 2: ANTERIOR COMPARTMENT -->
+<div class="section" id="anterior">
+  <h2 class="section-title">2. Anterior Compartment (Slides 4–7) <span class="exam-tag">Exam</span></h2>
+  <div class="slides-row">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-04.png" alt="Anterior leg muscles 1">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-05.png" alt="Anterior leg muscles 2">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-06.png" alt="Anterior leg muscles 3">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-07.png" alt="Anterior foot tendons">
+  </div>
+  <div class="nerve-note"><strong>Nerve supply (all 4 muscles):</strong> Deep fibular (peroneal) nerve, L4–L5</div>
+  <table class="muscle-table">
+    <thead>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Bilateral Action</th><th>Unilateral Action</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tibialis Anterior <span class="exam-tag">Exam</span></td>
+        <td>Lateral tibial condyle, upper 2/3 lateral tibia, interosseous membrane</td>
+        <td>Medial cuneiform (plantar surface), base of 1st metatarsal</td>
+        <td>Dorsiflexion</td>
+        <td>Inversion (supination) of foot</td>
+      </tr>
+      <tr>
+        <td>Extensor Hallucis Longus (EHL) <span class="exam-tag">Exam</span></td>
+        <td>Middle 2/3 medial fibula, interosseous membrane</td>
+        <td>Dorsal surface of distal phalanx of hallux</td>
+        <td>Extension of hallux; assists dorsiflexion</td>
+        <td>Weak inversion</td>
+      </tr>
+      <tr>
+        <td>Extensor Digitorum Longus (EDL)</td>
+        <td>Lateral tibial condyle, upper 3/4 medial fibula, interosseous membrane</td>
+        <td>Dorsal digital expansions of 2nd–5th toes</td>
+        <td>Extension of 2nd–5th toes; assists dorsiflexion</td>
+        <td>Weak eversion</td>
+      </tr>
+      <tr>
+        <td>Fibularis Tertius</td>
+        <td>Lower 1/3 anterior fibula, interosseous membrane (often considered part of EDL)</td>
+        <td>Dorsum of base of 5th metatarsal</td>
+        <td>Assists dorsiflexion</td>
+        <td>Eversion; variable / absent in ~7% of people</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="info-box">
+    <h4>Anterior Foot Tendons — Slide 7</h4>
+    The anterior compartment tendons pass under the <strong>superior extensor retinaculum</strong> (above the ankle) and <strong>inferior extensor retinaculum</strong> (Y-shaped, over the dorsum of the foot) to prevent bowstringing during dorsiflexion. Order lateral to medial at the ankle: EDL, EHL, tibialis anterior (mnemonic: <em>"Tom Has Do"</em> — Tibialis anterior, EHL, EDL from medial to lateral).
+  </div>
+</div>
+
+<!-- SECTION 3: LATERAL COMPARTMENT -->
+<div class="section" id="lateral">
+  <h2 class="section-title">3. Lateral Compartment (Slides 8–9) <span class="exam-tag">Exam</span></h2>
+  <div class="slides-row">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-08.png" alt="Lateral leg muscles 1">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-09.png" alt="Lateral leg muscles 2">
+  </div>
+  <div class="nerve-note"><strong>Nerve supply (both muscles):</strong> Superficial fibular (peroneal) nerve, L5–S1</div>
+  <table class="muscle-table">
+    <thead>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Bilateral Action</th><th>Unilateral Action</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fibularis (Peroneus) Longus <span class="exam-tag">Exam</span></td>
+        <td>Head and upper 2/3 of lateral fibula</td>
+        <td>Plantar surface of medial cuneiform and base of 1st metatarsal (crosses under foot obliquely)</td>
+        <td>Plantarflexion; supports transverse and lateral arches</td>
+        <td>Eversion of foot</td>
+      </tr>
+      <tr>
+        <td>Fibularis (Peroneus) Brevis <span class="exam-tag">Exam</span></td>
+        <td>Lower 2/3 of lateral fibula</td>
+        <td>Tuberosity (styloid process) at base of 5th metatarsal</td>
+        <td>Plantarflexion</td>
+        <td>Eversion of foot; pulls 5th ray laterally</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="info-box">
+    <h4>Lateral Compartment — Clinical Notes</h4>
+    Both fibularis tendons pass posterior to the lateral malleolus, held in place by the <strong>superior peroneal retinaculum</strong>. Peroneus brevis avulsion fracture at the 5th metatarsal styloid (pseudo-Jones or Jones fracture) occurs during forced inversion. Fibularis longus follows a unique course — it dips under the cuboid through the <strong>fibular groove of the cuboid</strong> to reach its plantar insertion, making it an important support of the transverse arch as well as an evertor.
+  </div>
+</div>
+
+<!-- SECTION 4: SUPERFICIAL POSTERIOR -->
+<div class="section" id="superficial-post">
+  <h2 class="section-title">4. Superficial Posterior Compartment — Triceps Surae (Slides 10–13) <span class="exam-tag">Exam</span></h2>
+  <div class="slides-row">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-10.png" alt="Posterior superficial 1">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-11.png" alt="Posterior superficial 2">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-12.png" alt="Posterior superficial 3">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-13.png" alt="Posterior superficial 4">
+  </div>
+  <div class="nerve-note"><strong>Nerve supply (all three muscles):</strong> Tibial nerve, S1–S2</div>
+  <table class="muscle-table">
+    <thead>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Gastrocnemius <span class="exam-tag">Exam</span></td>
+        <td>Medial head: posterior medial femoral condyle; Lateral head: posterior lateral femoral condyle</td>
+        <td>Via Achilles (calcaneal) tendon → posterior calcaneal tuberosity</td>
+        <td>Plantarflexion of foot; flexion of knee</td>
+        <td>Biarticular — most effective plantarflexor with knee extended. Contributes most to fast-speed propulsion.</td>
+      </tr>
+      <tr>
+        <td>Soleus <span class="exam-tag">Exam</span></td>
+        <td>Head &amp; upper 1/3 posterior fibula; soleal line &amp; middle 1/3 medial tibia; tendinous arch between</td>
+        <td>Via Achilles tendon → posterior calcaneal tuberosity</td>
+        <td>Plantarflexion of foot only</td>
+        <td>Monoarticular — effective plantarflexor regardless of knee position. Dominant postural/anti-gravity muscle. Predominately slow-twitch (Type I) fibres.</td>
+      </tr>
+      <tr>
+        <td>Plantaris</td>
+        <td>Posterior lateral femoral condyle (just above lateral gastrocnemius head)</td>
+        <td>Medial edge of Achilles tendon / posterior calcaneus</td>
+        <td>Weak plantarflexion; weak knee flexion</td>
+        <td>Small, vestigial muscle. Absent in ~7–10% of people. Long thin tendon frequently harvested for surgical grafts. "Tennis leg" = plantaris rupture.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="info-box">
+    <h4>Achilles Tendon</h4>
+    The Achilles (calcaneal) tendon is formed by the union of the gastrocnemius and soleus tendons (with plantaris contribution), inserting into the posterior calcaneal tuberosity. It is the thickest and strongest tendon in the body, transmitting forces up to 8× body weight during running. A <strong>hypovascular zone</strong> exists approximately 2–6 cm above the calcaneal insertion — the most common site of Achilles tendinopathy and rupture.
+  </div>
+</div>
+
+<!-- SECTION 5: DEEP POSTERIOR -->
+<div class="section" id="deep-post">
+  <h2 class="section-title">5. Deep Posterior Compartment (Slides 14–17) <span class="exam-tag">Exam</span></h2>
+  <div class="slides-row">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-14.png" alt="Deep posterior 1">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-15.png" alt="Deep posterior 2">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-16.png" alt="Posterior tendons">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-17.png" alt="Deep posterior 3">
+  </div>
+  <div class="nerve-note"><strong>Nerve supply (all four muscles):</strong> Tibial nerve, L4–S2 (specific roots vary by muscle)</div>
+  <table class="muscle-table">
+    <thead>
+      <tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Popliteus</td>
+        <td>Lateral femoral condyle (popliteal groove)</td>
+        <td>Posterior proximal tibia (above soleal line)</td>
+        <td>"Unlocks" the extended knee: medially rotates tibia on fixed femur (or laterally rotates femur on fixed tibia). Assists knee flexion.</td>
+        <td>Tibial n. L4–S1</td>
+      </tr>
+      <tr>
+        <td>Tibialis Posterior <span class="exam-tag">Exam</span></td>
+        <td>Posterior interosseous membrane; adjacent posterior tibia and fibula</td>
+        <td>Navicular tuberosity (primary); slips to all cuneiforms, cuboid, 2nd–4th metatarsal bases, sustentaculum tali</td>
+        <td>Plantarflexion; inversion (primary dynamic subtalar invertor); dynamic support of medial longitudinal arch</td>
+        <td>Tibial n. L4–L5</td>
+      </tr>
+      <tr>
+        <td>Flexor Digitorum Longus (FDL)</td>
+        <td>Posterior tibia (below soleal line, medial)</td>
+        <td>Bases of distal phalanges of 2nd–5th toes</td>
+        <td>Flexion of 2nd–5th toes; plantarflexion; inversion</td>
+        <td>Tibial n. L5–S2</td>
+      </tr>
+      <tr>
+        <td>Flexor Hallucis Longus (FHL) <span class="exam-tag">Exam</span></td>
+        <td>Posterior fibula (lower 2/3); interosseous membrane</td>
+        <td>Base of distal phalanx of hallux (plantar surface)</td>
+        <td>Flexion of hallux; plantarflexion; supination (inversion + plantarflexion)</td>
+        <td>Tibial n. L5–S2</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="info-box">
+    <h4>Tom, Dick and (a very) Nervous Harry — Tarsal Tunnel Mnemonic</h4>
+    The structures passing posterior to the medial malleolus under the flexor retinaculum (tarsal tunnel) from anterior to posterior: <strong>T</strong>ibialis posterior, <strong>D</strong>FDL (flexor Digitorum longus), posterior tibial <strong>A</strong>rtery &amp; veins, <strong>N</strong>erve (tibial), <strong>H</strong>FL (flexor Hallucis Longus).<br>
+    Mnemonic: <em>"Tom, Dick And a Nervous Harry"</em> (TP – FDL – Artery/vein – Nerve – FHL)
+  </div>
+</div>
+
+<!-- SECTION 6: TENDON ARRANGEMENTS -->
+<div class="section" id="tendons">
+  <h2 class="section-title">6. Tendon Arrangements &amp; Retinacula (Slide 16)</h2>
+  <table class="muscle-table">
+    <thead>
+      <tr><th>Retinaculum</th><th>Location</th><th>Holds</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Superior extensor retinaculum</td><td>Anterior ankle, above joint line</td><td>Tibialis anterior, EHL, EDL</td></tr>
+      <tr><td>Inferior extensor retinaculum</td><td>Y-shaped, over dorsum of foot</td><td>Tibialis anterior (medial loop), EHL, EDL, fibularis tertius</td></tr>
+      <tr><td>Superior fibular (peroneal) retinaculum</td><td>Posterior to lateral malleolus</td><td>Fibularis longus &amp; brevis tendons</td></tr>
+      <tr><td>Inferior fibular retinaculum</td><td>Lateral calcaneus, below lateral malleolus</td><td>Fibularis longus &amp; brevis tendons</td></tr>
+      <tr><td>Flexor retinaculum</td><td>Posterior to medial malleolus (tarsal tunnel)</td><td>TP, FDL, posterior tibial A/V, tibial nerve, FHL (Tom Dick ANH)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 7: INTRINSIC FOOT -->
+<div class="section" id="intrinsic">
+  <h2 class="section-title">7. Intrinsic Foot Muscles (Slides 18–19)</h2>
+  <div class="slides-row">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-18.png" alt="Deep foot muscles">
+    <img class="slide-img" src="bpty04_images/ankle_foot_myology/slide-19.png" alt="Final review">
+  </div>
+  <div class="nerve-note"><strong>Nerve supply:</strong> Medial plantar nerve (most layer 1 muscles; L4–L5) and Lateral plantar nerve (most deep muscles; S1–S2) — both terminal branches of the tibial nerve passing through the tarsal tunnel</div>
+
+  <p style="margin-bottom:0.8rem; font-size:0.88rem;">The intrinsic muscles are arranged in <strong>4 plantar layers</strong> (numbered from superficial) plus the <strong>dorsal intrinsics</strong> (EDB/EHB).</p>
+
+  <table class="muscle-table">
+    <thead>
+      <tr><th>Layer</th><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Nerve</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="3">Layer 1<br>(Superficial)</td>
+        <td>Abductor Hallucis</td>
+        <td>Medial calcaneal tubercle</td>
+        <td>Medial base of proximal phalanx of hallux</td>
+        <td>Abducts &amp; flexes hallux; supports medial arch</td>
+        <td>Medial plantar n.</td>
+      </tr>
+      <tr>
+        <td>Flexor Digitorum Brevis (FDB)</td>
+        <td>Medial calcaneal tubercle, plantar aponeurosis</td>
+        <td>Middle phalanges of 2nd–5th toes (2 slips)</td>
+        <td>Flexes PIP joints 2–5; assists MTP flexion</td>
+        <td>Medial plantar n.</td>
+      </tr>
+      <tr>
+        <td>Abductor Digiti Minimi</td>
+        <td>Medial &amp; lateral calcaneal tubercles</td>
+        <td>Lateral base of proximal phalanx of 5th toe</td>
+        <td>Abducts 5th toe; assists MTP flexion</td>
+        <td>Lateral plantar n.</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Layer 2</td>
+        <td>Quadratus Plantae (Flexor Accessorius)</td>
+        <td>Two heads from medial &amp; lateral calcaneus</td>
+        <td>Posterolateral edge of FDL tendon</td>
+        <td>Redirects FDL pull to straight flexion; assists toe flexion</td>
+        <td>Lateral plantar n.</td>
+      </tr>
+      <tr>
+        <td>Lumbricals (4)</td>
+        <td>From medial aspects of FDL tendons</td>
+        <td>Extensor hoods of 2nd–5th toes</td>
+        <td>Flex MTP joints; extend IP joints (like hand lumbricals)</td>
+        <td>1st: medial plantar; 2nd–4th: lateral plantar</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Layer 3</td>
+        <td>Flexor Hallucis Brevis (FHB)</td>
+        <td>Plantar cuboid; lateral cuneiform</td>
+        <td>Via two heads (with sesamoids) into base of proximal phalanx of hallux</td>
+        <td>Flexes MTP joint of hallux; protects sesamoids</td>
+        <td>Medial plantar n.</td>
+      </tr>
+      <tr>
+        <td>Adductor Hallucis</td>
+        <td>Oblique head: bases of 2nd–4th metatarsals; Transverse head: deep transverse MT ligaments</td>
+        <td>Lateral base of proximal phalanx of hallux</td>
+        <td>Adducts hallux; supports transverse arch</td>
+        <td>Deep branch lateral plantar n.</td>
+      </tr>
+      <tr>
+        <td>Flexor Digiti Minimi Brevis</td>
+        <td>Base of 5th metatarsal</td>
+        <td>Lateral base of proximal phalanx of 5th toe</td>
+        <td>Flexes MTP joint of 5th toe</td>
+        <td>Lateral plantar n.</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Layer 4<br>(Deep)</td>
+        <td>Dorsal Interossei (4)</td>
+        <td>Adjacent shafts of metatarsals (bipennate)</td>
+        <td>Bases of proximal phalanges &amp; extensor hoods</td>
+        <td>Abduct toes 2–4 from 2nd toe axis; flex MTP</td>
+        <td>Lateral plantar n.</td>
+      </tr>
+      <tr>
+        <td>Plantar Interossei (3)</td>
+        <td>Medial sides of 3rd–5th metatarsals</td>
+        <td>Medial bases of proximal phalanges 3–5</td>
+        <td>Adduct toes 3–5 toward 2nd toe axis; flex MTP</td>
+        <td>Lateral plantar n.</td>
+      </tr>
+      <tr>
+        <td>Dorsal</td>
+        <td>Extensor Digitorum Brevis (EDB) / Extensor Hallucis Brevis (EHB)</td>
+        <td>Superolateral calcaneus</td>
+        <td>Dorsal digital expansions of toes 1–4 (EHB to hallux)</td>
+        <td>Extends MTP joints of toes 1–4</td>
+        <td>Deep fibular n. L5–S1</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</main>
+</body>
+</html>
