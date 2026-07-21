@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPTY04 – Upper Limb Bone Landmark Diagrams</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #101420;
+  color: #e0d8c8;
+  line-height: 1.5;
+}
+header {
+  background: linear-gradient(135deg, #1a2848 0%, #38186a 100%);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-bottom: 3px solid #6a4a9a;
+}
+header h1 { font-size: 1.9rem; color: #f0eafc; letter-spacing: .02em; }
+header p { color: #c0aee0; font-size: .95rem; margin-top: .35rem; }
+
+nav {
+  background: #181a2a;
+  padding: .75rem 1.5rem;
+  display: flex; flex-wrap: wrap; gap: .5rem;
+  justify-content: center;
+  border-bottom: 1px solid #22253a;
+}
+nav a {
+  color: #b8a8d8; text-decoration: none;
+  padding: .3rem .95rem; border: 1px solid #40306a;
+  border-radius: 4px; font-size: .85rem;
+  transition: background .15s, color .15s;
+}
+nav a:hover { background: #40306a; color: #f0eafc; }
+
+.page { max-width: 1320px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+.bone-section { margin: 3rem 0; }
+.bone-section > h2 {
+  font-size: 1.45rem; color: #c8a440;
+  border-bottom: 2px solid #38280a;
+  padding-bottom: .45rem; margin-bottom: 1.75rem;
+}
+
+.views-row {
+  display: flex; flex-wrap: wrap; gap: 1.5rem;
+}
+
+.view-card {
+  background: #181c2c;
+  border: 1px solid #242840;
+  border-radius: 10px;
+  padding: 1.25rem;
+  flex: 1; min-width: 320px;
+  display: flex; flex-direction: column;
+}
+.view-card h3 {
+  font-size: .82rem; color: #988060; text-transform: uppercase;
+  letter-spacing: .1em; text-align: center;
+  border-bottom: 1px solid #242840;
+  padding-bottom: .55rem; margin-bottom: 1rem;
+}
+.view-card svg {
+  display: block; width: 100%; height: auto;
+}
+
+/* ── Legend table ── */
+.legend {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .22rem .75rem;
+}
+.legend.single-col { grid-template-columns: 1fr; }
+.lrow {
+  display: flex; align-items: flex-start; gap: .45rem;
+  padding: .22rem .35rem; border-radius: 4px;
+  background: rgba(255,255,255,.04);
+  font-size: .78rem;
+}
+.lnum {
+  min-width: 20px; height: 20px; border-radius: 50%;
+  background: #a82020; color: #fff;
+  font-size: .7rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.ltxt { color: #bfb8a8; line-height: 1.35; }
+.ltxt strong { color: #d8c898; font-weight: 600; }
+
+.note {
+  background: #14201a; border: 1px solid #264030;
+  border-left: 4px solid #408050;
+  border-radius: 6px; padding: .8rem 1.1rem;
+  font-size: .85rem; color: #a8c8a8; line-height: 1.55;
+  margin-top: 1.5rem;
+}
+.note strong { color: #78c078; }
+
+.mnemonic {
+  background: #1a1430; border: 1px solid #342050;
+  border-left: 4px solid #7040c0;
+  border-radius: 6px; padding: .8rem 1.1rem;
+  font-size: .85rem; color: #c8b8f0; line-height: 1.55;
+  margin-top: 1.5rem;
+}
+.mnemonic strong { color: #a070e8; }
+
+footer {
+  text-align: center; padding: 2rem 1rem;
+  font-size: .76rem; color: #3a3a5a;
+  border-top: 1px solid #181a2a; margin-top: 3rem;
+}
+
+/* ── Shared SVG style tokens (referenced inline) ── */
+</style>
+</head>
+<body>
+
+<header>
+  <h1>BPTY04 — Upper Limb Osteology</h1>
+  <p>Bone Landmark Reference Diagrams &nbsp;·&nbsp; Clavicle · Scapula · Humerus · Radius &amp; Ulna · Carpus &amp; Hand</p>
+</header>
+
+<nav>
+  <a href="#clavicle">Clavicle</a>
+  <a href="#scapula">Scapula</a>
+  <a href="#humerus">Humerus</a>
+  <a href="#radius-ulna">Radius &amp; Ulna</a>
+  <a href="#carpus">Carpus &amp; Hand</a>
+</nav>
+
+<div class="page">
+
+
+<!-- ═══════════════════════════════════════════════
+     1. CLAVICLE
+═══════════════════════════════════════════════ -->
+<section class="bone-section" id="clavicle">
+<h2>1. Clavicle (Clavicula)</h2>
+<div class="views-row">
+
+  <!-- CLAVICLE — SUPERIOR VIEW -->
+  <div class="view-card">
+    <h3>Superior View</h3>
+    <svg viewBox="0 0 560 155" xmlns="http://www.w3.org/2000/svg">
+      <!-- Direction tags -->
+      <text x="280" y="11" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▲ POSTERIOR</text>
+      <text x="280" y="150" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▼ ANTERIOR</text>
+      <text x="10"  y="82" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(-90,10,82)">MEDIAL</text>
+      <text x="550" y="82" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(90,550,82)">LATERAL</text>
+
+      <!-- ── BONE OUTLINE (superior view, S-curve visible) ── -->
+      <!-- Anterior (bottom) edge bows downward in medial 2/3, upward in lateral 1/3 -->
+      <path d="
+        M 42,70
+        C 96,54 185,44 260,66
+        C 306,78 340,90 384,82
+        C 418,75 464,70 514,74
+        L 517,96
+        C 464,100 418,104 384,108
+        C 340,116 306,108 260,96
+        C 185,74 96,104 52,108
+        L 42,100
+        C 28,100 20,92 20,85
+        C 20,76 28,68 42,70 Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- Medial/lateral 2/3 + 1/3 divider (faint) -->
+      <line x1="358" y1="72" x2="358" y2="116" stroke="#c8a840" stroke-width="1" stroke-dasharray="3,3" opacity=".6"/>
+      <text x="200" y="42" text-anchor="middle" font-size="10" fill="#b09040" font-family="Arial" font-style="italic">— medial ²⁄₃ (anterior convexity) —</text>
+      <text x="438" y="42" text-anchor="middle" font-size="10" fill="#b09040" font-family="Arial" font-style="italic">— lat. ¹⁄₃ —</text>
+
+      <!-- ── NUMBERED LANDMARKS ── -->
+      <!-- 1 Sternal end -->
+      <circle cx="30" cy="84" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="30" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">1</text>
+
+      <!-- 2 Body / shaft -->
+      <circle cx="265" cy="118" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="265" y="122" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">2</text>
+
+      <!-- 3 Acromial end -->
+      <circle cx="519" cy="84" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="519" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">3</text>
+
+      <!-- 4 Anterior margin (bottom edge) -->
+      <circle cx="180" cy="127" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="180" y="131" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">4</text>
+
+      <!-- 5 Posterior margin (top edge) -->
+      <circle cx="180" cy="55" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="180" y="59" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">5</text>
+    </svg>
+    <div class="legend">
+      <div class="lrow"><span class="lnum">1</span><span class="ltxt"><strong>Sternal (medial) end</strong> — cylindrical; articulates with manubrium via disc</span></div>
+      <div class="lrow"><span class="lnum">2</span><span class="ltxt"><strong>Body / shaft</strong> — elongated, S-curved; subcutaneous throughout</span></div>
+      <div class="lrow"><span class="lnum">3</span><span class="ltxt"><strong>Acromial (lateral) end</strong> — flat; articulates with acromion (AC joint)</span></div>
+      <div class="lrow"><span class="lnum">4</span><span class="ltxt"><strong>Anterior margin</strong> — deltoid (lateral) &amp; SCM/trapezius (medial) attachments</span></div>
+      <div class="lrow"><span class="lnum">5</span><span class="ltxt"><strong>Posterior margin</strong> — trapezius attachment laterally</span></div>
+    </div>
+  </div>
+
+  <!-- CLAVICLE — INFERIOR VIEW -->
+  <div class="view-card">
+    <h3>Inferior View (Attachment Sites)</h3>
+    <svg viewBox="0 0 560 155" xmlns="http://www.w3.org/2000/svg">
+      <text x="280" y="11" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▲ ANTERIOR</text>
+      <text x="280" y="150" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▼ POSTERIOR</text>
+      <text x="10"  y="82" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(-90,10,82)">MEDIAL</text>
+      <text x="550" y="82" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(90,550,82)">LATERAL</text>
+
+      <!-- Same bone outline for inferior view -->
+      <path d="
+        M 42,70
+        C 96,54 185,44 260,66
+        C 306,78 340,90 384,82
+        C 418,75 464,70 514,74
+        L 517,96
+        C 464,100 418,104 384,108
+        C 340,116 306,108 260,96
+        C 185,74 96,104 52,108
+        L 42,100
+        C 28,100 20,92 20,85
+        C 20,76 28,68 42,70 Z
+      " fill="#ecd9a0" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- Costal tuberosity (rough hatched area) -->
+      <ellipse cx="110" cy="97" rx="25" ry="10" fill="#c8a858" stroke="#7a5020" stroke-width="1"/>
+      <!-- Subclavian groove (depression) -->
+      <path d="M 190,84 Q 240,93 285,88" fill="none" stroke="#a88838" stroke-width="3" stroke-linecap="round"/>
+      <!-- Conoid tubercle bump -->
+      <ellipse cx="386" cy="106" rx="14" ry="8" fill="#c8a858" stroke="#7a5020" stroke-width="1.2"/>
+      <!-- Trapezoid line (raised ridge) -->
+      <path d="M 403,100 L 460,90" stroke="#a88030" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- ── NUMBERED LANDMARKS ── -->
+      <!-- 1 Sternal articular surface -->
+      <circle cx="30" cy="84" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="30" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">1</text>
+      <!-- 2 Costal tuberosity -->
+      <circle cx="110" cy="113" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="110" y="117" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">2</text>
+      <!-- 3 Subclavian groove -->
+      <circle cx="240" cy="116" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="240" y="120" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">3</text>
+      <!-- 4 Conoid tubercle -->
+      <circle cx="386" cy="118" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="386" y="122" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">4</text>
+      <!-- 5 Trapezoid line -->
+      <circle cx="434" cy="82" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="434" y="86" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">5</text>
+      <!-- 6 Acromial articular surface -->
+      <circle cx="519" cy="84" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="519" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">6</text>
+    </svg>
+    <div class="legend">
+      <div class="lrow"><span class="lnum">1</span><span class="ltxt"><strong>Sternal articular surface</strong> — smaller circular facet; disc interposed</span></div>
+      <div class="lrow"><span class="lnum">2</span><span class="ltxt"><strong>Costal tuberosity</strong> — rough medial area; costoclavicular ligament</span></div>
+      <div class="lrow"><span class="lnum">3</span><span class="ltxt"><strong>Subclavian groove</strong> — depression along shaft; subclavius muscle</span></div>
+      <div class="lrow"><span class="lnum">4</span><span class="ltxt"><strong>Conoid tubercle</strong> — junction mid-/lateral ¹⁄₃; conoid ligament</span></div>
+      <div class="lrow"><span class="lnum">5</span><span class="ltxt"><strong>Trapezoid line</strong> — ridge on lateral ¹⁄₃; trapezoid ligament</span></div>
+      <div class="lrow"><span class="lnum">6</span><span class="ltxt"><strong>Acromial articular surface</strong> — smaller flat facet; AC joint</span></div>
+    </div>
+  </div>
+
+</div><!-- end views-row -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     2. SCAPULA
+═══════════════════════════════════════════════ -->
+<section class="bone-section" id="scapula">
+<h2>2. Scapula</h2>
+<div class="views-row">
+
+  <!-- SCAPULA — POSTERIOR VIEW -->
+  <div class="view-card">
+    <h3>Posterior View</h3>
+    <svg viewBox="0 0 430 450" xmlns="http://www.w3.org/2000/svg">
+      <text x="215" y="12" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▲ SUPERIOR</text>
+      <text x="215" y="445" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▼ INFERIOR</text>
+      <text x="10"  y="225" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(-90,10,225)">MEDIAL</text>
+      <text x="420" y="225" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(90,420,225)">LATERAL</text>
+
+      <!-- ── BONE OUTLINE ── -->
+      <path d="
+        M 95,50
+        C 152,42 220,42 268,54
+        C 290,60 312,76 328,100
+        C 338,116 336,132 330,148
+        C 318,194 286,256 250,314
+        C 230,344 210,366 188,378
+        C 174,386 160,382 148,372
+        C 136,350 112,272 100,196
+        C 92,152 86,108 95,50 Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- SPINE FILL (raised ridge, slightly elevated) -->
+      <path d="
+        M 94,138 C 164,126 246,114 316,104
+        L 316,128 C 246,140 164,152 94,164 Z
+      " fill="#e8d288" stroke="#7a5020" stroke-width="1.8"/>
+
+      <!-- ACROMION -->
+      <path d="
+        M 316,102 C 334,92 356,88 374,96
+        L 382,110 C 372,124 352,130 334,126 C 322,124 316,118 316,118 Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- SUPRASPINOUS FOSSA (area above spine — slightly different shade) -->
+      <path d="
+        M 96,50 C 152,42 220,42 268,54 C 285,58 305,72 320,94
+        C 308,100 248,114 164,126 C 128,132 100,140 94,142
+        C 86,110 86,80 96,50 Z
+      " fill="#ecdea0" stroke="none"/>
+      <!-- Redraw outer outline on top -->
+      <path d="M 95,50 C 152,42 220,42 268,54 C 290,60 312,76 328,100" fill="none" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- SUPRASCAPULAR NOTCH (small notch on superior border) -->
+      <path d="M 246,50 Q 258,43 270,50" fill="none" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- GLENOID FOSSA at lateral angle -->
+      <ellipse cx="336" cy="124" rx="18" ry="26" fill="#e0cc80" stroke="#7a5020" stroke-width="2"/>
+
+      <!-- NECK of scapula (faint ridge) -->
+      <path d="M 300,86 C 318,102 326,116 328,132" fill="none" stroke="#a07030" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+      <!-- INFRAGLENOID TUBERCLE -->
+      <ellipse cx="326" cy="154" rx="8" ry="6" fill="#d0b060" stroke="#7a5020" stroke-width="1.5"/>
+
+      <!-- ── NUMBERED LANDMARKS ── -->
+      <!-- 1 Superior angle -->
+      <circle cx="95" cy="50" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="95" y="54" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">1</text>
+      <!-- 2 Inferior angle -->
+      <circle cx="172" cy="378" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="172" y="382" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">2</text>
+      <!-- 3 Lateral angle -->
+      <circle cx="342" cy="124" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="342" y="128" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">3</text>
+      <!-- 4 Superior border -->
+      <circle cx="190" cy="44" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="190" y="48" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">4</text>
+      <!-- 5 Suprascapular notch -->
+      <circle cx="258" cy="46" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="258" y="50" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">5</text>
+      <!-- 6 Medial border -->
+      <circle cx="90" cy="210" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="90" y="214" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">6</text>
+      <!-- 7 Lateral border -->
+      <circle cx="268" cy="252" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="268" y="256" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">7</text>
+      <!-- 8 Spine of scapula -->
+      <circle cx="200" cy="147" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="200" y="151" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">8</text>
+      <!-- 9 Acromion -->
+      <circle cx="374" cy="110" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="374" y="114" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">9</text>
+      <!-- 10 Supraspinous fossa -->
+      <circle cx="176" cy="85" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="176" y="89" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">10</text>
+      <!-- 11 Infraspinous fossa -->
+      <circle cx="180" cy="230" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="180" y="234" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">11</text>
+      <!-- 12 Neck of scapula -->
+      <circle cx="308" cy="103" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="308" y="107" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">12</text>
+      <!-- 13 Infraglenoid tubercle -->
+      <circle cx="326" cy="162" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="326" y="166" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">13</text>
+    </svg>
+    <div class="legend">
+      <div class="lrow"><span class="lnum">1</span><span class="ltxt"><strong>Superior angle</strong> — levator scapulae attachment</span></div>
+      <div class="lrow"><span class="lnum">2</span><span class="ltxt"><strong>Inferior angle</strong> — latissimus dorsi attachment; level T7</span></div>
+      <div class="lrow"><span class="lnum">3</span><span class="ltxt"><strong>Lateral angle</strong> — glenoid fossa (humeral head)</span></div>
+      <div class="lrow"><span class="lnum">4</span><span class="ltxt"><strong>Superior border</strong> — shortest border</span></div>
+      <div class="lrow"><span class="lnum">5</span><span class="ltxt"><strong>Suprascapular notch</strong> — suprascapular nerve passes below lig.</span></div>
+      <div class="lrow"><span class="lnum">6</span><span class="ltxt"><strong>Medial (vertebral) border</strong> — longest border; rhomboids, serratus ant.</span></div>
+      <div class="lrow"><span class="lnum">7</span><span class="ltxt"><strong>Lateral (axillary) border</strong> — thickest; teres major &amp; minor</span></div>
+      <div class="lrow"><span class="lnum">8</span><span class="ltxt"><strong>Spine of scapula</strong> — level T3; flat triangular → acromion; deltoid &amp; trapezius</span></div>
+      <div class="lrow"><span class="lnum">9</span><span class="ltxt"><strong>Acromion</strong> — deltoid &amp; trapezius; articulates with clavicle (AC jt)</span></div>
+      <div class="lrow"><span class="lnum">10</span><span class="ltxt"><strong>Supraspinous fossa</strong> — supraspinatus origin</span></div>
+      <div class="lrow"><span class="lnum">11</span><span class="ltxt"><strong>Infraspinous fossa</strong> — infraspinatus origin</span></div>
+      <div class="lrow"><span class="lnum">12</span><span class="ltxt"><strong>Neck of scapula</strong> — narrowing between body and glenoid</span></div>
+      <div class="lrow"><span class="lnum">13</span><span class="ltxt"><strong>Infraglenoid tubercle</strong> — long head triceps brachii origin</span></div>
+    </div>
+  </div>
+
+  <!-- SCAPULA — ANTERIOR VIEW -->
+  <div class="view-card">
+    <h3>Anterior (Costal) View</h3>
+    <svg viewBox="0 0 430 450" xmlns="http://www.w3.org/2000/svg">
+      <text x="215" y="12" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▲ SUPERIOR</text>
+      <text x="215" y="445" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▼ INFERIOR</text>
+      <text x="10"  y="225" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(-90,10,225)">MEDIAL</text>
+      <text x="420" y="225" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(90,420,225)">LATERAL</text>
+
+      <!-- ── BONE OUTLINE (same triangular body) ── -->
+      <path d="
+        M 95,50
+        C 152,42 220,42 268,54
+        C 290,60 312,76 328,100
+        C 338,116 336,132 330,148
+        C 318,194 286,256 250,314
+        C 230,344 210,366 188,378
+        C 174,386 160,382 148,372
+        C 136,350 112,272 100,196
+        C 92,152 86,108 95,50 Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- SUBSCAPULAR FOSSA — slightly recessed anterior surface -->
+      <path d="
+        M 110,78 C 162,70 220,70 264,82
+        C 282,88 300,104 310,124
+        C 300,164 272,226 246,282
+        C 228,314 210,338 190,352
+        L 178,346 C 158,318 136,245 125,178
+        C 116,138 110,108 110,78 Z
+      " fill="#ecd8a0" stroke="none"/>
+      <!-- Redraw outer border on top -->
+      <path d="
+        M 95,50 C 152,42 220,42 268,54 C 290,60 312,76 328,100
+        C 338,116 336,132 330,148 C 318,194 286,256 250,314
+        C 230,344 210,366 188,378 C 174,386 160,382 148,372
+        C 136,350 112,272 100,196 C 92,152 86,108 95,50 Z
+      " fill="none" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- CORACOID PROCESS — hook-shaped, projects anterosuperiorly -->
+      <path d="
+        M 270,62 C 286,50 306,40 324,38
+        C 338,36 346,44 343,56
+        C 340,68 326,74 308,78
+        C 296,82 280,78 272,68 Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- GLENOID FOSSA -->
+      <ellipse cx="334" cy="126" rx="18" ry="28" fill="#e0cc80" stroke="#7a5020" stroke-width="2"/>
+
+      <!-- SUPRAGLENOID TUBERCLE -->
+      <ellipse cx="325" cy="100" rx="8" ry="6" fill="#d0b060" stroke="#7a5020" stroke-width="1.5"/>
+
+      <!-- ── NUMBERED LANDMARKS ── -->
+      <!-- 1 Subscapular fossa -->
+      <circle cx="188" cy="200" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="188" y="204" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">1</text>
+      <!-- 2 Coracoid process -->
+      <circle cx="326" cy="50" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="326" y="54" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">2</text>
+      <!-- 3 Glenoid fossa -->
+      <circle cx="334" cy="126" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="334" y="130" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">3</text>
+      <!-- 4 Supraglenoid tubercle -->
+      <circle cx="325" cy="91" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="325" y="95" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">4</text>
+      <!-- 5 Superior angle -->
+      <circle cx="95" cy="50" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="95" y="54" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">5</text>
+      <!-- 6 Inferior angle -->
+      <circle cx="172" cy="378" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="172" y="382" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">6</text>
+      <!-- 7 Medial border -->
+      <circle cx="90" cy="210" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="90" y="214" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">7</text>
+      <!-- 8 Lateral border -->
+      <circle cx="270" cy="255" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="270" y="259" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">8</text>
+      <!-- 9 Superior border -->
+      <circle cx="190" cy="44" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="190" y="48" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">9</text>
+    </svg>
+    <div class="legend">
+      <div class="lrow"><span class="lnum">1</span><span class="ltxt"><strong>Subscapular fossa</strong> — large anterior concavity; subscapularis origin</span></div>
+      <div class="lrow"><span class="lnum">2</span><span class="ltxt"><strong>Coracoid process</strong> — pec. minor, LH biceps brachii, coracobrachialis</span></div>
+      <div class="lrow"><span class="lnum">3</span><span class="ltxt"><strong>Glenoid fossa</strong> — pear-shaped; articulates with humeral head</span></div>
+      <div class="lrow"><span class="lnum">4</span><span class="ltxt"><strong>Supraglenoid tubercle</strong> — long head biceps brachii origin</span></div>
+      <div class="lrow"><span class="lnum">5</span><span class="ltxt"><strong>Superior angle</strong> — levator scapulae attachment</span></div>
+      <div class="lrow"><span class="lnum">6</span><span class="ltxt"><strong>Inferior angle</strong> — latissimus dorsi; most inferior palpable point</span></div>
+      <div class="lrow"><span class="lnum">7</span><span class="ltxt"><strong>Medial (vertebral) border</strong> — rhomboids, serratus anterior</span></div>
+      <div class="lrow"><span class="lnum">8</span><span class="ltxt"><strong>Lateral (axillary) border</strong> — teres major &amp; minor; LH triceps origin below</span></div>
+      <div class="lrow"><span class="lnum">9</span><span class="ltxt"><strong>Superior border</strong> — suprascapular notch; shortest border</span></div>
+    </div>
+  </div>
+
+</div><!-- end views-row -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     3. HUMERUS
+═══════════════════════════════════════════════ -->
+<section class="bone-section" id="humerus">
+<h2>3. Humerus</h2>
+<div class="views-row">
+
+  <!-- HUMERUS — ANTERIOR VIEW -->
+  <div class="view-card">
+    <h3>Anterior View</h3>
+    <svg viewBox="0 0 310 590" xmlns="http://www.w3.org/2000/svg">
+      <text x="155" y="12" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▲ PROXIMAL</text>
+      <text x="155" y="585" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▼ DISTAL</text>
+      <text x="8"   y="295" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(-90,8,295)">MEDIAL</text>
+      <text x="302" y="295" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(90,302,295)">LATERAL</text>
+
+      <!-- ── HEAD OF HUMERUS — large dome ── -->
+      <circle cx="130" cy="82" r="64" fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- ── GREATER TUBERCLE — lateral prominence (highest point) ── -->
+      <ellipse cx="204" cy="96" rx="28" ry="36" fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- ── LESSER TUBERCLE — anterior/medial prominence ── -->
+      <ellipse cx="104" cy="126" rx="16" ry="20" fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- ── SHAFT BODY ── -->
+      <path d="
+        M 74,160
+        C 70,178 68,210 68,248
+        C 68,286 70,322 72,358
+        C 73,382 74,406 76,430
+        L 66,460
+        C 54,470 40,482 38,498
+        C 36,514 42,528 56,536
+        C 70,543 90,543 108,537
+        L 120,527
+        C 135,537 154,546 172,549
+        C 188,552 205,546 218,537
+        L 228,527
+        L 230,500
+        C 228,484 218,472 205,461
+        L 196,430
+        C 198,406 200,382 200,358
+        C 202,322 202,286 200,248
+        C 198,210 192,178 188,160 Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- ANATOMICAL NECK (groove around head) -->
+      <path d="M 80,118 C 96,138 116,148 140,148 C 162,148 182,140 196,126" fill="none" stroke="#a07030" stroke-width="1.8"/>
+
+      <!-- SURGICAL NECK (common fracture site, slightly below tubercles) -->
+      <path d="M 70,162 C 108,154 152,152 188,160" fill="none" stroke="#c83030" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+      <!-- BICIPITAL GROOVE (between tubercles) -->
+      <path d="
+        M 145,122 C 152,128 154,140 152,154
+        C 150,164 144,170 138,168
+        C 132,166 128,158 130,146
+        C 132,134 139,120 145,122 Z
+      " fill="#d8c878" stroke="#8a6020" stroke-width="1"/>
+
+      <!-- Medial + lateral crests of bicipital groove -->
+      <line x1="128" y1="150" x2="105" y2="168" stroke="#9a6828" stroke-width="1.5"/>
+      <line x1="153" y1="148" x2="180" y2="166" stroke="#9a6828" stroke-width="1.5"/>
+
+      <!-- DELTOID TUBEROSITY (lateral mid-shaft) -->
+      <path d="
+        M 198,278 C 207,290 210,308 206,320
+        C 202,330 196,332 190,326
+        C 184,320 182,304 186,290
+        C 190,278 196,270 198,278 Z
+      " fill="#d8c070" stroke="#8a6020" stroke-width="1.2"/>
+
+      <!-- CORONOID FOSSA (depression above trochlea) -->
+      <ellipse cx="120" cy="458" rx="18" ry="10" fill="#c8b060" stroke="#8a6020" stroke-width="1"/>
+      <!-- RADIAL FOSSA (depression above capitulum) -->
+      <ellipse cx="190" cy="452" rx="14" ry="9" fill="#c8b060" stroke="#8a6020" stroke-width="1"/>
+
+      <!-- ── NUMBERED LANDMARKS ── -->
+      <!-- 1 Head -->
+      <circle cx="110" cy="46" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="110" y="50" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">1</text>
+      <!-- 2 Anatomical neck -->
+      <circle cx="190" cy="130" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="190" y="134" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">2</text>
+      <!-- 3 Surgical neck (on the dashed line) -->
+      <circle cx="132" cy="153" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="132" y="157" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">3</text>
+      <!-- 4 Greater tubercle -->
+      <circle cx="212" cy="86" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="212" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">4</text>
+      <!-- 5 Lesser tubercle -->
+      <circle cx="93" cy="122" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="93" y="126" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">5</text>
+      <!-- 6 Bicipital groove -->
+      <circle cx="144" cy="146" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="144" y="150" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">6</text>
+      <!-- 7 Medial crest -->
+      <circle cx="100" cy="170" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="100" y="174" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">7</text>
+      <!-- 8 Lateral crest -->
+      <circle cx="184" cy="168" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="184" y="172" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">8</text>
+      <!-- 9 Deltoid tuberosity -->
+      <circle cx="200" cy="305" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="200" y="309" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">9</text>
+      <!-- 10 Body -->
+      <circle cx="130" cy="295" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="130" y="299" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">10</text>
+      <!-- 11 Medial epicondyle -->
+      <circle cx="46" cy="498" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="46" y="502" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">11</text>
+      <!-- 12 Lateral epicondyle -->
+      <circle cx="220" cy="492" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="220" y="496" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">12</text>
+      <!-- 13 Trochlea -->
+      <circle cx="102" cy="530" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="102" y="534" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">13</text>
+      <!-- 14 Capitulum -->
+      <circle cx="184" cy="530" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="184" y="534" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">14</text>
+      <!-- 15 Coronoid fossa -->
+      <circle cx="120" cy="449" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="120" y="453" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">15</text>
+      <!-- 16 Radial fossa -->
+      <circle cx="192" cy="443" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="192" y="447" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">16</text>
+    </svg>
+    <div class="legend">
+      <div class="lrow"><span class="lnum">1</span><span class="ltxt"><strong>Head</strong> — dome-shaped; faces superomedially and posteriorly</span></div>
+      <div class="lrow"><span class="lnum">2</span><span class="ltxt"><strong>Anatomical neck</strong> — groove around articular margin; capsule attachment</span></div>
+      <div class="lrow"><span class="lnum">3</span><span class="ltxt"><strong>Surgical neck</strong> — narrowing below tubercles; common fracture site</span></div>
+      <div class="lrow"><span class="lnum">4</span><span class="ltxt"><strong>Greater tubercle</strong> — highest point; supra/infraspinatus &amp; teres minor</span></div>
+      <div class="lrow"><span class="lnum">5</span><span class="ltxt"><strong>Lesser tubercle</strong> — anterior prominence; subscapularis tendon</span></div>
+      <div class="lrow"><span class="lnum">6</span><span class="ltxt"><strong>Bicipital groove</strong> — sulcus intertubercularis; LH biceps brachii</span></div>
+      <div class="lrow"><span class="lnum">7</span><span class="ltxt"><strong>Medial crest</strong> — of bicipital groove; teres major + latissimus dorsi</span></div>
+      <div class="lrow"><span class="lnum">8</span><span class="ltxt"><strong>Lateral crest</strong> — of bicipital groove; pectoralis major</span></div>
+      <div class="lrow"><span class="lnum">9</span><span class="ltxt"><strong>Deltoid tuberosity</strong> — roughened lateral shaft; deltoid insertion</span></div>
+      <div class="lrow"><span class="lnum">10</span><span class="ltxt"><strong>Body / shaft</strong> — 3 borders (ant., med., lat.), 3 surfaces</span></div>
+      <div class="lrow"><span class="lnum">11</span><span class="ltxt"><strong>Medial epicondyle</strong> — larger; common flexor origin; ulnar nerve posterior</span></div>
+      <div class="lrow"><span class="lnum">12</span><span class="ltxt"><strong>Lateral epicondyle</strong> — common extensor origin; radial collateral lig.</span></div>
+      <div class="lrow"><span class="lnum">13</span><span class="ltxt"><strong>Trochlea</strong> — spool-shaped; articulates with trochlear notch of ulna</span></div>
+      <div class="lrow"><span class="lnum">14</span><span class="ltxt"><strong>Capitulum</strong> — rounded; articulates with head of radius</span></div>
+      <div class="lrow"><span class="lnum">15</span><span class="ltxt"><strong>Coronoid fossa</strong> — anterior; receives coronoid process in flexion</span></div>
+      <div class="lrow"><span class="lnum">16</span><span class="ltxt"><strong>Radial fossa</strong> — anterior; receives radial head in flexion</span></div>
+    </div>
+  </div>
+
+  <!-- HUMERUS — POSTERIOR VIEW -->
+  <div class="view-card">
+    <h3>Posterior View</h3>
+    <svg viewBox="0 0 310 590" xmlns="http://www.w3.org/2000/svg">
+      <text x="155" y="12" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▲ PROXIMAL</text>
+      <text x="155" y="585" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▼ DISTAL</text>
+      <text x="8"   y="295" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(-90,8,295)">MEDIAL</text>
+      <text x="302" y="295" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(90,302,295)">LATERAL</text>
+
+      <!-- HEAD (posterior — smaller visible arc) -->
+      <circle cx="148" cy="82" r="64" fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- GREATER TUBERCLE (posterior view — most prominent from behind) -->
+      <ellipse cx="218" cy="92" rx="28" ry="38" fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- SHAFT -->
+      <path d="
+        M 84,158
+        C 80,176 78,208 78,248
+        C 78,286 80,322 82,358
+        C 82,382 82,406 84,430
+        L 74,460
+        C 62,470 48,482 46,498
+        C 44,514 50,528 64,536
+        C 78,543 98,543 114,537
+        L 126,527
+        C 142,537 158,546 176,549
+        C 192,552 208,546 220,537
+        L 230,527
+        L 232,500
+        C 230,484 220,472 208,461
+        L 200,430
+        C 202,406 202,382 202,358
+        C 204,322 204,286 202,248
+        C 200,208 196,176 192,158 Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- ANATOMICAL NECK (posterior) -->
+      <path d="M 90,120 C 108,140 130,150 155,150 C 175,150 196,142 208,128" fill="none" stroke="#a07030" stroke-width="1.8"/>
+
+      <!-- RADIAL GROOVE — diagonal channel on posterior shaft (lateral → medial, proximal → distal) -->
+      <path d="M 200,195 C 192,218 178,240 160,260 C 142,280 122,298 100,314" fill="none" stroke="#b07030" stroke-width="3.5" stroke-linecap="round"/>
+
+      <!-- OLECRANON FOSSA — large triangular depression, posterior distal -->
+      <path d="
+        M 108,450 C 120,440 148,436 174,440
+        C 190,444 198,454 196,466
+        C 194,478 182,484 162,484
+        C 142,484 120,478 110,466
+        C 104,458 104,452 108,450 Z
+      " fill="#c8b060" stroke="#8a6020" stroke-width="1.5"/>
+
+      <!-- ULNAR NERVE SULCUS (groove on posterior medial epicondyle) -->
+      <path d="M 68,474 C 60,484 56,496 62,508 C 66,516 76,518 84,512" fill="none" stroke="#8a6020" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- ── NUMBERED LANDMARKS ── -->
+      <!-- 1 Head -->
+      <circle cx="130" cy="46" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="130" y="50" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">1</text>
+      <!-- 2 Greater tubercle -->
+      <circle cx="224" cy="80" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="224" y="84" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">2</text>
+      <!-- 3 Anatomical neck -->
+      <circle cx="206" cy="128" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="206" y="132" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">3</text>
+      <!-- 4 Surgical neck -->
+      <circle cx="138" cy="157" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="138" y="161" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">4</text>
+      <!-- 5 Radial groove -->
+      <circle cx="158" cy="252" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="158" y="256" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">5</text>
+      <!-- 6 Body -->
+      <circle cx="138" cy="308" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="138" y="312" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">6</text>
+      <!-- 7 Olecranon fossa -->
+      <circle cx="154" cy="462" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="154" y="466" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">7</text>
+      <!-- 8 Medial epicondyle -->
+      <circle cx="54" cy="498" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="54" y="502" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">8</text>
+      <!-- 9 Ulnar nerve sulcus -->
+      <circle cx="66" cy="482" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="66" y="486" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">9</text>
+      <!-- 10 Lateral epicondyle -->
+      <circle cx="224" cy="492" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="224" y="496" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">10</text>
+      <!-- 11 Trochlea -->
+      <circle cx="114" cy="530" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="114" y="534" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">11</text>
+    </svg>
+    <div class="legend">
+      <div class="lrow"><span class="lnum">1</span><span class="ltxt"><strong>Head</strong> — faces posteromedially; retroversion ~30°</span></div>
+      <div class="lrow"><span class="lnum">2</span><span class="ltxt"><strong>Greater tubercle</strong> — prominently visible from posterior</span></div>
+      <div class="lrow"><span class="lnum">3</span><span class="ltxt"><strong>Anatomical neck</strong> — articular margin groove</span></div>
+      <div class="lrow"><span class="lnum">4</span><span class="ltxt"><strong>Surgical neck</strong> — common fracture site; axillary nerve nearby</span></div>
+      <div class="lrow"><span class="lnum">5</span><span class="ltxt"><strong>Radial (spiral) groove</strong> — posterior shaft; radial nerve + profunda brachii a.; delimits triceps origins</span></div>
+      <div class="lrow"><span class="lnum">6</span><span class="ltxt"><strong>Body / shaft</strong> — 3 borders, 3 surfaces</span></div>
+      <div class="lrow"><span class="lnum">7</span><span class="ltxt"><strong>Olecranon fossa</strong> — large posterior pit; receives olecranon in full extension</span></div>
+      <div class="lrow"><span class="lnum">8</span><span class="ltxt"><strong>Medial epicondyle</strong> — larger medial bony prominence</span></div>
+      <div class="lrow"><span class="lnum">9</span><span class="ltxt"><strong>Ulnar nerve sulcus</strong> — posterior medial epicondyle; "funny bone"</span></div>
+      <div class="lrow"><span class="lnum">10</span><span class="ltxt"><strong>Lateral epicondyle</strong> — common extensor tendon origin</span></div>
+      <div class="lrow"><span class="lnum">11</span><span class="ltxt"><strong>Trochlea</strong> — wraps from anterior to posterior</span></div>
+    </div>
+  </div>
+
+</div><!-- end views-row -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     4. RADIUS AND ULNA
+═══════════════════════════════════════════════ -->
+<section class="bone-section" id="radius-ulna">
+<h2>4. Radius &amp; Ulna — Anterior View (Anatomical / Supinated)</h2>
+<div class="views-row">
+  <div class="view-card" style="max-width:680px; margin:0 auto; flex:none; width:100%;">
+    <h3>Anterior View — Supinated (Anatomical Position) &nbsp;·&nbsp; Ulna = Medial &nbsp;·&nbsp; Radius = Lateral</h3>
+    <svg viewBox="0 0 560 600" xmlns="http://www.w3.org/2000/svg">
+      <text x="280" y="12"  text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▲ PROXIMAL</text>
+      <text x="280" y="596" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▼ DISTAL</text>
+      <text x="10"  y="300" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(-90,10,300)">MEDIAL (ULNA)</text>
+      <text x="550" y="300" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(90,550,300)">LATERAL (RADIUS)</text>
+
+      <!-- ════ ULNA (LEFT / MEDIAL) ════ -->
+
+      <!-- OLECRANON — large blunt proximal process -->
+      <path d="
+        M 96,28 C 96,20 104,16 118,16 C 132,16 140,20 140,28
+        C 140,44 136,60 128,72 L 136,85
+        C 150,90 160,104 160,120
+        C 160,136 150,148 138,155
+        L 138,162 L 100,162 L 100,155
+        C 88,148 78,136 78,120
+        C 78,104 88,90 102,85 L 110,72
+        C 102,60 96,44 96,28 Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- TROCHLEAR NOTCH — articular surface between olecranon and coronoid -->
+      <path d="M 106,46 C 116,64 128,80 128,98 C 128,112 120,122 118,122 C 116,122 108,112 108,98 C 108,80 106,64 106,46" fill="#e0cc80" stroke="#8a6020" stroke-width="1.2"/>
+
+      <!-- CORONOID PROCESS — sharp triangular anterior projection -->
+      <path d="
+        M 100,156 C 84,162 72,174 70,188 C 68,200 76,210 88,214
+        L 102,218 L 140,218 L 154,210
+        C 162,200 158,186 148,178 L 136,165
+        Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- RADIAL NOTCH on lateral side of proximal ulna -->
+      <ellipse cx="152" cy="184" rx="10" ry="18" fill="#d8c878" stroke="#8a6020" stroke-width="1.2"/>
+
+      <!-- ULNAR SHAFT — tapers distally -->
+      <path d="
+        M 94,220 C 90,238 88,264 88,296
+        C 88,330 90,364 92,395
+        C 93,418 94,440 93,460
+        L 92,478 C 90,488 88,498 88,508
+        L 88,520 C 88,530 95,540 108,542
+        L 128,544 C 142,542 150,534 150,524
+        L 150,510 C 150,498 148,488 145,478
+        L 144,460 C 144,440 145,418 146,395
+        C 148,364 150,330 150,296
+        C 150,264 148,238 144,220 Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- Ulnar tuberosity (rough area below coronoid) -->
+      <ellipse cx="118" cy="232" rx="18" ry="10" fill="#d8c070" stroke="#8a6020" stroke-width="1"/>
+
+      <!-- Crest of supinator (lateral side of proximal ulna shaft) -->
+      <path d="M 148,224 C 154,242 156,262 152,280" fill="none" stroke="#9a6828" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- HEAD OF ULNA (distal, small) -->
+      <ellipse cx="118" cy="516" rx="28" ry="16" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+
+      <!-- STYLOID PROCESS OF ULNA -->
+      <path d="M 108,530 C 106,542 110,556 116,560 C 122,564 128,560 128,550 C 128,540 122,532 116,530 Z" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+
+      <!-- Interosseous margin (ulna, on the side facing radius) -->
+      <line x1="148" y1="270" x2="148" y2="430" stroke="#9a6828" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- ════ RADIUS (RIGHT / LATERAL) ════ -->
+
+      <!-- HEAD OF RADIUS — disc-shaped circle -->
+      <circle cx="370" cy="82" r="32" fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+      <!-- Fovea (superior articular surface) -->
+      <ellipse cx="370" cy="76" rx="16" ry="12" fill="#e0cc80" stroke="#8a6020" stroke-width="1"/>
+      <!-- Articular circumference (rim of head) -->
+      <circle cx="370" cy="82" r="26" fill="none" stroke="#8a6020" stroke-width="1.2"/>
+
+      <!-- NECK OF RADIUS -->
+      <path d="M 346,114 L 394,114 L 392,140 L 348,140 Z" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+
+      <!-- RADIAL TUBEROSITY — medial aspect, below neck -->
+      <path d="
+        M 348,136 C 330,140 320,154 324,168 C 328,180 340,186 354,182
+        L 360,175 Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <ellipse cx="338" cy="158" rx="18" ry="15" fill="#d8c070" stroke="#8a6020" stroke-width="1.2"/>
+
+      <!-- RADIUS SHAFT — expands significantly distally -->
+      <path d="
+        M 350,185 C 346,200 344,230 344,264
+        C 344,298 346,332 348,364
+        C 350,390 352,412 352,436
+        C 352,454 352,470 352,486
+        L 356,504 C 360,518 364,530 366,542
+        L 400,542 C 406,530 408,518 410,504
+        L 412,486 C 412,470 412,454 412,436
+        C 412,412 412,390 412,364
+        C 412,332 412,298 410,264
+        C 408,230 404,200 400,185 Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- DISTAL RADIUS — wider, articular surface -->
+      <path d="
+        M 350,488 L 412,488 L 428,520 C 424,540 408,554 386,556
+        C 364,558 345,544 340,524 Z
+      " fill="#f5e6b8" stroke="#7a5020" stroke-width="2.5"/>
+
+      <!-- ULNAR NOTCH (sigmoid notch) — medial distal radius -->
+      <ellipse cx="348" cy="514" rx="10" ry="22" fill="#d8c878" stroke="#8a6020" stroke-width="1.2"/>
+
+      <!-- RADIAL STYLOID PROCESS -->
+      <path d="M 424,516 C 432,520 438,530 438,540 C 438,550 432,558 424,558 C 418,558 412,552 412,542 L 415,520 Z" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+
+      <!-- Lister's tubercle (posterior - shown dashed) -->
+      <path d="M 408,452 C 420,448 428,444 432,456 C 434,466 426,474 414,474" fill="none" stroke="#b07030" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+      <!-- Interosseous margin (radius, on side facing ulna) -->
+      <line x1="350" y1="265" x2="350" y2="430" stroke="#9a6828" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- INTEROSSEOUS MEMBRANE label -->
+      <line x1="162" y1="320" x2="340" y2="320" stroke="#6060a0" stroke-width="1.2" stroke-dasharray="5,3"/>
+      <text x="251" y="314" text-anchor="middle" font-size="10" fill="#8888c0" font-family="Arial" font-style="italic">interosseous membrane</text>
+
+      <!-- ════ ULNA NUMBERED LANDMARKS ════ -->
+      <!-- U1 Olecranon -->
+      <circle cx="118" cy="16" r="9" fill="#1c5ab8" stroke="#fff" stroke-width="1.5"/>
+      <text x="118" y="20" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">U1</text>
+      <!-- U2 Trochlear notch -->
+      <circle cx="116" cy="88" r="9" fill="#1c5ab8" stroke="#fff" stroke-width="1.5"/>
+      <text x="116" y="92" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">U2</text>
+      <!-- U3 Coronoid process -->
+      <circle cx="75" cy="192" r="9" fill="#1c5ab8" stroke="#fff" stroke-width="1.5"/>
+      <text x="75" y="196" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">U3</text>
+      <!-- U4 Radial notch -->
+      <circle cx="154" cy="182" r="9" fill="#1c5ab8" stroke="#fff" stroke-width="1.5"/>
+      <text x="154" y="186" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">U4</text>
+      <!-- U5 Ulnar tuberosity -->
+      <circle cx="118" cy="244" r="9" fill="#1c5ab8" stroke="#fff" stroke-width="1.5"/>
+      <text x="118" y="248" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">U5</text>
+      <!-- U6 Crest of supinator -->
+      <circle cx="154" cy="252" r="9" fill="#1c5ab8" stroke="#fff" stroke-width="1.5"/>
+      <text x="154" y="256" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">U6</text>
+      <!-- U7 Interosseous margin ulna -->
+      <circle cx="150" cy="350" r="9" fill="#1c5ab8" stroke="#fff" stroke-width="1.5"/>
+      <text x="150" y="354" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">U7</text>
+      <!-- U8 Head of ulna -->
+      <circle cx="118" cy="516" r="9" fill="#1c5ab8" stroke="#fff" stroke-width="1.5"/>
+      <text x="118" y="520" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">U8</text>
+      <!-- U9 Styloid process ulna -->
+      <circle cx="118" cy="556" r="9" fill="#1c5ab8" stroke="#fff" stroke-width="1.5"/>
+      <text x="118" y="560" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">U9</text>
+
+      <!-- ════ RADIUS NUMBERED LANDMARKS ════ -->
+      <!-- R1 Head -->
+      <circle cx="370" cy="52" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="370" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">R1</text>
+      <!-- R2 Neck -->
+      <circle cx="370" cy="122" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="370" y="126" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">R2</text>
+      <!-- R3 Radial tuberosity -->
+      <circle cx="328" cy="158" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="328" y="162" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">R3</text>
+      <!-- R4 Interosseous margin radius -->
+      <circle cx="352" cy="350" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="352" y="354" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">R4</text>
+      <!-- R5 Lister's tubercle (dashed) -->
+      <circle cx="424" cy="458" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="424" y="462" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">R5</text>
+      <!-- R6 Ulnar notch -->
+      <circle cx="346" cy="513" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="346" y="517" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">R6</text>
+      <!-- R7 Carpal articular surface -->
+      <circle cx="383" cy="548" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="383" y="552" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">R7</text>
+      <!-- R8 Radial styloid process -->
+      <circle cx="430" cy="536" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="430" y="540" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">R8</text>
+    </svg>
+
+    <p style="font-size:.78rem; color:#6a7090; text-align:center; margin:.6rem 0 .4rem;">
+      <span style="color:#4a82e0; font-weight:700;">Blue</span> = Ulna landmarks &nbsp;·&nbsp;
+      <span style="color:#c83030; font-weight:700;">Red</span> = Radius landmarks
+    </p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem .75rem; margin-top:.5rem;">
+      <!-- Ulna key -->
+      <div>
+        <p style="font-size:.78rem; color:#7090c0; font-weight:700; margin-bottom:.35rem; text-transform:uppercase; letter-spacing:.06em;">Ulna</p>
+        <div class="legend single-col">
+          <div class="lrow"><span class="lnum" style="background:#1c5ab8;">U1</span><span class="ltxt"><strong>Olecranon</strong> — triceps brachii insertion; enters olecranon fossa in extension</span></div>
+          <div class="lrow"><span class="lnum" style="background:#1c5ab8;">U2</span><span class="ltxt"><strong>Trochlear notch</strong> — C-shaped articular surface; articulates with trochlea</span></div>
+          <div class="lrow"><span class="lnum" style="background:#1c5ab8;">U3</span><span class="ltxt"><strong>Coronoid process</strong> — triangular; brachialis insertion; resists posterior dislocation</span></div>
+          <div class="lrow"><span class="lnum" style="background:#1c5ab8;">U4</span><span class="ltxt"><strong>Radial notch</strong> — lateral proximal ulna; articulates with radial head (PRUJ)</span></div>
+          <div class="lrow"><span class="lnum" style="background:#1c5ab8;">U5</span><span class="ltxt"><strong>Ulnar tuberosity</strong> — rough area below coronoid; brachialis attachment</span></div>
+          <div class="lrow"><span class="lnum" style="background:#1c5ab8;">U6</span><span class="ltxt"><strong>Crest of supinator</strong> — proximal interosseous border; supinator origin</span></div>
+          <div class="lrow"><span class="lnum" style="background:#1c5ab8;">U7</span><span class="ltxt"><strong>Interosseous margin</strong> — sharp lateral ridge; interosseous membrane attachment</span></div>
+          <div class="lrow"><span class="lnum" style="background:#1c5ab8;">U8</span><span class="ltxt"><strong>Head of ulna</strong> — distal, small; articulates with TFCC disc + ulnar notch of radius (DRUJ)</span></div>
+          <div class="lrow"><span class="lnum" style="background:#1c5ab8;">U9</span><span class="ltxt"><strong>Styloid process</strong> — posterior medial; ulnar collateral ligament</span></div>
+        </div>
+      </div>
+      <!-- Radius key -->
+      <div>
+        <p style="font-size:.78rem; color:#c07070; font-weight:700; margin-bottom:.35rem; text-transform:uppercase; letter-spacing:.06em;">Radius</p>
+        <div class="legend single-col">
+          <div class="lrow"><span class="lnum">R1</span><span class="ltxt"><strong>Head of radius</strong> — disc-shaped; articulates with capitulum (humeroradial jt) + radial notch of ulna (PRUJ)</span></div>
+          <div class="lrow"><span class="lnum">R2</span><span class="ltxt"><strong>Neck of radius</strong> — narrow region between head and shaft</span></div>
+          <div class="lrow"><span class="lnum">R3</span><span class="ltxt"><strong>Radial tuberosity</strong> — medial, below neck; biceps brachii tendon insertion</span></div>
+          <div class="lrow"><span class="lnum">R4</span><span class="ltxt"><strong>Interosseous margin</strong> — sharp medial ridge; interosseous membrane attachment</span></div>
+          <div class="lrow"><span class="lnum">R5</span><span class="ltxt"><strong>Lister's tubercle</strong> (dorsal tubercle) — posterior surface; EPL tendon pulley; landmark for scaphoid/lunate</span></div>
+          <div class="lrow"><span class="lnum">R6</span><span class="ltxt"><strong>Ulnar notch</strong> (sigmoid notch) — medial distal radius; DRUJ; articulates with ulnar head</span></div>
+          <div class="lrow"><span class="lnum">R7</span><span class="ltxt"><strong>Carpal articular surface</strong> — lateral facet → scaphoid; medial facet → lunate</span></div>
+          <div class="lrow"><span class="lnum">R8</span><span class="ltxt"><strong>Radial styloid process</strong> — lateral distal; longer than ulnar styloid; radial collateral lig.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     5. CARPUS AND HAND
+═══════════════════════════════════════════════ -->
+<section class="bone-section" id="carpus">
+<h2>5. Carpus &amp; Hand — Palmar View (Right Hand)</h2>
+<div class="views-row">
+  <div class="view-card" style="max-width:700px; margin:0 auto; flex:none; width:100%;">
+    <h3>Palmar (Anterior) View — Right Hand &nbsp;·&nbsp; Radial (thumb) side = LEFT &nbsp;·&nbsp; Ulnar side = RIGHT</h3>
+    <svg viewBox="0 0 580 660" xmlns="http://www.w3.org/2000/svg">
+      <text x="290" y="12"  text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▲ PROXIMAL (wrist)</text>
+      <text x="290" y="655" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial">▼ DISTAL (fingertips)</text>
+      <text x="10"  y="330" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(-90,10,330)">RADIAL (thumb)</text>
+      <text x="570" y="330" text-anchor="middle" font-size="10" fill="#555a78" font-family="Arial" transform="rotate(90,570,330)">ULNAR (little finger)</text>
+
+      <!-- ═══ CARPAL BONES ═══ -->
+      <!-- PROXIMAL ROW: Scaphoid, Lunate, Triquetrum, Pisiform -->
+
+      <!-- SCAPHOID — lateral, boat-shaped -->
+      <path d="M 140,68 C 126,62 114,70 112,84 C 108,100 116,120 130,132 C 140,140 155,144 168,138 C 180,132 184,120 180,106 C 176,88 158,72 140,68 Z" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <!-- Tubercle of scaphoid (palmar projection) -->
+      <ellipse cx="116" cy="132" rx="12" ry="9" fill="#d8c060" stroke="#7a5020" stroke-width="1.5"/>
+
+      <!-- LUNATE — crescent-shaped, central -->
+      <path d="M 188,68 C 176,62 166,70 165,84 C 163,98 170,118 182,130 C 192,140 207,142 218,136 C 228,130 230,116 226,102 C 220,84 204,72 188,68 Z" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+
+      <!-- TRIQUETRUM — medial proximal row -->
+      <path d="M 244,72 C 233,65 220,72 219,86 C 217,100 225,118 238,128 C 248,136 264,138 273,130 C 282,122 282,108 274,94 C 266,80 256,76 244,72 Z" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+
+      <!-- PISIFORM — sesamoid, anterior to triquetrum -->
+      <ellipse cx="278" cy="140" rx="20" ry="20" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+
+      <!-- DISTAL ROW: Trapezium, Trapezoid, Capitate, Hamate -->
+
+      <!-- TRAPEZIUM — most lateral -->
+      <path d="M 118,154 C 106,148 94,158 94,174 C 94,192 106,210 122,218 C 136,225 152,222 160,210 C 168,198 165,182 154,168 C 144,155 132,157 118,154 Z" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <!-- Tubercle of trapezium -->
+      <ellipse cx="92" cy="178" rx="9" ry="12" fill="#d8c060" stroke="#7a5020" stroke-width="1.5"/>
+
+      <!-- TRAPEZOID -->
+      <path d="M 174,154 C 162,148 152,156 153,172 C 153,188 163,208 176,216 C 188,222 202,218 207,206 C 213,193 208,175 200,162 C 193,151 184,157 174,154 Z" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+
+      <!-- CAPITATE — largest, central -->
+      <path d="M 222,140 C 210,135 199,145 198,162 C 196,180 205,204 220,215 C 232,224 250,224 258,213 C 266,201 263,180 255,162 C 246,144 235,143 222,140 Z" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <!-- Head of capitate -->
+      <ellipse cx="222" cy="148" rx="16" ry="14" fill="#e0cc80" stroke="#8a6020" stroke-width="1"/>
+
+      <!-- HAMATE — medial distal -->
+      <path d="M 272,152 C 260,146 250,156 250,172 C 250,190 260,210 275,220 C 288,228 304,225 310,212 C 316,198 312,178 302,164 C 292,151 284,155 272,152 Z" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <!-- Hook of hamate — prominent palmar projection -->
+      <path d="M 296,158 C 306,152 320,150 326,162 C 330,172 325,186 315,190 C 310,192 305,190 302,185" fill="#d8c060" stroke="#7a5020" stroke-width="1.8"/>
+      <ellipse cx="314" cy="168" rx="11" ry="14" fill="#d8c060" stroke="#7a5020" stroke-width="1.5"/>
+
+      <!-- CARPAL TUNNEL outline -->
+      <path d="M 88,148 C 88,132 104,124 118,122 L 280,122 C 318,122 330,144 328,170 C 326,196 312,206 296,206 L 108,206 C 88,204 76,192 76,174 L 88,148" fill="none" stroke="#7060b0" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <text x="198" y="200" text-anchor="middle" font-size="9" fill="#9080c8" font-family="Arial">carpal tunnel</text>
+
+      <!-- ═══ METACARPALS 1-5 ═══ -->
+      <!-- MC1 (thumb - short, wide) -->
+      <rect x="62" y="232" width="40" height="112" rx="8" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <ellipse cx="82" cy="344" rx="18" ry="13" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <text x="82" y="295" text-anchor="middle" font-size="9" fill="#9a8060" font-family="Arial">MC1</text>
+
+      <!-- MC2 (index - longest) -->
+      <rect x="116" y="232" width="38" height="134" rx="8" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <ellipse cx="135" cy="366" rx="18" ry="13" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <text x="135" y="306" text-anchor="middle" font-size="9" fill="#9a8060" font-family="Arial">MC2</text>
+
+      <!-- MC3 -->
+      <rect x="165" y="232" width="38" height="136" rx="8" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <ellipse cx="184" cy="368" rx="18" ry="13" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <text x="184" y="310" text-anchor="middle" font-size="9" fill="#9a8060" font-family="Arial">MC3</text>
+
+      <!-- MC4 -->
+      <rect x="212" y="232" width="38" height="130" rx="8" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <ellipse cx="231" cy="362" rx="18" ry="13" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <text x="231" y="308" text-anchor="middle" font-size="9" fill="#9a8060" font-family="Arial">MC4</text>
+
+      <!-- MC5 -->
+      <rect x="258" y="232" width="38" height="122" rx="8" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <ellipse cx="277" cy="354" rx="18" ry="13" fill="#f5e6b8" stroke="#7a5020" stroke-width="2"/>
+      <text x="277" y="302" text-anchor="middle" font-size="9" fill="#9a8060" font-family="Arial">MC5</text>
+
+      <!-- ═══ PHALANGES (simplified) ═══ -->
+      <!-- Thumb (2 phalanges) -->
+      <rect x="65" y="357" width="34" height="66" rx="7" fill="#f0e0a8" stroke="#7a5020" stroke-width="1.8"/>
+      <rect x="65" y="426" width="34" height="60" rx="7" fill="#e8d698" stroke="#7a5020" stroke-width="1.8"/>
+
+      <!-- Index (3 phalanges) -->
+      <rect x="118" y="379" width="34" height="60" rx="7" fill="#f0e0a8" stroke="#7a5020" stroke-width="1.8"/>
+      <rect x="118" y="442" width="34" height="52" rx="7" fill="#e8d698" stroke="#7a5020" stroke-width="1.8"/>
+      <rect x="118" y="497" width="34" height="50" rx="7" fill="#e0ca88" stroke="#7a5020" stroke-width="1.8"/>
+
+      <!-- Middle (3 phalanges) -->
+      <rect x="167" y="383" width="34" height="62" rx="7" fill="#f0e0a8" stroke="#7a5020" stroke-width="1.8"/>
+      <rect x="167" y="448" width="34" height="54" rx="7" fill="#e8d698" stroke="#7a5020" stroke-width="1.8"/>
+      <rect x="167" y="505" width="34" height="52" rx="7" fill="#e0ca88" stroke="#7a5020" stroke-width="1.8"/>
+
+      <!-- Ring (3 phalanges) -->
+      <rect x="214" y="376" width="34" height="58" rx="7" fill="#f0e0a8" stroke="#7a5020" stroke-width="1.8"/>
+      <rect x="214" y="437" width="34" height="50" rx="7" fill="#e8d698" stroke="#7a5020" stroke-width="1.8"/>
+      <rect x="214" y="490" width="34" height="48" rx="7" fill="#e0ca88" stroke="#7a5020" stroke-width="1.8"/>
+
+      <!-- Little (3 phalanges) -->
+      <rect x="260" y="368" width="34" height="52" rx="7" fill="#f0e0a8" stroke="#7a5020" stroke-width="1.8"/>
+      <rect x="260" y="423" width="34" height="46" rx="7" fill="#e8d698" stroke="#7a5020" stroke-width="1.8"/>
+      <rect x="260" y="472" width="34" height="44" rx="7" fill="#e0ca88" stroke="#7a5020" stroke-width="1.8"/>
+
+      <!-- Phalanx row labels (right side) -->
+      <text x="360" y="410" font-size="9" fill="#9a8060" font-family="Arial">← Proximal</text>
+      <text x="360" y="410" font-size="9" fill="#9a8060" font-family="Arial">← Proximal</text>
+      <text x="360" y="472" font-size="9" fill="#9a8060" font-family="Arial">← Middle</text>
+      <text x="360" y="526" font-size="9" fill="#9a8060" font-family="Arial">← Distal</text>
+
+      <!-- ═══ NUMBERED LANDMARKS ═══ -->
+      <!-- 1 Scaphoid -->
+      <circle cx="148" cy="92" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="148" y="96" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">1</text>
+      <!-- 2 Tubercle of scaphoid -->
+      <circle cx="114" cy="135" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="114" y="139" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">2</text>
+      <!-- 3 Lunate -->
+      <circle cx="196" cy="88" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="196" y="92" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">3</text>
+      <!-- 4 Triquetrum -->
+      <circle cx="248" cy="95" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="248" y="99" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">4</text>
+      <!-- 5 Pisiform -->
+      <circle cx="278" cy="140" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="278" y="144" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">5</text>
+      <!-- 6 Trapezium -->
+      <circle cx="126" cy="182" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="126" y="186" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">6</text>
+      <!-- 7 Tubercle of trapezium -->
+      <circle cx="90" cy="178" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="90" y="182" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">7</text>
+      <!-- 8 Trapezoid -->
+      <circle cx="181" cy="183" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="181" y="187" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">8</text>
+      <!-- 9 Capitate -->
+      <circle cx="228" cy="180" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="228" y="184" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">9</text>
+      <!-- 10 Hamate -->
+      <circle cx="278" cy="184" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="278" y="188" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">10</text>
+      <!-- 11 Hook of hamate -->
+      <circle cx="318" cy="172" r="9" fill="#a82020" stroke="#fff" stroke-width="1.5"/>
+      <text x="318" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff" font-family="Arial">11</text>
+    </svg>
+
+    <div class="legend">
+      <div class="lrow"><span class="lnum">1</span><span class="ltxt"><strong>Scaphoid (S)</strong> — most fractured carpal; retrograde blood supply → AVN risk</span></div>
+      <div class="lrow"><span class="lnum">2</span><span class="ltxt"><strong>Tubercle of scaphoid</strong> — palpable palmar; lateral wall carpal tunnel; flexor retinaculum attachment</span></div>
+      <div class="lrow"><span class="lnum">3</span><span class="ltxt"><strong>Lunate (L)</strong> — crescent-shaped; prone to dislocation ("spilled teacup" sign on X-ray)</span></div>
+      <div class="lrow"><span class="lnum">4</span><span class="ltxt"><strong>Triquetrum (Tr)</strong> — pisiform on its palmar surface; lunotriquetral lig.</span></div>
+      <div class="lrow"><span class="lnum">5</span><span class="ltxt"><strong>Pisiform (P)</strong> — sesamoid in FCU tendon; Guyon's canal medial wall</span></div>
+      <div class="lrow"><span class="lnum">6</span><span class="ltxt"><strong>Trapezium (Tm)</strong> — CMC joint of thumb; APB, FPB, opponens pollicis</span></div>
+      <div class="lrow"><span class="lnum">7</span><span class="ltxt"><strong>Tubercle of trapezium</strong> — palpable palmar; lateral wall carpal tunnel; flexor retinaculum</span></div>
+      <div class="lrow"><span class="lnum">8</span><span class="ltxt"><strong>Trapezoid (Td)</strong> — smallest distal carpal; MC2 base</span></div>
+      <div class="lrow"><span class="lnum">9</span><span class="ltxt"><strong>Capitate (C)</strong> — largest carpal; central keystone; articulates with 7 bones</span></div>
+      <div class="lrow"><span class="lnum">10</span><span class="ltxt"><strong>Hamate (H)</strong> — MC4 &amp; MC5 bases; hypothenar muscles</span></div>
+      <div class="lrow"><span class="lnum">11</span><span class="ltxt"><strong>Hook of hamate</strong> — palpable palmar; medial wall carpal tunnel + Guyon's canal</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="mnemonic">
+  <strong>Carpal Bone Mnemonics</strong><br>
+  <strong>Proximal row</strong> (lateral → medial): <em>She Likes To Play</em> — <strong>S</strong>caphoid · <strong>L</strong>unate · <strong>T</strong>riquetrum · <strong>P</strong>isiform<br>
+  <strong>Distal row</strong> (lateral → medial): <em>Try To Catch Her</em> — <strong>T</strong>rapezium · <strong>T</strong>rapezoid · <strong>C</strong>apitate · <strong>H</strong>amate<br><br>
+  <strong>Carpal tunnel</strong> walls: <em>Lateral</em> — tubercle of scaphoid + trapezium &nbsp;·&nbsp; <em>Medial</em> — pisiform + hook of hamate &nbsp;·&nbsp; Roof = flexor retinaculum &nbsp;·&nbsp; Contains: median nerve + 9 flexor tendons<br>
+  <strong>Guyon's canal</strong>: pisiform (medial) ↔ hook of hamate (lateral) — ulnar nerve and artery
+</div>
+</section>
+
+
+<!-- LEGEND KEY -->
+<section class="bone-section">
+  <div class="note">
+    <strong>Diagram Key:</strong> &ensp;
+    <span style="display:inline-flex;align-items:center;gap:5px;margin-right:12px;">
+      <svg width="18" height="18"><circle cx="9" cy="9" r="8" fill="#a82020" stroke="#fff" stroke-width="1.5"/><text x="9" y="13" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff" font-family="Arial">N</text></svg>
+      Numbered landmark
+    </span>
+    <span style="display:inline-flex;align-items:center;gap:5px;margin-right:12px;">
+      <svg width="18" height="18"><circle cx="9" cy="9" r="8" fill="#1c5ab8" stroke="#fff" stroke-width="1.5"/></svg>
+      Ulna-specific landmark (R&amp;U diagram)
+    </span>
+    <span style="margin-right:12px;"><span style="color:#d8c060;">■</span> Gold/amber patches = rough areas &amp; attachment surfaces</span>
+    <span><span style="color:#7060b0;">- - -</span> Dashed outline = non-visible posterior feature or surgical boundary</span>
+  </div>
+</section>
+
+</div><!-- end .page -->
+
+<footer>
+  BPTY04 — Upper Limb Osteology Bone Landmark Reference &nbsp;|&nbsp;
+  Based on <em>Osteo UL WS25</em> (Dr Abulkhanova / Urhausen, LUNEX) &nbsp;|&nbsp;
+  For educational use only
+</footer>
+
+</body>
+</html>
